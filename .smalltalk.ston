@@ -1,0 +1,22 @@
+SmalltalkCISpec {
+	#loading : [
+		SCIMetacelloLoadSpec {
+			#baseline : 'Ume',
+			#repository : 'github://FedeLoch/Ume:main',
+			#onConflict : #useIncoming,
+			#onUpgrade : #useIncoming
+		},
+		SCIMetacelloLoadSpec {
+			#baseline : 'Shin',
+			#onConflict : #useIncoming,
+			#onUpgrade : #useIncoming,
+			#ignoreImage : true
+		}
+	],
+	#testing : {
+		#include : {
+			#packages : [ 'Shin' ]
+		},
+		#defaultTimeout : 900
+	}
+}
