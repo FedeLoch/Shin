@@ -76,7 +76,9 @@ ShinHDDShrinker >> initialize [
 
 	super initialize.
 	seen := Set new.
+	"ddmin := ShinDDminPaperCustomShrinker new caller: self."
 	ddmin := ShinFuzzingBookPaperCustomShrinker new caller: self.
+	
 ]
 
 { #category : 'shrinking' }
