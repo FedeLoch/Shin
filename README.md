@@ -35,24 +35,13 @@ shrinker oracle: (ShinBooleanInputOracle from: [ :string | string includes: $e ]
 (shrinker shrink: 'asqjjkqsbdvieqvsbdoivbq') "=> 'e'"
 ```
 
-## How it works
+## Main Concepts
 
 Shin separates three orthogonal concerns:
 
 1. **Shrinker** — the reduction algorithm that iteratively tries to remove or simplify parts of the input.
 2. **Oracle** — decides whether a given candidate input still triggers the behavior of interest.
 3. **Grammar** — (optional, for tree-based shrinkers) describes the input language so reductions stay syntactically valid.
-
-A typical pipeline:
-
-```
-original input ──▶ parse ──▶ tree ──▶ minimize (guided by the oracle) ──▶ smaller tree ──▶ emit ──▶ minimized input
-```
-
-For convenience, the `ShinShrinker` base class exposes two entry points:
-
-- `shrink: anInput` — returns the minimized input.
-- `profiledShrink: anInput` — returns a dictionary with statistics (original/minimized input, elapsed time, number of needed and failed reductions, `%` of problem preservation and input reduction, original/minimized bound).
 
 ## Shrinkers
 
@@ -68,16 +57,10 @@ Shin provides the following shrinkers. Tree-based ones are grammar-aware.
 | `ShinNautilusShrinker` | Grammar tree | Reward-based reduction inspired by Nautilus, repeatedly minimizing the "worst" node. |
 | `ShinVulcanShrinker` | Grammar tree | Combines a main reducer (HDD) with auxiliary reducers: identifier replacement, subtree reduction, and tree-based Linear Example-based Edition (LEE). |
 
-Other building blocks include the abstract `ShinGrammarShrinker`, the `ShinSimplifyGrammar*` strategies, and the `ShinVulcanAuxiliaryReducer` hierarchy (`ShinIdentifierReplacement`, `ShinSubTreeReducer`, `ShinTreeBasedLEE`).
-
-Subclasses of `ShinShrinker` can be configured with:
-- `maxIterations:` — cap on the number of reduction rounds (default `1000`).
-- `oracle:` — the oracle used to validate candidates.
-- `grammar:` — the grammar used to parse/validate inputs (tree-based shrinkers).
-
 ## Oracles
 
-An oracle decides whether a candidate input still reproduces the target behavior. `ShinInputOracle` is the abstract base class; the following implementations are provided:
+An oracle decides whether a candidate input still reproduces the target behavior.
+`ShinInputOracle` is the abstract base class; the following implementations are provided:
 
 | Oracle | Description |
 | --- | --- |
