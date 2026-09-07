@@ -6,9 +6,9 @@
 
 # Shin — Input Minimization Library for Pharo
 
-Shin provides **state-of-the-art shrinking implementations** for Pharo. It takes a potentially large input that triggers the behavior of interest and produces a much smaller input that still reproduces the same behavior.
+Shin is a Pharo library that provides **implementations of state-of-the-art reducers**: working, self-contained implementations of the most influential input-minimization and grammar-based reduction algorithms — including delta debugging, Hierarchical Delta Debugging (HDD), Nautilus, and Vulcan's reducers — so they can be reused and compared directly. Each reducer takes a potentially large input that triggers the behavior of interest and produces a much smaller input that still reproduces the same behavior. Shin is **grammar-aware**: it can parse inputs into a concrete syntax tree and reduce the tree, so the minimized output always stays valid according to the grammar.
 
-Shin is **grammar-aware**: it can parse inputs into a concrete syntax tree and reduce the tree, so the minimized output always stays valid according to the grammar. It ships with implementations of several well-known shrinking algorithms, a set of pluggable oracles, and tooling to benchmark them against each other.
+Beyond the algorithms, Shin provides an **architecture to benchmark shrinking algorithms**. It separates three orthogonal concerns — shrinker, oracle, and grammar — and ships with ready-to-run benchmark classes and datasets for several input languages (regex, SVG, JSON, Microdown, arithmetic expressions), so different reducers can be evaluated head-to-head on the same corpora and reported with plots.
 
 ## Getting Started
 
