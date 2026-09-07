@@ -1,21 +1,21 @@
 | shrinkerClasses benchmark report |
 
 Metacello new
-    baseline: 'Ume';
-    repository: 'github://FedeLoch/Ume:main';
+    baseline: 'Shin';
+    repository: 'github://FedeLoch/Shin:main';
 	onConflictUseIncoming;
     load.
 
 shrinkerClasses := {
-    Smalltalk at: #UmeGRABRShrinker.
-    Smalltalk at: #UmeDDminFuzzingBookShrinker.
-    Smalltalk at: #UmeDDminPaperShrinker.
-    Smalltalk at: #UmeNautilusShrinker.
-    Smalltalk at: #UmeHDDShrinker.
-    Smalltalk at: #UmeVulcanShrinker
+    Smalltalk at: #ShinGRABRShrinker.
+    Smalltalk at: #ShinDDminFuzzingBookShrinker.
+    Smalltalk at: #ShinDDminPaperShrinker.
+    Smalltalk at: #ShinNautilusShrinker.
+    Smalltalk at: #ShinHDDShrinker.
+    Smalltalk at: #ShinVulcanShrinker
 }.
 
-benchmark := (Smalltalk at: #UmeShrinkingMicrodownCoverageBenchmark) for: shrinkerClasses.
+benchmark := (Smalltalk at: #ShinShrinkingMicrodownCoverageBenchmark) for: shrinkerClasses.
 report := benchmark bench.
 
-report saveAsFile: 'UmeShrinkingMicrodownCoverageBenchmark.json'
+report saveAsFile: 'ShinShrinkingMicrodownCoverageBenchmark.json'
