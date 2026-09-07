@@ -15,7 +15,7 @@ SmalltalkCISpec {
 	],
 	#testing : {
 		#include : {
-			#packages : [ 'Shin' ]
+			#categories : [ 'Shin-Shrinker Tests' ]
 		},
 		#defaultTimeout : 900
 	}
