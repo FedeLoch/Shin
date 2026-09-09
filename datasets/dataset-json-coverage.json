@@ -1,7 +1,7 @@
 [
     {
-        "percetange": 4.133858267716535,
         "input": "{}",
+        "percetange": 4.133858267716535,
         "#nodes": 21,
         "#methods": 14,
         "reducedInput": "",
@@ -9,8 +9,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 12.204724409448819,
         "input": "{\"n\":true,\"n\":[],\"x\":6}",
+        "percetange": 12.204724409448819,
         "#nodes": 62,
         "#methods": 26,
         "reducedInput": "",
@@ -18,8 +18,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 12.598425196850394,
         "input": "{\"s\":true,\"n\":[\"v\"],\"x\":6}",
+        "percetange": 12.598425196850394,
         "#nodes": 64,
         "#methods": 26,
         "reducedInput": "",
@@ -27,8 +27,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 12.992125984251969,
         "input": "{\"s\":true,\"n\":[[false]],\"x\":6}",
+        "percetange": 12.992125984251969,
         "#nodes": 66,
         "#methods": 26,
         "reducedInput": "",
@@ -36,8 +36,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 13.385826771653543,
         "input": "{\"s\":true,\"n\":[[false]],\"y\":[{\"t\":null},5]}",
+        "percetange": 13.385826771653543,
         "#nodes": 68,
         "#methods": 26,
         "reducedInput": "",
@@ -45,8 +45,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 14.37007874015748,
         "input": "{\"s\":true,\"n\":[[false]],\"y\":[{\"th\":null},8e5]}",
+        "percetange": 14.37007874015748,
         "#nodes": 73,
         "#methods": 27,
         "reducedInput": "",
@@ -54,8 +54,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 14.566929133858268,
         "input": "{\"s\":true,\"n\":[[false],5],\"}y\":[{\"th\":null},8e5]}",
+        "percetange": 14.566929133858268,
         "#nodes": 74,
         "#methods": 27,
         "reducedInput": "",

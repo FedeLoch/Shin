@@ -1,7 +1,7 @@
 [
     {
-        "percetange": 7.086614173228346,
         "input": "a",
+        "percetange": 7.086614173228346,
         "#nodes": 90,
         "#methods": 59,
         "reducedInput": "",
@@ -9,8 +9,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 13.228346456692913,
         "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](http://pharo.org)\r\t\r   \t- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Point>>#setX:setY:`, `#’Microdown-Tests’`\r\r  \tReferences: @ref@",
+        "percetange": 13.228346456692913,
         "#nodes": 168,
         "#methods": 103,
         "reducedInput": "",
@@ -18,8 +18,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 13.543307086614174,
         "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo 0[^ cool](http://pharo.org)\r\t\r   \t- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`& `Point class`, `Point>>#setX:setY:`, `#’Microdown-Tests’`\r\r  \tReferences: @ref@",
+        "percetange": 13.543307086614174,
         "#nodes": 172,
         "#methods": 103,
         "reducedInput": "",
@@ -27,8 +27,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 13.779527559055119,
         "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo 0[^ cool](nttp://pharo.org)\r\t\r   \t- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and pac&age: \r  \t`Point`\r `Point class`, `Point>>#setX:setY:`, `#’Microdown-Tests’`\r\r  \tReferences: @ref@",
+        "percetange": 13.779527559055119,
         "#nodes": 175,
         "#methods": 105,
         "reducedInput": "",
@@ -36,8 +36,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 13.858267716535433,
         "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo 0[^ cool](nttp://pharo.org)\r\t\r   \t- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to cyass, method and pac&age: \r  \t`Point`\r `Point class`, `PoinT>>#setX:setY:`, `#’Microdown-Tests’`\r\r( \tReferences: @ref@",
+        "percetange": 13.858267716535433,
         "#nodes": 176,
         "#methods": 105,
         "reducedInput": "",
@@ -45,8 +45,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 14.960629921259843,
         "input": "4.\raj:#w m:.\r\r\r   \repvRd\r~zj\\n~ \r\r\r\t\r [:wq/a  #cdrk ](Ucd/eC- c)>\r![ja>:R/](eb)\t> gdb\\cgrhfh#jhnueN/Lwlyn’eg\r  \r - qewqyqReFicw\r  \t\t\t###\rxib-\r  4. -kMz/y   rz>ox:baxm",
+        "percetange": 14.960629921259843,
         "#nodes": 190,
         "#methods": 114,
         "reducedInput": "",
@@ -54,8 +54,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 15.118110236220472,
         "input": "4.\raj:#w *m:.\r##\r\r   \repvRd\r~zj\\n~ \r\r\r\t\r [:wq/a  #cdrk ](Ucd/eC- c)>\r![ja>:R/]#(eb)\t> gdb\\cgrhfh#jhnueN/Lwlyn’eg\r  \r - qewqyqReFicw\r  \t\t\t###\rxib-\r  4. -kMz/y   rz>ox:baxm",
+        "percetange": 15.118110236220472,
         "#nodes": 192,
         "#methods": 115,
         "reducedInput": "",
@@ -63,8 +63,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 15.275590551181102,
         "input": "4.\raj:#w *m:.\r##\r\r+   \repvRd\r~zj\\n~ \r\r\r-\t\r [:wq/a  #cdrk ](Ucd/eC- c)>\r![ja>:R/]#(eb)\t> gdb\\cgrhfh#jyhnueN/Lwlyn’eg\r  \r - qewqyqReFicw\r  \t\t\t###\rxib-\r  4. -kMz/y   rz>ox:baxm",
+        "percetange": 15.275590551181102,
         "#nodes": 194,
         "#methods": 116,
         "reducedInput": "",
@@ -72,8 +72,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 16.53543307086614,
         "input": "1.\rupbf\\\r\t\r**:#\\ksbmlMb**[i>O](y.Z,pw)\r~~\\fpr~~ \r@UaKkap/’@@l:p@\r\r   \r `z`\t---\r|bxs|\r| ----------- |\r|chl./qk lg|\r\r\r\r>  >\\s Jzx.-bn txyqrvifn{#/>-vnK #od\\>gvw}:./ p/ww  ",
+        "percetange": 16.53543307086614,
         "#nodes": 210,
         "#methods": 129,
         "reducedInput": "",
@@ -81,8 +81,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 16.771653543307085,
         "input": "1.\rupbf\\\r\t\r**:#\\ksbmlMb**[lb.c](ampld x)\r~~\\fpr~~ \r@UaKkap/’@@l:p@\r\r   \r `z`\t---\r|bxs|\r| ----------- |\r|chl./qk lg|\r\r\r\r>  >\\s Jzx.-bn txyqrvifn{#/>-vnK #od\\>gvw}:./ p/ww  ",
+        "percetange": 16.771653543307085,
         "#nodes": 213,
         "#methods": 131,
         "reducedInput": "",
@@ -90,8 +90,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 16.929133858267715,
         "input": "1.\rupbf\\\r\t\r**:#\\ksbmlMb*2#*[lb.c](ampld x)\r~~\\fpr~~ \r@UaKkap/’@@l:p@\r\r   \r `z`\t---\r|bxs|\r| ----------- |\r|chl./qk lg|\r\r\r\r>  >\\s Jzx.-bn txyqrvifn{#/>-vnK #od\\>gvw-}:./ p/ww  ",
+        "percetange": 16.929133858267715,
         "#nodes": 215,
         "#methods": 131,
         "reducedInput": "",
@@ -99,8 +99,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 17.165354330708663,
         "input": "9.\rxor.rG\r**\\nhIezsbp**[G-zf ](xj> yl:/o )\r```\t\r \r\rb#u  \r\r\t```[^54]: s\\aw\r- k\\c/-d xy w,# jhot\t\r\r  >\r\\>>gogwmzciyiW\t\r\r~.kx/~\r--- \r > >d",
+        "percetange": 17.165354330708663,
         "#nodes": 218,
         "#methods": 138,
         "reducedInput": "",
@@ -108,8 +108,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 17.244094488188978,
         "input": "9.\rxor.rG\r**\\XnhIezsbp**[G-zf ](xj>) yl:/o )\r```\t\r \r2\rb#u  \r\r\t```[^54]: s\\aw\r- k\\c/-d xy w,# jhot\t\r\r  >\r\\>>gogwmzciyiW\t\r\r~.kx/~\r--- \r > >d",
+        "percetange": 17.244094488188978,
         "#nodes": 219,
         "#methods": 138,
         "reducedInput": "",
@@ -117,8 +117,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 17.559055118110237,
         "input": "9.\rqdx\\.\\\\\r**v.#\\> **[ \\/>/,-y](o>> --’y/: )```\t\t\r\t\r\r```- [ ]\r\\\\\\:\t- \\>\rB,>>-/ \t\r~~L.G/>t~~1.\r/ --h\t[^77]: :  l",
+        "percetange": 17.559055118110237,
         "#nodes": 223,
         "#methods": 140,
         "reducedInput": "",
@@ -126,8 +126,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 17.637795275590552,
         "input": "9.\rqdx\\.\\\\\r**v.#\\> **[ \\/)>/,-y](o>> --’y/: )```\t\t\r\t\r\r```- [ ]\r\\\\\\:\t- \\>\rB,>>j-/ \t\r~~DL.G/>t~~1.\r/ --h\t[^77]: :  l",
+        "percetange": 17.637795275590552,
         "#nodes": 224,
         "#methods": 140,
         "reducedInput": "",
@@ -135,8 +135,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 17.874015748031496,
         "input": "9.\rqdx\\.\\\\\r**v.#\\> [ ]**[^[ \\/)>/,-y](o>> --’y/: )```\t\t\r\t\r\r```- [ ]\r\\\\\\:\t- \\>\rB,>>#j-/ \t\r~~DL.G/>t~~1.\r/ --h\t[^77]: :  l",
+        "percetange": 17.874015748031496,
         "#nodes": 227,
         "#methods": 140,
         "reducedInput": "",
@@ -144,8 +144,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 18.11023622047244,
         "input": "9.\roy#t\\\\\r@:.i\\:u@[iojTp - w/trml>-cv](#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jrOZ)--- | xl’\\pmlp.d:lt b|h:ctlkhya.yg| k> |\r| ----------- |\r|b/ c’|\r[^07]: >>6. fura",
+        "percetange": 18.11023622047244,
         "#nodes": 230,
         "#methods": 143,
         "reducedInput": "",
@@ -153,8 +153,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 18.4251968503937,
         "input": "9.\roy#t\\\\\r@:.i\\:u@[iojTp - w/t/rml>-cv](#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)--- | xl’\\pmlp.d:lt b|h:ctlkhya~.yg| k> |\r| ----------- |\r|b/ c’|\r[^07]: >>6. fura",
+        "percetange": 18.4251968503937,
         "#nodes": 234,
         "#methods": 146,
         "reducedInput": "",
@@ -162,8 +162,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 18.503937007874015,
         "input": "9.\roy#t\\\\\r@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)--- | xl’\\pmlp.d:lt b|h:ctlkhya~.yg| k> |\r| ----------- |\r|b/ c’|\r[^0[^7]: >>6z. fura",
+        "percetange": 18.503937007874015,
         "#nodes": 235,
         "#methods": 146,
         "reducedInput": "",
@@ -171,8 +171,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 18.58267716535433,
         "input": "9.\roy#t\\\\\r@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)-\t-- | xl’\\pmlp.d:lt\r b|h:ctlkhya~.yg| k> |\r| ----------- |\r|b/ c’|\r[^0[^v7]: >>6z. fura",
+        "percetange": 18.58267716535433,
         "#nodes": 236,
         "#methods": 146,
         "reducedInput": "",
@@ -180,8 +180,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 18.58267716535433,
         "input": "9.\roy#t\\\\\r@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)-\t-- | xl’\\pmlp.d:)lt\r b|h:ctlkhya~.yg| k> |\r| -------~~---- |\r|b/ c’|\r[^0[^v7]: >>6z. fur7a",
+        "percetange": 18.58267716535433,
         "#nodes": 236,
         "#methods": 147,
         "reducedInput": "",
@@ -189,8 +189,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 18.661417322834644,
         "input": "9.\roy#t\\U\\\rt@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)-\t-- | xl’\\pmlp.d:)lt\r b|h:ctlkh7ya~.yg| k> |\r| -------~~---- |\r|b/ c’|\r[^0[^v7]: >>6z. fur7a",
+        "percetange": 18.661417322834644,
         "#nodes": 237,
         "#methods": 146,
         "reducedInput": "",
@@ -198,8 +198,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 19.055118110236222,
         "input": "9.\roy#t\\U\\\r=@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)-\t-- | xl’\\pmlp.d:)lt\r b|h:ctlkh7ya~.yg| k> |\r| -------~~---- |\r|b/ c’|\r[^0[^v7]: >>6z. fur7a",
+        "percetange": 19.055118110236222,
         "#nodes": 242,
         "#methods": 148,
         "reducedInput": "",
@@ -207,8 +207,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 19.291338582677167,
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)-\t-- | xl’\\pmlp.d:)lt\r b|h:ctlkh7y-~.yg| v> |\r| -------~~---- |\r|b/ c’|\r[^0[^v7]: >>6z. fur7a",
+        "percetange": 19.291338582677167,
         "#nodes": 245,
         "#methods": 149,
         "reducedInput": "",
@@ -216,8 +216,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 19.37007874015748,
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.j\r<OZ)-\t-- | xl’\\pmlp.d:)lt\r b|h:ctlkh7y-~.yg| v> |\r| -------~~---- |\r|b/ c’|\r[^0[^v7]: >>6zS fur7a",
+        "percetange": 19.37007874015748,
         "#nodes": 246,
         "#methods": 149,
         "reducedInput": "",
@@ -225,8 +225,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 19.448818897637796,
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/t/rml>-[^v](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.j\r<OZ)-\t-- | xl’\\pmlp.d:)lt\r b|h:ctlkh7y-~.yg| v> |\r| --’----~~---- |\r|b/ c’|\r[^0[^v7]: >>6zS fur7a",
+        "percetange": 19.448818897637796,
         "#nodes": 247,
         "#methods": 149,
         "reducedInput": "",
@@ -234,8 +234,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 19.606299212598426,
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/t/**ml>-[^v](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.j\r<OZ)-\t-- | xl’\\pmlp.d:)lt\r b|h**ctlkh7y-~.yg| v> |\r| --’----~~---- |\r\rb/ c’|\r[^0[^v7]: >>6zS fur7a",
+        "percetange": 19.606299212598426,
         "#nodes": 249,
         "#methods": 149,
         "reducedInput": "",
@@ -243,8 +243,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 19.68503937007874,
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t!,g](.j\r<OZ)0\t-- | xl’\\pmlp.d:)lt\r b|h**ctlkh7y-~.yg| v> |\r| --’----~~---- |\r\rb/ c’|\r[^0[^v7]: >>6zS fur7a",
+        "percetange": 19.68503937007874,
         "#nodes": 250,
         "#methods": 151,
         "reducedInput": "",
@@ -252,8 +252,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 19.763779527559056,
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /->nfq . t.ez| -----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t!,g](.j\r<OZ)0\t-- |```xl’\\pmlp.d:)lt\r b|h**ctlkh7y-~.yg| v> |\r| --’----~~---- |\r\rb/ c’|\r[^0[^v7]: >>6z4 fur7a",
+        "percetange": 19.763779527559056,
         "#nodes": 251,
         "#methods": 152,
         "reducedInput": "",
@@ -261,8 +261,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 19.921259842519685,
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /->nfq . t.ez| \r----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t!,g](.j\r<OZ)0\t-- |```xl’\\pmlp.d:)lt\r b`h**ctlkh7y-~.yg| v# |\r| --’----~~---- |\r\rb/ c’|\r[^0[^v7]: >>6z4 fur7a",
+        "percetange": 19.921259842519685,
         "#nodes": 253,
         "#methods": 152,
         "reducedInput": "",
@@ -270,8 +270,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 19.84251968503937,
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /->nfq . t.ez| \r----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t!,g](.j\r&OZ)0\t-- |```xl’\\pmlp.d:)lt\r b`h**ctlkh7y-~.yg| v# |\r| --’----~~-f-- |\r\rb/ c’|\r@^0[^v7]: >>6z4 fur7a",
+        "percetange": 19.84251968503937,
         "#nodes": 252,
         "#methods": 153,
         "reducedInput": "",
@@ -279,8 +279,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 20.0,
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /->nfq . twez| \r----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ)0\t-- |```xl’\\pmlp.1:)lt\r b`h**ctlkh7y-~.yg| v# |\r| --’----~~---- |\r\rb/ c’|\r[^0[^v7]: >>6z4 fur7a",
+        "percetange": 20.0,
         "#nodes": 254,
         "#methods": 152,
         "reducedInput": "",
@@ -288,8 +288,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 20.078740157480315,
         "input": "9.\r<y#t\\p\\\r=@:.i\\:u@[iojmp - w/tv**ml>-[^v](t#, /->nfq . twez| \r----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ)0\t-- |```xl’\\pmlp.1:)lt\r b`h**ctlkh7y-~.yg| v#\r|\r| --’----~~---- |\r\rb/ c’|\r[^0[^v7]: >>6z4 fur7a",
+        "percetange": 20.078740157480315,
         "#nodes": 255,
         "#methods": 152,
         "reducedInput": "",
@@ -297,8 +297,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 20.0,
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /2>nfq . t.ez| \r----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r###!,g](.j\r&OZ)0\t-- |```xl’\\pmlp.d:)lt\r b`h**ctlkh7y-~.yg| v# |\r| --’----~~-f-- |\r\rb/ c’|\r@^0[^v7]: >>6z4 fuQ7a",
+        "percetange": 20.0,
         "#nodes": 254,
         "#methods": 155,
         "reducedInput": "",
@@ -306,8 +306,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 20.31496062992126,
         "input": "9.\r<y#t\\p\\\r=@:.i\\:u4[iojmp - w/tv**ml>-[^v](t#, /->nfq . twez| \r-----%----gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ)0\t-- |```xl’\\pmlp.1:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --’----~~---- |\r\rb/ c’|\r[^0[^v7]: >>6z4 fur7a",
+        "percetange": 20.31496062992126,
         "#nodes": 258,
         "#methods": 155,
         "reducedInput": "",
@@ -315,8 +315,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 20.47244094488189,
         "input": "9.\r<y#t\\p\\\r=@:.i\\:u4[iojmp - w/tv**ml>-[^v](t#, /->nfq . tw\rz| \r-----%----gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ)0\t-- |```xl’\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --’----~~---- |\r\rb/ c’|\r)^0[^v7]: >>6z4 fur7a",
+        "percetange": 20.47244094488189,
         "#nodes": 260,
         "#methods": 155,
         "reducedInput": "",
@@ -324,8 +324,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 21.25984251968504,
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm! - w/tv**ml>-[^vY(t#, /->nfq . tw\rz| \r-----%----gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ)0\t-- |```xl’\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --’----~~---- |\r\rb/ c’|\r)^0[^v7]: >>6z4 fur7a",
+        "percetange": 21.25984251968504,
         "#nodes": 270,
         "#methods": 169,
         "reducedInput": "",
@@ -333,8 +333,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 21.496062992125985,
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm! - w/tv**mK>-[^vY(t#, /->nfq . tw\rz| \r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ#0\t-- |```xl’\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --’----~~---- |\r\rb/ c’|\r)^0[^v7]: >>6z4 fur7a",
+        "percetange": 21.496062992125985,
         "#nodes": 273,
         "#methods": 168,
         "reducedInput": "",
@@ -342,8 +342,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 21.496062992125985,
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm! - w/tv**mK>-[^vY(t#, /->nfq . tw\rz| \r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ#0\t-- |```xl(\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --’----~~---- |\r#b/ c’|\r)^0[^v7]: >>6z4 fu<7a",
+        "percetange": 21.496062992125985,
         "#nodes": 273,
         "#methods": 170,
         "reducedInput": "",
@@ -351,8 +351,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 21.653543307086615,
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/tv**mK>-[^vY(t#, /->nfq . tw\rz|\r\r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ#0\t-- |```xl(\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --’----~~---- |\r#b/ c’|\r)^0[^v7]: >>6z- fu<7a",
+        "percetange": 21.653543307086615,
         "#nodes": 275,
         "#methods": 170,
         "reducedInput": "",
@@ -360,8 +360,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 21.181102362204726,
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/tv**mK>-[^vY(t#, /->nfq . tw\rz|\r\r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j)<OZ#0\t-- |```xl(’pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --’----~~---- |\r#b/ c’|\r)^0[^v7]: >>6z- fu**7a",
+        "percetange": 21.181102362204726,
         "#nodes": 269,
         "#methods": 171,
         "reducedInput": "",
@@ -369,8 +369,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 21.41732283464567,
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/tv**mK>-[^vY(t#, /->nfq . tw\rz|\r\r-----%--m-gxf(l)\r```\t&\t\r \r```@\\V@f\r\t![^g](.j)<xZ#0\t-- |```xl(’pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --’----~~---- |\r#b/ c’|\r)!0[^v7]: >>6z- fu**7a",
+        "percetange": 21.41732283464567,
         "#nodes": 272,
         "#methods": 172,
         "reducedInput": "",
@@ -378,8 +378,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 21.88976377952756,
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/tv**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@>\r\t![^g](.j\r<OZ#0\t-- |```xl(\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --’----~~---- |\r#b/ c’|\r)^```[^v7]: >>6z- fu<7a",
+        "percetange": 21.88976377952756,
         "#nodes": 278,
         "#methods": 173,
         "reducedInput": "",
@@ -387,8 +387,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 21.968503937007874,
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/,v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@>\r\t![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v%\r|\r| --’----~~---- |\r#b/ c’|\r)^```[^v7]: >>6z- fu<7a",
+        "percetange": 21.968503937007874,
         "#nodes": 279,
         "#methods": 173,
         "reducedInput": "",
@@ -396,8 +396,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 22.04724409448819,
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/,v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gx[ ](l)\r```\t\t\t\r \r```@\\V@>\r\t![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%\r|\r| --’----q~---- |\r#b/ c’|\r)^```[^v7]: >>6z- fu<7a",
+        "percetange": 22.04724409448819,
         "#nodes": 280,
         "#methods": 173,
         "reducedInput": "",
@@ -405,8 +405,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 22.125984251968504,
         "input": "9.\r<!#t\\)\\\r=@:.i\\:u4[iojm!a- w/,v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gx[ ](l)\r```\t\t\t\r \r```@\\V@>\r\t![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%\r- \r| --’----q~---- |\r#b/ c’|\r)^```]^v7]: >>6z- fu<7a",
+        "percetange": 22.125984251968504,
         "#nodes": 281,
         "#methods": 174,
         "reducedInput": "",
@@ -414,8 +414,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 22.20472440944882,
         "input": "9.\r<!#t\\)\\\r=@:VZ\\:u4[iojm!a- w/,v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gx[ ](l)\r```\t\t\t\r \r```@\\V@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%\r- \r| --’----q~---- |\r#b/ c’|\r)^```]^v7]: >>6z- fu<7a",
+        "percetange": 22.20472440944882,
         "#nodes": 282,
         "#methods": 174,
         "reducedInput": "",
@@ -423,8 +423,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 22.283464566929133,
         "input": "9.\r<!#t\\)\\\r=@:VZ\\:u4[iojm!a- w/,v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gx[ ](/)\r```\t\t\t\r \r```@\\V@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%**- \r| --’----q~---- |\r#b/ c’|\ra^```]^v7]: >>6z- fu<7a",
+        "percetange": 22.283464566929133,
         "#nodes": 283,
         "#methods": 175,
         "reducedInput": "",
@@ -432,8 +432,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 22.519685039370078,
         "input": "9.\r<!#t\\)\\\r=@:VZ\\:u4[iojm!a- w/1v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gx[ ](/)\r```\t\r\t\r \r```@\\V@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%**- \r| --’----qj---- |\r#b/ c’|\ra^```]^v7]: >>6z- fu<7a",
+        "percetange": 22.519685039370078,
         "#nodes": 286,
         "#methods": 175,
         "reducedInput": "",
@@ -441,8 +441,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 22.677165354330707,
         "input": "9.\r<!#t\\)\\\r=@:VZ\\:u4[iojm!aj w/1v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-[---%--m-gx[ ](/)\r```\t\r\t\r \r```@\\V@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%*\r- \r| --’----qj---- |\r#b/ c’|\ra^```]^v7]: >>6z- fu<7a",
+        "percetange": 22.677165354330707,
         "#nodes": 288,
         "#methods": 176,
         "reducedInput": "",
@@ -450,8 +450,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 22.834645669291337,
         "input": "9.\r<!#t\\)\\\r=@:VZ\\(u4[iojm!aj w/1v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-[---%--m-gx, ](/)\r```\t\r\t\r \r```@\\V@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%*\r- \r| --’----q9---- |\r#b/ c’|\ra^```]^v7]: >>6z- fu<7a",
+        "percetange": 22.834645669291337,
         "#nodes": 290,
         "#methods": 176,
         "reducedInput": "",
@@ -459,8 +459,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 22.913385826771652,
         "input": "9.\r<!#t\\)\\\r=@:VZ\\(u4[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[---%--m-gx, ](/)\r```\t\r\t\r \r```@\\\r@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.yg| v%*\r- \r| --’----q9---- |\r#b/ c’|\ra^```]^v7]: >>6z- fu<7a",
+        "percetange": 22.913385826771652,
         "#nodes": 291,
         "#methods": 177,
         "reducedInput": "",
@@ -468,8 +468,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 22.992125984251967,
         "input": "9.\r<!#t\\)\\\r=@:VZ\\(u4[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[-}-%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[^![^g](.j\r<OZ#0\t-- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.yg| v%*\r- \r| --’----q9---- |\r#b/ c’|\ra^```]^v7]: >>6z- fu<7a",
+        "percetange": 22.992125984251967,
         "#nodes": 292,
         "#methods": 177,
         "reducedInput": "",
@@ -477,8 +477,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.070866141732285,
         "input": "9.\r<!#t\\)\\\r=@:VZ\\(u4[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[-}-%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\t-- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --’----q9----\r|\r#b/ c’|\ra^```]^v7]: >>6z- fu<7a",
+        "percetange": 23.070866141732285,
         "#nodes": 293,
         "#methods": 177,
         "reducedInput": "",
@@ -486,8 +486,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.1496062992126,
         "input": "9.\r<!%t\\)\\\r=@:VZ\\(u4[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[2}-%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --’----q9----\r|\r#b/ c’|\ra^```]^v7]: >>6z- fu<7a",
+        "percetange": 23.1496062992126,
         "#nodes": 294,
         "#methods": 177,
         "reducedInput": "",
@@ -495,8 +495,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.1496062992126,
         "input": "9.\r<!%t\\)\\\r=@:VZ\\(uL[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --’---&q9----\r|\r#b/ c’|\ra^```]^v7]: >>6z- fu<7a",
+        "percetange": 23.1496062992126,
         "#nodes": 294,
         "#methods": 178,
         "reducedInput": "",
@@ -504,8 +504,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.228346456692915,
         "input": "9.\r<!%t\\)\\\r=@:VZ\\(uL[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --’---&q9-%--\r{#\r#b/ c’|\ra^```]^v7]: >>68- fu<7a",
+        "percetange": 23.228346456692915,
         "#nodes": 295,
         "#methods": 178,
         "reducedInput": "",
@@ -513,8 +513,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.30708661417323,
         "input": "9.\r<!%t\\)\\\r=&:VZ\\(uL[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . **k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --’---&q9-%--\r{#\r#b/ c’|\ra^```]^v7]: >>68- fu<7a",
+        "percetange": 23.30708661417323,
         "#nodes": 296,
         "#methods": 179,
         "reducedInput": "",
@@ -522,8 +522,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 22.834645669291337,
         "input": "9.\r<!%O\\)\\\r=&:VZ\\(uL[iojm!aj w/1v**mK>-h^!Y(t#, /->nfq . **k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\tU- |```xE%\\pmlp..`?:mlt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --’---&q9-%--\r{#\r#b/ c’|\ra^```]^v7]: >>68- fu<7a",
+        "percetange": 22.834645669291337,
         "#nodes": 290,
         "#methods": 180,
         "reducedInput": "",
@@ -531,8 +531,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.228346456692915,
         "input": "9.\r<!%t\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#, /->nfq . **k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<)Z#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --’---&q9-%-t\r{#\r#b/ c’|\ra^```]^v7]: >>68- fu<7a",
+        "percetange": 23.228346456692915,
         "#nodes": 295,
         "#methods": 181,
         "reducedInput": "",
@@ -540,8 +540,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.30708661417323,
         "input": "9.\r<!%t\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](.j\r<)Z#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --’---&q9-%-t\r{#\r#b/ c’|\ra^```]^v7]: >>68- fu<7a",
+        "percetange": 23.30708661417323,
         "#nodes": 296,
         "#methods": 182,
         "reducedInput": "",
@@ -549,8 +549,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.543307086614174,
         "input": "9.\r<!%|\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](.j\r<)Z#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --’---&q9-%-t\r{#\r#b/ c’|\ra^```]^ve]: >>68- .u<7a",
+        "percetange": 23.543307086614174,
         "#nodes": 299,
         "#methods": 183,
         "reducedInput": "",
@@ -558,8 +558,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.62204724409449,
         "input": "9.\r<!%|\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](]: j\r<)Z#0\tU- |```xE%\\pml&..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --’---&q9-%-t\r{#\r#b/ c’|\ra^```]^ve]: >>68K .u<7a",
+        "percetange": 23.62204724409449,
         "#nodes": 300,
         "#methods": 183,
         "reducedInput": "",
@@ -567,8 +567,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.700787401574804,
         "input": "9.\r<!%|\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\r@|\r\rV[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](]: j\r<)Z#0\tU- |```xE%\\pml&..`?:)lt\r%b`S**ctlkh7y-~.y0| v%*\r- \r| --’---&q9-%-t\r{#\r#b/ c’|\ra^```]^ve]: >>68K .u<7a",
+        "percetange": 23.700787401574804,
         "#nodes": 301,
         "#methods": 184,
         "reducedInput": "",
@@ -576,8 +576,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.77952755905512,
         "input": "9.\r<!%|\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\r@|\r\rV[2}[%--m-=v, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](]: j\r<)Z#0\tU- |```xE%\\pml&..`?])lt\r%b`S**ctlkh7y-~.y0| \r%*\r- \r| --’---&q9-%-t\r{#\r#b/ c’|\ra^```]^ve]: >>68K .u<7a",
+        "percetange": 23.77952755905512,
         "#nodes": 302,
         "#methods": 184,
         "reducedInput": "",
@@ -585,8 +585,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.77952755905512,
         "input": "9.\r<!%|\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\r@|\r\rV[2}[%--m-=v, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](]: j\r<)Z#0\tU- |```xE%\\pml&..`?])lt\r%b`S**ctlkh7yO~.y0| \r%*\r> \r| --’---&q9-%-t\r{#\r#b/ c’|\ra^```m^ve]: >>68K .u<7a",
+        "percetange": 23.77952755905512,
         "#nodes": 302,
         "#methods": 185,
         "reducedInput": "",
@@ -594,8 +594,8 @@
         "%inputReduction": 0
     },
     {
-        "percetange": 23.858267716535433,
         "input": "9.\r<!%|0)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^| -----------Y(t#,!/->nfq . *:k\r@|\r\rV[2}[%--m-=v, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](]: j\r<)Z#0\tU- |```xE%\\pml&..`?])lt\r%b`S**ctlkh7yO~.y0| \r- *\r> \r| --’---&q9-%-t\r{#\r#b/ c’|\ra^```m^ve]: >>68K .u<7a",
+        "percetange": 23.858267716535433,
         "#nodes": 303,
         "#methods": 186,
         "reducedInput": "",
