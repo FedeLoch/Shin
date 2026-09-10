@@ -18,7 +18,8 @@
         "RxMatcher>>#currentState": 2,
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 295142
     },
     {
         "input": "b+||",
@@ -39,7 +40,8 @@
         "RxMatcher>>#currentState": 2,
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 225796
     },
     {
         "input": "c?|b+c+|",
@@ -60,7 +62,8 @@
         "RxMatcher>>#currentState": 2,
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 249841
     },
     {
         "input": "a+c?c",
@@ -80,7 +83,8 @@
         "RxmMarker>>#matchAgainst:": 1,
         "RxMatcher>>#currentState": 2,
         "RxMatcher>>#atEnd": 2,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 266969
     },
     {
         "input": "|((a*a.+))b*c*||",
@@ -101,7 +105,8 @@
         "RxMatcher>>#currentState": 3,
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 80879
     },
     {
         "input": "(|)c*.?||",
@@ -122,7 +127,8 @@
         "RxMatcher>>#currentState": 3,
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 82885
     },
     {
         "input": "b+bc+",
@@ -141,7 +147,8 @@
         "RxmMarker>>#matchAgainst:": 1,
         "RxMatcher>>#currentState": 2,
         "RxMatcher>>#atEnd": 2,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 218243
     },
     {
         "input": "().+a?b|.*a+b*|b|",
@@ -163,7 +170,8 @@
         "RxMatcher>>#currentState": 4,
         "RxMatcher>>#atEnd": 3,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 49094
     },
     {
         "input": "|||c*||b+.a?|c*",
@@ -184,7 +192,8 @@
         "RxMatcher>>#currentState": 3,
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 113467
     },
     {
         "input": "||||",
@@ -202,7 +211,8 @@
         "RxMatcher>>#matchesStreamPrefix:": 1,
         "RxmMarker>>#matchAgainst:": 2,
         "RxmBranch>>#matchAgainst:": 2,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 168910
     },
     {
         "input": "bb+b+bc+",
@@ -221,7 +231,8 @@
         "RxmMarker>>#matchAgainst:": 1,
         "RxMatcher>>#currentState": 3,
         "RxMatcher>>#atEnd": 3,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 115114
     },
     {
         "input": "().+a.+a?b|.*a+b*|b|",
@@ -243,7 +254,8 @@
         "RxMatcher>>#currentState": 5,
         "RxMatcher>>#atEnd": 4,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 21794
     },
     {
         "input": "().b+a...+a?b|.*a+b*|b|",
@@ -265,7 +277,8 @@
         "RxMatcher>>#currentState": 5,
         "RxMatcher>>#atEnd": 4,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 16799
     },
     {
         "input": "ba.+a?.*.*c.+a",
@@ -287,7 +300,8 @@
         "RxMatcher>>#currentState": 5,
         "RxMatcher>>#atEnd": 4,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 28054
     },
     {
         "input": "().b+a...+a?b|.*.+b*|b|",
@@ -309,7 +323,8 @@
         "RxMatcher>>#currentState": 5,
         "RxMatcher>>#atEnd": 5,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 10017
     },
     {
         "input": "(.).b+a...+a.?b|.*.+b*|bb|",
@@ -331,7 +346,8 @@
         "RxMatcher>>#currentState": 6,
         "RxMatcher>>#atEnd": 5,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 6905
     },
     {
         "input": "a*(..+b+.?b)..+b|(.(.+)+a+.?b?)|b.?b|b*b|",
@@ -353,7 +369,8 @@
         "RxMatcher>>#currentState": 7,
         "RxMatcher>>#atEnd": 6,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 1760
     },
     {
         "input": "a*(c..+b+.?b)..+b|(.(.+)+a+.?b?c)|b.?b|.b*b|",
@@ -375,7 +392,8 @@
         "RxMatcher>>#currentState": 7,
         "RxMatcher>>#atEnd": 6,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 1015
     },
     {
         "input": "().b+a...+a?b|.*.+b*|(.+)+.+.?.?|",
@@ -397,7 +415,8 @@
         "RxMatcher>>#currentState": 8,
         "RxMatcher>>#atEnd": 7,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 748
     },
     {
         "input": "(c).b+a...+a?b|.*.+b*c|(.+)+.+.?.?.|",
@@ -419,7 +438,8 @@
         "RxMatcher>>#currentState": 8,
         "RxMatcher>>#atEnd": 8,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 364
     },
     {
         "input": "().b+a...+a?b|.*.+c*|(.+a?)+.+.?.?|",
@@ -441,7 +461,8 @@
         "RxMatcher>>#currentState": 8,
         "RxMatcher>>#atEnd": 8,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 348
     },
     {
         "input": "(.c).b+a....+a?b|.a*.+b*c|(.+)+.+.?.?.|",
@@ -463,7 +484,8 @@
         "RxMatcher>>#currentState": 10,
         "RxMatcher>>#atEnd": 9,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 93
     },
     {
         "input": "(c).b+(c+(.+)?b?.?)+bcb*.|.*.+b*c|(.+)+.+.?.?.|",
@@ -485,7 +507,8 @@
         "RxMatcher>>#currentState": 8,
         "RxMatcher>>#atEnd": 7,
         "RxmSubstring>>#matchAgainst:": 3,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 414
     },
     {
         "input": "()c.b+a..a.+a?b|.*.+c*|(.+a?)+.+.?c.?|",
@@ -507,7 +530,8 @@
         "RxMatcher>>#currentState": 10,
         "RxMatcher>>#atEnd": 9,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 74
     },
     {
         "input": "()c.b+(a..a.+a?b|.*.).+c*|(.+a?)+.+.?c.?|",
@@ -529,7 +553,8 @@
         "RxMatcher>>#currentState": 11,
         "RxMatcher>>#atEnd": 10,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 25
     },
     {
         "input": "(.+a?a+|a?b)c.b+(a..a.+a?b|.*.).+c*|(.+a?)+.+.?c.?|",
@@ -551,7 +576,8 @@
         "RxMatcher>>#currentState": 12,
         "RxMatcher>>#atEnd": 12,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 5
     },
     {
         "input": "(.c).b+a....+a?b||b?(aa*.*|.*.)(.*..?a+a?b|.*..+a+a?)+a?a||(.*.)+a*a?|a?c*|a?",
@@ -573,7 +599,8 @@
         "RxMatcher>>#currentState": 11,
         "RxMatcher>>#atEnd": 10,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 22
     },
     {
         "input": "()c.b+(a..a.+a?b|.*.).+cc*|(.+a?)+.+.?cc.?|",
@@ -595,7 +622,8 @@
         "RxMatcher>>#currentState": 12,
         "RxMatcher>>#atEnd": 11,
         "RxmSubstring>>#matchAgainst:": 9,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 11
     },
     {
         "input": "(.?b)c.b+(a..a.+a?b|.*.).+cc*|(.+a?)+.+.?cc.?|a*",
@@ -617,7 +645,8 @@
         "RxMatcher>>#currentState": 12,
         "RxMatcher>>#atEnd": 12,
         "RxmSubstring>>#matchAgainst:": 10,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 6
     },
     {
         "input": "(.+a?a+|a?b)c.b+(a...a.+a?b|..*.).+c*|(.+a?)+.+.?.c.?|",
@@ -639,7 +668,8 @@
         "RxMatcher>>#currentState": 13,
         "RxMatcher>>#atEnd": 13,
         "RxmSubstring>>#matchAgainst:": 1,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 2
     },
     {
         "input": "(.?b)c.b+(a?a...a+a?a+c+|a|aa*.).+cc*|(.+a?)+.+.?cc.?|a*",
@@ -661,7 +691,8 @@
         "RxMatcher>>#currentState": 13,
         "RxMatcher>>#atEnd": 13,
         "RxmSubstring>>#matchAgainst:": 11,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 2
     },
     {
         "input": "(.?b)c.b+(ab..a.+a?b|.*.)..+cc*|(.+a?)+.+.a?cc.?|a*",
@@ -683,7 +714,8 @@
         "RxMatcher>>#currentState": 14,
         "RxMatcher>>#atEnd": 13,
         "RxmSubstring>>#matchAgainst:": 10,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 1
     },
     {
         "input": "()c.b+(a..a.+a?b|.*.).+cc*c|(.+a?)+.+.?cc.?|",
@@ -705,7 +737,8 @@
         "RxMatcher>>#currentState": 12,
         "RxMatcher>>#atEnd": 12,
         "RxmSubstring>>#matchAgainst:": 10,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 5
     },
     {
         "input": "(b+)c.b+(a..a.+a?b|.*.).+cc*c|(.+a?)+.+.?cc.?|",
@@ -727,7 +760,8 @@
         "RxMatcher>>#currentState": 13,
         "RxMatcher>>#atEnd": 12,
         "RxmSubstring>>#matchAgainst:": 11,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 2
     },
     {
         "input": "(.?b.)c.b+c(ab..+a.+a?b|.*.)..+cc*|(.+a?)+.+.a?cc.?|a*",
@@ -749,7 +783,8 @@
         "RxMatcher>>#currentState": 15,
         "RxMatcher>>#atEnd": 15,
         "RxmSubstring>>#matchAgainst:": 12,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 0.25
     },
     {
         "input": "(.?b)c.b+(a..a.+aa?b|.*.).+cc.*|(.+a?)+.+.?cc.?|ba*",
@@ -771,7 +806,8 @@
         "RxMatcher>>#currentState": 14,
         "RxMatcher>>#atEnd": 13,
         "RxmSubstring>>#matchAgainst:": 12,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 1
     },
     {
         "input": "(.?b)c.b+(a..a.+aa?b|.*.).+cc..*|(.+a?)+.+.?c*cc.?|ba*",
@@ -793,7 +829,8 @@
         "RxMatcher>>#currentState": 15,
         "RxMatcher>>#atEnd": 14,
         "RxmSubstring>>#matchAgainst:": 13,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 0.4
     },
     {
         "input": "(.?b)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?)+.+.?c*c?c..?|ba*",
@@ -815,7 +852,8 @@
         "RxMatcher>>#currentState": 16,
         "RxMatcher>>#atEnd": 15,
         "RxmSubstring>>#matchAgainst:": 4,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 0.14
     },
     {
         "input": "(b+a+)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?)+.+.?c*c?c..?|ba*",
@@ -837,7 +875,8 @@
         "RxMatcher>>#currentState": 17,
         "RxMatcher>>#atEnd": 16,
         "RxmSubstring>>#matchAgainst:": 4,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 0.06
     },
     {
         "input": "(b+a+)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?a?)+.+.?c*c?c..?|ba*",
@@ -859,6 +898,7 @@
         "RxMatcher>>#currentState": 19,
         "RxMatcher>>#atEnd": 18,
         "RxmSubstring>>#matchAgainst:": 4,
-        "threshold": 0.9
+        "threshold": 0.9,
+        "executionsPerSecond": 0.01
     }
 ]

@@ -1,5 +1,6 @@
 [
     {
+        "executionsPerSecond": 225,
         "RSPolygon>>#extent:": 1,
         "RSAbstractGridLayout>>#lineItemsCountBlock": 1,
         "RSLineBuilder>>#canvasNodes": 2,
@@ -262,6 +263,7 @@
         "RSCornerRadius>>#radius:": 1
     },
     {
+        "executionsPerSecond": 242,
         "RSTextExtents>>#width": 4,
         "RSBoundingShape>>#accept:": 1,
         "RSBoundingShape>>#matrix:": 3,
@@ -541,6 +543,7 @@
         "RSAbstractRegularTreeLayout>>#doPost:": 1
     },
     {
+        "executionsPerSecond": 285,
         "Point class>>#r:theta:": 1,
         "RSAbstractLine>>#privateMarkers:": 1,
         "RSLineBuilder>>#shape:": 1,
@@ -797,6 +800,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 343,
         "RSPolygon>>#extent:": 1,
         "RSLineBuilder>>#canvasNodes": 1,
         "RSLineBuilder class>>#arrowedDirectedBezier": 1,
@@ -1072,6 +1076,7 @@
         "RSCornerRadius>>#radius:": 1
     },
     {
+        "executionsPerSecond": 337,
         "Point class>>#r:theta:": 1,
         "RSAbstractLine>>#privateMarkers:": 1,
         "RSLineBuilder>>#shape:": 1,
@@ -1328,6 +1333,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 351,
         "RSCellLayout>>#initialize": 1,
         "RSAbstractLine>>#privateMarkers:": 1,
         "RSLineBuilder>>#shape:": 1,
@@ -1582,6 +1588,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 287,
         "RSTextExtents>>#width": 3,
         "RSBoundingShape>>#accept:": 2,
         "RSBoundingShape>>#matrix:": 3,
@@ -1867,6 +1874,7 @@
         "RSAbstractLine>>#from": 4
     },
     {
+        "executionsPerSecond": 219,
         "RSPolygon>>#extent:": 1,
         "RSLineBuilder>>#canvasNodes": 2,
         "RSLineBuilder class>>#arrowedDirectedBezier": 1,
@@ -2131,6 +2139,7 @@
         "RSCornerRadius>>#radius:": 1
     },
     {
+        "executionsPerSecond": 228,
         "RSTextExtents>>#width": 3,
         "RSBoundingShape>>#accept:": 2,
         "RSAbstractGraphLayout>>#childrenWithHighestNestingLevelFor:except:": 1,
@@ -2411,6 +2420,7 @@
         "RSAbstractRegularTreeLayout>>#doPost:": 1
     },
     {
+        "executionsPerSecond": 238,
         "RSTextExtents>>#width": 3,
         "RSSugiyamaLayout>>#cl:u:v:": 1,
         "RSBoundingShape>>#accept:": 2,
@@ -2690,6 +2700,7 @@
         "RSAbstractLine>>#from": 5
     },
     {
+        "executionsPerSecond": 336,
         "RSAbstractLine>>#privateMarkers:": 1,
         "RSConditionalLayout>>#clusterLayout:": 1,
         "RSLineBuilder>>#shape:": 1,
@@ -2938,6 +2949,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 329,
         "RSAbstractLine>>#privateMarkers:": 1,
         "RSLineBuilder>>#shape:": 1,
         "RSLabel>>#hasText": 4,
@@ -3190,6 +3202,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 128,
         "RSPolygon>>#extent:": 1,
         "RSLineBuilder>>#canvasNodes": 2,
         "RSLineBuilder class>>#arrowedDirectedBezier": 1,
@@ -3466,6 +3479,7 @@
         "RSCornerRadius>>#radius:": 1
     },
     {
+        "executionsPerSecond": 321,
         "RSAbstractLine>>#privateMarkers:": 2,
         "RSConditionalLayout>>#clusterLayout:": 1,
         "RSLineBuilder>>#shape:": 1,
@@ -3713,6 +3727,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 284,
         "RSAbstractLine>>#privateMarkers:": 2,
         "RSLineBuilder>>#shape:": 1,
         "RSEllipse>>#geometry": 3,
@@ -3956,6 +3971,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 255,
         "RSRectanglePackLayout>>#doNotUseProgressBar": 1,
         "RSAbstractLine>>#privateMarkers:": 2,
         "RSLineBuilder>>#shape:": 1,
@@ -4209,6 +4225,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 276,
         "RSAbstractLine>>#privateMarkers:": 2,
         "RSLineBuilder>>#shape:": 1,
         "RSLabel>>#hasText": 4,
@@ -4463,6 +4480,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 242,
         "Point class>>#r:theta:": 2,
         "RSEquidistantCircleLayout>>#computeSeparationFor:": 1,
         "RSAbstractLine>>#privateMarkers:": 2,
@@ -4723,6 +4741,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 30,
         "RSTextExtents>>#width": 3,
         "RSBoundingShape>>#accept:": 2,
         "RSBoundingShape>>#matrix:": 3,
@@ -5013,6 +5032,7 @@
         "RSAbstractLine>>#from": 4
     },
     {
+        "executionsPerSecond": 323,
         "RSPolygon>>#extent:": 1,
         "RSLineBuilder>>#canvasNodes": 1,
         "RSLineBuilder class>>#arrowedDirectedBezier": 1,
@@ -5284,6 +5304,7 @@
         "RSCornerRadius>>#radius:": 1
     },
     {
+        "executionsPerSecond": 326,
         "RSAbstractLine>>#privateMarkers:": 1,
         "RSLineBuilder>>#shape:": 1,
         "RSLabel>>#hasText": 4,
@@ -5540,6 +5561,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 61,
         "RSTextExtents>>#width": 3,
         "RSBoundingShape>>#accept:": 2,
         "RSBoundingShape>>#matrix:": 3,
@@ -5826,6 +5848,7 @@
         "RSAbstractLine>>#from": 4
     },
     {
+        "executionsPerSecond": 24,
         "RSTextExtents>>#width": 3,
         "RSBoundingShape>>#accept:": 3,
         "RSBoundingShape>>#matrix:": 3,
@@ -6117,6 +6140,7 @@
         "RSAbstractLine>>#from": 5
     },
     {
+        "executionsPerSecond": 205,
         "RSAbstractLine>>#privateMarkers:": 2,
         "RSConditionalLayout>>#clusterLayout:": 1,
         "RSLineBuilder>>#shape:": 1,
@@ -6363,6 +6387,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 222,
         "RSRectanglePackLayout>>#doNotUseProgressBar": 1,
         "RSAbstractLine>>#privateMarkers:": 2,
         "RSLineBuilder>>#shape:": 1,
@@ -6617,6 +6642,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 132,
         "RSPolygon>>#extent:": 1,
         "RSLineBuilder>>#canvasNodes": 3,
         "RSLineBuilder class>>#arrowedDirectedBezier": 1,
@@ -6887,6 +6913,7 @@
         "RSCornerRadius>>#radius:": 1
     },
     {
+        "executionsPerSecond": 340,
         "RSAbstractLine>>#privateMarkers:": 1,
         "RSLineBuilder>>#shape:": 1,
         "RSEllipse>>#geometry": 2,
@@ -7140,6 +7167,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 383,
         "RSAbstractLine>>#privateMarkers:": 1,
         "RSLineBuilder>>#shape:": 1,
         "RSLabel>>#hasText": 4,
@@ -7387,6 +7415,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 300,
         "RSAbstractLine>>#privateMarkers:": 1,
         "RSLineBuilder>>#shape:": 1,
         "RSLabel>>#hasText": 4,
@@ -7638,6 +7667,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 200,
         "RSTextExtents>>#width": 3,
         "RSBoundingShape>>#accept:": 3,
         "RSBoundingShape>>#matrix:": 3,
@@ -7915,6 +7945,7 @@
         "RSAbstractRegularTreeLayout>>#doPost:": 1
     },
     {
+        "executionsPerSecond": 302,
         "RSAbstractLine>>#privateMarkers:": 2,
         "RSLineBuilder>>#shape:": 1,
         "RSLabel>>#hasText": 4,
@@ -8162,6 +8193,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 29,
         "RSTextExtents>>#width": 3,
         "RSBoundingShape>>#accept:": 2,
         "RSBoundingShape>>#matrix:": 3,
@@ -8455,6 +8487,7 @@
         "RSAbstractLine>>#from": 4
     },
     {
+        "executionsPerSecond": 219,
         "RSPolygon>>#extent:": 1,
         "RSLineBuilder>>#canvasNodes": 1,
         "RSLineBuilder class>>#arrowedDirectedBezier": 1,
@@ -8724,6 +8757,7 @@
         "RSCornerRadius>>#radius:": 1
     },
     {
+        "executionsPerSecond": 294,
         "RSTextExtents>>#width": 3,
         "RSBoundingShape>>#accept:": 2,
         "RSAbstractGraphLayout>>#childrenWithHighestNestingLevelFor:except:": 1,
@@ -9006,6 +9040,7 @@
         "RSAbstractRegularTreeLayout>>#doPost:": 1
     },
     {
+        "executionsPerSecond": 132,
         "Point class>>#r:theta:": 3,
         "RSAbstractLine>>#privateMarkers:": 3,
         "RSLineBuilder>>#shape:": 1,
@@ -9263,6 +9298,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 314,
         "RSPolygon>>#extent:": 2,
         "RSLineBuilder>>#canvasNodes": 1,
         "RSLineBuilder class>>#arrowedDirectedBezier": 1,
@@ -9537,6 +9573,7 @@
         "RSCornerRadius>>#radius:": 1
     },
     {
+        "executionsPerSecond": 29,
         "Point class>>#r:theta:": 5,
         "RSAbstractLine>>#privateMarkers:": 5,
         "RSLineBuilder>>#shape:": 1,
@@ -9794,6 +9831,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 155,
         "RSTextExtents>>#width": 4,
         "RSBoundingShape>>#accept:": 2,
         "RSBoundingShape>>#matrix:": 3,
@@ -10073,6 +10111,7 @@
         "RSAbstractRegularTreeLayout>>#doPost:": 1
     },
     {
+        "executionsPerSecond": 29,
         "Point class>>#r:theta:": 5,
         "RSAbstractLine>>#privateMarkers:": 5,
         "RSLineBuilder>>#shape:": 1,
@@ -10330,6 +10369,7 @@
         "RSBox>>#buildPathOn:": 1
     },
     {
+        "executionsPerSecond": 17,
         "RSTextExtents>>#width": 3,
         "RSBoundingShape>>#accept:": 3,
         "RSBoundingShape>>#matrix:": 4,
@@ -10621,6 +10661,7 @@
         "RSAbstractLine>>#from": 6
     },
     {
+        "executionsPerSecond": 16,
         "RSTextExtents>>#width": 3,
         "RSBoundingShape>>#accept:": 3,
         "RSBoundingShape>>#matrix:": 4,
@@ -10912,6 +10953,7 @@
         "RSAbstractLine>>#from": 6
     },
     {
+        "executionsPerSecond": 16,
         "RSTextExtents>>#width": 3,
         "RSBoundingShape>>#accept:": 3,
         "RSBoundingShape>>#matrix:": 4,
@@ -11469,7 +11511,8 @@
         "RSBoundingShape>>#extent:": 4,
         "RSBoundingShape>>#incomingNodes": 3,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 167
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -11738,7 +11781,8 @@
         "RSBoundingShape>>#extent:": 5,
         "RSBoundingShape>>#incomingNodes": 4,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 95
     },
     {
         "Point class>>#r:theta:": 5,
@@ -11995,7 +12039,8 @@
         "input": "RSWeightedCircleLayout\rRSLabel\r154->803 . 251->070 . 458->084 . 140->866 . 504->632 . 904->482 . 179->497 . 744->679 . 631->870 . 570->764 . 472->029 . 685->158 . 805->275 . 663->833 . 568->611 . 684->821 . 939->728 . 635->776 . 969->037 . 304->393 . 429->909 . 484->112 . 261->139 . 853->232 . 692->497 . 775->530 . 863->064 . 384->845 . 489->779 . 953->010 . 628->212 . 988->056 . 095->325 . 307->937 . 310->508 . 969->729 . 198->085 . 099->977 . 153->618 . 179->455 . 800->850 . 763->656 . 500->378 . 445->265 . 707->024 . 767->080 . 679->605 . 823->047 . 063->565 . 701->703 . 078->323 . 781->829 . 520->718 . 733->252 . 472->150 . 539->038 . 102->074 . 091->853 . 006->649 . 837->703 . 852->064 . 056->193 . 759->403 . 240->728 . 851->598 . 604->105 . 493->151 . 188->436 . 728->981 . 639->029 . 721->447 . 239->744 . 285->225 . 513->153 . 806->257 . 877->000 . 232->501 . 434->377 . 313->654 . 107->653 . 075->539 . 646->855 . 433->452 . 939->070 . 563->092 . 842->865 . 619->306 . 322->166 . 180->599",
         "RSLabel class>>#defaultFont": 5,
         "RSAbstractLine>>#resetPath": 6,
-        "RSBox>>#buildPathOn:": 1
+        "RSBox>>#buildPathOn:": 1,
+        "executionsPerSecond": 28
     },
     {
         "RSTextExtents>>#width": 4,
@@ -12274,7 +12319,8 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 4,
         "RSAbstractLine>>#from": 6,
-        "RSAbstractRegularTreeLayout>>#doPost:": 1
+        "RSAbstractRegularTreeLayout>>#doPost:": 1,
+        "executionsPerSecond": 119
     },
     {
         "Point class>>#r:theta:": 3,
@@ -12534,7 +12580,8 @@
         "input": "RSCircularAroundAVertexLayout\rRSEllipse\r232->682 . 451->842 . 788->634 . 387->646 . 031->696 . 176->923 . 236->759 . 407->017 . 835->604 . 996->223 . 523->275 . 211->366 . 301->109",
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 4,
-        "RSBox>>#buildPathOn:": 1
+        "RSBox>>#buildPathOn:": 1,
+        "executionsPerSecond": 148
     },
     {
         "RSAbstractLine>>#privateMarkers:": 3,
@@ -12788,7 +12835,8 @@
         "input": "RSVerticalCellLayout\rRSPolygon\r566->453 . 538->125 . 576->332 . 255->266 . 257->922 . 526->787 . 814->952",
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 3,
-        "RSBox>>#buildPathOn:": 1
+        "RSBox>>#buildPathOn:": 1,
+        "executionsPerSecond": 209
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -13064,7 +13112,8 @@
         "RSAbstractLine>>#intersects:": 2,
         "RSBoundingShape>>#extent:": 5,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 112
     },
     {
         "RSAbstractLine>>#privateMarkers:": 3,
@@ -13311,7 +13360,8 @@
         "input": "RSHorizontalLineLayout\rRSBitmap\r513->009 . 764->719 . 986->458 . 347->662 . 204->625 . 631->466 . 532->271 . 261->820 . 150->800 . 364->400 . 525->460 . 746->362 . 183->664 . 068->596",
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 4,
-        "RSBox>>#buildPathOn:": 1
+        "RSBox>>#buildPathOn:": 1,
+        "executionsPerSecond": 166
     },
     {
         "RSTextExtents>>#width": 3,
@@ -13591,7 +13641,8 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 3,
         "RSAbstractLine>>#from": 5,
-        "RSAbstractRegularTreeLayout>>#doPost:": 1
+        "RSAbstractRegularTreeLayout>>#doPost:": 1,
+        "executionsPerSecond": 187
     },
     {
         "RSTextExtents>>#width": 5,
@@ -13870,7 +13921,8 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 4,
         "RSAbstractLine>>#from": 7,
-        "RSAbstractRegularTreeLayout>>#doPost:": 1
+        "RSAbstractRegularTreeLayout>>#doPost:": 1,
+        "executionsPerSecond": 93
     },
     {
         "RSTextExtents>>#width": 5,
@@ -14149,7 +14201,8 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 4,
         "RSAbstractLine>>#from": 7,
-        "RSAbstractRegularTreeLayout>>#doPost:": 1
+        "RSAbstractRegularTreeLayout>>#doPost:": 1,
+        "executionsPerSecond": 85
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -14418,7 +14471,8 @@
         "RSBoundingShape>>#extent:": 5,
         "RSBoundingShape>>#incomingNodes": 4,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 68
     },
     {
         "RSTextExtents>>#width": 3,
@@ -14709,7 +14763,8 @@
         "RSAbstractControlPointsLine>>#update": 4,
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 4,
-        "RSAbstractLine>>#from": 6
+        "RSAbstractLine>>#from": 6,
+        "executionsPerSecond": 12
     },
     {
         "RSTextExtents>>#width": 3,
@@ -14986,7 +15041,8 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 4,
         "RSAbstractLine>>#from": 7,
-        "RSAbstractRegularTreeLayout>>#doPost:": 1
+        "RSAbstractRegularTreeLayout>>#doPost:": 1,
+        "executionsPerSecond": 123
     },
     {
         "RSTextExtents>>#width": 5,
@@ -15265,7 +15321,8 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 8,
-        "RSAbstractRegularTreeLayout>>#doPost:": 1
+        "RSAbstractRegularTreeLayout>>#doPost:": 1,
+        "executionsPerSecond": 74
     },
     {
         "RSTextExtents>>#width": 3,
@@ -15556,7 +15613,8 @@
         "RSAbstractControlPointsLine>>#update": 4,
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
-        "RSAbstractLine>>#from": 7
+        "RSAbstractLine>>#from": 7,
+        "executionsPerSecond": 5
     },
     {
         "Point class>>#r:theta:": 4,
@@ -15816,7 +15874,8 @@
         "input": "RSCircularAroundAVertexLayout\rRSEllipse\r232->682 . 451->842 . 409->519 . 230->112 . 987->018 . 088->979 . 154->206 . 801->542 . 430->625 . 076->504 . 857->149 . 836->230 . 067->821 . 304->695 . 920->958 . 965->947 . 328->522 . 547->205 . 626->508 . 212->539 . 614->197 . 926->451 . 024->257 . 117->141 . 256->728 . 812->176 . 602->399 . 934->708 . 612->062",
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 5,
-        "RSBox>>#buildPathOn:": 1
+        "RSBox>>#buildPathOn:": 1,
+        "executionsPerSecond": 106
     },
     {
         "RSAbstractLine>>#privateMarkers:": 4,
@@ -16063,7 +16122,8 @@
         "input": "RSHorizontalLineLayout\rRSBitmap\r513->009 . 764->719 . 986->458 . 347->662 . 204->625 . 631->466 . 532->271 . 261->820 . 150->800 . 659->122 . 802->269 . 216->435 . 995->758 . 733->821 . 198->706 . 492->692 . 317->315 . 113->425 . 182->672 . 883->526 . 959->967 . 650->394 . 680->857 . 608->315 . 740->224 . 726->914 . 940->611 . 095->619 . 911->048 . 150->670",
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 5,
-        "RSBox>>#buildPathOn:": 1
+        "RSBox>>#buildPathOn:": 1,
+        "executionsPerSecond": 120
     },
     {
         "RSTextExtents>>#width": 3,
@@ -16342,7 +16402,8 @@
         "RSAbstractControlPointsLine>>#update": 3,
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 3,
-        "RSAbstractLine>>#from": 6
+        "RSAbstractLine>>#from": 6,
+        "executionsPerSecond": 134
     },
     {
         "RSTextExtents>>#width": 3,
@@ -16633,7 +16694,8 @@
         "RSAbstractControlPointsLine>>#update": 5,
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
-        "RSAbstractLine>>#from": 7
+        "RSAbstractLine>>#from": 7,
+        "executionsPerSecond": 4
     },
     {
         "RSTextExtents>>#width": 5,
@@ -16912,7 +16974,8 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 8,
-        "RSAbstractRegularTreeLayout>>#doPost:": 1
+        "RSAbstractRegularTreeLayout>>#doPost:": 1,
+        "executionsPerSecond": 59
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -17181,7 +17244,8 @@
         "RSBoundingShape>>#extent:": 5,
         "RSBoundingShape>>#incomingNodes": 4,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 63
     },
     {
         "RSTextExtents>>#width": 5,
@@ -17460,7 +17524,8 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 8,
-        "RSAbstractRegularTreeLayout>>#doPost:": 1
+        "RSAbstractRegularTreeLayout>>#doPost:": 1,
+        "executionsPerSecond": 55
     },
     {
         "RSRectanglePackLayout>>#doNotUseProgressBar": 1,
@@ -17714,7 +17779,8 @@
         "input": "RSRectanglePackLayout\rRSCircle\r548->089 . 241->738 . 389->282 . 448->889 . 670->723 . 935->488 . 828->947 . 972->162 . 695->531 . 099->854 . 042->428 . 984->846 . 788->284 . 887->316 . 118->566 . 729->164 . 981->421 . 052->547 . 711->598 . 987->721 . 506->161",
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 4,
-        "RSBox>>#buildPathOn:": 1
+        "RSBox>>#buildPathOn:": 1,
+        "executionsPerSecond": 108
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -17983,7 +18049,8 @@
         "RSBoundingShape>>#extent:": 5,
         "RSBoundingShape>>#incomingNodes": 5,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 44
     },
     {
         "RSTextExtents>>#width": 3,
@@ -18274,7 +18341,8 @@
         "RSAbstractControlPointsLine>>#update": 5,
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
-        "RSAbstractLine>>#from": 7
+        "RSAbstractLine>>#from": 7,
+        "executionsPerSecond": 3
     },
     {
         "RSTextExtents>>#width": 3,
@@ -18553,7 +18621,8 @@
         "RSAbstractControlPointsLine>>#update": 5,
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
-        "RSAbstractLine>>#from": 8
+        "RSAbstractLine>>#from": 8,
+        "executionsPerSecond": 47
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -18822,7 +18891,8 @@
         "RSBoundingShape>>#extent:": 5,
         "RSBoundingShape>>#incomingNodes": 5,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 41
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -19093,7 +19163,8 @@
         "RSAbstractLine>>#intersects:": 3,
         "RSBoundingShape>>#extent:": 5,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 132
     },
     {
         "RSTextExtents>>#width": 3,
@@ -19386,7 +19457,8 @@
         "RSAbstractControlPointsLine>>#update": 3,
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 4,
-        "RSAbstractLine>>#from": 6
+        "RSAbstractLine>>#from": 6,
+        "executionsPerSecond": 14
     },
     {
         "RSTextExtents>>#width": 3,
@@ -19677,7 +19749,8 @@
         "RSAbstractControlPointsLine>>#update": 5,
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
-        "RSAbstractLine>>#from": 7
+        "RSAbstractLine>>#from": 7,
+        "executionsPerSecond": 3
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -19946,7 +20019,8 @@
         "RSBoundingShape>>#extent:": 5,
         "RSBoundingShape>>#incomingNodes": 5,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 36
     },
     {
         "RSAbstractLine>>#privateMarkers:": 1,
@@ -20197,7 +20271,8 @@
         "input": "RSVerticalLineLayout\rRSBitmap\r244->381",
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 1,
-        "RSBox>>#buildPathOn:": 1
+        "RSBox>>#buildPathOn:": 1,
+        "executionsPerSecond": 324
     },
     {
         "RSTextExtents>>#width": 3,
@@ -20488,7 +20563,8 @@
         "RSAbstractControlPointsLine>>#update": 5,
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
-        "RSAbstractLine>>#from": 7
+        "RSAbstractLine>>#from": 7,
+        "executionsPerSecond": 3
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -20757,7 +20833,8 @@
         "RSBoundingShape>>#extent:": 6,
         "RSBoundingShape>>#incomingNodes": 5,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 34
     },
     {
         "RSTextExtents>>#width": 6,
@@ -21036,7 +21113,8 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 9,
-        "RSAbstractRegularTreeLayout>>#doPost:": 1
+        "RSAbstractRegularTreeLayout>>#doPost:": 1,
+        "executionsPerSecond": 40
     },
     {
         "RSTextExtents>>#width": 3,
@@ -21327,7 +21405,8 @@
         "RSAbstractControlPointsLine>>#update": 5,
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
-        "RSAbstractLine>>#from": 7
+        "RSAbstractLine>>#from": 7,
+        "executionsPerSecond": 2
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -21597,7 +21676,8 @@
         "RSAbstractLine>>#intersects:": 3,
         "RSBoundingShape>>#extent:": 5,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 108
     },
     {
         "RSTextExtents>>#width": 3,
@@ -21888,7 +21968,8 @@
         "RSAbstractControlPointsLine>>#update": 5,
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 5,
-        "RSAbstractLine>>#from": 8
+        "RSAbstractLine>>#from": 8,
+        "executionsPerSecond": 2
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -22158,7 +22239,8 @@
         "RSAbstractLine>>#intersects:": 3,
         "RSBoundingShape>>#extent:": 5,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 87
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -22434,6 +22516,7 @@
         "RSAbstractLine>>#intersects:": 3,
         "RSBoundingShape>>#extent:": 5,
         "RSShapeFactory class>>#polygon": 1,
-        "RSCornerRadius>>#radius:": 1
+        "RSCornerRadius>>#radius:": 1,
+        "executionsPerSecond": 61
     }
 ]

@@ -1,5 +1,6 @@
 [
     {
+        "executionsPerSecond": 29914,
         "MicAbstractBlock>>#startLine:": 1,
         "MicParagraphBlock>>#closeMe": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 1,
@@ -64,6 +65,7 @@
         "MicRootBlock>>#hasMetaDataElement": 1
     },
     {
+        "executionsPerSecond": 1030,
         "MicEvaluatedBlock>>#closeMe": 1,
         "MicParagraphBlock>>#isRightlyIndented:": 2,
         "MicParser>>#handleLine:": 3,
@@ -80,7 +82,7 @@
         "MicInlineParser>>#parse:": 1,
         "MicInlineParser>>#skipTo:inStream:": 1,
         "MicInlineTokenStream class>>#backslashReescape:except:": 2,
-        "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](http://pharo.org)\r\t\r   \t- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Point>>#setX:setY:`, `#’Microdown-Tests’`\r\r  \tReferences: @ref@",
+        "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](http://pharo.org)\r\t\r   \t- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Point>>#setX:setY:`, `#\u2019Microdown-Tests\u2019`\r\r  \tReferences: @ref@",
         "MicInlineToken>>#string": 3,
         "MicInlineTokenStream>>#addText:": 3,
         "MicInlineElement class>>#isEvaluated": 4,
@@ -185,6 +187,7 @@
         "MicRootBlock>>#massageLine:": 3
     },
     {
+        "executionsPerSecond": 961,
         "MicInlineHttpDelimiter>>#blockClass": 2,
         "MicArgumentList>>#from:": 1,
         "MicListBlock>>#indentFromLine:": 1,
@@ -262,7 +265,7 @@
         "MicInlineToken>>#string:": 3,
         "MicInlineBlockWithUrl>>#children": 1,
         "MicHTTPResourceReference class>>#handlesUriScheme:": 1,
-        "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](httc://pharo.org)\r\t\r\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Point>>#setX:setY:`, `#’Microdown-Tests’`\r\r  \tReferences: @ref@",
+        "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](httc://pharo.org)\r\t\r\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Point>>#setX:setY:`, `#\u2019Microdown-Tests\u2019`\r\r  \tReferences: @ref@",
         "MicResourceReference class>>#newFromUri:": 1,
         "MicAbstractBlock>>#initialize": 2,
         "MicAbstractBlock>>#children:": 1,
@@ -324,6 +327,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 3
     },
     {
+        "executionsPerSecond": 886,
         "MicParagraphBlock>>#canConsumeLine:": 3,
         "MicInlineTokenStream>>#addDelimiter:": 2,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -405,7 +409,7 @@
         "MicAbstractBlock>>#parser": 3,
         "MicAbstractBlock>>#setParser:": 2,
         "MicElement>>#inlineParserClass": 2,
-        "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](httc://pharo.org)\r\t\r\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r(- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Point>>#setX:setY:`, `#’Microdown-Tests’`\r\r  \tReferences: @ref@",
+        "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](httc://pharo.org)\r\t\r\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r(- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Point>>#setX:setY:`, `#\u2019Microdown-Tests\u2019`\r\r  \tReferences: @ref@",
         "MicUnEvaluatedBlock class>>#isEvaluated": 4,
         "MicInlineTokenStream class>>#magicCharacter": 6,
         "MicAbstractBlock>>#children:": 1,
@@ -448,6 +452,7 @@
         "MicResourceReference class>>#fromUri:": 1
     },
     {
+        "executionsPerSecond": 150,
         "MicAbstractBlock>>#startLine:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 1,
         "MicInlineToken>>#string:": 6,
@@ -472,7 +477,7 @@
         "MicInlineTokenStream>>#tokenize:": 6,
         "MicInlineDelimiter class>>#at:": 6,
         "MicRootBlock>>#initialize": 1,
-        "input": "|                                                                                                                                                                          ’-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|\r| -----------| ----------- |\r| |---",
+        "input": "|                                                                                                                                                                          \u2019-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|\r| -----------| ----------- |\r| |---",
         "MicInlineParser>>#parseChildrenIn:": 6,
         "Microdown class>>#parse:": 1,
         "MicInlineTokenStream>>#addText:": 6,
@@ -515,6 +520,7 @@
         "MicRootBlock>>#hasMetaDataElement": 1
     },
     {
+        "executionsPerSecond": 838,
         "MicParagraphBlock>>#canConsumeLine:": 2,
         "MicInlineTokenStream>>#addDelimiter:": 2,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -600,7 +606,7 @@
         "MicAbstractBlock>>#parser": 3,
         "MicAbstractBlock>>#setParser:": 2,
         "MicElement>>#inlineParserClass": 2,
-        "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](httc://pharo.org)\r\t\r\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r- l}ist\r/   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Point>>#setX:setY:`, `#’Microdown-Tests’`\r\r  \tReferenc{#es: @ref@",
+        "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](httc://pharo.org)\r\t\r\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r- l}ist\r/   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Point>>#setX:setY:`, `#\u2019Microdown-Tests\u2019`\r\r  \tReferenc{#es: @ref@",
         "MicUnEvaluatedBlock class>>#isEvaluated": 4,
         "MicInlineTokenStream class>>#magicCharacter": 6,
         "MicAbstractBlock>>#children:": 1,
@@ -651,6 +657,7 @@
         "MicInlineBlockWithUrl>>#arguments": 1
     },
     {
+        "executionsPerSecond": 19783,
         "MicAbstractBlock>>#startLine:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 1,
         "MicInlineToken>>#string:": 1,
@@ -723,6 +730,7 @@
         "MicListBlock>>#closeMe": 1
     },
     {
+        "executionsPerSecond": 747,
         "MicParagraphBlock>>#canConsumeLine:": 2,
         "MicInlineTokenStream>>#addDelimiter:": 2,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -808,7 +816,7 @@
         "MicAbstractBlock>>#parser": 3,
         "MicAbstractBlock>>#setParser:": 2,
         "MicElement>>#inlineParserClass": 2,
-        "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](httc://pharo.org)\r\t\r\t\t\t\t\td\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t/\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r- l}ist\r/   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Poinxt>>#setX:setY:`, `#’Microdown-Tests’`\r\r  \tReferenc{#es: @ref@",
+        "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](httc://pharo.org)\r\t\r\t\t\t\t\td\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t/\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r- l}ist\r/   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Poinxt>>#setX:setY:`, `#\u2019Microdown-Tests\u2019`\r\r  \tReferenc{#es: @ref@",
         "MicUnEvaluatedBlock class>>#isEvaluated": 4,
         "MicInlineTokenStream class>>#magicCharacter": 7,
         "MicAbstractBlock>>#children:": 1,
@@ -859,6 +867,7 @@
         "MicInlineBlockWithUrl>>#arguments": 1
     },
     {
+        "executionsPerSecond": 665,
         "MicParagraphBlock>>#canConsumeLine:": 2,
         "MicInlineTokenStream>>#addDelimiter:": 3,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -944,7 +953,7 @@
         "MicAbstractBlock>>#parser": 3,
         "MicAbstractBlock>>#setParser:": 2,
         "MicElement>>#inlineParserClass": 2,
-        "input": "#) Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](httc://pharo.org)\r\t\r\t\t\t\t\td\t\t\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t/\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t**\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r- l}ist\r/   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Poinxt>>#setX:setY:`, `#’Microdown-Tests’`\r\r  \tReferenc{#es: @ref@",
+        "input": "#) Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](httc://pharo.org)\r\t\r\t\t\t\t\td\t\t\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t/\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t**\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r- l}ist\r/   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Poinxt>>#setX:setY:`, `#\u2019Microdown-Tests\u2019`\r\r  \tReferenc{#es: @ref@",
         "MicUnEvaluatedBlock class>>#isEvaluated": 4,
         "MicInlineTokenStream class>>#magicCharacter": 7,
         "MicAbstractBlock>>#children:": 1,
@@ -995,6 +1004,7 @@
         "MicInlineBlockWithUrl>>#arguments": 1
     },
     {
+        "executionsPerSecond": 99,
         "MicTableBlock>>#extractLine:": 1,
         "MicRootBlock>>#canConsumeLine:": 1,
         "MicInlineTokenStream>>#initialize": 6,
@@ -1026,7 +1036,7 @@
         "MicTableBlock>>#closeMe": 1,
         "MicAbstractBlock>>#startLine": 2,
         "MicAbstractBlock>>#initialize": 1,
-        "input": "###\r’-\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|’|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|’|-|-|-|-|-|-|-|’|-|-|-|-|’|#|’|-|-|-|-|-|-|-|-|-|-|-|’|-|-|-|’|-|-|-|-|-|-|-|-|-|-|-|-|’|-|-|-|-|-|’|-|’|-|-|-|-|’|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-| |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|                                                                                                                                                   |-|\r| -----------| ----------- |\r| |---",
+        "input": "###\r\u2019-\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|\u2019|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|\u2019|-|-|-|-|-|-|-|\u2019|-|-|-|-|\u2019|#|\u2019|-|-|-|-|-|-|-|-|-|-|-|\u2019|-|-|-|\u2019|-|-|-|-|-|-|-|-|-|-|-|-|\u2019|-|-|-|-|-|\u2019|-|\u2019|-|-|-|-|\u2019|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-| |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|                                                                                                                                                   |-|\r| -----------| ----------- |\r| |---",
         "MicAbstractBlock class>>#alternateBlockClassFor:": 1,
         "MicInlineDelimiter>>#isOpener": 6,
         "MicAbstractBlock>>#massageLine:": 2,
@@ -1078,6 +1088,7 @@
         "MicParser>>#nonMatchedBlockClassFor:": 1
     },
     {
+        "executionsPerSecond": 364,
         "MicParagraphBlock>>#isRightlyIndented:": 1,
         "MicParser>>#handleLine:": 4,
         "MicArgumentList>>#from:": 1,
@@ -1095,7 +1106,7 @@
         "MicInlineParser>>#parse:": 4,
         "MicContinuousMarkedBlock>>#extractLine:": 1,
         "MicStartStopMarkupBlock>>#body": 1,
-        "input": "> ./.-\r:/.\\.\t\r :/./.\\{#E}h:/:/.\\\\\\\\\\,,|:|\r| ----------- |\r|:FE/...|:///..\\||Q::|\r| ----------- |\r|n|A|\r|xgG://.\\,,,|D::/.\\\\\\|\r| ----------- |\r|lt|fm|\r|v/|QY:/...,>>>|\r| ----------- |\r|mf.iitS:|zcmnbR///\\|bki::|\r|\\ \\’#|yU|hIL:.,,,|\r| ----------- |\r| |\\  zo| qyx|\r|ra|td u|/>W/\\\\|\r| ----------- |\r|y |f#o/r| xfah:|k|\r| za|tp|azT..\\>>>>>|\r| ----------- |\r|ec,ayeget//.,,,,,>|’ he  | w|qf::/\\\\\\\\\\,>>>##|\r|eyf|kuoqxKL:.|aiudh|pvE|\r| ----------- |\r|n |jz t  xqh/....|d|tuml:////\\,,,>>#####’’’’’|\r| jozIK coJ::|, s|wa  |ez|\r| ----------- |\r|eq| |icbpfsuZK|>c rex::.\\\\\\|\r|g|c  #m>|qy |cfcnCV|\r| ----------- |\r|\\xxuw|ovwcpih/kdys/.|tbo>p|f o/dyqg:/..,,|g bdq|\r|:   .:x |.:#|\r| ----------- |\r|:ly’J>l fe\\n N://|jN|/gn|ay|juy-eK::\\|\r|’f>r,#fs> qXsT|\\mwsh  ag|rp|fmn: keoC.\\|I: zig|\r| ----------- |\r|s#il -. -| lfnpwcNg\\|\\|\\|khtqw|\r|a|rbpyxvw-- Nt/.>>|-m| d-e| |\r| ----------- |\r|tbw-d| > ’>qr|m |Ob\\uxekur:/,,>>|- nO\\rf| L  D:|\r|,>ydxw j qzp:|>f  sc--thZ|d-u|z:g|:pr|byhU\\\\,,>#|\r| ----------- |\r|w|\r---\r```x\r```",
+        "input": "> ./.-\r:/.\\.\t\r :/./.\\{#E}h:/:/.\\\\\\\\\\,,|:|\r| ----------- |\r|:FE/...|:///..\\||Q::|\r| ----------- |\r|n|A|\r|xgG://.\\,,,|D::/.\\\\\\|\r| ----------- |\r|lt|fm|\r|v/|QY:/...,>>>|\r| ----------- |\r|mf.iitS:|zcmnbR///\\|bki::|\r|\\ \\\u2019#|yU|hIL:.,,,|\r| ----------- |\r| |\\  zo| qyx|\r|ra|td u|/>W/\\\\|\r| ----------- |\r|y |f#o/r| xfah:|k|\r| za|tp|azT..\\>>>>>|\r| ----------- |\r|ec,ayeget//.,,,,,>|\u2019 he  | w|qf::/\\\\\\\\\\,>>>##|\r|eyf|kuoqxKL:.|aiudh|pvE|\r| ----------- |\r|n |jz t  xqh/....|d|tuml:////\\,,,>>#####\u2019\u2019\u2019\u2019\u2019|\r| jozIK coJ::|, s|wa  |ez|\r| ----------- |\r|eq| |icbpfsuZK|>c rex::.\\\\\\|\r|g|c  #m>|qy |cfcnCV|\r| ----------- |\r|\\xxuw|ovwcpih/kdys/.|tbo>p|f o/dyqg:/..,,|g bdq|\r|:   .:x |.:#|\r| ----------- |\r|:ly\u2019J>l fe\\n N://|jN|/gn|ay|juy-eK::\\|\r|\u2019f>r,#fs> qXsT|\\mwsh  ag|rp|fmn: keoC.\\|I: zig|\r| ----------- |\r|s#il -. -| lfnpwcNg\\|\\|\\|khtqw|\r|a|rbpyxvw-- Nt/.>>|-m| d-e| |\r| ----------- |\r|tbw-d| > \u2019>qr|m |Ob\\uxekur:/,,>>|- nO\\rf| L  D:|\r|,>ydxw j qzp:|>f  sc--thZ|d-u|z:g|:pr|byhU\\\\,,>#|\r| ----------- |\r|w|\r---\r```x\r```",
         "threshold": 0.9,
         "MicInlineToken>>#string": 4,
         "MicInlineTokenStream>>#addText:": 4,
@@ -1187,6 +1198,7 @@
         "MicCodeBlock>>#extractFirstLineFrom:": 1
     },
     {
+        "executionsPerSecond": 81,
         "MicParagraphBlock>>#canConsumeLine:": 4,
         "MicInlineTokenStream>>#addDelimiter:": 4,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -1266,7 +1278,7 @@
         "MicAbstractBlock>>#parser": 5,
         "MicAbstractBlock>>#setParser:": 5,
         "MicElement>>#inlineParserClass": 5,
-        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t > , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\rsa\r- [x]\r \r- [x]\rf\r- [x]\r,>.r/\r- [x]\r,B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r- [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\r- [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t > , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\rsa\r- [x]\r \r- [x]\rf\r- [x]\r,>.r/\r- [x]\r,B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r- [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\r- [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicUnEvaluatedBlock class>>#isEvaluated": 2,
         "MicInlineTokenStream class>>#magicCharacter": 7,
         "MicAbstractBlock>>#children:": 4,
@@ -1315,6 +1327,7 @@
         "MicResourceReference class>>#fromUri:": 1
     },
     {
+        "executionsPerSecond": 82,
         "MicParagraphBlock>>#canConsumeLine:": 4,
         "MicInlineTokenStream>>#addDelimiter:": 4,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -1393,7 +1406,7 @@
         "MicAbstractBlock>>#parser": 5,
         "MicAbstractBlock>>#setParser:": 5,
         "MicElement>>#inlineParserClass": 5,
-        "input": "---\r\r[:](./)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t > , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\rsa\r- [x]\r \r- [x]\rf\r- [x]\r,>.r/\r- [x]\r,B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r- [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\r- [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:](./)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t > , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\rsa\r- [x]\r \r- [x]\rf\r- [x]\r,>.r/\r- [x]\r,B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r- [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\r- [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicUnEvaluatedBlock class>>#isEvaluated": 2,
         "MicInlineTokenStream class>>#magicCharacter": 7,
         "MicAbstractBlock>>#children:": 4,
@@ -1440,6 +1453,7 @@
         "MicResourceReference class>>#fromUri:": 1
     },
     {
+        "executionsPerSecond": 619,
         "MicParagraphBlock>>#canConsumeLine:": 2,
         "MicInlineTokenStream>>#addDelimiter:": 3,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -1520,7 +1534,7 @@
         "MicAbstractBlock>>#parser": 3,
         "MicAbstractBlock>>#setParser:": 2,
         "MicElement>>#inlineParserClass": 2,
-        "input": "#) Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](| ----------- |httc://pharo.org)\r\t\r\t\t\t\t\td\t\t\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t/\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t**\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r- l}ist\r/   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `P+oint class`, `Poinxt>>#setX:setY:`, `#’Microdown-Tests’`\r\r  \tReferenc{#es: @ref@",
+        "input": "#) Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](| ----------- |httc://pharo.org)\r\t\r\t\t\t\t\td\t\t\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t/\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t**\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\r- l}ist\r/   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `P+oint class`, `Poinxt>>#setX:setY:`, `#\u2019Microdown-Tests\u2019`\r\r  \tReferenc{#es: @ref@",
         "MicArgumentList>>#setDefaultAndArguments:": 1,
         "MicUnEvaluatedBlock class>>#isEvaluated": 4,
         "MicInlineTokenStream class>>#magicCharacter": 7,
@@ -1573,6 +1587,7 @@
         "MicInlineBlockWithUrl>>#arguments": 1
     },
     {
+        "executionsPerSecond": 2793,
         "MicRootBlock>>#canConsumeLine:": 2,
         "MicInlineTokenStream>>#initialize": 2,
         "Microdown>>#parse:": 1,
@@ -1610,7 +1625,7 @@
         "MicRootBlock>>#initialize": 1,
         "MicAbstractBlock>>#startLine": 3,
         "MicAbstractBlock>>#initialize": 2,
-        "input": "---\t\r\r\r\r\r0. k\r: xgu:\r\t\t\r> ..>\r:, yjru’pzjaj ’n,nm/t y\r\r\t###\r#w7. h",
+        "input": "---\t\r\r\r\r\r0. k\r: xgu:\r\t\t\r> ..>\r:, yjru\u2019pzjaj \u2019n,nm/t y\r\r\t###\r#w7. h",
         "MicAbstractBlock class>>#alternateBlockClassFor:": 2,
         "MicInlineDelimiter>>#isOpener": 2,
         "MicAbstractBlock>>#massageLine:": 2,
@@ -1669,6 +1684,7 @@
         "MicParser>>#nonMatchedBlockClassFor:": 2
     },
     {
+        "executionsPerSecond": 2455,
         "MicInlineParser>>#parseEvaluatedBlock:token:stream:": 1,
         "MicRootBlock>>#canConsumeLine:": 2,
         "MicInlineParser>>#createInlineBlock:inStream:": 1,
@@ -1756,6 +1772,7 @@
         "MicParser>>#nonMatchedBlockClassFor:": 1
     },
     {
+        "executionsPerSecond": 26283,
         "MicAbstractBlock>>#startLine:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 1,
         "MicElement>>#parent": 3,
@@ -1787,7 +1804,7 @@
         "String>>#stripNtabs:": 2,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
         "MicStartStopMarkupBlock>>#addLineAndReturnNextNode:": 3,
-        "input": "```\t- /.axbxU>```\r\r\r\r\r\r[,slv/q ,]( b)\r- [x] .d,rb\r- [x] v-#\r- [ ]\ra,t\t#\tx> nl’iopsI  \r\r 5. /k\\ m ",
+        "input": "```\t- /.axbxU>```\r\r\r\r\r\r[,slv/q ,]( b)\r- [x] .d,rb\r- [x] v-#\r- [ ]\ra,t\t#\tx> nl\u2019iopsI  \r\r 5. /k\\ m ",
         "MicStartStopMarkupBlock>>#initialize": 1,
         "MicArgumentList>>#split:defaultArg:defaultValue:": 1,
         "MicSameStartStopMarkupBlock>>#lineStopMarkup": 2,
@@ -1818,6 +1835,7 @@
         "MicRootBlock>>#hasMetaDataElement": 1
     },
     {
+        "executionsPerSecond": 77,
         "MicParagraphBlock>>#canConsumeLine:": 4,
         "MicInlineTokenStream>>#addDelimiter:": 4,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -1898,7 +1916,7 @@
         "MicAbstractBlock>>#parser": 5,
         "MicAbstractBlock>>#setParser:": 5,
         "MicElement>>#inlineParserClass": 5,
-        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t > , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<sa\r- [x]\r \r- [x]\rf\r- [x]\r#,>.r/\r- [x]\r,B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r- [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\r- [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t > , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<sa\r- [x]\r \r- [x]\rf\r- [x]\r#,>.r/\r- [x]\r,B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r- [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\r- [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicUnEvaluatedBlock class>>#isEvaluated": 2,
         "MicInlineTokenStream class>>#magicCharacter": 7,
         "MicAbstractBlock>>#children:": 4,
@@ -1947,6 +1965,7 @@
         "MicResourceReference class>>#fromUri:": 1
     },
     {
+        "executionsPerSecond": 531,
         "MicParagraphBlock>>#canConsumeLine:": 1,
         "MicInlineTokenStream>>#addDelimiter:": 1,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -2030,7 +2049,7 @@
         "MicAbstractBlock>>#parser": 2,
         "MicAbstractBlock>>#setParser:": 2,
         "MicElement>>#inlineParserClass": 4,
-        "input": "|w|qaknkBy-d Fbo/>uh|-d| | zC,wv,,| d |ct >dk>h| :y|’’ hgp:|c-fK.| qxn#.vrs:n|’\\a# |:|\\P:|.di.#y\\>-  |.| |N|.->’ c x --j:hnv- u|,|b e-p| |-rm| F |  #|\\  : la#K.|  x|#--:|\r| ----------- |\r|/  :Wr|:.x|p#>mtEaw|,q wmb|n|  ,c |ik’p|:i\\ e.#mmns -Nbf|tvwm,|. |\r[,k-p](Nm)\r4.\ro:u’xivz\\-d \r\r- [ ] -\r  - /#[^86]: B:v\r\r@x/@@N-e\\/@",
+        "input": "|w|qaknkBy-d Fbo/>uh|-d| | zC,wv,,| d |ct >dk>h| :y|\u2019\u2019 hgp:|c-fK.| qxn#.vrs:n|\u2019\\a# |:|\\P:|.di.#y\\>-  |.| |N|.->\u2019 c x --j:hnv- u|,|b e-p| |-rm| F |  #|\\  : la#K.|  x|#--:|\r| ----------- |\r|/  :Wr|:.x|p#>mtEaw|,q wmb|n|  ,c |ik\u2019p|:i\\ e.#mmns -Nbf|tvwm,|. |\r[,k-p](Nm)\r4.\ro:u\u2019xivz\\-d \r\r- [ ] -\r  - /#[^86]: B:v\r\r@x/@@N-e\\/@",
         "MicUnEvaluatedBlock class>>#isEvaluated": 2,
         "MicInlineTokenStream class>>#magicCharacter": 6,
         "MicParser>>#isAList:": 1,
@@ -2082,6 +2101,7 @@
         "MicTableBlock>>#extractLine:": 1
     },
     {
+        "executionsPerSecond": 26279,
         "MicAbstractBlock>>#startLine:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 1,
         "MicElement>>#parent": 3,
@@ -2113,7 +2133,7 @@
         "String>>#stripNtabs:": 3,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
         "MicStartStopMarkupBlock>>#addLineAndReturnNextNode:": 3,
-        "input": "```\t- /.axbxU>```\r\r\r\r\r\r[,slv/q ,]( b)\r- [x] .d,rb\r- [x] v-#\r- [ ]\ra,t\t###\rH\\W\r\r 7.  ’",
+        "input": "```\t- /.axbxU>```\r\r\r\r\r\r[,slv/q ,]( b)\r- [x] .d,rb\r- [x] v-#\r- [ ]\ra,t\t###\rH\\W\r\r 7.  \u2019",
         "MicStartStopMarkupBlock>>#initialize": 1,
         "MicArgumentList>>#split:defaultArg:defaultValue:": 1,
         "MicSameStartStopMarkupBlock>>#lineStopMarkup": 3,
@@ -2144,6 +2164,7 @@
         "MicRootBlock>>#hasMetaDataElement": 1
     },
     {
+        "executionsPerSecond": 370,
         "MicParagraphBlock>>#canConsumeLine:": 2,
         "MicInlineTokenStream>>#addDelimiter:": 3,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -2225,7 +2246,7 @@
         "MicAbstractBlock>>#parser": 3,
         "MicAbstractBlock>>#setParser:": 3,
         "MicElement>>#inlineParserClass": 3,
-        "input": "*on *\r\r[h#t,](mAoes )\r\t\t- [x]\r :w’d>,n/ /’\r- [x]\r/ o\r- [x] o M.i.Xss/> QOz>e\r- [x] O\r- [x]\t,r\r- [x]\t \r- [x] Pg\r- [x]\r om jd:o.Vk#\r- [x]\tsm\r- [x]\r v\r- [x]\tu\\\r- [ ]\r# u yq’![-](wf),\r\t```:kvw \t```\r\r -\t.tp#lx y , `unG\\ibt``yqyC.evtz`f.@n-chui/@\r- /mK, /:  \r ’d`l’`** n ahh i#\\ **` zq,`@bjw k r,xdyp @@u@[ e](pxo>:ZHyB#  ’j/)",
+        "input": "*on *\r\r[h#t,](mAoes )\r\t\t- [x]\r :w\u2019d>,n/ /\u2019\r- [x]\r/ o\r- [x] o M.i.Xss/> QOz>e\r- [x] O\r- [x]\t,r\r- [x]\t \r- [x] Pg\r- [x]\r om jd:o.Vk#\r- [x]\tsm\r- [x]\r v\r- [x]\tu\\\r- [ ]\r# u yq\u2019![-](wf),\r\t```:kvw \t```\r\r -\t.tp#lx y , `unG\\ibt``yqyC.evtz`f.@n-chui/@\r- /mK, /:  \r \u2019d`l\u2019`** n ahh i#\\ **` zq,`@bjw k r,xdyp @@u@[ e](pxo>:ZHyB#  \u2019j/)",
         "MicUnEvaluatedBlock class>>#isEvaluated": 4,
         "MicInlineTokenStream class>>#magicCharacter": 6,
         "MicAbstractBlock>>#children:": 2,
@@ -2278,6 +2299,7 @@
         "MicInlineBlockWithUrl>>#arguments": 1
     },
     {
+        "executionsPerSecond": 752,
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicInlineHttpDelimiter>>#blockClass": 2,
         "MicArgumentList>>#from:": 1,
@@ -2364,7 +2386,7 @@
         "MicCodeBlock>>#initialize": 1,
         "MicInlineBlockWithUrl>>#children": 1,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
-        "input": "-\r.N\r\r\t[.:.]( kqfu)\r```\rl/irhw \t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t---\r`:Nc``vd pr yud`*WmZop*`ow`mo w,kxrlie**k***m\\,**onk/>nul> : N,,p*@>’@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**xltrDr>****oWa**",
+        "input": "-\r.N\r\r\t[.:.]( kqfu)\r```\rl/irhw \t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t---\r`:Nc``vd pr yud`*WmZop*`ow`mo w,kxrlie**k***m\\,**onk/>nul> : N,,p*@>\u2019@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**xltrDr>****oWa**",
         "MicAbstractBlock>>#initialize": 2,
         "MicAbstractBlock>>#children:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 2,
@@ -2422,6 +2444,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 3
     },
     {
+        "executionsPerSecond": 79,
         "MicParagraphBlock>>#canConsumeLine:": 4,
         "MicInlineTokenStream>>#addDelimiter:": 4,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -2503,7 +2526,7 @@
         "MicAbstractBlock>>#parser": 5,
         "MicAbstractBlock>>#setParser:": 5,
         "MicElement>>#inlineParserClass": 5,
-        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<sa\r- [x]\r \r- [x]\rf\r- [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,<>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r- [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\r- [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<sa\r- [x]\r \r- [x]\rf\r- [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,<>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r- [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\r- [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicUnEvaluatedBlock class>>#isEvaluated": 2,
         "MicInlineTokenStream class>>#magicCharacter": 7,
         "MicAbstractBlock>>#children:": 4,
@@ -2552,6 +2575,7 @@
         "MicResourceReference class>>#fromUri:": 1
     },
     {
+        "executionsPerSecond": 2209,
         "String>>#withoutPreTabs": 1,
         "MicParagraphBlock>>#isRightlyIndented:": 1,
         "MicParser>>#handleLine:": 4,
@@ -2570,7 +2594,7 @@
         "MicInlineParser>>#parse:": 2,
         "MicContinuousMarkedBlock>>#extractLine:": 1,
         "MicStartStopMarkupBlock>>#body": 1,
-        "input": "> ./.-\r:/.\\.\t\r :/./.\\{#E}h:/:/.\\\\\\\\\\,,|:|\r| ----------- |\r|:FE/...|:///..\\||Q::|\r| ----------- |\r|n|A|\r```w```\r|v/|QY:/...,>>>|\r| ----------- |\r|mf.iitS:|zcmnbR///\\|bki::|\r|\\ \\’#|yU|hIL:.,,,|\r| ----------- |\r| |\\  zo| qyx|\r|ra|td u|/>W/\\\\|\r| ----------- |\r|y |f#o/r| xfah:|k|\r| za|tp|azT..\\>>>>>|\r| ----------- |\r|ec,ayeget//.,,,,,>|’ he  | w|qf::/\\\\\\\\\\,>>>##|\r|eyf|kuoqxKL:.|aiudh|pvE|\r| ----------- |\r|n |jz t  xqh/....|d|tuml:////\\,,,>>#####’’’’’|\r| jozIK coJ::|, s|wa  |ez|\r| ----------- |\r|eq| |icbpfsuZK|>c rex::.\\\\\\|\r|g|c  #m>|qy |cfcnCV|\r| ----------- |\r|\\xxuw|ovwcpih/kdys/.|tbo>p|f o/dyqg:/..,,|g bdq|\r|:   .:x |.:#|\r| ----------- |\r|:ly’J>l fe\\n N://|jN|/gn|ay|juy-eK::\\|\r|’f>r,#fs> qXsT|\\mwsh  ag|rp|fmn: keoC.\\|I: zig|\r| ----------- |\r|s#il -. -| lfnpwcNg\\|\\|\\|khtqw|\r|a|rbpyxvw-- Nt/.>>|-m| d-e| |\r| ----------- |\r|tbw-d| > ’>qr|m |Ob\\uxekur:/,,>>|- nO\\rf| L  D:|\r|,>ydxw j qzp:|>f  sc--thZ|d-u|z:g|:pr|byhU\\\\,,>#|\r| ----------- |\r|w|\r---\r``` \r\r\r```",
+        "input": "> ./.-\r:/.\\.\t\r :/./.\\{#E}h:/:/.\\\\\\\\\\,,|:|\r| ----------- |\r|:FE/...|:///..\\||Q::|\r| ----------- |\r|n|A|\r```w```\r|v/|QY:/...,>>>|\r| ----------- |\r|mf.iitS:|zcmnbR///\\|bki::|\r|\\ \\\u2019#|yU|hIL:.,,,|\r| ----------- |\r| |\\  zo| qyx|\r|ra|td u|/>W/\\\\|\r| ----------- |\r|y |f#o/r| xfah:|k|\r| za|tp|azT..\\>>>>>|\r| ----------- |\r|ec,ayeget//.,,,,,>|\u2019 he  | w|qf::/\\\\\\\\\\,>>>##|\r|eyf|kuoqxKL:.|aiudh|pvE|\r| ----------- |\r|n |jz t  xqh/....|d|tuml:////\\,,,>>#####\u2019\u2019\u2019\u2019\u2019|\r| jozIK coJ::|, s|wa  |ez|\r| ----------- |\r|eq| |icbpfsuZK|>c rex::.\\\\\\|\r|g|c  #m>|qy |cfcnCV|\r| ----------- |\r|\\xxuw|ovwcpih/kdys/.|tbo>p|f o/dyqg:/..,,|g bdq|\r|:   .:x |.:#|\r| ----------- |\r|:ly\u2019J>l fe\\n N://|jN|/gn|ay|juy-eK::\\|\r|\u2019f>r,#fs> qXsT|\\mwsh  ag|rp|fmn: keoC.\\|I: zig|\r| ----------- |\r|s#il -. -| lfnpwcNg\\|\\|\\|khtqw|\r|a|rbpyxvw-- Nt/.>>|-m| d-e| |\r| ----------- |\r|tbw-d| > \u2019>qr|m |Ob\\uxekur:/,,>>|- nO\\rf| L  D:|\r|,>ydxw j qzp:|>f  sc--thZ|d-u|z:g|:pr|byhU\\\\,,>#|\r| ----------- |\r|w|\r---\r``` \r\r\r```",
         "threshold": 0.9,
         "MicInlineToken>>#string": 2,
         "MicInlineTokenStream>>#addText:": 2,
@@ -2665,6 +2689,7 @@
         "MicCodeBlock>>#extractFirstLineFrom:": 1
     },
     {
+        "executionsPerSecond": 2923,
         "MicParagraphBlock>>#canConsumeLine:": 2,
         "MicInlineTokenStream>>#addDelimiter:": 1,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -2752,7 +2777,7 @@
         "MicAbstractBlock>>#setParser:": 2,
         "MicElement>>#inlineParserClass": 1,
         "MicCodeBlock>>#closeMe": 1,
-        "input": "-\r.N\r\r\t[.:.]( kqfu)\r```\rl/irhw \t\r``` )\r \r \t \r\t![Ev](#) mf  -i>  \r{#\t---\r`:Nc``vd pr yud`*WmZop*`ow`mo w,kxrlie**k***m\\,**onk/>nul> : N,,p*@>’@\r\t---  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**xltrDr>****oWa**",
+        "input": "-\r.N\r\r\t[.:.]( kqfu)\r```\rl/irhw \t\r``` )\r \r \t \r\t![Ev](#) mf  -i>  \r{#\t---\r`:Nc``vd pr yud`*WmZop*`ow`mo w,kxrlie**k***m\\,**onk/>nul> : N,,p*@>\u2019@\r\t---  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**xltrDr>****oWa**",
         "MicUnEvaluatedBlock class>>#isEvaluated": 3,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
         "MicInlineTokenStream class>>#magicCharacter": 4,
@@ -2802,6 +2827,7 @@
         "MicResourceReference class>>#fromUri:": 1
     },
     {
+        "executionsPerSecond": 264,
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicInlineHttpDelimiter>>#blockClass": 1,
         "MicArgumentList>>#from:": 1,
@@ -2888,7 +2914,7 @@
         "MicCodeBlock>>#initialize": 1,
         "MicInlineBlockWithUrl>>#children": 1,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
-        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<sa\r- [x]\r \r- [x]\rf\r``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,<>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<sa\r- [x]\r \r- [x]\rf\r``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,<>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicAbstractBlock>>#initialize": 4,
         "MicAbstractBlock>>#children:": 3,
         "MicAbstractBlock>>#blockStarterClassFrom:": 4,
@@ -2950,6 +2976,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 5
     },
     {
+        "executionsPerSecond": 613,
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicInlineHttpDelimiter>>#blockClass": 2,
         "MicArgumentList>>#from:": 1,
@@ -3036,7 +3063,7 @@
         "MicCodeBlock>>#initialize": 1,
         "MicInlineBlockWithUrl>>#children": 1,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
-        "input": "**.i, \\e  w#/ b,**`s/``d``.  .\\#`\r\r\t[.:.]( kqfu)\r```\rl/irhw \t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv’@[>\\qu>- ]( >)\r`:Nc``vd pr yud`*WmZop*`-/,`mo w,kxrlie**k***m\\,**onk/>nul> : N,,p*@>’@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**xltrDr>****oWa**",
+        "input": "**.i, \\e  w#/ b,**`s/``d``.  .\\#`\r\r\t[.:.]( kqfu)\r```\rl/irhw \t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv\u2019@[>\\qu>- ]( >)\r`:Nc``vd pr yud`*WmZop*`-/,`mo w,kxrlie**k***m\\,**onk/>nul> : N,,p*@>\u2019@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**xltrDr>****oWa**",
         "MicAbstractBlock>>#initialize": 2,
         "MicAbstractBlock>>#children:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 2,
@@ -3094,6 +3121,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 4
     },
     {
+        "executionsPerSecond": 271,
         "MicInlineDelimiter>>#isRawkind": 3,
         "MicParser class>>#parse:": 1,
         "MicSameStartStopMarkupBlock>>#lineStopMarkup": 5,
@@ -3232,7 +3260,7 @@
         "MicCodeBlock>>#code": 1,
         "MicInlineDelimiter>>#isOpener": 5,
         "MicUnEvaluatedBlock class>>#isEvaluated": 2,
-        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<!a\r- [x]\r \r- [x]\rf\r``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<!a\r- [x]\r \r- [x]\rf\r``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicInlineToken>>#string:": 4,
         "MicSameStartStopMarkupBlock>>#arguments": 1,
         "MicAbstractCodeBlock class>>#alternateBlockClassFor:": 1,
@@ -3256,6 +3284,7 @@
         "MicInlineStandardDelimiter>>#blockClass": 4
     },
     {
+        "executionsPerSecond": 550,
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicInlineHttpDelimiter>>#blockClass": 2,
         "MicArgumentList>>#from:": 2,
@@ -3342,7 +3371,7 @@
         "MicCodeBlock>>#initialize": 1,
         "MicInlineBlockWithUrl>>#children": 1,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
-        "input": "**.i, \\e  w#/ b,**`s/``d``.  .\\#`\r\r\t![h::-ofn](li)![o  Y.’:k.\\.:\\  K’ ](nu>:>#h) u*T*\r```\rl/irhw \t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv’@[>\\qu>- ]( >)\r`p\\, l ``vd pr yud`*WmZop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>’@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**xltrDr>****oWa**",
+        "input": "**.i, \\e  w#/ b,**`s/``d``.  .\\#`\r\r\t![h::-ofn](li)![o  Y.\u2019:k.\\.:\\  K\u2019 ](nu>:>#h) u*T*\r```\rl/irhw \t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv\u2019@[>\\qu>- ]( >)\r`p\\, l ``vd pr yud`*WmZop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>\u2019@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**xltrDr>****oWa**",
         "MicAbstractBlock>>#initialize": 2,
         "MicAbstractBlock>>#children:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 2,
@@ -3400,6 +3429,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 4
     },
     {
+        "executionsPerSecond": 537,
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicInlineHttpDelimiter>>#blockClass": 2,
         "MicArgumentList>>#from:": 2,
@@ -3486,7 +3516,7 @@
         "MicCodeBlock>>#initialize": 1,
         "MicInlineBlockWithUrl>>#children": 2,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
-        "input": "**.i, \\e  w#/ b,**`mh>``d``.  .\\#`\r\r\t![h::-ofn](li)![o  Y.’:k.\\.:\\  K’ ](nu>:>#h) u![:m](JN\\ # \\ A#-)\r```\rl/irhw \t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv’@[>\\qu>- ]( >)\r`p\\, l ``vd pr yud`*WmZop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>’@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**xltzDr>****oWa**",
+        "input": "**.i, \\e  w#/ b,**`mh>``d``.  .\\#`\r\r\t![h::-ofn](li)![o  Y.\u2019:k.\\.:\\  K\u2019 ](nu>:>#h) u![:m](JN\\ # \\ A#-)\r```\rl/irhw \t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv\u2019@[>\\qu>- ]( >)\r`p\\, l ``vd pr yud`*WmZop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>\u2019@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**xltzDr>****oWa**",
         "MicAbstractBlock>>#initialize": 2,
         "MicAbstractBlock>>#children:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 2,
@@ -3544,6 +3574,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 4
     },
     {
+        "executionsPerSecond": 81,
         "MicInlineDelimiter>>#isRawkind": 4,
         "MicParser class>>#parse:": 1,
         "MicUnEvaluatedBlock>>#bodyString": 6,
@@ -3683,7 +3714,7 @@
         "MicInlineDelimiter>>#isOpener": 6,
         "MicContinuousMarkedBlock>>#extractLine:": 1,
         "MicUnEvaluatedBlock class>>#isEvaluated": 3,
-        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.hv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<!a\r- [x]\r \r- [x]\rfj``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r/ [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.hv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<!a\r- [x]\r \r- [x]\rfj``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r/ [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicInlineToken>>#string:": 6,
         "MicInlineTokenStream>>#addText:": 5,
         "MicRootBlock>>#hasMetaDataElement": 1,
@@ -3705,6 +3736,7 @@
         "MicInlineStandardDelimiter>>#blockClass": 5
     },
     {
+        "executionsPerSecond": 492,
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicInlineHttpDelimiter>>#blockClass": 2,
         "MicArgumentList>>#from:": 2,
@@ -3791,7 +3823,7 @@
         "MicCodeBlock>>#initialize": 1,
         "MicInlineBlockWithUrl>>#children": 2,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
-        "input": "**.i, \\e  w#/ b,**`mh>``d``.  .\\#`\r\r\t![h::-ofn](li)![o  Y.’:k.\\.:\\  K’ ](nu>:>#h) u![:m](JN\\ # \\ A#-)\r```\rl/irhw \t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv’@[U :w:ycqn’](y)\r`p\\, l ``vd pr yud`*WmZop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>’@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**i’q-e#F**![i-:,x>](,idkm.>z,/pge)",
+        "input": "**.i, \\e  w#/ b,**`mh>``d``.  .\\#`\r\r\t![h::-ofn](li)![o  Y.\u2019:k.\\.:\\  K\u2019 ](nu>:>#h) u![:m](JN\\ # \\ A#-)\r```\rl/irhw \t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv\u2019@[U :w:ycqn\u2019](y)\r`p\\, l ``vd pr yud`*WmZop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>\u2019@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**i\u2019q-e#F**![i-:,x>](,idkm.>z,/pge)",
         "MicAbstractBlock>>#initialize": 2,
         "MicAbstractBlock>>#children:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 2,
@@ -3849,6 +3881,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 4
     },
     {
+        "executionsPerSecond": 488,
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicInlineHttpDelimiter>>#blockClass": 2,
         "MicArgumentList>>#from:": 2,
@@ -3935,7 +3968,7 @@
         "MicCodeBlock>>#initialize": 1,
         "MicInlineBlockWithUrl>>#children": 2,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
-        "input": "**.i, \\e  w#/ b,**`mh>``d`![>a:\\ w>](wa-V-)\r\r\t![h::-ofn](li)![o  Y.’:k.\\.:\\  K’ ](nu>:>#h) u![:m](JN\\ # \\ A#-)\r```\r/:l-\t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv’@[U :w:ycqn’](y)\r`\\le``vd pr yud`*WmZop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>’@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**i’q-e#F**![i-:,x>](,idkm.>z,/pge)",
+        "input": "**.i, \\e  w#/ b,**`mh>``d`![>a:\\ w>](wa-V-)\r\r\t![h::-ofn](li)![o  Y.\u2019:k.\\.:\\  K\u2019 ](nu>:>#h) u![:m](JN\\ # \\ A#-)\r```\r/:l-\t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv\u2019@[U :w:ycqn\u2019](y)\r`\\le``vd pr yud`*WmZop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>\u2019@\r\t  k*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**i\u2019q-e#F**![i-:,x>](,idkm.>z,/pge)",
         "MicAbstractBlock>>#initialize": 2,
         "MicAbstractBlock>>#children:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 2,
@@ -3993,6 +4026,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 4
     },
     {
+        "executionsPerSecond": 567,
         "MicParagraphBlock>>#canConsumeLine:": 2,
         "MicInlineTokenStream>>#addDelimiter:": 3,
         "MicInlineBlockWithUrl>>#closeMe": 2,
@@ -4124,6 +4158,7 @@
         "MicInlineBlockWithUrl>>#arguments": 2
     },
     {
+        "executionsPerSecond": 294,
         "MicParagraphBlock>>#canConsumeLine:": 2,
         "MicInlineTokenStream>>#addDelimiter:": 4,
         "MicInlineBlockWithUrl>>#closeMe": 2,
@@ -4207,7 +4242,7 @@
         "MicAbstractBlock>>#parser": 3,
         "MicAbstractBlock>>#setParser:": 3,
         "MicElement>>#inlineParserClass": 3,
-        "input": "#\r..dG/-` ’/`![T:](-)![/](.l)**, // pt**`x \\c k`- [x]\r :\r- [x]\r-,\r- [x]\r:/u.Tqllf ,sn  #\r- [x]  o .ygs\r- [x] e:# x\r- [ ] \\ dni\r- [x]\rG/ h\r- [x]\t-uq\r- [ ] mx\r- [x] ,\r- [x]\rd’ f   \r- [ ]\r,#gk/-#\r- [x]\r:zo.:\r- [x] :e  h\r- [x]\r   \r- [x]\r  ,\r`/`[\\](l- q\\p)`c`[qI  u]( rfl)`:ybQ`` t/`` q`![jt  ](e   b :n)[s Xpj.Ju]( .up   )4.\r -d\\,lz’’,/nm z v` `k##’@ \\uksk  @`yv`S -l# hrug k,::r#O`spg``ne\\dh> -k#:>a S`[\\:m /]( ezi:Qj\\\\/wL,)---ii cjx#/# .x",
+        "input": "#\r..dG/-` \u2019/`![T:](-)![/](.l)**, // pt**`x \\c k`- [x]\r :\r- [x]\r-,\r- [x]\r:/u.Tqllf ,sn  #\r- [x]  o .ygs\r- [x] e:# x\r- [ ] \\ dni\r- [x]\rG/ h\r- [x]\t-uq\r- [ ] mx\r- [x] ,\r- [x]\rd\u2019 f   \r- [ ]\r,#gk/-#\r- [x]\r:zo.:\r- [x] :e  h\r- [x]\r   \r- [x]\r  ,\r`/`[\\](l- q\\p)`c`[qI  u]( rfl)`:ybQ`` t/`` q`![jt  ](e   b :n)[s Xpj.Ju]( .up   )4.\r -d\\,lz\u2019\u2019,/nm z v` `k##\u2019@ \\uksk  @`yv`S -l# hrug k,::r#O`spg``ne\\dh> -k#:>a S`[\\:m /]( ezi:Qj\\\\/wL,)---ii cjx#/# .x",
         "MicUnEvaluatedBlock class>>#isEvaluated": 5,
         "MicInlineTokenStream class>>#magicCharacter": 7,
         "MicParser>>#isAList:": 1,
@@ -4261,6 +4296,7 @@
         "MicInlineBlockWithUrl>>#arguments": 2
     },
     {
+        "executionsPerSecond": 163,
         "MicInlineDelimiter>>#isRawkind": 4,
         "MicParser class>>#parse:": 1,
         "MicUnEvaluatedBlock>>#bodyString": 5,
@@ -4407,7 +4443,7 @@
         "MicListBlock>>#indentFromLine:": 4,
         "MicInlineDelimiter>>#isOpener": 5,
         "MicContinuousMarkedBlock>>#extractLine:": 1,
-        "input": "---\r\r[:- rtcbLdm />r R,#ivT4th](/ jvfE c wb vx)\r- [x]\r/.hv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<!a\r- [x]\r \r- [x]\rfj``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r{#\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\rq>\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r/ [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:- rtcbLdm />r R,#ivT4th](/ jvfE c wb vx)\r- [x]\r/.hv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<!a\r- [x]\r \r- [x]\rfj``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r{#\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\rq>\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r/ [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicInlineToken>>#string:": 5,
         "MicInlineTokenStream>>#addText:": 5,
         "MicRootBlock>>#hasMetaDataElement": 1,
@@ -4430,6 +4466,7 @@
         "MicInlineStandardDelimiter>>#blockClass": 5
     },
     {
+        "executionsPerSecond": 291,
         "MicParagraphBlock>>#canConsumeLine:": 2,
         "MicInlineTokenStream>>#addDelimiter:": 4,
         "MicInlineBlockWithUrl>>#closeMe": 2,
@@ -4513,7 +4550,7 @@
         "MicAbstractBlock>>#parser": 3,
         "MicAbstractBlock>>#setParser:": 3,
         "MicElement>>#inlineParserClass": 3,
-        "input": "#\r..dG/-` ’/`![T:](-)![/](.l| -----------)**, // pt**`x \\c k`- [x]\r :\r- [x]\r-,\r- [x]\r:/u.Tqllf ,sn  #\r- [x]  o .ygs\r- [x] e:# x\r- ![ ] \\ dni\r- [x]\rG/ h\r- [x]\t-uq\r- [ ] mx\r- [x] ,\r- [x]\rd’ f   \r- [ ]\r,#gk/-#\r- [x]\r:zo.:\r- [x] :e  h\r- [x]\r   \r- [x]\r  ,\r`/`[\\](l- q\\p)`c`[qI  u]( rfl)`:ybQ`` t/`` q`![jt  ](e   b :n)[s Xpj.Ju]( .up   )4.\r -d\\,lz’’,/nm z v` `k##’@ \\uksk  @`yv`S -l# hrug k,::r#O`spg``ne\\dh> -k#:>a S`[\\:m /]( ezi:Qj\\\\/wL,)---iiX cjx#/# .x",
+        "input": "#\r..dG/-` \u2019/`![T:](-)![/](.l| -----------)**, // pt**`x \\c k`- [x]\r :\r- [x]\r-,\r- [x]\r:/u.Tqllf ,sn  #\r- [x]  o .ygs\r- [x] e:# x\r- ![ ] \\ dni\r- [x]\rG/ h\r- [x]\t-uq\r- [ ] mx\r- [x] ,\r- [x]\rd\u2019 f   \r- [ ]\r,#gk/-#\r- [x]\r:zo.:\r- [x] :e  h\r- [x]\r   \r- [x]\r  ,\r`/`[\\](l- q\\p)`c`[qI  u]( rfl)`:ybQ`` t/`` q`![jt  ](e   b :n)[s Xpj.Ju]( .up   )4.\r -d\\,lz\u2019\u2019,/nm z v` `k##\u2019@ \\uksk  @`yv`S -l# hrug k,::r#O`spg``ne\\dh> -k#:>a S`[\\:m /]( ezi:Qj\\\\/wL,)---iiX cjx#/# .x",
         "MicUnEvaluatedBlock class>>#isEvaluated": 5,
         "MicInlineTokenStream class>>#magicCharacter": 7,
         "MicParser>>#isAList:": 1,
@@ -4567,6 +4604,7 @@
         "MicInlineBlockWithUrl>>#arguments": 2
     },
     {
+        "executionsPerSecond": 654,
         "MicParagraphBlock>>#canConsumeLine:": 1,
         "MicInlineTokenStream>>#addDelimiter:": 1,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -4646,7 +4684,7 @@
         "MicAbstractBlock>>#parser": 2,
         "MicAbstractBlock>>#setParser:": 2,
         "MicElement>>#inlineParserClass": 4,
-        "input": "|w|qaknkBy-d Fbo/>uh|-d| | zC,wv,,| d |ct >dk>h| :y|’’ hgp:|c-fK.| qxn#.vrs:n|’\\a# |:|\\P:|.di.#y\\>-  |.| |N|.->’ c x --j:hnv- u|,|b e-p| |-rm| F |  #|\\  : la#K.|  x|#--:|\r| ----------- |\r|/  :Wr|:.x|p#>mtEaw|,q wmb|n|  ,c |ik’p|:i\\ e.#mmns -Nbf|tvwm,|. |\r[,k-p](Nm)\r9.\tn,lue \t\r\r\r\r\r\r\r\r\r\r---\t \t:k:",
+        "input": "|w|qaknkBy-d Fbo/>uh|-d| | zC,wv,,| d |ct >dk>h| :y|\u2019\u2019 hgp:|c-fK.| qxn#.vrs:n|\u2019\\a# |:|\\P:|.di.#y\\>-  |.| |N|.->\u2019 c x --j:hnv- u|,|b e-p| |-rm| F |  #|\\  : la#K.|  x|#--:|\r| ----------- |\r|/  :Wr|:.x|p#>mtEaw|,q wmb|n|  ,c |ik\u2019p|:i\\ e.#mmns -Nbf|tvwm,|. |\r[,k-p](Nm)\r9.\tn,lue \t\r\r\r\r\r\r\r\r\r\r---\t \t:k:",
         "MicUnEvaluatedBlock class>>#isEvaluated": 2,
         "MicInlineTokenStream class>>#magicCharacter": 6,
         "MicAbstractBlock>>#children:": 1,
@@ -4696,6 +4734,7 @@
         "MicTableBlock>>#extractLine:": 1
     },
     {
+        "executionsPerSecond": 258,
         "String>>#withoutPreTabs": 2,
         "MicEvaluatedBlock>>#closeMe": 1,
         "MicParagraphBlock>>#isRightlyIndented:": 2,
@@ -4714,7 +4753,7 @@
         "MicInlineParser>>#parse:": 4,
         "MicInlineTokenStream class>>#backslashReescape:except:": 1,
         "MicInlineParser>>#skipTo:inStream:": 1,
-        "input": "|wTj,y:|e|\r| -----------| -----------| ----------- |\r| |\r\r|>G |i|:,Cdb/orzc,|yuh h ,di/ d>fhf|kqykd  u.-| nv/\\\\> f, gCy-.|.m\\pz|y|nio|xy|/hp | uMbk:|> m.te>#-|\r| ----------- |\r|cip/:l  |.f,|d|l | \t- [x]\r  Rki fb bf/qgz-\r- [x] :’r.h/urm,l o’ sdb\\\r- [x] #yp’q\\q ghm\r- [ ]\r>b\r- [x] d t\r- [x]\tz R:f|:|\r| ----------- |\r|q|wdW:|\tq ih/  .  nw\\\r\r \r \t|dk,zzusp,mb.z:>|qr/ w|- l|\r| ----------- |\r|p|z\\otr |`b`\r\t   g g/@uvn>:  ceh@ / ytmUdlnyVp` s:s- t-j`|x , k|/..hwk m|qhdX>>|:aWR|yb  k >R Js|ad>Nx|\r| ----------- |\r| Y,’v  \\|’hlyndy|ymt\\ x s|o /ux|> y’>vqhf|ksj us rk|xcu|-vw#xJy |:\\, ||q >|>qqN|g>’k|o#,aFK/#|\r| ----------- |\r| je|xiksm>uv||xasjp x,bdhqb\\o|d .i.jr n ,---u,k/|x|v/g| /y:::nol\\|t|\r| ----------- |\r|t’o X be>:# j.i|s|clh|K/m#| htxj|pzx| t,  xyp > o|gdN>>k:|wT.|bWK \\ t’O|j\\>|> |\r\t| r,a  :wdXcb |hq|y\\ll|g n| .P’hy, -|z c-b,pe>|o|a|v:s|/’| ,\\\\> - -|>|y,a|>e\\u  y Tyr#f\\H- |o|T|dz|\r| ----------- |\r|Vx|ri .>zbjyar: |og,c|xvc|--mh-O:m:||betht ..\\g| :sk> \\c>|\r| ----------- |\r|ag ,cr>k|n|:v>pn| ~-~",
+        "input": "|wTj,y:|e|\r| -----------| -----------| ----------- |\r| |\r\r|>G |i|:,Cdb/orzc,|yuh h ,di/ d>fhf|kqykd  u.-| nv/\\\\> f, gCy-.|.m\\pz|y|nio|xy|/hp | uMbk:|> m.te>#-|\r| ----------- |\r|cip/:l  |.f,|d|l | \t- [x]\r  Rki fb bf/qgz-\r- [x] :\u2019r.h/urm,l o\u2019 sdb\\\r- [x] #yp\u2019q\\q ghm\r- [ ]\r>b\r- [x] d t\r- [x]\tz R:f|:|\r| ----------- |\r|q|wdW:|\tq ih/  .  nw\\\r\r \r \t|dk,zzusp,mb.z:>|qr/ w|- l|\r| ----------- |\r|p|z\\otr |`b`\r\t   g g/@uvn>:  ceh@ / ytmUdlnyVp` s:s- t-j`|x , k|/..hwk m|qhdX>>|:aWR|yb  k >R Js|ad>Nx|\r| ----------- |\r| Y,\u2019v  \\|\u2019hlyndy|ymt\\ x s|o /ux|> y\u2019>vqhf|ksj us rk|xcu|-vw#xJy |:\\, ||q >|>qqN|g>\u2019k|o#,aFK/#|\r| ----------- |\r| je|xiksm>uv||xasjp x,bdhqb\\o|d .i.jr n ,---u,k/|x|v/g| /y:::nol\\|t|\r| ----------- |\r|t\u2019o X be>:# j.i|s|clh|K/m#| htxj|pzx| t,  xyp > o|gdN>>k:|wT.|bWK \\ t\u2019O|j\\>|> |\r\t| r,a  :wdXcb |hq|y\\ll|g n| .P\u2019hy, -|z c-b,pe>|o|a|v:s|/\u2019| ,\\\\> - -|>|y,a|>e\\u  y Tyr#f\\H- |o|T|dz|\r| ----------- |\r|Vx|ri .>zbjyar: |og,c|xvc|--mh-O:m:||betht ..\\g| :sk> \\c>|\r| ----------- |\r|ag ,cr>k|n|:v>pn| ~-~",
         "MicInlineToken>>#string": 5,
         "MicInlineTokenStream>>#addText:": 4,
         "MicListBlock>>#indent": 2,
@@ -4817,6 +4856,7 @@
         "MicListBlock>>#closeMe": 1
     },
     {
+        "executionsPerSecond": 83,
         "MicInlineDelimiter>>#isRawkind": 5,
         "MicParser class>>#parse:": 1,
         "MicUnEvaluatedBlock>>#bodyString": 6,
@@ -4962,7 +5002,7 @@
         "MicListBlock>>#indentFromLine:": 4,
         "MicInlineDelimiter>>#isOpener": 6,
         "MicContinuousMarkedBlock>>#extractLine:": 1,
-        "input": "---\r\r[:- rtcbLdm />r [^,#ivT th](/ jvfE c wb vx)\r- [x]\r/.hv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r-~~[x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x[x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<!a\r- [x]\r \r- [x]\rfj``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r/ [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:- rtcbLdm />r [^,#ivT th](/ jvfE c wb vx)\r- [x]\r/.hv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r-~~[x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x[x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<!a\r- [x]\r \r- [x]\rfj``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r/ [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicInlineToken>>#string:": 6,
         "MicInlineTokenStream>>#addText:": 5,
         "MicRootBlock>>#hasMetaDataElement": 1,
@@ -4984,6 +5024,7 @@
         "MicInlineStandardDelimiter>>#blockClass": 5
     },
     {
+        "executionsPerSecond": 83,
         "MicInlineDelimiter>>#isRawkind": 5,
         "MicParser class>>#parse:": 1,
         "MicUnEvaluatedBlock>>#bodyString": 6,
@@ -5129,7 +5170,7 @@
         "MicListBlock>>#indentFromLine:": 4,
         "MicInlineDelimiter>>#isOpener": 6,
         "MicContinuousMarkedBlock>>#extractLine:": 1,
-        "input": "---\r\r[:- rtcbLdm />r [^,#ivT th](/ jvfE c wb vx)\r- [x]\r/.hv\r- [x] dU\r- [ ( ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r-~~[x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x[x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\r[^j--\r- [x]\r<!a\r- [x]\r \r- [x]\rfj``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x[^\r,\r- [x]\r>>##\r/ [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:- rtcbLdm />r [^,#ivT th](/ jvfE c wb vx)\r- [x]\r/.hv\r- [x] dU\r- [ ( ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r-~~[x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x[x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\r[^j--\r- [x]\r<!a\r- [x]\r \r- [x]\rfj``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x[^\r,\r- [x]\r>>##\r/ [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicInlineToken>>#string:": 6,
         "MicInlineTokenStream>>#addText:": 5,
         "MicRootBlock>>#hasMetaDataElement": 1,
@@ -5151,6 +5192,7 @@
         "MicInlineStandardDelimiter>>#blockClass": 5
     },
     {
+        "executionsPerSecond": 85,
         "MicInlineDelimiter>>#isRawkind": 5,
         "MicParser class>>#parse:": 1,
         "MicUnEvaluatedBlock>>#bodyString": 6,
@@ -5296,7 +5338,7 @@
         "MicListBlock>>#indentFromLine:": 4,
         "MicInlineDelimiter>>#isOpener": 6,
         "MicContinuousMarkedBlock>>#extractLine:": 1,
-        "input": "---\r\r[:- rtcbLdm />r [^,#ivT th](/ jvfE c wb vx)\r- [x]\r/.hv\r- [x] dU\r- [ ( ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r-~~[x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x[x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\r[^j--\r- [x]\r<!a\r- [x]\r \r- [x]\rfj``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-A# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x][^ \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x[^\r,\r- [x]\r>>##\r/ [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x][^>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:- rtcbLdm />r [^,#ivT th](/ jvfE c wb vx)\r- [x]\r/.hv\r- [x] dU\r- [ ( ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\vo:t}> , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r-~~[x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x[x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x],#et\r- [x]\r tV#eDd>\r- [x]\r[^j--\r- [x]\r<!a\r- [x]\r \r- [x]\rfj``` [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r- [x]\r>\r- [x]\r>w-k-A# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\\r- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x][^ \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x[^\r,\r- [x]\r>>##\r/ [x]\r,<>##\r- [x]\r,,\r- [x]<\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r, [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\rk [x][^>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicInlineToken>>#string:": 6,
         "MicInlineTokenStream>>#addText:": 5,
         "MicRootBlock>>#hasMetaDataElement": 1,
@@ -5318,6 +5360,7 @@
         "MicInlineStandardDelimiter>>#blockClass": 5
     },
     {
+        "executionsPerSecond": 1382,
         "MicTableBlock>>#extractLine:": 1,
         "MicRootBlock>>#canConsumeLine:": 1,
         "MicInlineTokenStream>>#initialize": 1,
@@ -5349,7 +5392,7 @@
         "MicTableBlock>>#closeMe": 1,
         "MicAbstractBlock>>#startLine": 2,
         "MicAbstractBlock>>#initialize": 1,
-        "input": "###\r’-\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t\r\t|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’’-|’|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|’|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|’|-|-|-|-|-|-|-|’|-|-|-|-|’|#|’|-|-|-|-|-|-|-|-|-|-|-|’|-|-|-|’|-|-|-|-|-|-|-|-|-|-|-|-|’|-|-|-|-|-|’|-|’|-|-|-|-|’|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-| |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|                                                                                                                                                   |-|\r| -----------| ----------- |\r|#’|---",
+        "input": "###\r\u2019-\t\r \t\t\t\t\t\t\t\t\t\t\t\t\t\r\t|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019\u2019-|\u2019|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|\u2019|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|\u2019|-|-|-|-|-|-|-|\u2019|-|-|-|-|\u2019|#|\u2019|-|-|-|-|-|-|-|-|-|-|-|\u2019|-|-|-|\u2019|-|-|-|-|-|-|-|-|-|-|-|-|\u2019|-|-|-|-|-|\u2019|-|\u2019|-|-|-|-|\u2019|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-| |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|                                                                                                                                                   |-|\r| -----------| ----------- |\r|#\u2019|---",
         "MicAbstractBlock class>>#alternateBlockClassFor:": 2,
         "MicInlineDelimiter>>#isOpener": 1,
         "MicAbstractBlock>>#massageLine:": 2,
@@ -5401,6 +5444,7 @@
         "MicParser>>#nonMatchedBlockClassFor:": 1
     },
     {
+        "executionsPerSecond": 613,
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicInlineHttpDelimiter>>#blockClass": 3,
         "MicArgumentList>>#from:": 2,
@@ -5488,7 +5532,7 @@
         "MicCodeBlock>>#initialize": 1,
         "MicInlineBlockWithUrl>>#children": 2,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
-        "input": "**.i, \\e  w#/ b,**`mh>``d`![>a:\\ w>](wa-V-)\r\r\t![h::-ofn](li)![o  Y.’:k.\\.:\\  K’ ](nu>:>#h) u![:m](JN\\ # \\ A#-)\r```\r/:l-\t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv’@[U :w:ycqn/’](y)\r`\\le``vd pr yud`*WmZop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>’@\r\t  k@*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**i’q-e#F**![i-:,x>](,idkm.>z8,/pge)",
+        "input": "**.i, \\e  w#/ b,**`mh>``d`![>a:\\ w>](wa-V-)\r\r\t![h::-ofn](li)![o  Y.\u2019:k.\\.:\\  K\u2019 ](nu>:>#h) u![:m](JN\\ # \\ A#-)\r```\r/:l-\t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv\u2019@[U :w:ycqn/\u2019](y)\r`\\le``vd pr yud`*WmZop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>\u2019@\r\t  k@*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**i\u2019q-e#F**![i-:,x>](,idkm.>z8,/pge)",
         "MicAbstractBlock>>#initialize": 2,
         "MicAbstractBlock>>#children:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 2,
@@ -5546,6 +5590,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 4
     },
     {
+        "executionsPerSecond": 220,
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicInlineHttpDelimiter>>#blockClass": 1,
         "MicArgumentList>>#from:": 1,
@@ -5625,7 +5670,7 @@
         "SequenceableCollection>>#splitOnFirst:": 1,
         "MicInlineToken>>#string:": 5,
         "MicInlineBlockWithUrl>>#children": 1,
-        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\]: o:t}> , -\r- [x] u/\r- [x] t\r- [x] i  ’\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r’ p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<sa\r- [x]\r \r- [x]\rf\r- [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,’\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r{# [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\u- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f’ \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r’ -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,<>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r- [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\r- [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
+        "input": "---\r\r[:- rtcbLdm />r R,#ivT th](/ jvfE c wb vx)\r- [x]\r/.qv\r- [x] dU\r- [ ] ,,\r- [x] d.  \r- [x] v,jf a\r- [x] pGb\\ko,nfcn/t \\]: o:t}> , -\r- [x] u/\r- [x] t\r- [x] i  \u2019\r- [x] /t\r- [x] ewv\r- [x] tures\r- [x] ,  hpy,\r- [x]\rk.\r- [x]\r\u2019 p >.\r- [x]\raue\r- [x] >:hikvd \\,y\\b. >\r- [x]\rul\r- [x]\rr\r- [x]\r#et\r- [x]\r tV#eDd>\r- [x]\rSj--\r- [x]\r<sa\r- [x]\r \r- [x]\rf\r- [x]\r#,>.r/\r- [x]\r%B\r- [x]\rh:L\\,u\\\\# c \r- [x]\rv>.w #-#,\u2019\r- [x]\ra\r- [x]\r> -s\r- [x]\r\\#/ j\r- [x]\r>\\# s m \r{# [x]\r>\r- [x]\r>w-k-o# az c\r- [x]\r >>l- j -\r- [x]\r,-\r- [x]\rm\r- [x]\r \\u- [x]\r-  \r- [x]\r,\r- [x]\r-vox-j sr\r- [x]\r- -c- #-    l f\u2019 \r- [x]\rq\r- [x]\rz \r- [x]\ryxk\r- [x]\rA,\\k:-rz,z p\r- [x]\r #\r- [x]\r\\ \r- [x]\rwwG -\r- [x]\r->\r- [x]\r -: -\r- [x]\r jjoz-i-\r- [x]\r \r- [x]\r\u2019 -f-\r- [x]\re\r- [x]\rb\\h  .\r- [x]  \r- [x]  ::\r- [x]\rp9\r- [x]\r \r- [x]\r/,,\r- [x]\r\\\\>#\r- [x]\r.\r- [x]\r,>##\r- [x]\r,\r- [x]\r>>##\r- [x]\r,<>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>>##\r- [x]\r,,\r- [x]\r\\>\r- [x]\r,>#\r- [x]\r,\r- [x]\r>#\r- [x]\r>##\r- [x]\r>>#\r- [x]\r,\r- [x]\r>###\r- [x]\r>\t\r\r ###\rX###\r cb",
         "MicAbstractBlock>>#initialize": 4,
         "MicAbstractBlock>>#children:": 3,
         "MicAbstractBlock>>#blockStarterClassFrom:": 4,
@@ -5688,6 +5733,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 5
     },
     {
+        "executionsPerSecond": 117,
         "String>>#withoutPreTabs": 4,
         "MicParagraphBlock>>#isRightlyIndented:": 4,
         "MicParser>>#handleLine:": 6,
@@ -5704,7 +5750,7 @@
         "MicInlineParser>>#parse:": 5,
         "MicInlineTokenStream class>>#backslashReescape:except:": 1,
         "MicContinuousMarkedBlock>>#extractLine:": 1,
-        "input": "Sm\\:#, jiG\r\r`.duyk`\r\t\t\r\t- [x] /E #\r- [x]\t .ts ,f\r- [ ] fpt\r- [x] G\r- [x] okPmp/aiv\r- [x] > \\,cG,k hm\r- [x]\ta:f \r- [x]\te \r- [x]\r/j l \r- [x] og\r- [x]\tf \r- [x]\rvavyh/Bwl,wQc G ,oe.\\#\\\r- [x] :vb \r- [x] b \r- [ ]\rppgry\r- [x]\ryaC\r- [x]\r w-/o g \r- [x]\t \r- [x]\rps b:xe#ykB \r- [x]\t c,j:f’E\r- [x]\tnsef\r- [x]\rR\r- [x]\rko\r- [ ]\r--D, \r- [x]\r:xiH:K>kh >##,\r- [x]\r>>:\r- [x]\rg\r- [x]\tf\r- [x]\r -\r- [ ]\t.d>\r- [x]\t- \\n  >f-:\r- [ ]\t, ,\r- [x]\r,-\\d\r- [x]\r/> wk/,\r- [x]\r##\r- [x]\r> - \r- [x]\r, \r- [x]\r>po \r- [x]\r--T/\r- [x]\r   -a\r- [x]\r-Oa\r- [x]\r  -\r- [x]\ru n \r- [ ]\rx-i- p\r- [x]\r #h,\r- [x]\r-\r- [x]\rlw \\\r- [x]\r  v> \r- [ ]\r\\-\r- [x]\rt y-t\r- [x]\r--l#x  g-\r- [x]\r   --r- -     >\r- [x]\r  \r- [x]\r m.\r- [x]\t \r- [x]\tjhv\r- [x]\r :-.\r- [x]\t:> :\r- [x] v\r- [x] a\r- [x]\r-\r- [x]\t/\r- [x]\r-\\’,\r- [x]\r,\r- [x]\r--->\r- [x]\t \r- [x]\r#,,\r- [x]\rI>#\r- [x]\r#, \\\r- [x]\r>\\: ,",
+        "input": "Sm\\:#, jiG\r\r`.duyk`\r\t\t\r\t- [x] /E #\r- [x]\t .ts ,f\r- [ ] fpt\r- [x] G\r- [x] okPmp/aiv\r- [x] > \\,cG,k hm\r- [x]\ta:f \r- [x]\te \r- [x]\r/j l \r- [x] og\r- [x]\tf \r- [x]\rvavyh/Bwl,wQc G ,oe.\\#\\\r- [x] :vb \r- [x] b \r- [ ]\rppgry\r- [x]\ryaC\r- [x]\r w-/o g \r- [x]\t \r- [x]\rps b:xe#ykB \r- [x]\t c,j:f\u2019E\r- [x]\tnsef\r- [x]\rR\r- [x]\rko\r- [ ]\r--D, \r- [x]\r:xiH:K>kh >##,\r- [x]\r>>:\r- [x]\rg\r- [x]\tf\r- [x]\r -\r- [ ]\t.d>\r- [x]\t- \\n  >f-:\r- [ ]\t, ,\r- [x]\r,-\\d\r- [x]\r/> wk/,\r- [x]\r##\r- [x]\r> - \r- [x]\r, \r- [x]\r>po \r- [x]\r--T/\r- [x]\r   -a\r- [x]\r-Oa\r- [x]\r  -\r- [x]\ru n \r- [ ]\rx-i- p\r- [x]\r #h,\r- [x]\r-\r- [x]\rlw \\\r- [x]\r  v> \r- [ ]\r\\-\r- [x]\rt y-t\r- [x]\r--l#x  g-\r- [x]\r   --r- -     >\r- [x]\r  \r- [x]\r m.\r- [x]\t \r- [x]\tjhv\r- [x]\r :-.\r- [x]\t:> :\r- [x] v\r- [x] a\r- [x]\r-\r- [x]\t/\r- [x]\r-\\\u2019,\r- [x]\r,\r- [x]\r--->\r- [x]\t \r- [x]\r#,,\r- [x]\rI>#\r- [x]\r#, \\\r- [x]\r>\\: ,",
         "MicInlineToken>>#string": 6,
         "MicInlineTokenStream>>#addText:": 5,
         "MicContinuousMarkedBlock>>#addLineAndReturnNextNode:": 1,
@@ -5807,6 +5853,7 @@
         "MicListBlock>>#closeMe": 4
     },
     {
+        "executionsPerSecond": 118,
         "String>>#withoutPreTabs": 4,
         "MicParagraphBlock>>#isRightlyIndented:": 4,
         "MicParser>>#handleLine:": 6,
@@ -5822,7 +5869,7 @@
         "MicContinuousMarkedBlock>>#doesLineStartWithMarkup:": 1,
         "MicInlineParser>>#parse:": 5,
         "MicContinuousMarkedBlock>>#extractLine:": 1,
-        "input": "@, ,,@\r\r@#,,@\r\t\t\r\t- [x] /E #\r- [x]\t .ts ,f\r- [ ] fpt\r- [x] G\r- [x] okPmp/aiv\r- [x] > \\,cG,k hm\r- [x]\ta:f \r- [x]\te \r- [x]\r/j l \r- [x] og\r- [x]\tf \r- [x]\rvavyh/Bwl,wQc G ,oe.\\#\\\r- [x] :vb \r- [x] b \r- [ ]\rppgry\r- [x]\ryaC\r- [x]\r w-/o g \r- [x]\t \r- [x]\rps b:xe#ykB \r- [x]\t c,j:f’E\r- [x]\tnsef\r- [x]\rR\r- [x]\rko\r- [ ]\r--D, \r- [x]\r:xiH:K>kh >##,\r- [x]\r>>:\r- [x]\rg\r- [x]\tf\r- [x]\r -\r- [ ]\t.d>\r- [x]\t- \\n  >f-:\r- [ ]\t, ,\r- [x]\r,-\\d\r- [x]\r/> wk/,\r- [x]\r##\r- [x]\r> - \r- [x]\r, \r- [x]\r>po \r- [x]\r--T/\r- [x]\r   -a\r- [x]\r-Oa\r- [x]\r  -\r- [x]\ru n \r- [ ]\rx-i- p\r- [x]\r #h,\r- [x]\r-\r- [x]\rlw \\\r- [x]\r  v> \r- [ ]\r\\-\r- [x]\rt y-t\r- [x]\r--l#x  g-\r- [x]\r   --r- -     >\r- [x]\r  \r- [x]\r m.\r- [x]\t \r- [x]\tjhv\r- [x]\r :-.\r- [x]\t:> :\r- [x] v\r- [x] a\r- [x]\r-\r- [x]\t/\r- [x]\r-\\’,\r- [x]\r,\r- [x]\r--->\r- [x]\t \r- [x]\r#,,\r- [x]\rI>#\r- [x]\r#, \\\r- [x]\r>\\: ,",
+        "input": "@, ,,@\r\r@#,,@\r\t\t\r\t- [x] /E #\r- [x]\t .ts ,f\r- [ ] fpt\r- [x] G\r- [x] okPmp/aiv\r- [x] > \\,cG,k hm\r- [x]\ta:f \r- [x]\te \r- [x]\r/j l \r- [x] og\r- [x]\tf \r- [x]\rvavyh/Bwl,wQc G ,oe.\\#\\\r- [x] :vb \r- [x] b \r- [ ]\rppgry\r- [x]\ryaC\r- [x]\r w-/o g \r- [x]\t \r- [x]\rps b:xe#ykB \r- [x]\t c,j:f\u2019E\r- [x]\tnsef\r- [x]\rR\r- [x]\rko\r- [ ]\r--D, \r- [x]\r:xiH:K>kh >##,\r- [x]\r>>:\r- [x]\rg\r- [x]\tf\r- [x]\r -\r- [ ]\t.d>\r- [x]\t- \\n  >f-:\r- [ ]\t, ,\r- [x]\r,-\\d\r- [x]\r/> wk/,\r- [x]\r##\r- [x]\r> - \r- [x]\r, \r- [x]\r>po \r- [x]\r--T/\r- [x]\r   -a\r- [x]\r-Oa\r- [x]\r  -\r- [x]\ru n \r- [ ]\rx-i- p\r- [x]\r #h,\r- [x]\r-\r- [x]\rlw \\\r- [x]\r  v> \r- [ ]\r\\-\r- [x]\rt y-t\r- [x]\r--l#x  g-\r- [x]\r   --r- -     >\r- [x]\r  \r- [x]\r m.\r- [x]\t \r- [x]\tjhv\r- [x]\r :-.\r- [x]\t:> :\r- [x] v\r- [x] a\r- [x]\r-\r- [x]\t/\r- [x]\r-\\\u2019,\r- [x]\r,\r- [x]\r--->\r- [x]\t \r- [x]\r#,,\r- [x]\rI>#\r- [x]\r#, \\\r- [x]\r>\\: ,",
         "MicInlineToken>>#string": 6,
         "MicInlineTokenStream>>#addText:": 5,
         "MicContinuousMarkedBlock>>#addLineAndReturnNextNode:": 1,
@@ -5912,6 +5959,7 @@
         "MicListBlock>>#closeMe": 4
     },
     {
+        "executionsPerSecond": 117,
         "MicInlineHttpDelimiter>>#blockClass": 1,
         "MicArgumentList>>#from:": 1,
         "MicListBlock>>#indentFromLine:": 4,
@@ -5993,7 +6041,7 @@
         "MicUnEvaluatedBlock>>#bodyString": 6,
         "MicInlineToken>>#string:": 6,
         "MicInlineBlockWithUrl>>#children": 1,
-        "input": "1. #,\r\r**w’az**![:  qb ](ge)`-G,w,`\t \t\r- [x]\r bub\\ \r- [x] /l\r- [x]\tSg\r- [ ] rbUmQ/\r- [x] kQZ/y.f\r- [x]\tz b\\/baAgl\r- [x] m \r- [x] o   Rokv pd\r- [x] a\r- [x] d. \r- [ ]\t,qq,\\dU>cs>.f\r- [x] ugol. v>\r- [x] o bpou o>y/z\r- [x]\ri tc\r- [x]\r’\r- [x]\r \\l#-y -: q’v\r- [x] oMd\r- [x]\rl\r- [x]\r-xKq/ k yb:-\r- [x]\r \r- [x]\t n g\r- [x]\rkfx.N\r- [x]\rAx\r- [x]\rX:  \\\r- [ ]\r--eGs/\r- [x]\rn,oa\\\r- [x]\r/,\r- [x]\rh,\r- [ ]\r z>\\-\r- [x]\t.g.:\\->\r- [x]\tv ,,\r- [x]\r>#i # j-   \r- [x]\r> \\ ,:’-, -/j\r- [x] d\r- [x]\r#z’-w\r- [x]\r# y ,\r- [x]\r#’yzs# -\r- [x]\rm\r- [x]\r- -\\\r- [x]\r- \r- [ ]\r#-rxx\r- [x]\r \r- [x]\rj   \r- [x]\rj\r- [x]\r-ytn \r- [x] -- #\\\r- [ ]\rj  --  .-ua \r- [x]\rt\r- [ ]\r-gnW>c d\r- [x]\r ,>\r- [x]\ra D lx \\--\r- [x]\r> y\r- [x]\t  s/wk\r- [x]\r-:e :\r- [x]\r  \r- [x]\rercir:\r- [x]\t- x\r- [x]\r- \r- [x] n   \r- [x] e\r- [ ]\ri ,,,/\r- [x]\r \r- [x]\t. \r- [x]\r# -\r- [ ]\r>>#\r- [x]\t,\r- [x]\r>#### /-\r\\w",
+        "input": "1. #,\r\r**w\u2019az**![:  qb ](ge)`-G,w,`\t \t\r- [x]\r bub\\ \r- [x] /l\r- [x]\tSg\r- [ ] rbUmQ/\r- [x] kQZ/y.f\r- [x]\tz b\\/baAgl\r- [x] m \r- [x] o   Rokv pd\r- [x] a\r- [x] d. \r- [ ]\t,qq,\\dU>cs>.f\r- [x] ugol. v>\r- [x] o bpou o>y/z\r- [x]\ri tc\r- [x]\r\u2019\r- [x]\r \\l#-y -: q\u2019v\r- [x] oMd\r- [x]\rl\r- [x]\r-xKq/ k yb:-\r- [x]\r \r- [x]\t n g\r- [x]\rkfx.N\r- [x]\rAx\r- [x]\rX:  \\\r- [ ]\r--eGs/\r- [x]\rn,oa\\\r- [x]\r/,\r- [x]\rh,\r- [ ]\r z>\\-\r- [x]\t.g.:\\->\r- [x]\tv ,,\r- [x]\r>#i # j-   \r- [x]\r> \\ ,:\u2019-, -/j\r- [x] d\r- [x]\r#z\u2019-w\r- [x]\r# y ,\r- [x]\r#\u2019yzs# -\r- [x]\rm\r- [x]\r- -\\\r- [x]\r- \r- [ ]\r#-rxx\r- [x]\r \r- [x]\rj   \r- [x]\rj\r- [x]\r-ytn \r- [x] -- #\\\r- [ ]\rj  --  .-ua \r- [x]\rt\r- [ ]\r-gnW>c d\r- [x]\r ,>\r- [x]\ra D lx \\--\r- [x]\r> y\r- [x]\t  s/wk\r- [x]\r-:e :\r- [x]\r  \r- [x]\rercir:\r- [x]\t- x\r- [x]\r- \r- [x] n   \r- [x] e\r- [ ]\ri ,,,/\r- [x]\r \r- [x]\t. \r- [x]\r# -\r- [ ]\r>>#\r- [x]\t,\r- [x]\r>#### /-\r\\w",
         "MicAbstractBlock>>#initialize": 5,
         "MicAbstractBlock>>#children:": 3,
         "MicAbstractBlock>>#blockStarterClassFrom:": 5,
@@ -6057,6 +6105,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 6
     },
     {
+        "executionsPerSecond": 711,
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicInlineHttpDelimiter>>#blockClass": 2,
         "MicArgumentList>>#from:": 2,
@@ -6144,7 +6193,7 @@
         "MicCodeBlock>>#initialize": 1,
         "MicInlineBlockWithUrl>>#children": 2,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
-        "input": "***.i, \\e  w#/ b,**`mh>``d`![>a:\\ w>](wa-V-)\r\r\t![h::-ofn](li)![o  Y.’:k.\\.:\\  K’ ](nu>:>#h) u![:m](JN\\ # \\ A#-)\r```\r/:l-\t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv’@[U :w:ycqn/’]| -----------(y)\r`\\le``vd pr yud`*Wm,Zop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>’@\r\t  k@*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**i’q-e#F**![i-:,x>](,idkm.>z8,/pge)",
+        "input": "***.i, \\e  w#/ b,**`mh>``d`![>a:\\ w>](wa-V-)\r\r\t![h::-ofn](li)![o  Y.\u2019:k.\\.:\\  K\u2019 ](nu>:>#h) u![:m](JN\\ # \\ A#-)\r```\r/:l-\t\r``` \r \r \t \r\t![Ev](#) mf  -i>  \r\t@#,>/:/ Rv\u2019@[U :w:ycqn/\u2019]| -----------(y)\r`\\le``vd pr yud`*Wm,Zop*`-/,`mo w,kxrlie**ez***m\\,**onk/>nul> : N,,p*@>\u2019@\r\t  k@*   aQ   b\\x\\  capgc >x*@pq \\C@m/gujiq q/r**i\u2019q-e#F**![i-:,x>](,idkm.>z8,/pge)",
         "MicAbstractBlock>>#initialize": 2,
         "MicAbstractBlock>>#children:": 1,
         "MicAbstractBlock>>#blockStarterClassFrom:": 2,
@@ -6203,6 +6252,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 4
     },
     {
+        "executionsPerSecond": 116,
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicInlineHttpDelimiter>>#blockClass": 1,
         "MicArgumentList>>#from:": 1,
@@ -6282,7 +6332,7 @@
         "MicUnEvaluatedBlock>>#bodyString": 6,
         "MicInlineToken>>#string:": 6,
         "MicInlineBlockWithUrl>>#children": 1,
-        "input": "1. #,\r\r> >##n>![ ]( , #>>\\ )* *> ,,*>**>##*![   ](,)\t \t\r- [x]\r bub\\ \r- [x] /l\r- [x]\tSg\r- [ ] rbUmQ/\r- [x] kQZ/y.f\r- [x]\tz b\\/baAgl\r- [x] m \r- [x] o   Rokv pd\r- [x] a\r- [x] d. \r- [ ]\t,qq,\\dU>cs>.f\r- [x] ugol. v>\r- [x] o bpou o>y/z\r- [x]\ri tc\r- [x]\r’\r- [x]\r \\l#-y -: q’v\r- [x] oMd\r- [x]\rl\r- [x]\r-xKq/ k yb:-\r- [x]\r \r- [x]\t n g\r- [x]\rkfx.N\r- [x]\rAx\r- [x]\rX:  \\\r- [ ]\r--eGs/\r- [x]\rn,oa\\\r- [x]\r/,\r- [x]\rh,\r- [ ]\r z>\\-\r- [x]\t.g.:\\->\r- [x]\tv ,,\r- [x]\r>#i # j-   \r- [x]\r> \\ ,:’-, -/j\r- [x] d\r- [x]\r#z’-w\r- [x]\r# y ,\r- [x]\r#’yzs# -\r- [x]\rm\r- [x]\r- -\\\r- [x]\r- \r- [ ]\r#-rxx\r- [x]\r \r- [x]\rj   \r- [x]\rj\r- [x]\r-ytn \r- [x] -- #\\\r- [ ]\rj  --  .-ua \r- [x]\rt\r- [ ]\r-gnW>c d\r- [x]\r ,>\r- [x]\ra D lx \\--\r- [x]\r> y\r- [x]\t  s/wk\r- [x]\r-:e :\r- [x]\r  \r- [x]\rercir:\r- [x]\t- x\r- [x]\r- \r- [x] n   \r- [x] e\r- [ ]\ri ,,,/\r- [x]\r \r- [x]\t. \r- [x]\r# -\r- [ ]\r>>#\r- [x]\t,\r- [x]\r>#### /-\r\\w",
+        "input": "1. #,\r\r> >##n>![ ]( , #>>\\ )* *> ,,*>**>##*![   ](,)\t \t\r- [x]\r bub\\ \r- [x] /l\r- [x]\tSg\r- [ ] rbUmQ/\r- [x] kQZ/y.f\r- [x]\tz b\\/baAgl\r- [x] m \r- [x] o   Rokv pd\r- [x] a\r- [x] d. \r- [ ]\t,qq,\\dU>cs>.f\r- [x] ugol. v>\r- [x] o bpou o>y/z\r- [x]\ri tc\r- [x]\r\u2019\r- [x]\r \\l#-y -: q\u2019v\r- [x] oMd\r- [x]\rl\r- [x]\r-xKq/ k yb:-\r- [x]\r \r- [x]\t n g\r- [x]\rkfx.N\r- [x]\rAx\r- [x]\rX:  \\\r- [ ]\r--eGs/\r- [x]\rn,oa\\\r- [x]\r/,\r- [x]\rh,\r- [ ]\r z>\\-\r- [x]\t.g.:\\->\r- [x]\tv ,,\r- [x]\r>#i # j-   \r- [x]\r> \\ ,:\u2019-, -/j\r- [x] d\r- [x]\r#z\u2019-w\r- [x]\r# y ,\r- [x]\r#\u2019yzs# -\r- [x]\rm\r- [x]\r- -\\\r- [x]\r- \r- [ ]\r#-rxx\r- [x]\r \r- [x]\rj   \r- [x]\rj\r- [x]\r-ytn \r- [x] -- #\\\r- [ ]\rj  --  .-ua \r- [x]\rt\r- [ ]\r-gnW>c d\r- [x]\r ,>\r- [x]\ra D lx \\--\r- [x]\r> y\r- [x]\t  s/wk\r- [x]\r-:e :\r- [x]\r  \r- [x]\rercir:\r- [x]\t- x\r- [x]\r- \r- [x] n   \r- [x] e\r- [ ]\ri ,,,/\r- [x]\r \r- [x]\t. \r- [x]\r# -\r- [ ]\r>>#\r- [x]\t,\r- [x]\r>#### /-\r\\w",
         "MicAbstractBlock>>#initialize": 5,
         "MicAbstractBlock>>#children:": 3,
         "MicAbstractBlock>>#blockStarterClassFrom:": 5,
@@ -6344,6 +6394,7 @@
         "MicUnEvaluatedBlock>>#bodyString:": 6
     },
     {
+        "executionsPerSecond": 368,
         "MicParagraphBlock>>#canConsumeLine:": 2,
         "MicInlineTokenStream>>#addDelimiter:": 3,
         "MicInlineBlockWithUrl>>#closeMe": 1,
@@ -6424,7 +6475,7 @@
         "MicAbstractBlock>>#parser": 3,
         "MicAbstractBlock>>#setParser:": 2,
         "MicElement>>#inlineParserClass": 4,
-        "input": "|#|#|j|g.gdl./tqd | /\\rv i fu# |m cs Tz h\\ :vJq|,n’ps/k|vy| t cm#q|d|q|-x--:U.:/#,\\|\r| -----------| -----------| ----------- |\r|w#/ > o f  Wx|\r\r\t\r\t|:.|-|#xaz|l:e|X|c|#qmw:| >|,tucV/ |\r| ----------- |\r|.crmflc#Mjwy/h|:grg|u|sVte|\t ~  Wcgl       zcuyrzs~###\r//.#eCvcrq\r\r\t\r@i-@\r `ee v``.X\\a/o ``w  p`-bs*\\r’r>wh*`c`\\,i\r\t`tk`` t /p,/’Wf,ondpn- `yw/>*,lr’hc.>c>-: qla>>l*`jwo  md’u` d`wJb d’   ler`[//buOk>g]( sr)@xx \\t@q icm`-.`qj xln >#`fhm/` \t  |Mf -Uy ov|w\\oxg|u g\\\\#|-Qgxp#um,vea::: W|\r| ----------- |\r|p ui|   :>#v,mv’mm:’emz,v/|p|ne f :y|p.zh|,mzh|\r|wxypf ,ua|kn:u|whN>|uv:z\\\\\\|/ zb p:  \\zkqH s|> |\\J:|g>,,\\|s.f |\r| ----------- |\r|ap/ /lo\\ im|jpe, #i-yol.’>|,b’|a -b|gwj|q zhj|s>  WgF-|y,-|qQ a |f ’’’.>>#\\>’d- |\\.|# ,#H>’| /|>>-,y #|x:| i| #| t|y>n -|\\ph|:f/ |p|z- ,|cbi\\| ’r|  ||,,|y#tw|sh|z:hs/>un| |b/s\\co|cv>\\>| w|jP|Pd->|.\\\\-/ |\\  i#p-|,#, | kq-- n,|b |,--lchb,|y :o| F  : >  p l |\r| ----------- |\r|\\Acz|q  |\\>k\\>u/|x|---```\t ```|x.|./z| s’ SY-|xqv:o|lu#|K:-,a>t|pt|\r| ----------- |\r|z|- pu",
+        "input": "|#|#|j|g.gdl./tqd | /\\rv i fu# |m cs Tz h\\ :vJq|,n\u2019ps/k|vy| t cm#q|d|q|-x--:U.:/#,\\|\r| -----------| -----------| ----------- |\r|w#/ > o f  Wx|\r\r\t\r\t|:.|-|#xaz|l:e|X|c|#qmw:| >|,tucV/ |\r| ----------- |\r|.crmflc#Mjwy/h|:grg|u|sVte|\t ~  Wcgl       zcuyrzs~###\r//.#eCvcrq\r\r\t\r@i-@\r `ee v``.X\\a/o ``w  p`-bs*\\r\u2019r>wh*`c`\\,i\r\t`tk`` t /p,/\u2019Wf,ondpn- `yw/>*,lr\u2019hc.>c>-: qla>>l*`jwo  md\u2019u` d`wJb d\u2019   ler`[//buOk>g]( sr)@xx \\t@q icm`-.`qj xln >#`fhm/` \t  |Mf -Uy ov|w\\oxg|u g\\\\#|-Qgxp#um,vea::: W|\r| ----------- |\r|p ui|   :>#v,mv\u2019mm:\u2019emz,v/|p|ne f :y|p.zh|,mzh|\r|wxypf ,ua|kn:u|whN>|uv:z\\\\\\|/ zb p:  \\zkqH s|> |\\J:|g>,,\\|s.f |\r| ----------- |\r|ap/ /lo\\ im|jpe, #i-yol.\u2019>|,b\u2019|a -b|gwj|q zhj|s>  WgF-|y,-|qQ a |f \u2019\u2019\u2019.>>#\\>\u2019d- |\\.|# ,#H>\u2019| /|>>-,y #|x:| i| #| t|y>n -|\\ph|:f/ |p|z- ,|cbi\\| \u2019r|  ||,,|y#tw|sh|z:hs/>un| |b/s\\co|cv>\\>| w|jP|Pd->|.\\\\-/ |\\  i#p-|,#, | kq-- n,|b |,--lchb,|y :o| F  : >  p l |\r| ----------- |\r|\\Acz|q  |\\>k\\>u/|x|---```\t ```|x.|./z| s\u2019 SY-|xqv:o|lu#|K:-,a>t|pt|\r| ----------- |\r|z|- pu",
         "MicUnEvaluatedBlock class>>#isEvaluated": 5,
         "MicInlineTokenStream class>>#magicCharacter": 7,
         "MicAbstractBlock>>#children:": 1,
