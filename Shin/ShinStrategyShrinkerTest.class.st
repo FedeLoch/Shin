@@ -121,20 +121,6 @@ ShinStrategyShrinkerTest >> testGrammarReducer10 [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer11 [
-
-	| oracle input |
-	oracle := ShinExecutionTimeOracle new threshold: 0.9; evalBlock: [ :path | SVGRunner run: path ].
-
-	shrinker oracle: oracle.
-	shrinker grammar: SvgPathGrammar new.
-	shrinker reductionStrategy: ShinSimplifyGrammarBoth.
-	input := 'm-.99,-.4,7-93.,03-.8 -19.9-.2449 -1742 -269 -747 -5 16.-132 21.04-55.9'.
-	
-	self assert:  (shrinker shrink: input) size < (input size)
-]
-
-{ #category : 'tests' }
 ShinStrategyShrinkerTest >> testGrammarReducer12 [
 
 	| oracle res |

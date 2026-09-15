@@ -47,7 +47,7 @@ ShinVulcanShrinker >> initialize [
 	maxIterations := 1.
 	windowSize := 4. 
 	
-	mainReducer := ShinHDDShrinker new.
+	mainReducer := "ShinHDDShrinker"ShinHDDPaperShrinker new.
 	auxiliaryReducers := { 
 		ShinIdentifierReplacement new. 
 		ShinSubTreeReducer new.

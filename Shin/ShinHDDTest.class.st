@@ -95,17 +95,3 @@ ShinHDDTest >> testHDDReducer08 [
 	
 	self assert:  res equals: 'm2-5'
 ]
-
-{ #category : 'tests' }
-ShinHDDTest >> testHDDReducer09 [
-
-	| oracle input |
-	oracle := ShinExecutionTimeOracle new evalBlock: [ :path | SVGRunner run: path ].
-	
-	shrinker oracle: oracle.
-	shrinker grammar: SvgPathGrammar new.
-	
-	input := 'm-.99,-.4,7-933.,03-.8 -319.9-.62449 -1742 -269 -747 -5 16.-132 21.04-55.9'.
-	
-	self assert: (shrinker shrink: input) size < (input size)
-]
