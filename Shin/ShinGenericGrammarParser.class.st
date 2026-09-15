@@ -1,5 +1,5 @@
 Class {
-	#name : 'GenericGrammarParser',
+	#name : 'ShinGenericGrammarParser',
 	#superclass : 'Object',
 	#instVars : [
 		'memo'
@@ -10,13 +10,13 @@ Class {
 }
 
 { #category : 'parsing' }
-GenericGrammarParser class >> accept: string from: grammar [
+ShinGenericGrammarParser class >> accept: string from: grammar [
 
 	^ (self parse: string from: grammar) isNil not 
 ]
 
 { #category : 'parsing' }
-GenericGrammarParser class >> parse: string from: grammar [
+ShinGenericGrammarParser class >> parse: string from: grammar [
 
 	| parsingResult |
 	parsingResult := self new parseNonTerminal: grammar start on: string from: 0.
@@ -29,7 +29,7 @@ GenericGrammarParser class >> parse: string from: grammar [
 ]
 
 { #category : 'parsing' }
-GenericGrammarParser >> best: best candidate: candidate [
+ShinGenericGrammarParser >> best: best candidate: candidate [
 	
 	best ifNil: [ ^ candidate ].
 	
@@ -37,14 +37,14 @@ GenericGrammarParser >> best: best candidate: candidate [
 ]
 
 { #category : 'parsing' }
-GenericGrammarParser >> initialize [
+ShinGenericGrammarParser >> initialize [
 
 	super initialize.
 	memo := Dictionary new.
 ]
 
 { #category : 'parsing' }
-GenericGrammarParser >> parseNonTerminal: nonTerminal on: input from: index [
+ShinGenericGrammarParser >> parseNonTerminal: nonTerminal on: input from: index [
 
 	| key cached best |
     key := { nonTerminal name . index }.
@@ -68,7 +68,7 @@ GenericGrammarParser >> parseNonTerminal: nonTerminal on: input from: index [
 ]
 
 { #category : 'parsing' }
-GenericGrammarParser >> parseRule: rule on: input from: index [
+ShinGenericGrammarParser >> parseRule: rule on: input from: index [
 
 	| children currentIndex |
 	children := OrderedCollection new.
@@ -85,7 +85,7 @@ GenericGrammarParser >> parseRule: rule on: input from: index [
 ]
 
 { #category : 'parsing' }
-GenericGrammarParser >> parseTerminal: terminal on: string from: index rule: rule [
+ShinGenericGrammarParser >> parseTerminal: terminal on: string from: index rule: rule [
 
     | token |
 

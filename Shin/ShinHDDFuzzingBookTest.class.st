@@ -1,5 +1,5 @@
 Class {
-	#name : 'ShinHDDTest',
+	#name : 'ShinHDDFuzzingBookTest',
 	#superclass : 'ShinReductionShrinkerTest',
 	#instVars : [
 		'shrinker',
@@ -11,17 +11,17 @@ Class {
 }
 
 { #category : 'running' }
-ShinHDDTest >> setUp [
+ShinHDDFuzzingBookTest >> setUp [
 
 	super setUp.
 	super timeLimit: 5 minutes. 
-	shrinker := ShinHDDPaperShrinker new.
+	shrinker := ShinHDDShrinker new.
 	grammar := AritExpressionGrammar new.
 	shrinker grammar: grammar.
 ]
 
 { #category : 'tests' }
-ShinHDDTest >> testHDDReducer01 [
+ShinHDDFuzzingBookTest >> testHDDReducer01 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $3 ]).
 	
@@ -29,7 +29,7 @@ ShinHDDTest >> testHDDReducer01 [
 ]
 
 { #category : 'tests' }
-ShinHDDTest >> testHDDReducer02 [
+ShinHDDFuzzingBookTest >> testHDDReducer02 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $2 ]).
 	
@@ -37,7 +37,7 @@ ShinHDDTest >> testHDDReducer02 [
 ]
 
 { #category : 'tests' }
-ShinHDDTest >> testHDDReducer02v2 [
+ShinHDDFuzzingBookTest >> testHDDReducer02v2 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $2 ]).
 	
@@ -45,7 +45,7 @@ ShinHDDTest >> testHDDReducer02v2 [
 ]
 
 { #category : 'tests' }
-ShinHDDTest >> testHDDReducer03 [
+ShinHDDFuzzingBookTest >> testHDDReducer03 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includesSubstring: '(' ]).
 	
@@ -53,7 +53,7 @@ ShinHDDTest >> testHDDReducer03 [
 ]
 
 { #category : 'tests' }
-ShinHDDTest >> testHDDReducer04 [
+ShinHDDFuzzingBookTest >> testHDDReducer04 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $1 ]).
 	
@@ -61,7 +61,7 @@ ShinHDDTest >> testHDDReducer04 [
 ]
 
 { #category : 'tests' }
-ShinHDDTest >> testHDDReducer05 [
+ShinHDDFuzzingBookTest >> testHDDReducer05 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $3 ]).
 	
@@ -69,7 +69,7 @@ ShinHDDTest >> testHDDReducer05 [
 ]
 
 { #category : 'tests' }
-ShinHDDTest >> testHDDReducer06 [
+ShinHDDFuzzingBookTest >> testHDDReducer06 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | (string includes: $2) and: [(string includes: $3)] ]).
 	
@@ -77,7 +77,7 @@ ShinHDDTest >> testHDDReducer06 [
 ]
 
 { #category : 'tests' }
-ShinHDDTest >> testHDDReducer07 [
+ShinHDDFuzzingBookTest >> testHDDReducer07 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | (string includes: $2) and: [(string includes: $1)] ]).
 	
@@ -85,7 +85,7 @@ ShinHDDTest >> testHDDReducer07 [
 ]
 
 { #category : 'tests' }
-ShinHDDTest >> testHDDReducer08 [
+ShinHDDFuzzingBookTest >> testHDDReducer08 [
 
 	| res |
 	
@@ -97,7 +97,7 @@ ShinHDDTest >> testHDDReducer08 [
 ]
 
 { #category : 'tests' }
-ShinHDDTest >> testHDDReducer09 [
+ShinHDDFuzzingBookTest >> testHDDReducer09 [
 
 	| oracle input |
 	oracle := ShinExecutionTimeOracle new evalBlock: [ :path | SVGRunner run: path ].
