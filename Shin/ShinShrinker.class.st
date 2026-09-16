@@ -22,7 +22,7 @@ ShinShrinker >> asInput: tree [
 { #category : 'shrinking' }
 ShinShrinker >> checkGrammar: aInput [
 
-	^ UmeGrammarParser accept: aInput from: grammar
+	^ GncGenericGrammarParser accept: aInput from: grammar
 ]
 
 { #category : 'shrinking' }
