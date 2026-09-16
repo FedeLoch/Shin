@@ -20,7 +20,7 @@ ShinBooleanInputOracle class >> from: booleanBlock [
 
 { #category : 'as yet unclassified' }
 ShinBooleanInputOracle >> accepts: input from: _ [
-	
+
 	^ block value: input
 ]
 

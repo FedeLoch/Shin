@@ -1,5 +1,5 @@
 Class {
-	#name : 'ShinStrategyShrinkerTest',
+	#name : 'ShinGRABRShrinkerest',
 	#superclass : 'ShinReductionShrinkerTest',
 	#instVars : [
 		'shrinker',
@@ -11,7 +11,7 @@ Class {
 }
 
 { #category : 'accessing' }
-ShinStrategyShrinkerTest >> setUp [
+ShinGRABRShrinkerest >> setUp [
 
 	super setUp.
 	shrinker := ShinGRABRShrinker new.
@@ -20,7 +20,7 @@ ShinStrategyShrinkerTest >> setUp [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer00 [ 
+ShinGRABRShrinkerest >> testGrammarReducer00 [ 
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includesSubstring: '(3)' ]).
 	shrinker reductionStrategy: ShinSimplifyGrammarAlternateReduction . 
@@ -29,7 +29,7 @@ ShinStrategyShrinkerTest >> testGrammarReducer00 [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer01 [
+ShinGRABRShrinkerest >> testGrammarReducer01 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $1 ]).
 	shrinker reductionStrategy: ShinSimplifyGrammarBoth.
@@ -38,7 +38,7 @@ ShinStrategyShrinkerTest >> testGrammarReducer01 [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer02 [
+ShinGRABRShrinkerest >> testGrammarReducer02 [
 	
 	shrinker oracle: (self oracleByBlock: [ :string | string includesSubstring: '(3)' ]).
 	shrinker reductionStrategy: ShinSimplifyGrammarBoth.
@@ -47,7 +47,7 @@ ShinStrategyShrinkerTest >> testGrammarReducer02 [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer03 [
+ShinGRABRShrinkerest >> testGrammarReducer03 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $3 ]).
 	shrinker reductionStrategy: ShinSimplifyGrammarBoth.
@@ -56,7 +56,7 @@ ShinStrategyShrinkerTest >> testGrammarReducer03 [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer05 [
+ShinGRABRShrinkerest >> testGrammarReducer05 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $3 ]).
 	shrinker reductionStrategy: ShinSimplifyGrammarBoth.
@@ -65,7 +65,7 @@ ShinStrategyShrinkerTest >> testGrammarReducer05 [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer06 [
+ShinGRABRShrinkerest >> testGrammarReducer06 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includesSubstring: '(' ]).
 	shrinker reductionStrategy: ShinSimplifyGrammarSubtreeReducer . 
@@ -74,7 +74,7 @@ ShinStrategyShrinkerTest >> testGrammarReducer06 [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer07 [
+ShinGRABRShrinkerest >> testGrammarReducer07 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includesSubstring: '4' ]).
 	shrinker reductionStrategy: ShinSimplifyGrammarSubtreeReducer . 
@@ -83,7 +83,7 @@ ShinStrategyShrinkerTest >> testGrammarReducer07 [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer08 [
+ShinGRABRShrinkerest >> testGrammarReducer08 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includesSubstring: '2' ]).
 	shrinker reductionStrategy: ShinSimplifyGrammarAlternateReduction . 
@@ -92,7 +92,7 @@ ShinStrategyShrinkerTest >> testGrammarReducer08 [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer09 [
+ShinGRABRShrinkerest >> testGrammarReducer09 [
 
 	| res |
 
@@ -104,7 +104,7 @@ ShinStrategyShrinkerTest >> testGrammarReducer09 [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer10 [
+ShinGRABRShrinkerest >> testGrammarReducer10 [
 
 	| grammar2 oracle input |
 	grammar2 := GncRegexGrammar new.
@@ -121,7 +121,7 @@ ShinStrategyShrinkerTest >> testGrammarReducer10 [
 ]
 
 { #category : 'tests' }
-ShinStrategyShrinkerTest >> testGrammarReducer12 [
+ShinGRABRShrinkerest >> testGrammarReducer12 [
 
 	| oracle res |
 	oracle := (self oracleByBlock: [ :string | (string includes: $5) and: (string includes: $2) ]).
