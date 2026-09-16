@@ -12,7 +12,7 @@ ShinSimplifyGrammarAlternateReductionTest >> testMinimizingATreeWithAAlternative
 	| expressionTree grammar res stringList expectedRes|
 	grammar := AritExpressionGrammar new.
 
-	expressionTree := ShinGenericGrammarParser parse: '1+(2+(3*4))' from: grammar.
+	expressionTree := GncGenericGrammarParser parse: '1+(2+(3*4))' from: grammar.
 	res := (ShinSimplifyGrammarAlternateReduction alternateReduction: expressionTree  using: grammar matchingWith: 'Expr' ).
 	stringList := res collect: #asInput.
 	expectedRes := #('1' '2' ).
@@ -25,7 +25,7 @@ ShinSimplifyGrammarAlternateReductionTest >> testMinimizingATreeWithAAlternative
 	| expressionTree grammar res stringList expectedRes|
 	grammar := AritExpressionGrammar new.
 
-	expressionTree := ShinGenericGrammarParser parse: '1+2' from: grammar.
+	expressionTree := GncGenericGrammarParser parse: '1+2' from: grammar.
 	res := (ShinSimplifyGrammarAlternateReduction alternateReduction: expressionTree  using: grammar matchingWith: 'Expr' ).
 	stringList := res collect: #asInput. "2, 1, 2+2, 1+2"
 	expectedRes := #( '2' '1' '2+2' ).
@@ -38,7 +38,7 @@ ShinSimplifyGrammarAlternateReductionTest >> testMinimizingATreeWithAAlternative
 	| expressionTree grammar res stringList expectedRes |
 	grammar := AritExpressionGrammar new.
 
-	expressionTree := ShinGenericGrammarParser parse: '1+(2*3)' from: grammar.
+	expressionTree := GncGenericGrammarParser parse: '1+(2*3)' from: grammar.
 	res := (ShinSimplifyGrammarAlternateReduction alternateReduction: expressionTree  using: grammar matchingWith: 'Term' ).
 	stringList := res collect: #asInput.
 	expectedRes := #( '2' '1' '3' '(2*3)').

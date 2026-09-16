@@ -12,7 +12,7 @@ ShinSimplifyGrammarSubtreeReducerTest >> testMinimizingAnExpressionSubree [
 	| expressionTree grammar res stringList expectedRes|
 	grammar := AritExpressionGrammar new.
 
-	expressionTree := ShinGenericGrammarParser parse: '1+(2*3)' from: grammar.
+	expressionTree := GncGenericGrammarParser parse: '1+(2*3)' from: grammar.
 	res := (ShinSimplifyGrammarSubtreeReducer findSubtree: expressionTree mathchingWith: 'Term' ).
 	stringList := res collect: #asInput.
 	expectedRes := #('(2*3)' '1' '2' '3').
@@ -26,7 +26,7 @@ ShinSimplifyGrammarSubtreeReducerTest >> testMinimizingAnExpressionSubree02 [
 	| expressionTree grammar res stringList expectedRes|
 	grammar := AritExpressionGrammar new.
 
-	expressionTree := ShinGenericGrammarParser parse: '1+(2*3)' from: grammar.
+	expressionTree := GncGenericGrammarParser parse: '1+(2*3)' from: grammar.
 	res := (ShinSimplifyGrammarSubtreeReducer findSubtree: expressionTree mathchingWith: 'Op' ).
 	stringList := res collect: #asInput.
 	expectedRes := #('+' '*').

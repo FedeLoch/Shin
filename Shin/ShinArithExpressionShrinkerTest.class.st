@@ -42,5 +42,5 @@ ShinArithExpressionShrinkerTest >> testMinimizeSimpleExpression1 [
 { #category : 'running' }
 ShinArithExpressionShrinkerTest >> tree: input [
 
-	^ ShinGenericGrammarParser parse: input from: shrinker grammar
+	^ GncGenericGrammarParser parse: input from: shrinker grammar
 ]
