@@ -13,15 +13,17 @@ Metacello new
     load.
 
 shrinkerClasses := {
-    Smalltalk at: #ShinGRABRShrinker.
     Smalltalk at: #ShinDDminFuzzingBookShrinker.
     Smalltalk at: #ShinDDminPaperShrinker.
     Smalltalk at: #ShinNautilusShrinker.
     Smalltalk at: #ShinHDDShrinker.
-    Smalltalk at: #ShinVulcanShrinker
+    Smalltalk at: #ShinVulcanShrinker.
+    Smalltalk at: #ShinGRABRShrinker.
 }.
 
-benchmark := (Smalltalk at: #ShinShrinkingMicrodownCoverageBenchmark) for: shrinkerClasses.
-report := benchmark bench.
+shrinkerClasses do: [ :aShrinkerClass |
+    benchmark := (Smalltalk at: #ShinShrinkingMicrodownCoverageBenchmark) for: {aShrinkerClass}.
+    report := benchmark bench.
 
-report saveAsFile: 'ShinShrinkingMicrodownCoverageBenchmark.json'
+    report saveAsFile: 'ShinShrinkingMicrodownCoverageBenchmark-', aShrinkerClass name, '.json'
+].
