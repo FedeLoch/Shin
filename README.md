@@ -119,7 +119,7 @@ Plots are built with [Roassal](https://github.com/ObjectProfile/Roassal3) and be
 - Hierarchical Delta Debugging (HDD): [Misherghi & Su](https://www.cs.ucr.edu/~hhsu/papers/asplos06-hdd.pdf)
 - Nautilus: [Astrauskas et al.](https://github.com/RUB-SysSec/Nautilus)
 - Vulcan: [FuzzBench](https://github.com/purseclab/Vulcan)
-- Perser
+- Perses: [Perses](https://dl.acm.org/doi/abs/10.1145/3180155.3180236)
 - The Fuzzing Book: [Zeller et al.](https://www.fuzzingbook.org/)
 
 ## License
