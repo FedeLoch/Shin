@@ -6,6 +6,12 @@ Metacello new
 	onConflictUseIncoming;
     load.
 
+Metacello new
+    baseline: 'Ume';
+    repository: 'github://FedeLoch/Ume:main';
+	onConflictUseIncoming;
+    load.
+
 shrinkerClasses := {
     Smalltalk at: #ShinGRABRShrinker.
     Smalltalk at: #ShinDDminFuzzingBookShrinker.
