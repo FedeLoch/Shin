@@ -62,7 +62,7 @@ ShinGrammarShrinker >> minimized: node [
 { #category : 'testing' }
 ShinGrammarShrinker >> parse: input [
 
-	^ ShinGenericGrammarParser parse: input from: grammar
+	^ GncGenericGrammarParser parse: input from: grammar
 ]
 
 { #category : 'shrinking' }
