@@ -108,7 +108,7 @@ ShinGRABRShrinkerest >> testGrammarReducer10 [
 
 	| grammar2 oracle input |
 	grammar2 := GncRegexGrammar new.
-	oracle := ShinExecutionTimeOracle new threshold: 0.9; evalBlock: [ :regex |
+	oracle := ShinExecutionTimeOracle new threshold: 0.8; evalBlock: [ :regex |
 		regex asRegex matches: regex minimalStringMatching
 	].
 
