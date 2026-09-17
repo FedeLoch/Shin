@@ -72,7 +72,7 @@ ShinShrinker >> grammar: aGrammar [
 ShinShrinker >> initialize [ 
 	
 	super initialize.
-	maxIterations := 1000.
+	maxIterations := 1.
 	reductionsDone := 0.
 	failedReductionsDone := 0.
 ]
