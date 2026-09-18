@@ -16,13 +16,9 @@ ShinCoverageOracle >> accepts: input from: baseline [
 
 	| current |
 	
-	current := [self evalInput: input] on: Error do: [ ^ false ].
+	current := [ self evalInput: input ] on: Error do: [ ^ false ].
 
-	current keys do: [ :key |
-		(baseline at: key) ~= (current at: key) ifTrue: [ ^ false ]
-	].
-
-	^ true
+	^ current = baseline
 ]
 
 { #category : 'accessing' }
@@ -41,13 +37,11 @@ ShinCoverageOracle >> evalBlock: aBlock [
 ShinCoverageOracle >> evalInput: input [
 
 	| result |
-	" return the coverage table "
+	
+	
 	result := collector runOn: [ evalBlock value: input ].
-	^ {
-		  ('percetange' -> result percentage).
-		  ('nodes' -> result nodes size).
-		  ( 'methods' -> result methods size)
-	} asDictionary 
+
+	^ result nodes collect: #asString as: Set.
 ]
 
 { #category : 'initialization' }
