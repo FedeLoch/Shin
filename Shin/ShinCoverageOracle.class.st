@@ -48,7 +48,7 @@ ShinCoverageOracle >> evalInput: input [
 ShinCoverageOracle >> initialize [ 
 
 	super initialize.
-	collector := C2CoverageCollector new methods: {}.
+	collector := CoverageCollector new methods: {}.
 	threshold := 1.
 ]
 
