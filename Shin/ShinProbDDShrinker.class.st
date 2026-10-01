@@ -27,7 +27,7 @@ ShinProbDDShrinker >> minimizeProbDD: list probabilities: probs upperBound: boun
 	
 	[ lmin anySatisfy: [ :l | (probs at: l) < 1 ] ] whileTrue: [ | subset complement |
 		subset := self selectSubset: lmin probabilities: probs upperBound: bound.
-		complement := lmin \ subset. "Check me"
+		complement := lmin \ subset.
 		(self triggerBug: complement upperBound: bound) ifTrue: [
 			lmin := complement.
 		] ifFalse: [ | factor | 
@@ -59,10 +59,13 @@ ShinProbDDShrinker >> selectSubset: lmin probabilities: probs upperBound: bound 
 
 	| sorted subset currentMaxGain |
 	
-	sorted := lmin copy sorted: [ :a :b| (probs at: a) >= (probs at: b) ].
+	sorted := lmin copy sorted: [ :a :b | (probs at: a) >= (probs at: b) ].
+	
+	(sorted size = 2) ifTrue: [ ^ { sorted second } ].
 	
 	subset := {}.
 	currentMaxGain := 0.
+
 	sorted do: [ :l | | tempSubset gain |
 		tempSubset := subset, { l }.
 		gain := tempSubset size * ((tempSubset collect: [ :subL | (1 - (probs at: subL) ) ]) multiply).
