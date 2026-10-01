@@ -111,17 +111,6 @@ ShinWDDminShrinker >> triggerBug: tree upperBound: originalScore [
 ]
 
 { #category : 'shrinking' }
-ShinWDDminShrinker >> wddRec: partitions lmin: lmin input: list upperBound: bound [
-
-	[ partitions notEmpty ] whileTrue: [
-		partitions do: [ :ptn |
-			
-		
-		]
-	]
-]
-
-{ #category : 'shrinking' }
 ShinWDDminShrinker >> wddRec: partitions lmin: lmin input: list weights: weights upperBound: bound [
 
 	| localPartitions |
@@ -130,20 +119,22 @@ ShinWDDminShrinker >> wddRec: partitions lmin: lmin input: list weights: weights
 
 	[ localPartitions notEmpty ] whileTrue: [ 
 		partitions do: [ :ptn |
+			self minimizationDone.
 			(self triggerBug: ptn upperBound: bound) ifTrue: [ | currentLmin currentPartitions |
 				currentLmin := ptn.
 				currentPartitions := self weightedPartitions: { ptn } weights: weights.
 				^ self wddRec: currentPartitions lmin: currentLmin input: list weights: weights upperBound: bound
-			]
+			] ifFalse: [ self failedMinimization ]
 		].
 	
 		localPartitions do: [ :ptn | | complement |
 			complement := lmin \ { ptn }.
+			self minimizationDone.
 			(self triggerBug: complement upperBound: bound) ifTrue: [ | currentLmin currentPartitions |
 				currentLmin := complement.
 				currentPartitions := localPartitions reject: [ :e | e = ptn ].
 				^ self wddRec: currentPartitions lmin: currentLmin input: list weights: weights upperBound: bound
-			]
+			] ifFalse: [ self failedMinimization ]
 		].
 			
 		localPartitions := self weightedPartitions: localPartitions weights: weights
