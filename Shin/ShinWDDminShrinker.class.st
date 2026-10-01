@@ -141,7 +141,7 @@ ShinWDDminShrinker >> wddRec: partitions lmin: lmin input: list weights: weights
 			complement := lmin \ { ptn }.
 			(self triggerBug: complement upperBound: bound) ifTrue: [ | currentLmin currentPartitions |
 				currentLmin := complement.
-				currentPartitions := localPartitions copy remove: ptn.
+				currentPartitions := localPartitions reject: [ :e | e = ptn ].
 				^ self wddRec: currentPartitions lmin: currentLmin input: list weights: weights upperBound: bound
 			]
 		].
