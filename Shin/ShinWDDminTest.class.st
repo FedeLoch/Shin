@@ -1,5 +1,5 @@
 Class {
-	#name : 'ShinWDDTest',
+	#name : 'ShinWDDminTest',
 	#superclass : 'ShinReductionShrinkerTest',
 	#instVars : [
 		'shrinker',
@@ -11,7 +11,7 @@ Class {
 }
 
 { #category : 'running' }
-ShinWDDTest >> setUp [
+ShinWDDminTest >> setUp [
 
 	super setUp.
 	shrinker := ShinWDDminShrinker new.	
@@ -20,31 +20,31 @@ ShinWDDTest >> setUp [
 ]
 
 { #category : 'running' }
-ShinWDDTest >> testString [ 
+ShinWDDminTest >> testString [ 
 	
 	self assert: (shrinker shrink: 'asqjjkqsbdvieqvsbdoivbq') equals: 'e'
 ]
 
 { #category : 'running' }
-ShinWDDTest >> testString02 [
+ShinWDDminTest >> testString02 [
 
 	self assert: (shrinker shrink: 'e') equals: 'e'
 ]
 
 { #category : 'running' }
-ShinWDDTest >> testString03 [
+ShinWDDminTest >> testString03 [
 
 	self assert: (shrinker shrink: 'eq') equals: 'e'
 ]
 
 { #category : 'running' }
-ShinWDDTest >> testString04 [
+ShinWDDminTest >> testString04 [
 	
 	self assert: (shrinker shrink: 'eeeeeeeeeeeeeeeeeeeeeeeeee') equals: 'e'
 ]
 
 { #category : 'running' }
-ShinWDDTest >> testString05 [
+ShinWDDminTest >> testString05 [
 
 	shrinker oracle: (self oracleByBlock: [ :string |
 			 (string includes: $e) and: (string includes: $a) ]).
@@ -55,7 +55,7 @@ ShinWDDTest >> testString05 [
 ]
 
 { #category : 'running' }
-ShinWDDTest >> testString06 [
+ShinWDDminTest >> testString06 [
 	
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $3 ]).
 	
