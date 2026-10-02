@@ -6,7 +6,7 @@
 
 # Shin — Input Minimization Library for Pharo
 
-Shin is a Pharo library that provides **implementations of state-of-the-art reducers**: working, self-contained implementations of the most influential input-minimization and grammar-based reduction algorithms — including delta debugging, Hierarchical Delta Debugging (HDD), Nautilus, and Vulcan's reducers — so they can be reused and compared directly. Each reducer takes a potentially large input that triggers the behavior of interest and produces a much smaller input that still reproduces the same behavior. Shin is **grammar-aware**: it can parse inputs into a concrete syntax tree and reduce the tree, so the minimized output always stays valid according to the grammar.
+Shin is a Pharo library that provides **implementations of state-of-the-art reducers**: working, self-contained implementations of the most influential input-minimization and grammar-based reduction algorithms, including delta debugging, Hierarchical Delta Debugging (HDD), Nautilus, ProbDD, CDD, WDDProb, WDDmin, and Vulcan's reducers — so they can be reused and compared directly. Each reducer takes a potentially large input that triggers the behavior of interest and produces a much smaller input that still reproduces the same behavior. Shin is **grammar-aware**: it can parse inputs into a concrete syntax tree and reduce the tree, so the minimized output always stays valid according to the grammar.
 
 Beyond the algorithms, Shin provides an **architecture to benchmark shrinking algorithms**. It separates three orthogonal concerns — shrinker, oracle, and grammar — and ships with ready-to-run benchmark classes and datasets for several input languages (regex, SVG, JSON, Microdown, arithmetic expressions), so different reducers can be evaluated head-to-head on the same corpora and reported with plots.
 
@@ -49,13 +49,17 @@ Shin provides the following shrinkers. Tree-based ones are grammar-aware.
 
 | Shrinker | Type | Description |
 | --- | --- | --- |
-| `ShinDDminPaperShrinker` | Character/string | Classic delta-debugging `ddmin` from the original [delta-debugging paper](https://www.cs.purdue.edu/homes/xyzhang/fall07/Papers/delta-debugging.pdf). |
-| `ShinDDminPaperCustomShrinker` | Character/string | `ddmin` variant with custom recursion/statistics callbacks. |
-| `ShinDDminFuzzingBookShrinker` | Character/string | `ddmin` variant following Zeller's "The Fuzzing Book". |
+| `ShinDDminPaperShrinker` | Array/string | Classic delta-debugging `ddmin` from the original [delta-debugging paper](https://www.cs.purdue.edu/homes/xyzhang/fall07/Papers/delta-debugging.pdf). |
+| `ShinDDminPaperCustomShrinker` | Array/string | `ddmin` variant with custom recursion/statistics callbacks. |
+| `ShinDDminFuzzingBookShrinker` | Array/string | `ddmin` variant following Zeller's "The Fuzzing Book". |
 | `ShinHDDShrinker` | Grammar tree | Hierarchical Delta Debugging — applies `ddmin` level by level over the parse tree. |
 | `ShinGRABRShrinker` | Grammar tree | Grammar-based reduction that replaces subtrees with grammar-derived smaller candidates. |
 | `ShinNautilusShrinker` | Grammar tree | Reward-based reduction inspired by Nautilus, repeatedly minimizing the "worst" node. |
 | `ShinVulcanShrinker` | Grammar tree | Combines a main reducer (HDD) with auxiliary reducers: identifier replacement, subtree reduction, and tree-based Linear Example-based Edition (LEE). |
+| `ShinProbDDShrinker` | Array/string | Probabilistic variant of delta debugging |
+| `ShinCDDShrinker` | Array/string | | 
+| `ShinWDDminShrinker` | Array/string | |
+| `ShinWDDProbShrinker` | Array/string | |
 
 ## Oracles
 
@@ -121,6 +125,10 @@ Plots are built with [Roassal](https://github.com/ObjectProfile/Roassal3) and be
 - Vulcan: [FuzzBench](https://github.com/purseclab/Vulcan)
 - Perses: [Perses](https://dl.acm.org/doi/abs/10.1145/3180155.3180236)
 - The Fuzzing Book: [Zeller et al.](https://www.fuzzingbook.org/)
+- Probabilistic Delta Debugging: [ProbDD](https://dl.acm.org/doi/10.1145/3468264.3468625)
+- CDD, a simplified version of ProbDD: [CDD](https://ieeexplore.ieee.org/document/11029925/)
+- WDD: Weighted Delta Debugging: [WDD](https://ieeexplore.ieee.org/document/11029863/)
+- WDD: Weighted Probabilistic Delta Debugging: [WDD](https://ieeexplore.ieee.org/document/11029863/)
 
 ## License
 
