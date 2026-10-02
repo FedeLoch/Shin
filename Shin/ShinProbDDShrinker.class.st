@@ -28,9 +28,11 @@ ShinProbDDShrinker >> minimizeProbDD: list probabilities: probs upperBound: boun
 	[ lmin anySatisfy: [ :l | (probs at: l) < 1 ] ] whileTrue: [ | subset complement |
 		subset := self selectSubset: lmin probabilities: probs upperBound: bound.
 		complement := lmin \ subset.
+		self minimizationDone.
 		(self triggerBug: complement upperBound: bound) ifTrue: [
 			lmin := complement.
 		] ifFalse: [ | factor | 
+			self failedMinimization.
 			factor := 1 / (1 - ((subset collect: [ :elem | 1 - (probs at: elem) ]) multiply)).
 			subset do: [ :elem |
 				probs at: elem update: [ :p | factor * p ]
