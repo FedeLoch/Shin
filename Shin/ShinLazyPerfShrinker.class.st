@@ -11,75 +11,6 @@ Class {
 	#tag : 'Shrinkers'
 }
 
-{ #category : 'shrinking' }
-ShinLazyPerfShrinker >> batchBudget [
-
-	^ batchBudget
-]
-
-{ #category : 'shrinking' }
-ShinLazyPerfShrinker >> batchBudget: anInteger [
-
-	batchBudget := anInteger
-]
-
-{ #category : 'private' }
-ShinLazyPerfShrinker >> binaryValidate: tree batch: batch upperBound: bound [
-	"Validate a batch of {nodeIndex -> replacement} removals using binary search.
-	 Key insight for performance bugs:
-	   - Failures are CHEAP (input does not trigger the bug -> program runs fast)
-	   - Successes are EXPENSIVE (input still triggers the bug -> program runs slow)
-	 So we try all removals at once first: if the oracle says interesting,
-	 ONE success call validates the ENTIRE batch.
-	 On failure (cheap), we binary-split and recurse."
-
-	| candidate |
-	
-	batch ifEmpty: [ ^ #() ].
-
-	"Apply ALL removals in the batch at once"
-	candidate := self applyRemovals: tree batch: batch.
-	self minimizationDone.
-	
-	(self triggerBug: candidate upperBound: bound) ifTrue: [
-		"ONE success call validated the entire batch!"
-		^ batch
-	].
-
-	"Failure is cheap, so we can afford to probe further"
-	self failedMinimization.
-
-	batch size = 1 ifTrue: [
-		"This single removal breaks the property"
-		^ #()
-	].
-
-	"Binary split and recurse"
-	^ self binarySplit: tree batch: batch upperBound: bound
-]
-
-{ #category : 'private' }
-ShinLazyPerfShrinker >> binarySplit: tree batch: batch upperBound: bound [
-	"Split batch in half and validate each half independently.
-	 The left half is validated first, and its accepted removals
-	 are applied before validating the right half."
-
-	| mid leftBatch rightBatch acceptedLeft treeAfterLeft acceptedRight |
-
-	mid := batch size // 2.
-	leftBatch := batch copyFrom: 1 to: mid.
-	rightBatch := batch copyFrom: mid + 1 to: batch size.
-
-	"Validate left half"
-	acceptedLeft := self binaryValidate: tree batch: leftBatch upperBound: bound.
-
-	"Apply accepted left removals, then validate right half"
-	treeAfterLeft := self applyRemovals: tree batch: acceptedLeft.
-	acceptedRight := self binaryValidate: treeAfterLeft batch: rightBatch upperBound: bound.
-
-	^ acceptedLeft , acceptedRight
-]
-
 { #category : 'private' }
 ShinLazyPerfShrinker >> applyRemovals: tree batch: batch [
 	"Apply a batch of {nodeIndex -> replacement} removals to a copy of the tree.
@@ -116,6 +47,75 @@ ShinLazyPerfShrinker >> applyRemovals: tree batch: batch [
 	].
 
 	^ treeCopy
+]
+
+{ #category : 'shrinking' }
+ShinLazyPerfShrinker >> batchBudget [
+
+	^ batchBudget
+]
+
+{ #category : 'shrinking' }
+ShinLazyPerfShrinker >> batchBudget: anInteger [
+
+	batchBudget := anInteger
+]
+
+{ #category : 'private' }
+ShinLazyPerfShrinker >> binarySplit: tree batch: batch upperBound: bound [
+	"Split batch in half and validate each half independently.
+	 The left half is validated first, and its accepted removals
+	 are applied before validating the right half."
+
+	| mid leftBatch rightBatch acceptedLeft treeAfterLeft acceptedRight |
+
+	mid := batch size // 2.
+	leftBatch := batch copyFrom: 1 to: mid.
+	rightBatch := batch copyFrom: mid + 1 to: batch size.
+
+	"Validate left half"
+	acceptedLeft := self binaryValidate: tree batch: leftBatch upperBound: bound.
+
+	"Apply accepted left removals, then validate right half"
+	treeAfterLeft := self applyRemovals: tree batch: acceptedLeft.
+	acceptedRight := self binaryValidate: treeAfterLeft batch: rightBatch upperBound: bound.
+
+	^ acceptedLeft , acceptedRight
+]
+
+{ #category : 'private' }
+ShinLazyPerfShrinker >> binaryValidate: tree batch: batch upperBound: bound [
+	"Validate a batch of {nodeIndex -> replacement} removals using binary search.
+	 Key insight for performance bugs:
+	   - Failures are CHEAP (input does not trigger the bug -> program runs fast)
+	   - Successes are EXPENSIVE (input still triggers the bug -> program runs slow)
+	 So we try all removals at once first: if the oracle says interesting,
+	 ONE success call validates the ENTIRE batch.
+	 On failure (cheap), we binary-split and recurse."
+
+	| candidate |
+	
+	batch ifEmpty: [ ^ #() ].
+
+	"Apply ALL removals in the batch at once"
+	candidate := self applyRemovals: tree batch: batch.
+	self minimizationDone.
+	
+	(self triggerBug: candidate upperBound: bound) ifTrue: [
+		"ONE success call validated the entire batch!"
+		^ batch
+	].
+
+	"Failure is cheap, so we can afford to probe further"
+	self failedMinimization.
+
+	batch size = 1 ifTrue: [
+		"This single removal breaks the property"
+		^ #()
+	].
+
+	"Binary split and recurse"
+	^ self binarySplit: tree batch: batch upperBound: bound
 ]
 
 { #category : 'private' }
@@ -182,6 +182,15 @@ ShinLazyPerfShrinker >> hasRemovedAncestor: node in: removedIndices in: allNodes
 	^ false
 ]
 
+{ #category : 'shrinking' }
+ShinLazyPerfShrinker >> initialize [
+
+	super initialize.
+	batchBudget := 8.
+	maxBatchBudget := 64.
+	minBatchBudget := 1
+]
+
 { #category : 'private' }
 ShinLazyPerfShrinker >> markDescendants: node startingAt: index in: allNodes into: removedIndices [
 	"Mark all descendants of node as covered so they are not batched separately."
@@ -193,15 +202,6 @@ ShinLazyPerfShrinker >> markDescendants: node startingAt: index in: allNodes int
 			removedIndices add: idx
 		]
 	]
-]
-
-{ #category : 'shrinking' }
-ShinLazyPerfShrinker >> initialize [
-
-	super initialize.
-	batchBudget := 8.
-	maxBatchBudget := 64.
-	minBatchBudget := 1
 ]
 
 { #category : 'shrinking' }
@@ -264,6 +264,12 @@ ShinLazyPerfShrinker >> minimizeOne: originalTree upperBound: bound [
 	^ tree
 ]
 
+{ #category : 'shrinking' }
+ShinLazyPerfShrinker >> shouldStop: minimized size: size from: current size: currentSize [
+
+	^ minimized asInput = current asInput
+]
+
 { #category : 'private' }
 ShinLazyPerfShrinker >> tuneBudget: acceptedCount against: batchCount [
 	"Adaptively tune the batch budget based on how many removals were accepted.
@@ -282,10 +288,4 @@ ShinLazyPerfShrinker >> tuneBudget: acceptedCount against: batchCount [
 		"Few removals worked, decrease aggressiveness"
 		batchBudget := (batchBudget // 2) max: minBatchBudget
 	]
-]
-
-{ #category : 'shrinking' }
-ShinLazyPerfShrinker >> shouldStop: minimized size: size from: current size: currentSize [
-
-	^ minimized asInput = current asInput
 ]
