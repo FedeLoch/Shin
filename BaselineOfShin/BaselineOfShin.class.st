@@ -12,8 +12,9 @@ BaselineOfShin >> baseline: spec [
 	spec for: #common do: [
 		spec baseline: 'Gnocco' with: [ spec repository: 'github://Alamvic/gnocco:release/src' ].
 		spec baseline: 'NeoJSON' with: [ spec repository: 'github://svenvc/NeoJSON/repository' ].
+		spec baseline: 'PBA' with: [ spec repository: 'github://FedeLoch/PBA:main' ].
 		"spec baseline: 'Mate' with: [ spec repository: 'github://FedeLoch/Mate:main' ]."
 		
-		spec package: 'Shin' with: [ spec requires: #( 'Gnocco' 'NeoJSON' ) ].
+		spec package: 'Shin' with: [ spec requires: #( 'Gnocco' 'NeoJSON' 'PBA' ) ].
 	]
 ]
