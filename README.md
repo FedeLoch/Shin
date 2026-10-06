@@ -60,7 +60,7 @@ Shin provides the following shrinkers. Tree-based ones are grammar-aware.
 | `ShinCDDShrinker` | Array/string | Counter-based delta debugging, a simplified version of ProbDD that replaces probability computations with counters, skipping inefficient complement/repeated deletion attempts. |
 | `ShinWDDminShrinker` | Array/string | Weighted ddmin, partitions elements by size (weight) instead of count, with an extra deletion pass to ensure 1-minimality. |
 | `ShinWDDProbShrinker` | Array/string | Weighted ProbDD, factors element size into the probabilistic model to prioritize removing larger elements. |
-| `ShinSADDminShrinker` | Grammar tree | Structure-Aware ddmin (SADD), partitions candidates by structural weight (geometric volume, decision uniformity, and effective branching complexity) from the [SADD paper](https://dl.acm.org/doi/10.1145/3691620.3695062). |
+| `ShinSADDminShrinker` | Grammar tree | Structure-Aware ddmin (SADD), partitions candidates by structural weight (geometric volume, decision uniformity, and effective branching complexity) from the SADD paper. |
 | `ShinSAProbDDShrinker` | Grammar tree | Structure-Aware ProbDD, ranks deletable subsets by expected structural weight gain while keeping ProbDD's Bayesian update rule. |
 
 ## Oracles
@@ -131,7 +131,7 @@ Plots are built with [Roassal](https://github.com/ObjectProfile/Roassal3) and be
 - CDD, a simplified version of ProbDD: [CDD](https://ieeexplore.ieee.org/document/11029925/)
 - WDD: Weighted Delta Debugging: [WDD](https://ieeexplore.ieee.org/document/11029863/)
 - WDD: Weighted Probabilistic Delta Debugging: [WDD](https://ieeexplore.ieee.org/document/11029863/)
-- SADD: Structure-Aware Delta Debugging: [SADD](https://dl.acm.org/doi/10.1145/3691620.3695062)
+- SADD: Structure-Aware Delta Debugging: [SADD](https://dl.acm.org/doi/10.1145/3808195)
 
 ## License
 
