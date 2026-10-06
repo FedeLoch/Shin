@@ -1,27 +1,13 @@
 Class {
 	#name : 'ShinSADDminShrinker',
-	#superclass : 'ShinGrammarShrinker',
+	#superclass : 'ShinSADDShrinker',
 	#instVars : [
-		'pu',
-		'pb',
-		'c'
+		'seen'
 	],
 	#category : 'Shin-Shrinkers',
 	#package : 'Shin',
 	#tag : 'Shrinkers'
 }
-
-{ #category : 'shrinking' }
-ShinSADDminShrinker >> backgroundPerplexity: node [
-
-	"TODO"
-]
-
-{ #category : 'shrinking' }
-ShinSADDminShrinker >> decisionUniformity: node [
-
-	"TODO"
-]
 
 { #category : 'shrinking' }
 ShinSADDminShrinker >> ensureOneMinimal: lmin upperBound: bound [
@@ -38,72 +24,87 @@ ShinSADDminShrinker >> ensureOneMinimal: lmin upperBound: bound [
 ]
 
 { #category : 'shrinking' }
-ShinSADDminShrinker >> geometricVolume: node [
-
-	^ node depth * node leaves size
-]
-
-{ #category : 'shrinking' }
-ShinSADDminShrinker >> initialize [ 
-	
-	super initialize.
-	pu := 1.
-	pb := 1.
-	c := 16.
-]
-
-{ #category : 'shrinking' }
-ShinSADDminShrinker >> minimizeOne: tree upperBound: bound [
-
-	| list |
-	
-	list := tree allNodes.
-
-	^ self minimizeSADDmin: list weights: (self structuralWeightOf: list) upperBound: bound
-]
-
-{ #category : 'shrinking' }
-ShinSADDminShrinker >> minimizeSADDmin: list weights: weights upperBound: bound [
+ShinSADDminShrinker >> minimizeSADDmin: list weights: aWeights upperBound: bound [
 
 	| lmin totalWeight |
-	
+
+	weights := aWeights.
 	totalWeight := weights values sum.
-	
+	seen := Set new.
+
 	lmin := self saddmin: list totalWeight: totalWeight upperBound: bound.
-	
 	lmin := self ensureOneMinimal: lmin upperBound: bound.
-	
+
 	^ list class withAll: lmin
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'shrinking' }
+ShinSADDminShrinker >> reduceCandidates: list upperBound: bound [
+
+	^ self minimizeSADDmin: list weights: weights upperBound: bound
+]
+
+{ #category : 'shrinking' }
 ShinSADDminShrinker >> saddmin: list totalWeight: totalWeight upperBound: bound [
 
-	"TODO"
+	^ self saddmin2: list totalWeight: totalWeight upperBound: bound granularity: 2
 ]
 
 { #category : 'shrinking' }
-ShinSADDminShrinker >> saturationFunction: x [
+ShinSADDminShrinker >> saddmin2: cFail totalWeight: totalWeight upperBound: bound granularity: n [
 
-	^ x / (x + c)
+	| key partitions |
 
+	key := { cFail . n }.
+	(seen includes: key) ifTrue: [ ^ cFail ].
+	seen add: key.
 
+	partitions := self weightBalancedPartitions: cFail totalWeight: totalWeight count: n.
+
+	1 to: partitions size do: [ :i | | subset |
+		subset := partitions at: i.
+		self minimizationDone.
+		(self triggerBug: subset upperBound: bound)
+			ifTrue: [ ^ self saddmin2: subset totalWeight: (self totalWeightOf: subset) upperBound: bound granularity: 2 ]
+			ifFalse: [ self failedMinimization ]
+	].
+
+	1 to: partitions size do: [ :i | | subset complement |
+		subset := partitions at: i.
+		complement := cFail \ subset.
+		self minimizationDone.
+		(self triggerBug: complement upperBound: bound)
+			ifTrue: [ ^ self saddmin2: complement totalWeight: (self totalWeightOf: complement) upperBound: bound granularity: ((n - 1) max: 2) ]
+			ifFalse: [ self failedMinimization ]
+	].
+
+	n < cFail size ifTrue: [
+		^ self saddmin2: cFail totalWeight: totalWeight upperBound: bound granularity: ((2 * n) min: cFail size)
+	].
+
+	^ cFail
 ]
 
 { #category : 'shrinking' }
-ShinSADDminShrinker >> shouldStop: minimized size: size from: current size: currentSize [
+ShinSADDminShrinker >> weightBalancedPartitions: list totalWeight: totalWeight count: n [
 
-	^ minimized asInput = current asInput
-]
+	| target partitions current currentWeight |
 
-{ #category : 'shrinking' }
-ShinSADDminShrinker >> structuralWeightOf: node [
+	target := totalWeight / n.
+	partitions := OrderedCollection new.
+	current := OrderedCollection new.
+	currentWeight := 0.
 
-	| geometric decision background |
+	list do: [ :element | | elementWeight |
+		elementWeight := weights at: element.
+		(current notEmpty and: [ currentWeight + elementWeight > target ]) ifTrue: [
+			partitions add: current.
+			current := OrderedCollection new.
+			currentWeight := 0 ].
+		current add: element.
+		currentWeight := currentWeight + elementWeight ].
 
-	geometric := self geometricVolume: node.
-	decision := self decisionUniformity: node.
-	background := self backgroundPerplexity: node.
+	current ifNotEmpty: [ partitions add: current ].
 
-	^ geometric * (1 + (pu * decision) + (pb * self saturationFunction: background)) + 1
+	^ partitions
 ]
