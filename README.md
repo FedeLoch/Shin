@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="shin-images/logo-pixel.png" alt="Shin Logo" width="200"/>
+  <img src="shin-images/logo-pixel.png" alt="Shin Logo" width="400"/>
 </p>
 
 <p align="center">
