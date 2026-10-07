@@ -22,9 +22,11 @@ ShinSAProbDDShrinker >> minimizeSAProbDD: list probabilities: probs weights: som
 			ifTrue: [ lmin := complement ]
 			ifFalse: [ | factor |
 				self failedMinimization.
-				factor := 1 / (1 - ((subset collect: [ :elem | 1 - (probs at: elem) ]) multiply)).
-				subset do: [ :elem |
-					probs at: elem update: [ :p | factor * p ] ] ] ].
+				factor := 1 / (1 - (subset collect: [ :elem | 1 - (probs at: elem) ]) multiply).
+				subset do: [ :elem | probs at: elem update: [ :p | factor * p ]
+			]
+		]
+	].
 
 	^ list class withAll: lmin
 ]
