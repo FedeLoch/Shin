@@ -45,12 +45,6 @@ ShinSADDminShrinker >> reduceCandidates: list upperBound: bound [
 ]
 
 { #category : 'shrinking' }
-ShinSADDminShrinker >> saddmin: list totalWeight: totalWeight upperBound: bound [
-
-	^ self saddmin2: list totalWeight: totalWeight upperBound: bound granularity: 2
-]
-
-{ #category : 'shrinking' }
 ShinSADDminShrinker >> saddmin2: cFail totalWeight: totalWeight upperBound: bound granularity: n [
 
 	| key partitions |
@@ -83,6 +77,12 @@ ShinSADDminShrinker >> saddmin2: cFail totalWeight: totalWeight upperBound: boun
 	].
 
 	^ cFail
+]
+
+{ #category : 'shrinking' }
+ShinSADDminShrinker >> saddmin: list totalWeight: totalWeight upperBound: bound [
+
+	^ self saddmin2: list totalWeight: totalWeight upperBound: bound granularity: 2
 ]
 
 { #category : 'shrinking' }

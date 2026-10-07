@@ -6,7 +6,7 @@ Class {
 		'pb',
 		'c',
 		'weights',
-		'levelOracle'
+		'currentLevelOracle'
 	],
 	#category : 'Shin-Shrinkers',
 	#package : 'Shin',
@@ -17,6 +17,7 @@ Class {
 ShinSADDShrinker >> backgroundPerplexity: node [
 
 	| numerator denominator |
+
 	numerator := 0.
 	denominator := 0.
 
@@ -24,7 +25,8 @@ ShinSADDShrinker >> backgroundPerplexity: node [
 		nodeLeaves := self leavesOf: decisionNode.
 		entropy := self entropyOf: decisionNode.
 		numerator := numerator + (nodeLeaves * (entropy exp - 1)).
-		denominator := denominator + nodeLeaves ].
+		denominator := denominator + nodeLeaves
+	].
 
 	denominator = 0 ifTrue: [ ^ 0 ].
 
@@ -44,6 +46,7 @@ ShinSADDShrinker >> currentChildrenAssociations: tree atLevel: level [
 ShinSADDShrinker >> decisionNodesOf: node do: aBlock [
 
 	| children |
+
 	node isLeaf ifTrue: [ ^ self ].
 
 	children := node children.
@@ -55,6 +58,7 @@ ShinSADDShrinker >> decisionNodesOf: node do: aBlock [
 ShinSADDShrinker >> decisionUniformity: node [
 
 	| numerator denominator |
+
 	numerator := 0.
 	denominator := 0.
 
@@ -62,7 +66,8 @@ ShinSADDShrinker >> decisionUniformity: node [
 		nodeLeaves := self leavesOf: decisionNode.
 		arity := decisionNode children size.
 		numerator := numerator + (nodeLeaves * ((self entropyOf: decisionNode) / arity ln)).
-		denominator := denominator + nodeLeaves ].
+		denominator := denominator + nodeLeaves
+	].
 
 	denominator = 0 ifTrue: [ ^ 0 ].
 
@@ -73,11 +78,13 @@ ShinSADDShrinker >> decisionUniformity: node [
 ShinSADDShrinker >> entropyOf: decisionNode [
 
 	| total |
+	
 	total := self leavesOf: decisionNode.
 
 	^ decisionNode children inject: 0 into: [ :sum :child | | p |
-		  p := (self leavesOf: child) / total.
-		  sum - (p * p ln) ]
+		p := (self leavesOf: child) / total.
+		sum - (p * p ln)
+	]
 ]
 
 { #category : 'shrinking' }
@@ -90,6 +97,7 @@ ShinSADDShrinker >> geometricVolume: node [
 ShinSADDShrinker >> initialize [
 
 	super initialize.
+	"Hyperparameters proposed by the paper for general usage"
 	pu := 1.
 	pb := 1.
 	c := 16
@@ -114,7 +122,8 @@ ShinSADDShrinker >> minimizeOne: originalTree upperBound: bound [
 	currentLevel := 1.
 	[ currentLevel <= tree treeHeight ] whileTrue: [
 		self reduceLevel: tree upperBound: bound level: currentLevel.
-		currentLevel := currentLevel + 1 ].
+		currentLevel := currentLevel + 1
+	].
 
 	^ tree
 ]
@@ -136,7 +145,7 @@ ShinSADDShrinker >> reduceLevel: tree upperBound: bound level: level [
 	currentChildren := self currentChildrenAssociations: tree atLevel: level.
 	weights := self weightsOf: candidates.
 
-	levelOracle := ShinBooleanInputOracle from: [ :possibleNewChilds | | toDelete trigger |
+	currentLevelOracle := ShinBooleanInputOracle from: [ :possibleNewChilds | | toDelete trigger |
 		toDelete := candidates difference: possibleNewChilds.
 		toDelete do: [ :childToDelete | | parent |
 			parent := childToDelete parent.
@@ -150,10 +159,11 @@ ShinSADDShrinker >> reduceLevel: tree upperBound: bound level: level [
 		trigger ].
 
 	[ minimized := self reduceCandidates: candidates upperBound: bound.
+
 	(candidates difference: minimized) do: [ :childToDelete | | parent |
 		parent := childToDelete parent.
 		parent ifNotNil: [ parent removeChild: childToDelete ] ] ]
-		ensure: [ levelOracle := nil ].
+		ensure: [ currentLevelOracle := nil ].
 
 	^ minimized
 ]
@@ -174,7 +184,8 @@ ShinSADDShrinker >> shouldStop: minimized size: size from: current size: current
 ShinSADDShrinker >> structuralWeightOf: node [
 
 	| geometric decision background |
-
+	
+	"Following the paper definitions: https://dl.acm.org/doi/10.1145/3808195"
 	geometric := self geometricVolume: node.
 	decision := self decisionUniformity: node.
 	background := self backgroundPerplexity: node.
@@ -183,24 +194,26 @@ ShinSADDShrinker >> structuralWeightOf: node [
 ]
 
 { #category : 'shrinking' }
-ShinSADDShrinker >> totalWeightOf: aCollection [
+ShinSADDShrinker >> totalWeightOf: elements [
 
-	^ aCollection inject: 0 into: [ :sum :element | sum + (weights at: element) ]
+	^ elements inject: 0 into: [ :sum :element | sum + (weights at: element) ]
 ]
 
 { #category : 'testing' }
-ShinSADDShrinker >> triggerBug: anObject upperBound: originalScore [
+ShinSADDShrinker >> triggerBug: input upperBound: originalScore [
 
-	(anObject isCollection and: [ levelOracle notNil ])
-		ifTrue: [ ^ levelOracle accepts: anObject from: originalScore ].
+	(input isCollection and: [ currentLevelOracle notNil ]) ifTrue: [
+		^ currentLevelOracle accepts: input from: originalScore
+	].
 
-	^ super triggerBug: anObject upperBound: originalScore
+	^ super triggerBug: input upperBound: originalScore
 ]
 
 { #category : 'shrinking' }
-ShinSADDShrinker >> weightsOf: aCollection [
+ShinSADDShrinker >> weightsOf: nodes [
 
-	^ aCollection inject: Dictionary new into: [ :dict :node |
-		  dict at: node put: (self structuralWeightOf: node).
-		  dict ]
+	^ nodes inject: Dictionary new into: [ :dict :node |
+		dict at: node put: (self structuralWeightOf: node).
+		dict
+	]
 ]
