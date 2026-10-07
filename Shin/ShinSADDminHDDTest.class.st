@@ -1,5 +1,5 @@
 Class {
-	#name : 'ShinSAProbDDTest',
+	#name : 'ShinSADDminHDDTest',
 	#superclass : 'ShinReductionShrinkerTest',
 	#instVars : [
 		'shrinker',
@@ -11,17 +11,17 @@ Class {
 }
 
 { #category : 'running' }
-ShinSAProbDDTest >> setUp [
+ShinSADDminHDDTest >> setUp [
 
 	super setUp.
 	super timeLimit: 5 minutes.
-	shrinker := ShinSAProbDDShrinker new.
+	shrinker := ShinSADDminHDDShrinker new.
 	grammar := AritExpressionGrammar new.
 	shrinker grammar: grammar.
 ]
 
 { #category : 'tests' }
-ShinSAProbDDTest >> testSAProbDDReducer01 [
+ShinSADDminHDDTest >> testSADDminHDDReducer01 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $3 ]).
 
@@ -29,7 +29,7 @@ ShinSAProbDDTest >> testSAProbDDReducer01 [
 ]
 
 { #category : 'tests' }
-ShinSAProbDDTest >> testSAProbDDReducer02 [
+ShinSADDminHDDTest >> testSADDminHDDReducer02 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $2 ]).
 
@@ -37,7 +37,7 @@ ShinSAProbDDTest >> testSAProbDDReducer02 [
 ]
 
 { #category : 'tests' }
-ShinSAProbDDTest >> testSAProbDDReducer03 [
+ShinSADDminHDDTest >> testSADDminHDDReducer03 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includesSubstring: '(' ]).
 
@@ -45,7 +45,7 @@ ShinSAProbDDTest >> testSAProbDDReducer03 [
 ]
 
 { #category : 'tests' }
-ShinSAProbDDTest >> testSAProbDDReducer04 [
+ShinSADDminHDDTest >> testSADDminHDDReducer04 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $1 ]).
 
@@ -53,7 +53,7 @@ ShinSAProbDDTest >> testSAProbDDReducer04 [
 ]
 
 { #category : 'tests' }
-ShinSAProbDDTest >> testSAProbDDReducer05 [
+ShinSADDminHDDTest >> testSADDminHDDReducer05 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $3 ]).
 
@@ -61,7 +61,7 @@ ShinSAProbDDTest >> testSAProbDDReducer05 [
 ]
 
 { #category : 'tests' }
-ShinSAProbDDTest >> testSAProbDDReducer06 [
+ShinSADDminHDDTest >> testSADDminHDDReducer06 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | (string includes: $2) and: [ (string includes: $3) ] ]).
 
@@ -69,7 +69,7 @@ ShinSAProbDDTest >> testSAProbDDReducer06 [
 ]
 
 { #category : 'tests' }
-ShinSAProbDDTest >> testSAProbDDReducer07 [
+ShinSADDminHDDTest >> testSADDminHDDReducer07 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | (string includes: $2) and: [ (string includes: $1) ] ]).
 
@@ -77,7 +77,7 @@ ShinSAProbDDTest >> testSAProbDDReducer07 [
 ]
 
 { #category : 'tests' }
-ShinSAProbDDTest >> testSAProbDDReducer08 [
+ShinSADDminHDDTest >> testSADDminHDDReducer08 [
 
 	| res |
 

@@ -64,8 +64,10 @@ Shin provides the following shrinkers. Tree-based ones are grammar-aware.
 | `ShinCDDShrinker` | Array/string | Counter-based delta debugging, a simplified version of ProbDD that replaces probability computations with counters, skipping inefficient complement/repeated deletion attempts. |
 | `ShinWDDminShrinker` | Array/string | Weighted ddmin, partitions elements by size (weight) instead of count, with an extra deletion pass to ensure 1-minimality. |
 | `ShinWDDProbShrinker` | Array/string | Weighted ProbDD, factors element size into the probabilistic model to prioritize removing larger elements. |
-| `ShinSADDminShrinker` | Grammar tree | Structure-Aware ddmin (SADD), partitions candidates by structural weight (geometric volume, decision uniformity, and effective branching complexity) from the SADD paper. |
-| `ShinSAProbDDShrinker` | Grammar tree | Structure-Aware ProbDD, ranks deletable subsets by expected structural weight gain while keeping ProbDD's Bayesian update rule. |
+| `ShinSADDminShrinker` | Grammar AST nodes | Structure-Aware ddmin (SAddmin), flat list: partitions the input's element list (all non-root AST nodes) by structural weight (geometric volume, decision uniformity, effective branching complexity) from the SADD. |
+| `ShinSAProbDDShrinker` | Grammar AST nodes | Structure-Aware ProbDD, flat list: ranks deletable subsets of the input's element list by expected structural weight gain while keeping ProbDD's Bayesian update rule from SADD. |
+| `ShinSADDminHDDShrinker` | Grammar tree | Hierarchical variant of SAddmin, applies the structure-aware weighted ddmin reducer level by level inside HDD (the flat shrinker used as HDD's per-level strategy). |
+| `ShinSAProbDDHDDShrinker` | Grammar tree | Hierarchical variant of SAProbDD, applies the structure-aware ProbDD reducer level by level inside HDD (the flat shrinker used as HDD's per-level strategy). |
 
 ## Oracles
 

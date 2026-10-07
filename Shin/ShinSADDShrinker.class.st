@@ -6,7 +6,9 @@ Class {
 		'pb',
 		'c',
 		'weights',
-		'currentLevelOracle'
+		'seen',
+		'candidateOracle',
+		'caller'
 	],
 	#category : 'Shin-Shrinkers',
 	#package : 'Shin',
@@ -17,7 +19,6 @@ Class {
 ShinSADDShrinker >> backgroundPerplexity: node [
 
 	| numerator denominator |
-
 	numerator := 0.
 	denominator := 0.
 
@@ -25,18 +26,32 @@ ShinSADDShrinker >> backgroundPerplexity: node [
 		nodeLeaves := self leavesOf: decisionNode.
 		entropy := self entropyOf: decisionNode.
 		numerator := numerator + (nodeLeaves * (entropy exp - 1)).
-		denominator := denominator + nodeLeaves
-	].
+		denominator := denominator + nodeLeaves ].
 
 	denominator = 0 ifTrue: [ ^ 0 ].
 
 	^ numerator / denominator
 ]
 
-{ #category : 'shrinking' }
-ShinSADDShrinker >> currentChildrenAssociations: tree atLevel: level [
+{ #category : 'accessing' }
+ShinSADDShrinker >> caller [
 
-	^ (tree allNodesAtLevel: level) inject: Dictionary new into: [ :dict :child |
+	^ caller
+]
+
+{ #category : 'accessing' }
+ShinSADDShrinker >> caller: aCaller [
+
+	caller := aCaller
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> childrenAssociations: nodeList [
+
+	"Snapshot the current children of every parent of the given nodes, so a failed
+	reduction can be rolled back."
+
+	^ nodeList inject: Dictionary new into: [ :dict :child |
 		  child parent ifNotNil: [ dict at: child parent ifAbsentPut: child parent children copy ].
 		  dict
 	  ]
@@ -46,7 +61,6 @@ ShinSADDShrinker >> currentChildrenAssociations: tree atLevel: level [
 ShinSADDShrinker >> decisionNodesOf: node do: aBlock [
 
 	| children |
-
 	node isLeaf ifTrue: [ ^ self ].
 
 	children := node children.
@@ -58,7 +72,6 @@ ShinSADDShrinker >> decisionNodesOf: node do: aBlock [
 ShinSADDShrinker >> decisionUniformity: node [
 
 	| numerator denominator |
-
 	numerator := 0.
 	denominator := 0.
 
@@ -66,8 +79,7 @@ ShinSADDShrinker >> decisionUniformity: node [
 		nodeLeaves := self leavesOf: decisionNode.
 		arity := decisionNode children size.
 		numerator := numerator + (nodeLeaves * ((self entropyOf: decisionNode) / arity ln)).
-		denominator := denominator + nodeLeaves
-	].
+		denominator := denominator + nodeLeaves ].
 
 	denominator = 0 ifTrue: [ ^ 0 ].
 
@@ -75,16 +87,59 @@ ShinSADDShrinker >> decisionUniformity: node [
 ]
 
 { #category : 'shrinking' }
+ShinSADDShrinker >> ddvalue: element probabilities: probs [
+
+	^ (weights at: element) * (1 - (probs at: element))
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> ensureOneMinimal: lmin upperBound: bound [
+
+	lmin do: [ :element | | complement |
+		complement := lmin \ { element }.
+
+		(self triggerBug: complement upperBound: bound) ifTrue: [
+			^ self ensureOneMinimal: complement upperBound: bound
+		]
+	].
+
+	^ lmin
+]
+
+{ #category : 'shrinking' }
 ShinSADDShrinker >> entropyOf: decisionNode [
 
 	| total |
-	
 	total := self leavesOf: decisionNode.
 
 	^ decisionNode children inject: 0 into: [ :sum :child | | p |
-		p := (self leavesOf: child) / total.
-		sum - (p * p ln)
-	]
+		  p := (self leavesOf: child) / total.
+		  sum - (p * p ln) ]
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> failedMinimization [
+
+	super failedMinimization.
+	caller ifNotNil: [ caller failedMinimization ]
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> flatElementsOf: node into: aCollection [
+
+	"All non-root nodes of the tree in pre-order; each is an element of the flat list."
+
+	node children do: [ :child |
+		aCollection add: child.
+		self flatElementsOf: child into: aCollection ].
+
+	^ aCollection
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> flatElementsOf: tree [
+
+	^ self flatElementsOf: tree into: OrderedCollection new
 ]
 
 { #category : 'shrinking' }
@@ -97,10 +152,10 @@ ShinSADDShrinker >> geometricVolume: node [
 ShinSADDShrinker >> initialize [
 
 	super initialize.
-	"Hyperparameters proposed by the paper for general usage"
 	pu := 1.
 	pb := 1.
-	c := 16
+	c := 16.
+	seen := Set new
 ]
 
 { #category : 'shrinking' }
@@ -114,18 +169,102 @@ ShinSADDShrinker >> leavesOf: node [
 { #category : 'shrinking' }
 ShinSADDShrinker >> minimizeOne: originalTree upperBound: bound [
 
-	| tree currentLevel |
+	| tree elements childrenSnapshot |
 
+	"In HDD per-level strategy mode the argument is the list of candidate nodes of a
+	level; the oracle was already installed by ShinHDDShrinker."
+	originalTree isCollection ifTrue: [
+		weights := self weightsOf: originalTree.
+		^ self reduceCandidates: originalTree upperBound: bound ].
+
+	"Standalone flat mode over the whole parse tree."
 	tree := self tree: originalTree asInput.
 	tree ifNil: [ ^ originalTree ].
 
-	currentLevel := 1.
-	[ currentLevel <= tree treeHeight ] whileTrue: [
-		self reduceLevel: tree upperBound: bound level: currentLevel.
-		currentLevel := currentLevel + 1
-	].
+	elements := self flatElementsOf: tree.
+	elements size <= 1 ifTrue: [ ^ tree ].
+
+	weights := self weightsOf: elements.
+	childrenSnapshot := self childrenAssociations: elements.
+
+	candidateOracle := ShinBooleanInputOracle from: [ :keptNodes | | toDelete trigger |
+		toDelete := elements difference: keptNodes.
+		toDelete do: [ :node | | parent |
+			parent := node parent.
+			parent ifNotNil: [ parent removeChild: node ] ].
+
+		trigger := self triggerBug: tree upperBound: bound.
+		trigger
+			ifFalse: [ childrenSnapshot keysDo: [ :parent |
+				  parent children: (OrderedCollection withAll: (childrenSnapshot at: parent)) ] ]
+			ifTrue: [ childrenSnapshot := self childrenAssociations: elements ].
+		trigger ].
+
+	[ | minimized |
+		minimized := self reduceCandidates: elements upperBound: bound.
+		(elements difference: minimized) do: [ :node | | parent |
+			parent := node parent.
+			parent ifNotNil: [ parent removeChild: node ] ] ]
+		ensure: [ candidateOracle := nil ].
 
 	^ tree
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> minimizeSADDmin: list weights: aWeights upperBound: bound [
+
+	| lmin totalWeight |
+
+	weights := aWeights.
+	totalWeight := weights values sum.
+	seen := Set new.
+
+	lmin := self saddmin: list totalWeight: totalWeight upperBound: bound.
+	lmin := self ensureOneMinimal: lmin upperBound: bound.
+
+	^ list class withAll: lmin
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> minimizeSAProbDD: list probabilities: probs weights: aWeights upperBound: bound [
+
+	| lmin |
+
+	weights := aWeights.
+	lmin := list.
+
+	[ lmin anySatisfy: [ :element | (probs at: element) < 1 ] ] whileTrue: [ | subset complement |
+		subset := self selectSubset: lmin probabilities: probs.
+		complement := lmin \ subset.
+		self minimizationDone.
+		(self triggerBug: complement upperBound: bound)
+			ifTrue: [ lmin := complement ]
+			ifFalse: [ | factor |
+				self failedMinimization.
+				factor := 1 / (1 - ((subset collect: [ :elem | 1 - (probs at: elem) ]) multiply)).
+				subset do: [ :elem |
+					probs at: elem update: [ :p | factor * p ] ] ] ].
+
+	^ list class withAll: lmin
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> minimizationDone [
+
+	super minimizationDone.
+	caller ifNotNil: [ caller minimizationDone ]
+]
+
+{ #category : 'instance creation' }
+ShinSADDShrinker >> probabilities: list [
+
+	| p |
+
+	p := (1 / list size) asFloat.
+
+	^ list inject: Dictionary new into: [ :dict :element |
+		dict at: element put: p.
+		dict ]
 ]
 
 { #category : 'shrinking' }
@@ -135,43 +274,76 @@ ShinSADDShrinker >> reduceCandidates: list upperBound: bound [
 ]
 
 { #category : 'shrinking' }
-ShinSADDShrinker >> reduceLevel: tree upperBound: bound level: level [
+ShinSADDShrinker >> saddmin: list totalWeight: totalWeight upperBound: bound [
 
-	| candidates currentChildren minimized |
+	^ self saddmin2: list totalWeight: totalWeight upperBound: bound granularity: 2
+]
 
-	candidates := tree allNodesAtLevel: level.
-	candidates size <= 1 ifTrue: [ ^ nil ].
+{ #category : 'shrinking' }
+ShinSADDShrinker >> saddmin2: cFail totalWeight: totalWeight upperBound: bound granularity: n [
 
-	currentChildren := self currentChildrenAssociations: tree atLevel: level.
-	weights := self weightsOf: candidates.
+	| key partitions |
 
-	currentLevelOracle := ShinBooleanInputOracle from: [ :possibleNewChilds | | toDelete trigger |
-		toDelete := candidates difference: possibleNewChilds.
-		toDelete do: [ :childToDelete | | parent |
-			parent := childToDelete parent.
-			parent ifNotNil: [ parent removeChild: childToDelete ] ].
+	key := { cFail . n }.
+	(seen includes: key) ifTrue: [ ^ cFail ].
+	seen add: key.
 
-		trigger := self triggerBug: tree upperBound: bound.
-		trigger
-			ifFalse: [ currentChildren keysDo: [ :parent |
-				  parent children: (OrderedCollection withAll: (currentChildren at: parent)) ] ]
-			ifTrue: [ currentChildren := self currentChildrenAssociations: tree atLevel: level ].
-		trigger ].
+	partitions := self weightBalancedPartitions: cFail totalWeight: totalWeight count: n.
 
-	[ minimized := self reduceCandidates: candidates upperBound: bound.
+	1 to: partitions size do: [ :i | | subset |
+		subset := partitions at: i.
+		self minimizationDone.
+		(self triggerBug: subset upperBound: bound)
+			ifTrue: [ ^ self saddmin2: subset totalWeight: (self totalWeightOf: subset) upperBound: bound granularity: 2 ]
+			ifFalse: [ self failedMinimization ]
+	].
 
-	(candidates difference: minimized) do: [ :childToDelete | | parent |
-		parent := childToDelete parent.
-		parent ifNotNil: [ parent removeChild: childToDelete ] ] ]
-		ensure: [ currentLevelOracle := nil ].
+	1 to: partitions size do: [ :i | | subset complement |
+		subset := partitions at: i.
+		complement := cFail \ subset.
+		self minimizationDone.
+		(self triggerBug: complement upperBound: bound)
+			ifTrue: [ ^ self saddmin2: complement totalWeight: (self totalWeightOf: complement) upperBound: bound granularity: ((n - 1) max: 2) ]
+			ifFalse: [ self failedMinimization ]
+	].
 
-	^ minimized
+	n < cFail size ifTrue: [
+		^ self saddmin2: cFail totalWeight: totalWeight upperBound: bound granularity: ((2 * n) min: cFail size)
+	].
+
+	^ cFail
 ]
 
 { #category : 'shrinking' }
 ShinSADDShrinker >> saturationFunction: x [
 
 	^ x / (x + c)
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> selectSubset: lmin probabilities: probs [
+
+	| sorted result prefix currentMaxGain |
+
+	sorted := lmin copy sorted: [ :a :b |
+		(self ddvalue: a probabilities: probs) >= (self ddvalue: b probabilities: probs) ].
+
+	result := {}.
+	prefix := {}.
+	currentMaxGain := 0.
+
+	sorted do: [ :element | | weight probOfDeletion gain |
+		prefix := prefix, { element }.
+		weight := (prefix collect: [ :subElement | weights at: subElement ]) sum.
+		probOfDeletion := (prefix collect: [ :subElement | 1 - (probs at: subElement) ]) multiply.
+		gain := weight * probOfDeletion.
+
+		(gain > currentMaxGain)
+			ifTrue: [ currentMaxGain := gain. result := prefix ]
+			ifFalse: [ ^ result ]
+	].
+
+	^ result
 ]
 
 { #category : 'shrinking' }
@@ -184,8 +356,7 @@ ShinSADDShrinker >> shouldStop: minimized size: size from: current size: current
 ShinSADDShrinker >> structuralWeightOf: node [
 
 	| geometric decision background |
-	
-	"Following the paper definitions: https://dl.acm.org/doi/10.1145/3808195"
+
 	geometric := self geometricVolume: node.
 	decision := self decisionUniformity: node.
 	background := self backgroundPerplexity: node.
@@ -194,26 +365,50 @@ ShinSADDShrinker >> structuralWeightOf: node [
 ]
 
 { #category : 'shrinking' }
-ShinSADDShrinker >> totalWeightOf: elements [
+ShinSADDShrinker >> totalWeightOf: aCollection [
 
-	^ elements inject: 0 into: [ :sum :element | sum + (weights at: element) ]
+	^ aCollection inject: 0 into: [ :sum :element | sum + (weights at: element) ]
 ]
 
 { #category : 'testing' }
-ShinSADDShrinker >> triggerBug: input upperBound: originalScore [
+ShinSADDShrinker >> triggerBug: anObject upperBound: originalScore [
 
-	(input isCollection and: [ currentLevelOracle notNil ]) ifTrue: [
-		^ currentLevelOracle accepts: input from: originalScore
-	].
+	anObject isCollection
+		ifTrue: [
+			candidateOracle ifNotNil: [ ^ candidateOracle accepts: anObject from: originalScore ].
+			^ oracle accepts: anObject from: originalScore ].
 
-	^ super triggerBug: input upperBound: originalScore
+	^ super triggerBug: anObject upperBound: originalScore
 ]
 
 { #category : 'shrinking' }
-ShinSADDShrinker >> weightsOf: nodes [
+ShinSADDShrinker >> weightBalancedPartitions: list totalWeight: totalWeight count: n [
 
-	^ nodes inject: Dictionary new into: [ :dict :node |
-		dict at: node put: (self structuralWeightOf: node).
-		dict
-	]
+	| target partitions current currentWeight |
+
+	target := totalWeight / n.
+	partitions := OrderedCollection new.
+	current := OrderedCollection new.
+	currentWeight := 0.
+
+	list do: [ :element | | elementWeight |
+		elementWeight := weights at: element.
+		(current notEmpty and: [ currentWeight + elementWeight > target ]) ifTrue: [
+			partitions add: current.
+			current := OrderedCollection new.
+			currentWeight := 0 ].
+		current add: element.
+		currentWeight := currentWeight + elementWeight ].
+
+	current ifNotEmpty: [ partitions add: current ].
+
+	^ partitions
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> weightsOf: aCollection [
+
+	^ aCollection inject: Dictionary new into: [ :dict :node |
+		  dict at: node put: (self structuralWeightOf: node).
+		  dict ]
 ]
