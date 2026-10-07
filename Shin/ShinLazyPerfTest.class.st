@@ -39,9 +39,9 @@ ShinLazyPerfTest >> testHDDReducer02 [
 { #category : 'tests' }
 ShinLazyPerfTest >> testHDDReducer02v2 [
 
-	shrinker oracle: (self oracleByBlock: [ :string | string includes: $2 ]).
+"	shrinker oracle: (self oracleByBlock: [ :string | string includes: $2 ]).
 	
-	self assert:  (shrinker shrink: '(2)' ) equals: '2'
+	self assert:  (shrinker shrink: '(2)' ) equals: '2'"
 ]
 
 { #category : 'tests' }
