@@ -127,17 +127,17 @@ Plots are built with [Roassal](https://github.com/ObjectProfile/Roassal3) and be
 
 ## State of the Art
 
-- Delta debugging: [Zeller 1999](https://www.cs.purdue.edu/homes/xyzhang/fall07/Papers/delta-debugging.pdf)
-- Hierarchical Delta Debugging (HDD): [Misherghi & Su](https://www.cs.ucr.edu/~hhsu/papers/asplos06-hdd.pdf)
-- Nautilus: [Astrauskas et al.](https://github.com/RUB-SysSec/Nautilus)
-- Vulcan: [FuzzBench](https://github.com/purseclab/Vulcan)
-- Perses: [Perses](https://dl.acm.org/doi/abs/10.1145/3180155.3180236)
-- The Fuzzing Book: [Zeller et al.](https://www.fuzzingbook.org/)
-- Probabilistic Delta Debugging: [ProbDD](https://dl.acm.org/doi/10.1145/3468264.3468625)
-- CDD, a simplified version of ProbDD: [CDD](https://ieeexplore.ieee.org/document/11029925/)
-- WDD: Weighted Delta Debugging: [WDD](https://ieeexplore.ieee.org/document/11029863/)
-- WDD: Weighted Probabilistic Delta Debugging: [WDD](https://ieeexplore.ieee.org/document/11029863/)
-- SADD: Structure-Aware Delta Debugging: [SADD](https://dl.acm.org/doi/10.1145/3808195)
+- 2002 Delta debugging: [Zeller](https://www.cs.purdue.edu/homes/xyzhang/fall07/Papers/delta-debugging.pdf)
+- 2006 Hierarchical Delta Debugging (HDD): [Misherghi & Su](https://www.cs.ucr.edu/~hhsu/papers/asplos06-hdd.pdf)
+- 2019 Nautilus: [Astrauskas et al.]([https://github.com/RUB-SysSec/Nautilus](https://wcventure.github.io/FuzzingPaper/Paper/NDSS19_Nautilus.pdf)
+- 2023 Vulcan: [FuzzBench](https://github.com/purseclab/Vulcan)
+- 2018 Perses: [Perses](https://dl.acm.org/doi/abs/10.1145/3180155.3180236)
+- 2019 The Fuzzing Book: [Zeller et al.](https://www.fuzzingbook.org/)
+- 2022 Probabilistic Delta Debugging: [ProbDD](https://dl.acm.org/doi/10.1145/3468264.3468625)
+- 2023 CDD, a simplified version of ProbDD: [CDD](https://ieeexplore.ieee.org/document/11029925/)
+- 2025 WDD: Weighted Delta Debugging: [WDD](https://ieeexplore.ieee.org/document/11029863/)
+- 2025 WDD: Weighted Probabilistic Delta Debugging: [WDD](https://ieeexplore.ieee.org/document/11029863/)
+- 2026 SADD: Structure-Aware Delta Debugging: [SADD](https://dl.acm.org/doi/10.1145/3808195)
 
 ## License
 
