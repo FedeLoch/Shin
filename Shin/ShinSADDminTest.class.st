@@ -33,7 +33,7 @@ ShinSADDminTest >> testSADDminReducer02 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $2 ]).
 
-	self assert: (shrinker shrink: '1+(2*3)') equals: '2'
+	self assert: (shrinker shrink: '1+(2*3)') equals: '(2)'
 ]
 
 { #category : 'tests' }
@@ -49,7 +49,7 @@ ShinSADDminTest >> testSADDminReducer04 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $1 ]).
 
-	self assert: (shrinker shrink: '1+(2*3)') equals: '1'
+	self assert: (shrinker shrink: '1+(2*3)') equals: '1+(3)'
 ]
 
 { #category : 'tests' }
@@ -57,7 +57,7 @@ ShinSADDminTest >> testSADDminReducer05 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $3 ]).
 
-	self assert: (shrinker shrink: '1+(2*3)') equals: '3'
+	self assert: (shrinker shrink: '1+(2*3)') equals: '(3)'
 ]
 
 { #category : 'tests' }
@@ -65,7 +65,7 @@ ShinSADDminTest >> testSADDminReducer06 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | (string includes: $2) and: [ (string includes: $3) ] ]).
 
-	self assert: (shrinker shrink: '1+(2*3)') equals: '23'
+	self assert: (shrinker shrink: '1+(2*3)') equals: '(23)'
 ]
 
 { #category : 'tests' }
