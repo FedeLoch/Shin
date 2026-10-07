@@ -135,8 +135,7 @@ Plots are built with [Roassal](https://github.com/ObjectProfile/Roassal3) and be
 - 2019 The Fuzzing Book: [Zeller et al.](https://www.fuzzingbook.org/)
 - 2022 Probabilistic Delta Debugging: [ProbDD](https://dl.acm.org/doi/10.1145/3468264.3468625)
 - 2023 CDD, a simplified version of ProbDD: [CDD](https://ieeexplore.ieee.org/document/11029925/)
-- 2025 WDD: Weighted Delta Debugging: [WDD](https://ieeexplore.ieee.org/document/11029863/)
-- 2025 WDD: Weighted Probabilistic Delta Debugging: [WDD](https://ieeexplore.ieee.org/document/11029863/)
+- 2025 WDD: Weighted Delta Debugging and Weighted Probabilistic Delta Debugging: [WDD](https://ieeexplore.ieee.org/document/11029863/)
 - 2026 SADD: Structure-Aware Delta Debugging: [SADD](https://dl.acm.org/doi/10.1145/3808195)
 
 ## License
