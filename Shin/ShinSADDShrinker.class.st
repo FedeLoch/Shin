@@ -58,6 +58,12 @@ ShinSADDShrinker >> childrenAssociations: nodeList [
 ]
 
 { #category : 'shrinking' }
+ShinSADDShrinker >> ddvalue: element probabilities: probs [
+
+	^ (weights at: element) * (1 - (probs at: element))
+]
+
+{ #category : 'shrinking' }
 ShinSADDShrinker >> decisionNodesOf: node do: aBlock [
 
 	| children |
@@ -84,12 +90,6 @@ ShinSADDShrinker >> decisionUniformity: node [
 	denominator = 0 ifTrue: [ ^ 0 ].
 
 	^ numerator / denominator
-]
-
-{ #category : 'shrinking' }
-ShinSADDShrinker >> ddvalue: element probabilities: probs [
-
-	^ (weights at: element) * (1 - (probs at: element))
 ]
 
 { #category : 'shrinking' }
@@ -125,6 +125,12 @@ ShinSADDShrinker >> failedMinimization [
 ]
 
 { #category : 'shrinking' }
+ShinSADDShrinker >> flatElementsOf: tree [
+
+	^ self flatElementsOf: tree into: OrderedCollection new
+]
+
+{ #category : 'shrinking' }
 ShinSADDShrinker >> flatElementsOf: node into: aCollection [
 
 	"All non-root nodes of the tree in pre-order; each is an element of the flat list."
@@ -134,12 +140,6 @@ ShinSADDShrinker >> flatElementsOf: node into: aCollection [
 		self flatElementsOf: child into: aCollection ].
 
 	^ aCollection
-]
-
-{ #category : 'shrinking' }
-ShinSADDShrinker >> flatElementsOf: tree [
-
-	^ self flatElementsOf: tree into: OrderedCollection new
 ]
 
 { #category : 'shrinking' }
@@ -164,6 +164,13 @@ ShinSADDShrinker >> leavesOf: node [
 	node isLeaf ifTrue: [ ^ 1 ].
 
 	^ node children inject: 0 into: [ :sum :child | sum + (self leavesOf: child) ]
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> minimizationDone [
+
+	super minimizationDone.
+	caller ifNotNil: [ caller minimizationDone ]
 ]
 
 { #category : 'shrinking' }
@@ -248,13 +255,6 @@ ShinSADDShrinker >> minimizeSAProbDD: list probabilities: probs weights: aWeight
 	^ list class withAll: lmin
 ]
 
-{ #category : 'shrinking' }
-ShinSADDShrinker >> minimizationDone [
-
-	super minimizationDone.
-	caller ifNotNil: [ caller minimizationDone ]
-]
-
 { #category : 'instance creation' }
 ShinSADDShrinker >> probabilities: list [
 
@@ -271,12 +271,6 @@ ShinSADDShrinker >> probabilities: list [
 ShinSADDShrinker >> reduceCandidates: list upperBound: bound [
 
 	self subclassResponsibility
-]
-
-{ #category : 'shrinking' }
-ShinSADDShrinker >> saddmin: list totalWeight: totalWeight upperBound: bound [
-
-	^ self saddmin2: list totalWeight: totalWeight upperBound: bound granularity: 2
 ]
 
 { #category : 'shrinking' }
@@ -312,6 +306,12 @@ ShinSADDShrinker >> saddmin2: cFail totalWeight: totalWeight upperBound: bound g
 	].
 
 	^ cFail
+]
+
+{ #category : 'shrinking' }
+ShinSADDShrinker >> saddmin: list totalWeight: totalWeight upperBound: bound [
+
+	^ self saddmin2: list totalWeight: totalWeight upperBound: bound granularity: 2
 ]
 
 { #category : 'shrinking' }
