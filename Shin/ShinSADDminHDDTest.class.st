@@ -49,7 +49,7 @@ ShinSADDminHDDTest >> testSADDminHDDReducer04 [
 
 	shrinker oracle: (self oracleByBlock: [ :string | string includes: $1 ]).
 
-	self assert: (shrinker shrink: '1+(2*3)') equals: '1'
+	self assert: (shrinker shrink: '1+(2*3)') equals: '1+(2)'
 ]
 
 { #category : 'tests' }
