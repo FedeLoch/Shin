@@ -14,7 +14,7 @@ ShinShrinkingGraphCoverageBenchmark >> initialize [
 	grammar := RoassalGraphGrammar new.
 	oracle := ShinCoverageOracle new
 		          methodsToInstrument: RSLineBuilder package methods, RSClusterRadialTreeLayout package methods;
-		          evalBlock: [ :input | UmeRoassalGrapher run: input ].
+		          evalBlock: [ :input | RoassalGrapher run: input ].
 
 	tests := #(
 		'RSGridLayout

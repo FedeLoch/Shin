@@ -1,5 +1,5 @@
 Class {
-	#name : 'ShinShrinkingRegexBenchmark',
+	#name : 'ShinShrinkingRegexPerformanceBenchmark',
 	#superclass : 'ShinShrinkingBenchmark',
 	#category : 'Shin-Benchmarks',
 	#package : 'Shin',
@@ -7,13 +7,13 @@ Class {
 }
 
 { #category : 'initialization' }
-ShinShrinkingRegexBenchmark >> initialize [
+ShinShrinkingRegexPerformanceBenchmark >> initialize [
 
 	| oracle |
 	super initialize.
 	grammar := GncRegexGrammar new.
 	oracle := ShinMethodCallsOracle new
-		threshold: 0.95;
+		threshold: 0.9;
 		methodsToInstrument: RxMatcher package methods;
 		evalBlock: [ :regex | regex asRegex matches: regex minimalStringMatching ].
 
