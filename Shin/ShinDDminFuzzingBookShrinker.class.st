@@ -52,11 +52,11 @@ ShinDDminFuzzingBookShrinker >> minimizeOneFuzzingBook: aInput upperBound: bound
 		someComplementFailing := false.
 		
 		[ (start < currentInput size) and: [ someComplementFailing not ] ] whileTrue: [ | complement |
-			self minimizationDone.
-
 			complement := self getComplement: currentInput start: start length: subsetLength.
 			(complement = currentInput) ifTrue: [ ^ currentInput ].
-			
+
+			self minimizationDone.
+
 			(self triggerBug: complement upperBound: bound) ifTrue: [
 				currentInput := complement.
 				granularity := (granularity - 1) max: 2.

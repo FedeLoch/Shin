@@ -1,6 +1,9 @@
 Class {
 	#name : 'ShinWDDminShrinker',
 	#superclass : 'ShinShrinker',
+	#instVars : [
+		'source'
+	],
 	#category : 'Shin-Shrinkers',
 	#package : 'Shin',
 	#tag : 'Shrinkers'
@@ -16,11 +19,11 @@ ShinWDDminShrinker >> asInput: array [
 ShinWDDminShrinker >> ensureOneMinimal: lmin upperBound: bound [
 
 	lmin do: [ :element | | complement |
-		complement := lmin \ { element }.
-
-		(self triggerBug: complement upperBound: bound) ifTrue: [
-			^ self ensureOneMinimal: complement upperBound: bound
-		]
+		complement := lmin reject: [ :each | each = element ].
+		self minimizationDone.
+		(self triggerBug: complement upperBound: bound)
+			ifTrue: [ ^ self ensureOneMinimal: complement upperBound: bound ]
+			ifFalse: [ self failedMinimization ]
 	].
 
 	^ lmin
@@ -29,30 +32,36 @@ ShinWDDminShrinker >> ensureOneMinimal: lmin upperBound: bound [
 { #category : 'shrinking' }
 ShinWDDminShrinker >> minimizeOne: list upperBound: bound [
 
-	^ self minimizeWDDmin: list weights: (self newWeights: list) upperBound: bound
+	list size <= 1 ifTrue: [ ^ list ].
+
+	source := list.
+	^ self minimizeWDDmin: (1 to: list size) asArray weights: (self newWeights: list) upperBound: bound
 ]
 
 { #category : 'shrinking' }
-ShinWDDminShrinker >> minimizeWDDmin: list weights: weights upperBound: bound [
+ShinWDDminShrinker >> minimizeWDDmin: indices weights: weights upperBound: bound [
 
 	| lmin |
 
-	lmin := self wddRec: {list} lmin: list input: list weights: weights upperBound: bound.
-	
+	lmin := self wddRec: (self weightedPartitions: { indices } weights: weights) lmin: indices weights: weights upperBound: bound.
+
 	lmin := self ensureOneMinimal: lmin upperBound: bound.
-	
-	^ list class withAll: lmin
+
+	^ self elementsOf: source at: lmin
 ]
 
 { #category : 'shrinking' }
 ShinWDDminShrinker >> newWeights: list [
 
+	"Weights are indexed by position. Every element of a flat list is one item of size 1,
+	so the weights are uniform; structure-aware weights live in ShinSADDShrinker."
+
 	| weight |
-	
+
 	weight := (1 / list size) asFloat.
 
-	^ list inject: Dictionary new into: [ :dict :_ |
-		dict at: _ put: weight.
+	^ (1 to: list size) inject: Dictionary new into: [ :dict :index |
+		dict at: index put: weight.
 		dict
 	]
 ]
@@ -74,8 +83,8 @@ ShinWDDminShrinker >> splits: ptn with: halfSum weights: weights [
 	"split ptn into two paritions with weight sum of each close to halfSum"
 
 	| pairs part1 part2 sum1 sum2 |
-	
-	pairs := (1 to: ptn size) collect: [ :i | { (ptn at: i) . (weights at: (ptn at: i)) } ].
+
+	pairs := ptn asArray collect: [ :index | { index . (weights at: index) } ].
 	pairs := pairs sorted: [ :a :b | a second > b second ].
 
 	part1 := OrderedCollection new.
@@ -91,7 +100,7 @@ ShinWDDminShrinker >> splits: ptn with: halfSum weights: weights [
 			part2 add: item . sum2 := sum2 + weight ]
 		].
 
-	^ { part1 . part2 }
+	^ { part1 asSortedCollection asArray . part2 asSortedCollection asArray }
 ]
 
 { #category : 'shrinking' }
@@ -101,61 +110,63 @@ ShinWDDminShrinker >> tree: aString [
 ]
 
 { #category : 'testing' }
-ShinWDDminShrinker >> triggerBug: tree upperBound: originalScore [
+ShinWDDminShrinker >> triggerBug: indices upperBound: originalScore [
 
-	|input|
-	
-	input := (self asInput: tree).
-
-	^ oracle accepts: input from: originalScore
+	^ oracle accepts: (self asInput: (self elementsOf: source at: indices)) from: originalScore
 ]
 
 { #category : 'shrinking' }
-ShinWDDminShrinker >> wddRec: partitions lmin: lmin input: list weights: weights upperBound: bound [
+ShinWDDminShrinker >> wddRec: partitions lmin: lmin weights: weights upperBound: bound [
 
 	| localPartitions |
-	
+
 	localPartitions := partitions.
 
-	[ localPartitions notEmpty ] whileTrue: [ 
-		partitions do: [ :ptn |
-			self minimizationDone.
-			(self triggerBug: ptn upperBound: bound) ifTrue: [ | currentLmin currentPartitions |
-				currentLmin := ptn.
-				currentPartitions := self weightedPartitions: { ptn } weights: weights.
-				^ self wddRec: currentPartitions lmin: currentLmin input: list weights: weights upperBound: bound
-			] ifFalse: [ self failedMinimization ]
-		].
-	
-		localPartitions do: [ :ptn | | complement |
-			complement := lmin \ { ptn }.
-			self minimizationDone.
-			(self triggerBug: complement upperBound: bound) ifTrue: [ | currentLmin currentPartitions |
-				currentLmin := complement.
-				currentPartitions := localPartitions reject: [ :e | e = ptn ].
-				^ self wddRec: currentPartitions lmin: currentLmin input: list weights: weights upperBound: bound
-			] ifFalse: [ self failedMinimization ]
-		].
-			
-		localPartitions := self weightedPartitions: localPartitions weights: weights
-	].
+	[ true ] whileTrue: [ | refined |
+		"Reduce to subset (a single partition is lmin itself, nothing to test)"
+		localPartitions size > 1 ifTrue: [
+			localPartitions do: [ :ptn |
+				self minimizationDone.
+				(self triggerBug: ptn upperBound: bound) ifTrue: [
+					^ self wddRec: (self weightedPartitions: { ptn } weights: weights) lmin: ptn weights: weights upperBound: bound
+				] ifFalse: [ self failedMinimization ]
+			] ].
 
-	^ lmin
+		"Reduce to complement (with two partitions the complements are the subsets just tested)"
+		localPartitions size > 2 ifTrue: [
+			localPartitions do: [ :ptn | | toRemove complement |
+				toRemove := ptn asSet.
+				complement := lmin reject: [ :index | toRemove includes: index ].
+				self minimizationDone.
+				(self triggerBug: complement upperBound: bound) ifTrue: [
+					^ self wddRec: (localPartitions reject: [ :e | e == ptn ]) lmin: complement weights: weights upperBound: bound
+				] ifFalse: [ self failedMinimization ]
+			] ].
+
+		"Increase granularity, stop once every partition is a singleton"
+		refined := self weightedPartitions: localPartitions weights: weights.
+		refined size = localPartitions size ifTrue: [ ^ lmin ].
+		localPartitions := refined
+	]
 ]
 
 { #category : 'shrinking' }
 ShinWDDminShrinker >> weightedPartitions: partitions weights: weights [
 
+	"Split every partition with more than one element in two halves of similar weight.
+	Singletons are kept so they can still be tested at the finest granularity."
+
 	| result |
-		
+
 	result := OrderedCollection new.
-	
-	(partitions select: [ :ptn | ptn size > 1 ]) do: [ :ptn | | halfSum parts |
-		halfSum := 0.5 * ((ptn asArray collect: [ :e | weights at: e ]) sum).
-		parts := self splits: ptn with: halfSum weights: weights.
-		result addAll: parts
-	].
+
+	partitions do: [ :ptn |
+		ptn size > 1
+			ifTrue: [ | halfSum |
+				halfSum := 0.5 * ((ptn asArray collect: [ :e | weights at: e ]) sum).
+				result addAll: (self splits: ptn with: halfSum weights: weights) ]
+			ifFalse: [ result add: ptn ] ].
 
 	^ result
-	
+
 ]

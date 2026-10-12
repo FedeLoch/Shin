@@ -36,10 +36,8 @@ ShinTreeBasedLEE >> cutTree: nodeSequence position: windowPosition bound: bound 
 			^ newNodeSequence. 
 		] ifFalse: [ 
 			self failedMinimization.
-			backup associationsDo: [ :parentAndchildren | | parent |
-				parent := parentAndchildren key.
-				parent children: (parentAndchildren value).
-			]
+			backup keysAndValuesDo: [ :parent :children |
+				self setChildrenOf: parent to: children ]
 		]
 	].
 	

@@ -71,11 +71,10 @@ ShinVulcanShrinker >> minimizeOne: originalTree upperBound: bound [
 	
 	[ index <= auxiliaryReducers size ] whileTrue: [
 		| startingSize result |
-		startingSize := minimumInput treeSize. 
+		startingSize := self sizeOf: minimumInput. 
 		
 		"Main reducer"
 		minimumInput := self reduceMain: minimumInput bound: bound.
-		self minimizationDone.
 		
 		"Auxiliary reducers"
 		result := self runAuxiliary: minimumInput startingAt: index  bound: bound.
@@ -83,10 +82,9 @@ ShinVulcanShrinker >> minimizeOne: originalTree upperBound: bound [
 		index := result value.  
 		
 		"if we don't find smaller input, we stop"
-		(minimumInput treeSize = startingSize ) ifTrue: [ ^ minimumInput ].
+		((self sizeOf: minimumInput) = startingSize ) ifTrue: [ ^ minimumInput ].
 	].
 
-	auxiliaryReducers do: [ :auxiliar | self minimizationDone: (auxiliar getMinimizationDone). self failedMinimization: (auxiliar getFailedMinimization) ].
 	^ minimumInput
 ]
 
@@ -104,17 +102,25 @@ ShinVulcanShrinker >> reduceAuxiliary: reducer on: aTree bound: bound [
 
 	| candidate prevSize |
 	
-	prevSize := aTree treeSize.
-	candidate := reducer reduce: aTree bound: bound.
-	self minimizationDone.
+	"sizes are recomputed: the cached treeSize is not reliable after in-place edits"
+	prevSize := self sizeOf: aTree.
+	candidate := self countingCallsOf: reducer during: [ reducer reduce: aTree bound: bound ].
 	
-	^ (candidate treeSize < prevSize ) ifTrue: [ candidate ] ifFalse: [ self failedMinimization. aTree ]
+	^ ((self sizeOf: candidate) < prevSize ) ifTrue: [ candidate ] ifFalse: [ aTree ]
 ]
 
 { #category : 'accessing' }
 ShinVulcanShrinker >> reduceMain: aTree bound: bound [
 
-	^ mainReducer minimizeOne: aTree upperBound: bound 
+	^ self countingCallsOf: mainReducer during: [ mainReducer minimizeOne: aTree upperBound: bound ]
+]
+
+{ #category : 'shrinking' }
+ShinVulcanShrinker >> resetState [
+
+	super resetState.
+	mainReducer resetState.
+	auxiliaryReducers do: [ :reducer | reducer resetState ]
 ]
 
 { #category : 'accessing' }
@@ -129,10 +135,10 @@ ShinVulcanShrinker >> runAuxiliary: aTree startingAt: aIndex bound: bound [
 	[  (index <= auxiliaryReducers size) and: [ haveReduce not ] ] whileTrue: [ 
 		| reducer candidate prevSize |
 		reducer := auxiliaryReducers at: index. 
-		prevSize := currentTree treeSize.
+		prevSize := self sizeOf: currentTree.
 		candidate := self reduceAuxiliary: reducer on: currentTree bound: bound.
 		
-		(candidate treeSize < prevSize ) ifTrue: [ 
+		((self sizeOf: candidate) < prevSize ) ifTrue: [ 
 			currentTree := candidate.
 			haveReduce := true.
 		] ifFalse: [ 

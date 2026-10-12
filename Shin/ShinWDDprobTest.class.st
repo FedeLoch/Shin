@@ -40,7 +40,7 @@ ShinWDDprobTest >> testString03 [
 { #category : 'running' }
 ShinWDDprobTest >> testString04 [
 	
-	self assert: (shrinker shrink: 'e') equals: 'e'
+	self assert: (shrinker shrink: 'eeeeeeeeeeeeeeeeeeeeeeeeee') equals: 'e'
 ]
 
 { #category : 'running' }

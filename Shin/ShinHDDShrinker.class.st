@@ -54,7 +54,7 @@ ShinHDDShrinker >> hddmin: tree upperBound: bound level: level [
 			trigger := self triggerBug: tree upperBound: bound.
 			trigger ifFalse: [
 				currentChildren keysDo: [ :parent |
-					parent children: (OrderedCollection withAll: (currentChildren at: parent))
+					self setChildrenOf: parent to: (currentChildren at: parent)
 				]
 			] ifTrue: [
 				currentChildren := self currentChildrenAssociations: tree atLevel: level.
@@ -103,6 +103,13 @@ ShinHDDShrinker >> minimizeOne: originalTree upperBound: bound [
 ShinHDDShrinker >> oracle: anOracle [
 
 	super oracle: anOracle.
+]
+
+{ #category : 'shrinking' }
+ShinHDDShrinker >> resetState [
+
+	super resetState.
+	ddmin resetState
 ]
 
 { #category : 'shrinking' }

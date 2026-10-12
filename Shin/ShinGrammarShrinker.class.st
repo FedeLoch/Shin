@@ -50,19 +50,43 @@ ShinGrammarShrinker >> isValidTree: tree [
 { #category : 'shrinking' }
 ShinGrammarShrinker >> minimized: node [
 
-	| newNode |
-	
-	newNode := node grammarRule visit: minimalGenerator.
-	newNode tag: node	tag.
+	"Answer the smallest derivation of the node's symbol. The node's grammarRule is the
+	production of its parent (the rule the node is a fragment of), so the minimal tree is
+	generated from the non-terminal named by the node's tag instead. Leaves and unknown
+	symbols cannot be minimized and are answered as a copy."
+
+	| nonTerminal newNode |
+
+	nonTerminal := self nonTerminalNamed: node tag.
+	nonTerminal ifNil: [ ^ self copyTree: node ].
+
+	newNode := nonTerminal visit: minimalGenerator.
+	newNode tag: node tag.
 	newNode grammarRule: node grammarRule.
 
 	^ newNode
+]
+
+{ #category : 'shrinking' }
+ShinGrammarShrinker >> nonTerminalNamed: aTag [
+
+	aTag ifNil: [ ^ nil ].
+	grammar eachNonTerminal: [ :nonTerminal |
+		nonTerminal name asString = aTag asString ifTrue: [ ^ nonTerminal ] ].
+	^ nil
 ]
 
 { #category : 'testing' }
 ShinGrammarShrinker >> parse: input [
 
 	^ GncGenericGrammarParser parse: input from: grammar
+]
+
+{ #category : 'shrinking' }
+ShinGrammarShrinker >> resetState [
+
+	super resetState.
+	minimalGenerator reset
 ]
 
 { #category : 'shrinking' }

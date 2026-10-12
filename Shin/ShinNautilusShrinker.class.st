@@ -23,49 +23,54 @@ ShinNautilusShrinker >> candidates: root [
 ]
 
 { #category : 'shrinking' }
+ShinNautilusShrinker >> isAttached: node to: root [
+
+	"A node stops being part of the tree when one of its ancestors was replaced"
+
+	| current |
+	current := node.
+	[ current == root ] whileFalse: [
+		(current parent isNil or: [ (current parent children includes: current) not ]) ifTrue: [ ^ false ].
+		current := current parent ].
+	^ true
+]
+
+{ #category : 'shrinking' }
 ShinNautilusShrinker >> minimizeOne: givenTree upperBound: upperBound [
 
-	| seen candidates tree |
+	| tree |
 
-	seen := Set new.
 	tree := self tree: givenTree asInput.
-	candidates := self candidates: tree.
 
-	[ candidates isNotEmpty ] whileTrue: [ | candidate parent |
-		candidate := candidates first.
-		candidates := candidates allButFirst.
-		(seen includes: candidate asInput) ifFalse: [
-			seen add: candidate asInput.
-			parent := candidate parent.
+	(self candidates: tree) do: [ :candidate | | parent |
+		parent := candidate parent.
 
-			parent notNil ifTrue: [ | index |
+		(parent notNil and: [ self isAttached: candidate to: tree ]) ifTrue: [ | minimal reduced |
+			reduced := false.
+			minimal := self minimized: candidate.
+
+			"trying to replace the candidate by its minimal derivation"
+			minimal asInput = candidate asInput ifFalse: [ | index |
 				index := parent children indexOf: candidate.
-				"trying to minimize a candidate"
-				parent replaceChildAt: index with: (self minimized: candidate).
+				parent replaceChildAt: index with: minimal.
 				self minimizationDone.
-				
+				reduced := self triggerBug: tree upperBound: upperBound.
+				reduced ifFalse: [
+					self failedMinimization.
+					parent replaceChildAt: index with: candidate ] ].
+
+			"trying to replace the parent by candidate in case they have the same symbol"
+			(reduced not and: [ parent tag = candidate tag and: [ candidate isLeaf not ] ]) ifTrue: [ | parentChildren candidateChildren |
+				parentChildren := parent children copy.
+				candidateChildren := candidate children.
+
+				self setChildrenOf: parent to: candidateChildren.
+				self minimizationDone.
+
 				(self triggerBug: tree upperBound: upperBound) ifFalse: [
 					self failedMinimization.
-					parent replaceChildAt: index with: candidate.
-					
-					"trying to replace the parent by candidate in case they have the same symbol"
-					(parent tag = candidate tag) ifTrue: [ | parentChildren candidateChildren |
-						parentChildren := parent children.
-						candidateChildren := candidate children.
-
-						parent children: candidateChildren.
-						self minimizationDone.
-						
-						(self triggerBug: tree upperBound: upperBound) ifFalse: [	
-							self failedMinimization.
-							parent children: parentChildren.
-							candidate children: candidateChildren.
-						] ifTrue: []
-					]
-				] ifTrue: []
-			]
-		]
-	].
+					self setChildrenOf: parent to: parentChildren.
+					candidate children: candidateChildren ] ] ] ].
 
 	^ tree 
 ]
