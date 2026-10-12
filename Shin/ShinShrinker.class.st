@@ -26,6 +26,31 @@ ShinShrinker >> checkGrammar: aInput [
 ]
 
 { #category : 'shrinking' }
+ShinShrinker >> countingCallsOf: aReducer during: aBlock [
+
+	"Run aBlock and add the reductions aReducer performed meanwhile to my own counters,
+	so a composite shrinker reports every oracle call made on its behalf exactly once."
+
+	| done failed result |
+	done := aReducer getMinimizationDone.
+	failed := aReducer getFailedMinimization.
+	result := aBlock value.
+	self minimizationDone: aReducer getMinimizationDone - done.
+	self failedMinimization: aReducer getFailedMinimization - failed.
+	^ result
+]
+
+{ #category : 'shrinking' }
+ShinShrinker >> elementsOf: source at: indices [
+
+	"Answer the elements of source at the given positions, in input order and with the
+	species of source (a String stays a String). Flat shrinkers reason about positions
+	rather than values so that repeated elements can be removed independently."
+
+	^ source species withAll: (indices asSortedCollection asArray collect: [ :index | source at: index ])
+]
+
+{ #category : 'shrinking' }
 ShinShrinker >> evalInput: input [
 
 	"Returns true if the input triggers the bug, otherwise, it returns false"
@@ -112,6 +137,7 @@ ShinShrinker >> minimizeTree: tree upperBound: bound [
 	
 	reductionsDone := 0.
 	failedReductionsDone := 0.
+	self resetState.
 
 	currentTree := tree copy.
 	currentSize := self sizeOf: currentTree.
@@ -203,6 +229,26 @@ ShinShrinker >> shrink: input [
 	minimizedTree := self minimizeTree: tree upperBound: upperBound.
 
 	^ self asInput: minimizedTree
+]
+
+{ #category : 'shrinking' }
+ShinShrinker >> resetState [
+
+	"Hook called before each reduction so that no state of a previous run leaks into the next one"
+]
+
+{ #category : 'tree editing' }
+ShinShrinker >> setChildrenOf: parent to: someChildren [
+
+	"Replace the children of parent and propagate the size difference to its ancestors.
+	GncInnerNode>>children: only recomputes the parent's own treeSize, so restoring
+	children with it after a removeChild: leaves every ancestor with a stale treeSize."
+
+	| oldSize |
+	oldSize := parent treeSize.
+	parent children: (OrderedCollection withAll: someChildren).
+	parent parent ifNotNil: [ :grandParent |
+		grandParent increaseTreeSizeBy: parent treeSize - oldSize ]
 ]
 
 { #category : 'shrinking' }

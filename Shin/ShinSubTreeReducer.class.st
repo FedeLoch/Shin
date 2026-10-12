@@ -25,13 +25,21 @@ ShinSubTreeReducer >> initialize [
 ]
 
 { #category : 'as yet unclassified' }
+ShinSubTreeReducer >> resetState [
+
+	super resetState.
+	subtreeShrinker resetState
+]
+
+{ #category : 'as yet unclassified' }
+ShinSubTreeReducer >> oracle: anOracle [
+
+	super oracle: anOracle.
+	subtreeShrinker oracle: anOracle
+]
+
+{ #category : 'as yet unclassified' }
 ShinSubTreeReducer >> reduce: aTree bound: bound [
 
-	| minimizedTree |
-	
-	minimizedTree := subtreeShrinker minimizeOne: aTree upperBound: bound.
-	self minimizationDone: (subtreeShrinker getMinimizationDone).
-	self failedMinimization: (subtreeShrinker getFailedMinimization).
-	
-	^ minimizedTree
+	^ self countingCallsOf: subtreeShrinker during: [ subtreeShrinker minimizeOne: aTree upperBound: bound ]
 ]

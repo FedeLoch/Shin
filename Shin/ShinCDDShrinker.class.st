@@ -1,6 +1,9 @@
 Class {
 	#name : 'ShinCDDShrinker',
 	#superclass : 'ShinShrinker',
+	#instVars : [
+		'source'
+	],
 	#category : 'Shin-Shrinkers',
 	#package : 'Shin',
 	#tag : 'Shrinkers'
@@ -16,7 +19,7 @@ ShinCDDShrinker >> asInput: array [
 ShinCDDShrinker >> computeSize: round probability: prob [
 
 	| estimatedProb q real lower upper |
-	
+
 	"Estimated probability of round r"
 	estimatedProb := prob * (1.582 ** round).
 	estimatedProb >= 1 ifTrue: [ ^ 1 ].
@@ -34,20 +37,23 @@ ShinCDDShrinker >> computeSize: round probability: prob [
 ]
 
 { #category : 'shrinking' }
-ShinCDDShrinker >> minimizeCDD: list probabilities: probs upperBound: bound [
+ShinCDDShrinker >> minimizeCDD: list upperBound: bound [
+
+	"list holds positions of the input, so repeated elements are removed independently"
 
 	| round lmin p size |
-	
+
 	lmin := list.
 	round := 0.
 	p := (1 / list size) asFloat.
 	size := nil.
-	
+
 	[size isNil or: [ size > 1 ]] whileTrue: [ | subsets |
-		size := self computeSize: round probability: p.	
+		size := self computeSize: round probability: p.
 		subsets := self partitions: lmin size: size.
-		subsets do: [ :subset | | complement |
-			complement := lmin \ subset.
+		subsets do: [ :subset | | toRemove complement |
+			toRemove := subset asSet.
+			complement := lmin reject: [ :index | toRemove includes: index ].
 			self minimizationDone.
 			(self triggerBug: complement upperBound: bound) ifTrue: [
 				lmin := complement.
@@ -64,7 +70,10 @@ ShinCDDShrinker >> minimizeCDD: list probabilities: probs upperBound: bound [
 { #category : 'shrinking' }
 ShinCDDShrinker >> minimizeOne: list upperBound: bound [
 
-	^ self minimizeCDD: list probabilities: (self probabilities: list) upperBound: bound
+	list size <= 1 ifTrue: [ ^ list ].
+
+	source := list.
+	^ self elementsOf: source at: (self minimizeCDD: (1 to: list size) asArray upperBound: bound)
 ]
 
 { #category : 'shrinking' }
@@ -77,44 +86,6 @@ ShinCDDShrinker >> partitions: lmin size: size [
 		subsets add: (lmin copyFrom: start to: (start + size - 1 min: lmin size)) ].
 
 	^ subsets
-]
-
-{ #category : 'instance creation' }
-ShinCDDShrinker >> probabilities: list [
-
-	| p |
-	
-	p := (1 / list size) asFloat.
-
-	^ list inject: Dictionary new into: [ :dict :_ |
-		dict at: _ put: p.
-		dict
-	]
-]
-
-{ #category : 'shrinking' }
-ShinCDDShrinker >> selectSubset: lmin probabilities: probs upperBound: bound [
-
-	| sorted subset currentMaxGain |
-	
-	sorted := lmin copy sorted: [ :a :b | (probs at: a) >= (probs at: b) ].
-	
-	(sorted size = 2) ifTrue: [ ^ { sorted second } ].
-	
-	subset := {}.
-	currentMaxGain := 0.
-
-	sorted do: [ :l | | tempSubset gain |
-		tempSubset := subset, { l }.
-		gain := tempSubset size * ((tempSubset collect: [ :subL | (1 - (probs at: subL) ) ]) multiply).
-		
-		(gain > currentMaxGain) ifTrue: [
-			currentMaxGain := gain.
-			subset := tempSubset.
-		] ifFalse: [ ^ subset ]
-	].
-	
-	^ subset
 ]
 
 { #category : 'shrinking' }
@@ -136,11 +107,7 @@ ShinCDDShrinker >> tree: aString [
 ]
 
 { #category : 'testing' }
-ShinCDDShrinker >> triggerBug: tree upperBound: originalScore [
+ShinCDDShrinker >> triggerBug: indices upperBound: originalScore [
 
-	|input|
-	
-	input := (self asInput: tree).
-
-	^ oracle accepts: input from: originalScore
+	^ oracle accepts: (self asInput: (self elementsOf: source at: indices)) from: originalScore
 ]

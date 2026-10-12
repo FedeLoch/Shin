@@ -99,11 +99,11 @@ ShinSADDShrinker >> decisionUniformity: node [
 ShinSADDShrinker >> ensureOneMinimal: lmin upperBound: bound [
 
 	lmin do: [ :element | | complement |
-		complement := lmin \ { element }.
-
-		(self triggerBug: complement upperBound: bound) ifTrue: [
-			^ self ensureOneMinimal: complement upperBound: bound
-		]
+		complement := lmin reject: [ :each | each == element ].
+		self minimizationDone.
+		(self triggerBug: complement upperBound: bound)
+			ifTrue: [ ^ self ensureOneMinimal: complement upperBound: bound ]
+			ifFalse: [ self failedMinimization ]
 	].
 
 	^ lmin
@@ -209,7 +209,7 @@ ShinSADDShrinker >> minimizeOne: originalTree upperBound: bound [
 			                   trigger
 				                   ifFalse: [
 				                   childrenSnapshot keysDo: [ :parent |
-					                   parent children: (OrderedCollection withAll: (childrenSnapshot at: parent)) ] ]
+					                   self setChildrenOf: parent to: (childrenSnapshot at: parent) ] ]
 				                   ifTrue: [ childrenSnapshot := self childrenAssociations: elements ].
 			                   trigger ].
 

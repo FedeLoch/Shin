@@ -1,6 +1,9 @@
 Class {
 	#name : 'ShinWDDProbShrinker',
 	#superclass : 'ShinShrinker',
+	#instVars : [
+		'source'
+	],
 	#category : 'Shin-Shrinkers',
 	#package : 'Shin',
 	#tag : 'Shrinkers'
@@ -21,7 +24,14 @@ ShinWDDProbShrinker >> ddvalue: element probabilities: probs weights: weights [
 { #category : 'shrinking' }
 ShinWDDProbShrinker >> minimizeOne: list upperBound: bound [
 
-	^ self minimizeWDDProb: list probabilities: (self probabilities: list) weights: (self weights: list) upperBound: bound
+	| indices |
+
+	list size <= 1 ifTrue: [ ^ list ].
+
+	source := list.
+	indices := (1 to: list size) asArray.
+
+	^ self elementsOf: source at: (self minimizeWDDProb: indices probabilities: (self probabilities: indices) weights: (self weights: indices) upperBound: bound)
 ]
 
 { #category : 'shrinking' }
@@ -33,16 +43,13 @@ ShinWDDProbShrinker >> minimizeWDDProb: list probabilities: probs weights: weigh
 	
 	[ lmin anySatisfy: [ :l | (probs at: l) < 1 ] ] whileTrue: [ | subset complement |
 		subset := self selectSubsetWDD: lmin probabilities: probs weights: weights upperBound: bound.
-		complement := lmin \ subset.
+		complement := lmin reject: [ :l | subset includes: l ].
 		self minimizationDone.
 		(self triggerBug: complement upperBound: bound) ifTrue: [
 			lmin := complement.
-		] ifFalse: [ | factor | 
+		] ifFalse: [
 			self failedMinimization.
-			factor := 1 / (1 - ((subset collect: [ :elem | 1 - (probs at: elem) ]) multiply)).
-			subset do: [ :elem |
-				probs at: elem update: [ :p | factor * p ]
-			]
+			self update: probs afterFailing: subset
 		].
 	].
 	
@@ -56,8 +63,8 @@ ShinWDDProbShrinker >> probabilities: list [
 	
 	p := (1 / list size) asFloat.
 
-	^ list inject: Dictionary new into: [ :dict :_ |
-		dict at: _ put: p.
+	^ list inject: Dictionary new into: [ :dict :element |
+		dict at: element put: p.
 		dict
 	]
 ]
@@ -67,7 +74,7 @@ ShinWDDProbShrinker >> selectSubsetWDD: lmin probabilities: probs weights: weigh
 
 	| sorted result ptn currentMaxGain |
 	
-	sorted := lmin copy sorted: [ :a :b |
+	sorted := lmin asArray sorted: [ :a :b |
 		(self ddvalue: a probabilities: probs weights: weights) >= (self ddvalue: b probabilities: probs weights: weights)
 	].
 	
@@ -109,13 +116,25 @@ ShinWDDProbShrinker >> tree: aString [
 ]
 
 { #category : 'testing' }
-ShinWDDProbShrinker >> triggerBug: tree upperBound: originalScore [
+ShinWDDProbShrinker >> triggerBug: indices upperBound: originalScore [
 
-	|input|
-	
-	input := (self asInput: tree).
+	^ oracle accepts: (self asInput: (self elementsOf: source at: indices)) from: originalScore
+]
 
-	^ oracle accepts: input from: originalScore
+{ #category : 'shrinking' }
+ShinWDDProbShrinker >> update: probs afterFailing: subset [
+
+	"Bayesian update after the subset could not be removed. A failed singleton is
+	certainly needed, so its probability is set to exactly 1 (no floating point drift)."
+
+	| factor |
+
+	subset size = 1 ifTrue: [ ^ probs at: subset first put: 1 ].
+
+	factor := 1 / (1 - ((subset collect: [ :elem | 1 - (probs at: elem) ]) multiply)).
+	subset do: [ :elem |
+		probs at: elem update: [ :p | (factor * p) min: 1 ]
+	]
 ]
 
 { #category : 'shrinking' }
@@ -125,8 +144,8 @@ ShinWDDProbShrinker >> weights: list [
 	
 	weight := (1 / list size) asFloat.
 
-	^ list inject: Dictionary new into: [ :dict :_ |
-		dict at: _ put: weight.
+	^ list inject: Dictionary new into: [ :dict :element |
+		dict at: element put: weight.
 		dict
 	]
 ]

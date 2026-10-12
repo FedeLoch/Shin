@@ -39,7 +39,7 @@ ShinCDDTest >> testString03 [
 { #category : 'running' }
 ShinCDDTest >> testString04 [
 	
-	self assert: (shrinker shrink: 'eeeeeeeeeeeeeeeeeeeeeeeeee') equals: 'eeeeeeeeeeeeeeeeeeeeeeeeee'
+	self assert: (shrinker shrink: 'eeeeeeeeeeeeeeeeeeeeeeeeee') equals: 'e'
 ]
 
 { #category : 'running' }

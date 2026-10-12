@@ -4,7 +4,9 @@ Class {
 	#instVars : [
 		'batchBudget',
 		'maxBatchBudget',
-		'minBatchBudget'
+		'minBatchBudget',
+		'rejected',
+		'initialBatchBudget'
 	],
 	#category : 'Shin-Shrinkers',
 	#package : 'Shin',
@@ -12,41 +14,17 @@ Class {
 }
 
 { #category : 'private' }
-ShinLazyPerfShrinker >> applyRemovals: tree batch: batch [
-	"Apply a batch of {nodeIndex -> replacement} removals to a copy of the tree.
-	 Each entry is an Association: nodeIndex -> replacementNode.
-	 We apply them in reverse index order to preserve index correctness."
+ShinLazyPerfShrinker >> applyRemovals: batch [
+	"Apply a batch of {node -> replacement} removals in place.
+	 Nodes of a batch never overlap, so replacing one does not affect the others.
+	 Answer the undo information: {parent . index . originalNode} triples."
 
-	| treeCopy sortedBatch |
-
-	treeCopy := self copyTree: tree.
-	batch ifEmpty: [ ^ treeCopy ].
-
-	"Sort by descending index so earlier indices remain valid"
-	sortedBatch := batch sorted: [ :a :b | a key > b key ].
-
-	sortedBatch do: [ :assoc | | index replacement allNodes target parent childIndex |
-		index := assoc key.
-		replacement := assoc value.
-		allNodes := treeCopy allNodes.
-		
-		(index <= allNodes size) ifTrue: [
-			target := allNodes at: index.
-			parent := target parent.
-
-			parent ifNotNil: [
-				childIndex := parent children indexOf: target.
-				childIndex > 0 ifTrue: [
-					parent replaceChildAt: childIndex with: replacement doCopy
-				]
-			] ifNil: [
-				"Replacing root: return the replacement directly"
-				^ replacement doCopy
-			]
-		]
-	].
-
-	^ treeCopy
+	^ batch collect: [ :assoc | | node parent index |
+		node := assoc key.
+		parent := node parent.
+		index := parent children identityIndexOf: node.
+		parent replaceChildAt: index with: assoc value.
+		{ parent . index . node } ]
 ]
 
 { #category : 'shrinking' }
@@ -58,59 +36,56 @@ ShinLazyPerfShrinker >> batchBudget [
 { #category : 'shrinking' }
 ShinLazyPerfShrinker >> batchBudget: anInteger [
 
+	initialBatchBudget := anInteger.
 	batchBudget := anInteger
 ]
 
 { #category : 'private' }
 ShinLazyPerfShrinker >> binarySplit: tree batch: batch upperBound: bound [
 	"Split batch in half and validate each half independently.
-	 The left half is validated first, and its accepted removals
-	 are applied before validating the right half."
+	 The left half is validated first and its accepted removals stay applied,
+	 so the right half is validated on top of them, in the real current state."
 
-	| mid leftBatch rightBatch acceptedLeft treeAfterLeft acceptedRight |
+	| mid acceptedLeft acceptedRight |
 
 	mid := batch size // 2.
-	leftBatch := batch copyFrom: 1 to: mid.
-	rightBatch := batch copyFrom: mid + 1 to: batch size.
-
-	"Validate left half"
-	acceptedLeft := self binaryValidate: tree batch: leftBatch upperBound: bound.
-
-	"Apply accepted left removals, then validate right half"
-	treeAfterLeft := self applyRemovals: tree batch: acceptedLeft.
-	acceptedRight := self binaryValidate: treeAfterLeft batch: rightBatch upperBound: bound.
+	acceptedLeft := self binaryValidate: tree batch: (batch copyFrom: 1 to: mid) upperBound: bound.
+	acceptedRight := self binaryValidate: tree batch: (batch copyFrom: mid + 1 to: batch size) upperBound: bound.
 
 	^ acceptedLeft , acceptedRight
 ]
 
 { #category : 'private' }
 ShinLazyPerfShrinker >> binaryValidate: tree batch: batch upperBound: bound [
-	"Validate a batch of {nodeIndex -> replacement} removals using binary search.
+	"Validate a batch of {node -> replacement} removals using binary search.
 	 Key insight for performance bugs:
 	   - Failures are CHEAP (input does not trigger the bug -> program runs fast)
 	   - Successes are EXPENSIVE (input still triggers the bug -> program runs slow)
 	 So we try all removals at once first: if the oracle says interesting,
 	 ONE success call validates the ENTIRE batch.
-	 On failure (cheap), we binary-split and recurse."
+	 On failure (cheap), we binary-split and recurse.
+	 Accepted removals stay applied to tree, rejected ones are undone."
 
-	| candidate |
-	
+	| undo |
+
 	batch ifEmpty: [ ^ #() ].
 
 	"Apply ALL removals in the batch at once"
-	candidate := self applyRemovals: tree batch: batch.
+	undo := self applyRemovals: batch.
 	self minimizationDone.
-	
-	(self triggerBug: candidate upperBound: bound) ifTrue: [
+
+	(self triggerBug: tree upperBound: bound) ifTrue: [
 		"ONE success call validated the entire batch!"
 		^ batch
 	].
 
 	"Failure is cheap, so we can afford to probe further"
 	self failedMinimization.
+	self undoRemovals: undo.
 
 	batch size = 1 ifTrue: [
-		"This single removal breaks the property"
+		"This single removal breaks the property, its descendants may still be reduced"
+		rejected add: batch first key.
 		^ #()
 	].
 
@@ -124,40 +99,31 @@ ShinLazyPerfShrinker >> collectBatch: tree [
 	 Each removal replaces a node with its shortest grammar derivation.
 	 Nodes are prioritized by subtree size (largest first, like Perses)
 	 to maximize the amount of input removed per oracle call.
-	 Returns a collection of Associations: nodeIndex -> replacementNode."
+	 Nodes whose removal was already rejected do not cover their descendants.
+	 Returns a collection of Associations: node -> replacementNode."
 
-	| allNodes sortedIndices batch removedIndices |
+	| sortedNodes batch selected |
 
-	allNodes := tree allNodes.
-	
-	"Sort node indices by subtree size descending (largest subtrees first)"
-	sortedIndices := (1 to: allNodes size) asArray sorted: [ :a :b |
-		(allNodes at: a) treeSize > (allNodes at: b) treeSize
-	].
+	sortedNodes := tree allNodes asArray sorted: [ :a :b | a treeSize > b treeSize ].
 
 	batch := OrderedCollection new.
-	removedIndices := Set new.
+	selected := IdentitySet new.
 
-	sortedIndices do: [ :index | | node replacement |
+	sortedNodes do: [ :node |
 		(batch size >= batchBudget) ifTrue: [ ^ batch asArray ].
 
-		node := allNodes at: index.
+		"Skip leaves, the root and already rejected nodes"
+		(node isLeaf or: [ node parent isNil or: [ rejected includes: node ] ]) ifFalse: [
+			"Skip nodes overlapping a batched ancestor"
+			(self hasAncestor: node in: selected) ifFalse: [ | replacement |
+				replacement := self minimized: node.
 
-		"Skip leaves and the root"
-		(node isLeaf or: [ node parent isNil ]) ifFalse: [
-			"Skip nodes already covered by a batched ancestor/descendant"
-			(removedIndices includes: index) ifFalse: [
-				(self hasRemovedAncestor: node in: removedIndices in: allNodes) ifFalse: [
-					replacement := self minimized: node.
-				
-					"Only include if replacement is strictly smaller"
-					(replacement notNil and: [ replacement treeSize < node treeSize ]) ifTrue: [
-						batch add: index -> replacement.
-						removedIndices add: index.
-						"Mark all descendants as covered"
-						self markDescendants: node startingAt: index in: allNodes into: removedIndices
-					]
-				]
+				"Only include if replacement is strictly smaller"
+				(replacement notNil and: [ replacement treeSize < node treeSize ])
+					ifTrue: [
+						batch add: node -> replacement.
+						selected add: node ]
+					ifFalse: [ rejected add: node ]
 			]
 		]
 	].
@@ -166,16 +132,15 @@ ShinLazyPerfShrinker >> collectBatch: tree [
 ]
 
 { #category : 'private' }
-ShinLazyPerfShrinker >> hasRemovedAncestor: node in: removedIndices in: allNodes [
-	"Walk up from node to root, checking if any ancestor is in removedIndices."
+ShinLazyPerfShrinker >> hasAncestor: node in: selected [
+	"Walk up from node to root, checking if any ancestor is already in the batch.
+	 Nodes are sorted by decreasing size, so a batched descendant cannot come first."
 
 	| current |
-	
+
 	current := node parent.
 	[ current notNil ] whileTrue: [
-		| idx |
-		idx := allNodes indexOf: current.
-		(idx > 0 and: [ removedIndices includes: idx ]) ifTrue: [ ^ true ].
+		(selected includes: current) ifTrue: [ ^ true ].
 		current := current parent
 	].
 
@@ -186,22 +151,9 @@ ShinLazyPerfShrinker >> hasRemovedAncestor: node in: removedIndices in: allNodes
 ShinLazyPerfShrinker >> initialize [
 
 	super initialize.
-	batchBudget := 8.
+	self batchBudget: 8.
 	maxBatchBudget := 64.
 	minBatchBudget := 1
-]
-
-{ #category : 'private' }
-ShinLazyPerfShrinker >> markDescendants: node startingAt: index in: allNodes into: removedIndices [
-	"Mark all descendants of node as covered so they are not batched separately."
-
-	node allNodes do: [ :descendant |
-		| idx |
-		idx := allNodes indexOf: descendant.
-		(idx > 0 and: [ idx ~= index ]) ifTrue: [
-			removedIndices add: idx
-		]
-	]
 ]
 
 { #category : 'shrinking' }
@@ -224,44 +176,35 @@ ShinLazyPerfShrinker >> minimizeOne: originalTree upperBound: bound [
 	 2. Validate each batch using binary search, amortizing the expensive
 	    success oracle calls across multiple removals.
 	 3. Adaptively tune the batch budget based on acceptance rate.
-	 
+
 	 This design exploits the cost asymmetry of performance oracles:
 	 failures (uninteresting) are fast, successes (interesting) are slow.
 	 By batching removals and using binary search validation, we pay for
-	 fewer expensive success calls while using cheap failure calls to probe."
+	 fewer expensive success calls while using cheap failure calls to probe.
 
-	| tree progress |
+	 Every batch either shrinks the tree or rejects at least one node,
+	 so the loop terminates."
+
+	| tree batch |
 
 	tree := self tree: originalTree asInput.
 	tree ifNil: [ ^ originalTree ].
-	progress := true.
+	rejected := IdentitySet new.
 
-	[ progress ] whileTrue: [
-		| batch accepted |
-		progress := false.
-
-		batch := self collectBatch: tree.
-		batch ifNotEmpty: [
-			"Phase: Binary validation of the batch"
-			accepted := self binaryValidate: tree batch: batch upperBound: bound.
-			
-			accepted ifNotEmpty: [
-				tree := self applyRemovals: tree batch: accepted.
-				progress := true.
-
-				"Adaptive budget tuning"
-				self tuneBudget: accepted size against: batch size
-			].
-
-			"If nothing was accepted from a non-empty batch, try smaller batches"
-			(accepted isEmpty and: [ batchBudget > minBatchBudget ]) ifTrue: [
-				batchBudget := (batchBudget // 2) max: minBatchBudget.
-				progress := true "retry with smaller budget"
-			]
-		]
+	[ (batch := self collectBatch: tree) notEmpty ] whileTrue: [ | accepted |
+		accepted := self binaryValidate: tree batch: batch upperBound: bound.
+		self tuneBudget: accepted size against: batch size
 	].
 
 	^ tree
+]
+
+{ #category : 'shrinking' }
+ShinLazyPerfShrinker >> resetState [
+
+	"the budget adapts during a run, every run starts from the configured one"
+	super resetState.
+	batchBudget := initialBatchBudget
 ]
 
 { #category : 'shrinking' }
@@ -277,7 +220,7 @@ ShinLazyPerfShrinker >> tuneBudget: acceptedCount against: batchCount [
 	 Low acceptance rate -> be more conservative (smaller batches)."
 
 	| acceptanceRate |
-	
+
 	acceptanceRate := acceptedCount / batchCount.
 
 	acceptanceRate > (4/5) ifTrue: [
@@ -288,4 +231,11 @@ ShinLazyPerfShrinker >> tuneBudget: acceptedCount against: batchCount [
 		"Few removals worked, decrease aggressiveness"
 		batchBudget := (batchBudget // 2) max: minBatchBudget
 	]
+]
+
+{ #category : 'private' }
+ShinLazyPerfShrinker >> undoRemovals: undo [
+
+	undo reverseDo: [ :each |
+		each first replaceChildAt: each second with: each third ]
 ]

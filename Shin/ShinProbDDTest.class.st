@@ -40,7 +40,7 @@ ShinProbDDTest >> testString03 [
 { #category : 'running' }
 ShinProbDDTest >> testString04 [
 	
-	self assert: (shrinker shrink: 'eeeeeeeeeeeeeeeeeeeeeeeeee') equals: 'eeeeeeeeeeeeeeeeeeeeeeeeee'
+	self assert: (shrinker shrink: 'eeeeeeeeeeeeeeeeeeeeeeeeee') equals: 'e'
 ]
 
 { #category : 'running' }

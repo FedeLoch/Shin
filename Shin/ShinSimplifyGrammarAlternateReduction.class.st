@@ -9,60 +9,60 @@ Class {
 { #category : 'enumerating' }
 ShinSimplifyGrammarAlternateReduction class >> alternateReduction: aTree using: aGrammar matchingWith: symbol [
 	" return all the reduction candidates"
-	| expansions reductions nonTerminal |
 
-	reductions := OrderedCollection new.
-	nonTerminal := aGrammar instVarNamed: ('nt' , symbol asString).
-	expansions := nonTerminal rules.
-	expansions := expansions sorted: [ :expA :expB | expA fragments size < expB fragments size ]. 
-	
-	expansions do: [ :expansion | | match newChildReductions |
-		match := true.
-		newChildReductions := OrderedCollection new.
-		expansion fragments do: [ :altSymbol | | childReductions treeCopy | 
-			(altSymbol isTerminal ) ifFalse: [ 
-			treeCopy := aTree doCopy. 
-			childReductions := ShinSimplifyGrammarSubtreeReducer findSubtree: treeCopy mathchingWith: altSymbol name. 
-			childReductions ifEmpty: [ match:= false ].
-			match ifTrue: [ newChildReductions add: childReductions ]  ]
-		].
-		match ifTrue: [ (self possibleCombination: newChildReductions) do: [ :combination | | newTree|
-				newTree := self buildNewTree: combination tag: symbol.
-				newTree treeSize  < aTree treeSize ifTrue: [ reductions add: newTree ].
-				]
-			]
-		].
-    ^ reductions
+	^ self
+		  alternateReduction: aTree
+		  using: aGrammar
+		  matchingWith: symbol
+		  subtreesFinder: [ :treeCopy :altSymbol | ShinSimplifyGrammarSubtreeReducer findSubtree: treeCopy mathchingWith: altSymbol name ]
 ]
 
 { #category : 'enumerating' }
 ShinSimplifyGrammarAlternateReduction class >> alternateReduction: aTree using: aGrammar matchingWith: symbol depth: depth [
 
 	" return all the reduction candidates"
-	| expansions reductions nonTerminal |
+
+	^ self
+		  alternateReduction: aTree
+		  using: aGrammar
+		  matchingWith: symbol
+		  subtreesFinder: [ :treeCopy :altSymbol | ShinSimplifyGrammarSubtreeReducer findSubtree: treeCopy mathchingWith: altSymbol name depth: depth ]
+]
+
+{ #category : 'enumerating' }
+ShinSimplifyGrammarAlternateReduction class >> alternateReduction: aTree using: aGrammar matchingWith: symbol subtreesFinder: finderBlock [
+
+	"For every expansion of symbol, build the trees whose non-terminal fragments are taken
+	from matching subtrees of aTree and whose terminal fragments are regenerated, keeping
+	the fragments in the order of the expansion."
+
+	| expansions reductions nonTerminal generator |
 
 	reductions := OrderedCollection new.
+	generator := ShinGrammarMinimalGenerator new grammar: aGrammar; yourself.
 	nonTerminal := aGrammar instVarNamed: ('nt' , symbol asString).
 	expansions := nonTerminal rules.
 	expansions := expansions sorted: [ :expA :expB | expA fragments size < expB fragments size ]. 
 	
-	expansions do: [ :expansion | | match newChildReductions |
+	expansions do: [ :expansion | | match options |
 		match := true.
-		newChildReductions := OrderedCollection new.
-		expansion fragments do: [ :altSymbol | | childReductions treeCopy | 
-			(altSymbol isTerminal ) ifFalse: [ 
-			treeCopy := aTree doCopy. 
-			childReductions := ShinSimplifyGrammarSubtreeReducer findSubtree: treeCopy mathchingWith: altSymbol name depth: depth . 
-			childReductions ifEmpty: [ match:= false ].
-			match ifTrue: [ newChildReductions add: childReductions ]  ]
-		].
-		match ifTrue: [ (self possibleCombination: newChildReductions) do: [ :combination | | newTree|
-			newTree := self buildNewTree: combination tag: symbol.
-			newTree treeSize  < aTree treeSize ifTrue: [ reductions add: newTree ].
-		]]
+		options := OrderedCollection new.
+		expansion fragments do: [ :altSymbol | | childReductions |
+			match ifTrue: [
+				childReductions := altSymbol isTerminal
+					ifTrue: [ { (altSymbol generateAst: generator) grammarRule: expansion; yourself } ]
+					ifFalse: [ finderBlock value: aTree doCopy value: altSymbol ].
+				childReductions ifEmpty: [ match := false ].
+				options add: childReductions ] ].
+		
+		"an expansion made only of terminals reuses nothing from aTree"
+		(match and: [ expansion fragments anySatisfy: [ :fragment | fragment isTerminal not ] ]) ifTrue: [
+			(self possibleCombination: options) do: [ :combination | | newTree |
+				newTree := self buildNewTree: combination tag: symbol.
+				newTree treeSize < aTree treeSize ifTrue: [ reductions add: newTree ] ] ]
 	].
 
-    ^ reductions
+	^ reductions
 ]
 
 { #category : 'enumerating' }
