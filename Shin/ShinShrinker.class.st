@@ -189,14 +189,17 @@ ShinShrinker >> profiledShrink: input [
 	
 	initialTime := Time microsecondClockValue.
 	(self tree: input) ifNil: [ Error signal: 'Trying to reduce a non valid input' ].
-	upperBound := self evalInput: input.
 
-	tree := self tree: input.
+	"One oracle session for the whole reduction (e.g. coverage instrumentation is installed once)"
+	oracle during: [
+		upperBound := self evalInput: input.
+
+		tree := self tree: input.
 	
-	minimizedTree := self minimizeTree: tree upperBound: upperBound.	
-	totalTime := Time microsecondClockValue - initialTime.
-	minimizedInput := self asInput: minimizedTree.
-	minimizedBound := self evalInput: minimizedInput.
+		minimizedTree := self minimizeTree: tree upperBound: upperBound.	
+		totalTime := Time microsecondClockValue - initialTime.
+		minimizedInput := self asInput: minimizedTree.
+		minimizedBound := self evalInput: minimizedInput ].
 
 	^ {
 		'originalInput' -> input.
@@ -223,12 +226,15 @@ ShinShrinker >> shrink: input [
 	| tree minimizedTree upperBound |
 
 	(self tree: input) ifNil: [ ^ input ].
-	upperBound := self evalInput: input.
 
-	tree := self tree: input.
-	minimizedTree := self minimizeTree: tree upperBound: upperBound.
+	"One oracle session for the whole reduction (e.g. coverage instrumentation is installed once)"
+	^ oracle during: [
+		upperBound := self evalInput: input.
 
-	^ self asInput: minimizedTree
+		tree := self tree: input.
+		minimizedTree := self minimizeTree: tree upperBound: upperBound.
+
+		self asInput: minimizedTree ]
 ]
 
 { #category : 'shrinking' }

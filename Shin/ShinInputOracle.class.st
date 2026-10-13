@@ -14,6 +14,16 @@ ShinInputOracle >> accepts: bound from: base [
 ]
 
 { #category : 'shrinking' }
+ShinInputOracle >> during: aBlock [
+
+	"Evaluate aBlock as one session of evaluations, typically a whole reduction.
+	Oracles with an expensive setup (e.g. code instrumentation) do it once here
+	instead of on every evaluation."
+
+	^ aBlock value
+]
+
+{ #category : 'shrinking' }
 ShinInputOracle >> evalInput: input [
 
 	self subclassResponsibility 
