@@ -51,6 +51,22 @@ ShinShrinker >> elementsOf: source at: indices [
 ]
 
 { #category : 'shrinking' }
+ShinShrinker >> emptyProfiledResult: input [
+
+	^ {
+		'originalInput' -> input.
+		'minimizedInput' -> input.
+		'totalTime' -> (Duration microSeconds: 0).
+		'neededReductions' -> 0.
+		'failedReductions' -> 0.
+		'%problemPreservation' -> 100.
+		'%inputReduction' -> 0.
+		'originalBound' -> nil.
+		'minimizedBound' -> nil
+	} asDictionary
+]
+
+{ #category : 'shrinking' }
 ShinShrinker >> evalInput: input [
 
 	"Returns true if the input triggers the bug, otherwise, it returns false"
@@ -188,7 +204,7 @@ ShinShrinker >> profiledShrink: input [
 	| tree minimizedTree upperBound initialTime totalTime minimizedInput minimizedBound |
 	
 	initialTime := Time microsecondClockValue.
-	(self tree: input) ifNil: [ Error signal: 'Trying to reduce a non valid input' ].
+	(self tree: input) ifNil: [ self emptyProfiledResult: input ].
 
 	"One oracle session for the whole reduction (e.g. coverage instrumentation is installed once)"
 	oracle during: [
@@ -215,6 +231,26 @@ ShinShrinker >> profiledShrink: input [
 ]
 
 { #category : 'shrinking' }
+ShinShrinker >> resetState [
+
+	"Hook called before each reduction so that no state of a previous run leaks into the next one"
+]
+
+{ #category : 'tree editing' }
+ShinShrinker >> setChildrenOf: parent to: someChildren [
+
+	"Replace the children of parent and propagate the size difference to its ancestors.
+	GncInnerNode>>children: only recomputes the parent's own treeSize, so restoring
+	children with it after a removeChild: leaves every ancestor with a stale treeSize."
+
+	| oldSize |
+	oldSize := parent treeSize.
+	parent children: (OrderedCollection withAll: someChildren).
+	parent parent ifNotNil: [ :grandParent |
+		grandParent increaseTreeSizeBy: parent treeSize - oldSize ]
+]
+
+{ #category : 'shrinking' }
 ShinShrinker >> shouldStop: minimized size: size from: currentTree size: currentSize [
 
 	self subclassResponsibility 
@@ -235,26 +271,6 @@ ShinShrinker >> shrink: input [
 		minimizedTree := self minimizeTree: tree upperBound: upperBound.
 
 		self asInput: minimizedTree ]
-]
-
-{ #category : 'shrinking' }
-ShinShrinker >> resetState [
-
-	"Hook called before each reduction so that no state of a previous run leaks into the next one"
-]
-
-{ #category : 'tree editing' }
-ShinShrinker >> setChildrenOf: parent to: someChildren [
-
-	"Replace the children of parent and propagate the size difference to its ancestors.
-	GncInnerNode>>children: only recomputes the parent's own treeSize, so restoring
-	children with it after a removeChild: leaves every ancestor with a stale treeSize."
-
-	| oldSize |
-	oldSize := parent treeSize.
-	parent children: (OrderedCollection withAll: someChildren).
-	parent parent ifNotNil: [ :grandParent |
-		grandParent increaseTreeSizeBy: parent treeSize - oldSize ]
 ]
 
 { #category : 'shrinking' }

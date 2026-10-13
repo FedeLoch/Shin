@@ -40,19 +40,6 @@ ShinAlgorithmRegressionTest >> testAlternateReductionKeepsTerminals [
 ]
 
 { #category : 'tests' }
-ShinAlgorithmRegressionTest >> testGRABRMinimizeOneCanBeCalledTwice [
-
-	| shrinker first second |
-	shrinker := ShinGRABRShrinker new grammar: grammar; oracle: (self oracleByBlock: [ :input | input includes: $3 ]); yourself.
-
-	first := shrinker minimizeOne: (self parse: '1+(2*3)') upperBound: true.
-	second := shrinker minimizeOne: (self parse: '1+(2*3)') upperBound: true.
-
-	self assert: first asInput equals: '3'.
-	self assert: second asInput equals: '3'
-]
-
-{ #category : 'tests' }
 ShinAlgorithmRegressionTest >> testGRABRDoesNotMutateTheOriginalTree [
 
 	| shrinker tree |
@@ -63,6 +50,19 @@ ShinAlgorithmRegressionTest >> testGRABRDoesNotMutateTheOriginalTree [
 
 	self assert: tree asInput equals: '1+(2*3)'.
 	self assert: (tree allNodes allSatisfy: [ :node | node == tree or: [ node parent children includes: node ] ])
+]
+
+{ #category : 'tests' }
+ShinAlgorithmRegressionTest >> testGRABRMinimizeOneCanBeCalledTwice [
+
+	| shrinker first second |
+	shrinker := ShinGRABRShrinker new grammar: grammar; oracle: (self oracleByBlock: [ :input | input includes: $3 ]); yourself.
+
+	first := shrinker minimizeOne: (self parse: '1+(2*3)') upperBound: true.
+	second := shrinker minimizeOne: (self parse: '1+(2*3)') upperBound: true.
+
+	self assert: first asInput equals: '3'.
+	self assert: second asInput equals: '3'
 ]
 
 { #category : 'tests' }

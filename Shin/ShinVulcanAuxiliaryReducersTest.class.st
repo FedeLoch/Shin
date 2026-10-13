@@ -65,16 +65,6 @@ ShinVulcanAuxiliaryReducersTest >> testIdentifierReplacementUnifiesTokens [
 ]
 
 { #category : 'tests' }
-ShinVulcanAuxiliaryReducersTest >> testSubTreeReducerReplacesBySubtrees [
-
-	| result |
-	result := (self reducer: ShinSubTreeReducer oracle: [ :s | s includes: $3 ])
-		          reduce: (self parse: '1+(2*3)') bound: true.
-
-	self assert: result asInput equals: '3'
-]
-
-{ #category : 'tests' }
 ShinVulcanAuxiliaryReducersTest >> testSubTreeReducerCountsItsOracleCalls [
 
 	| reducer calls |
@@ -85,6 +75,27 @@ ShinVulcanAuxiliaryReducersTest >> testSubTreeReducerCountsItsOracleCalls [
 	reducer reduce: (self parse: '4+(5*3)') bound: true.
 
 	self assert: reducer getMinimizationDone equals: calls
+]
+
+{ #category : 'tests' }
+ShinVulcanAuxiliaryReducersTest >> testSubTreeReducerReplacesBySubtrees [
+
+	| result |
+	result := (self reducer: ShinSubTreeReducer oracle: [ :s | s includes: $3 ])
+		          reduce: (self parse: '1+(2*3)') bound: true.
+
+	self assert: result asInput equals: '3'
+]
+
+{ #category : 'tests' }
+ShinVulcanAuxiliaryReducersTest >> testTreeBasedLEEDoesNothingOnSmallTrees [
+
+	| reducer |
+	reducer := self reducer: ShinTreeBasedLEE oracle: [ :s | s includes: $3 ].
+	reducer windowSize: 50.
+
+	self assert: (reducer reduce: (self parse: '1+3') bound: true) asInput equals: '1+3'.
+	self assert: reducer getMinimizationDone equals: 0
 ]
 
 { #category : 'tests' }
@@ -100,15 +111,4 @@ ShinVulcanAuxiliaryReducersTest >> testTreeBasedLEEKeepsTheBug [
 	self assert: result asInput size < input size.
 	self assert: (GncGenericGrammarParser accept: result asInput from: grammar).
 	self assert: result treeSize equals: result allNodes size
-]
-
-{ #category : 'tests' }
-ShinVulcanAuxiliaryReducersTest >> testTreeBasedLEEDoesNothingOnSmallTrees [
-
-	| reducer |
-	reducer := self reducer: ShinTreeBasedLEE oracle: [ :s | s includes: $3 ].
-	reducer windowSize: 50.
-
-	self assert: (reducer reduce: (self parse: '1+3') bound: true) asInput equals: '1+3'.
-	self assert: reducer getMinimizationDone equals: 0
 ]

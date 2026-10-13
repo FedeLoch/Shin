@@ -48,6 +48,13 @@ ShinGrammarReducerPropertyTest >> cases [
 ]
 
 { #category : 'helpers' }
+ShinGrammarReducerPropertyTest >> casesNeedingSubtreeHoisting [
+
+	"Reaching a smaller input here requires replacing a node by one of its own subtrees"
+	^ #( '1+3' '1+(2*3)' )
+]
+
+{ #category : 'helpers' }
 ShinGrammarReducerPropertyTest >> countingOracle: block [
 
 	calls := 0.
@@ -69,6 +76,13 @@ ShinGrammarReducerPropertyTest >> newShrinker: block [
 ShinGrammarReducerPropertyTest >> parse: aString [
 
 	^ GncGenericGrammarParser parse: aString from: grammar
+]
+
+{ #category : 'helpers' }
+ShinGrammarReducerPropertyTest >> reducersWithoutSubtreeHoisting [
+
+	"LazyPerf only replaces subtrees by the minimal derivation of their symbol, by design"
+	^ { ShinLazyPerfShrinker }
 ]
 
 { #category : 'running' }
@@ -113,20 +127,6 @@ ShinGrammarReducerPropertyTest >> testInstanceCanBeReused [
 	second := shrinker shrink: '1+(2*3)+4*(5+(6*7))+8'.
 
 	self assert: second equals: first
-]
-
-{ #category : 'helpers' }
-ShinGrammarReducerPropertyTest >> casesNeedingSubtreeHoisting [
-
-	"Reaching a smaller input here requires replacing a node by one of its own subtrees"
-	^ #( '1+3' '1+(2*3)' )
-]
-
-{ #category : 'helpers' }
-ShinGrammarReducerPropertyTest >> reducersWithoutSubtreeHoisting [
-
-	"LazyPerf only replaces subtrees by the minimal derivation of their symbol, by design"
-	^ { ShinLazyPerfShrinker }
 ]
 
 { #category : 'tests' }

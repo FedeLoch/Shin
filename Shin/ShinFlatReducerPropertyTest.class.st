@@ -72,6 +72,12 @@ ShinFlatReducerPropertyTest >> monotonicCases [
 		  '1+(2*3)-(4/5)' -> [ :s | (s occurrencesOf: $() >= 2 ] }
 ]
 
+{ #category : 'helpers' }
+ShinFlatReducerPropertyTest >> shrink: input with: block [
+
+	^ (shrinkerClass new oracle: (ShinBooleanInputOracle from: block); yourself) shrink: input
+]
+
 { #category : 'accessing' }
 ShinFlatReducerPropertyTest >> shrinkerClass [
 
@@ -82,12 +88,6 @@ ShinFlatReducerPropertyTest >> shrinkerClass [
 ShinFlatReducerPropertyTest >> shrinkerClass: aClass [
 
 	shrinkerClass := aClass
-]
-
-{ #category : 'helpers' }
-ShinFlatReducerPropertyTest >> shrink: input with: block [
-
-	^ (shrinkerClass new oracle: (ShinBooleanInputOracle from: block); yourself) shrink: input
 ]
 
 { #category : 'tests' }
@@ -107,6 +107,12 @@ ShinFlatReducerPropertyTest >> testArraysStayArrays [
 ]
 
 { #category : 'tests' }
+ShinFlatReducerPropertyTest >> testFindsASubstring [
+
+	self assertShrinking: 'zzbzzuzzgzzbugzz' with: [ :s | s includesSubstring: 'bug' ] equals: 'bug'
+]
+
+{ #category : 'tests' }
 ShinFlatReducerPropertyTest >> testFindsTheSingleRelevantCharacter [
 
 	self assertShrinking: 'asqjjkqsbdvieqvsbdoivbq' with: [ :s | s includes: $e ] equals: 'e'.
@@ -120,12 +126,6 @@ ShinFlatReducerPropertyTest >> testFindsTwoRelevantCharacters [
 		assertShrinking: 'kjdsfhkjqsdhfehdkjsqfhkjsa'
 		with: [ :s | (s includes: $e) and: [ s includes: $a ] ]
 		equals: 'ea'
-]
-
-{ #category : 'tests' }
-ShinFlatReducerPropertyTest >> testFindsASubstring [
-
-	self assertShrinking: 'zzbzzuzzgzzbugzz' with: [ :s | s includesSubstring: 'bug' ] equals: 'bug'
 ]
 
 { #category : 'tests' }

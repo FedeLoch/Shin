@@ -24,17 +24,17 @@ ShinGrammarMinimalGenerator >> initialize [
 ]
 
 { #category : 'initialization' }
+ShinGrammarMinimalGenerator >> random [
+
+	^ randomGenerator
+]
+
+{ #category : 'initialization' }
 ShinGrammarMinimalGenerator >> reset [
 
 	"A fixed seed keeps reductions reproducible: the default generator is clock seeded,
 	so terminal ranges (e.g. digits) would get different values on every run"
 	randomGenerator := GncPCGRandomGenerator seed: 42
-]
-
-{ #category : 'initialization' }
-ShinGrammarMinimalGenerator >> random [
-
-	^ randomGenerator
 ]
 
 { #category : 'visiting' }
