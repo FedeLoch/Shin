@@ -56,6 +56,82 @@ ShinCoverageOracleTest >> testCoverageSurvivesAnASTCacheReset [
 ]
 
 { #category : 'tests' }
+ShinCoverageOracleTest >> testASTCacheResetDuringASessionIsHarmless [
+
+	oracle during: [ | before |
+		before := oracle evalInput: 'a+|'.
+		ASTCache reset.
+		self denyEmpty: before.
+		self assert: (oracle evalInput: 'a+|') equals: before ]
+]
+
+{ #category : 'tests' }
+ShinCoverageOracleTest >> testASessionGivesTheSameCoverageAsSingleEvaluations [
+
+	| alone inSession |
+	alone := { oracle evalInput: 'a+|'. oracle evalInput: '(a)*.*.' }.
+
+	inSession := oracle during: [ { oracle evalInput: 'a+|'. oracle evalInput: '(a)*.*.' } ].
+
+	self assert: inSession equals: alone.
+	self deny: alone first = alone second
+]
+
+{ #category : 'tests' }
+ShinCoverageOracleTest >> testASessionInstallsTheMetalinksOnce [
+
+	oracle during: [
+		self denyEmpty: self installedCoverageLinks.
+		oracle evalInput: 'a+|'.
+		oracle evalInput: 'a+|'.
+		self assert: self installedCoverageLinks size equals: 1 ].
+
+	self assertEmpty: self installedCoverageLinks
+]
+
+{ #category : 'tests' }
+ShinCoverageOracleTest >> testFailingSessionLeavesNoMetalinkInstalled [
+
+	[ oracle during: [ oracle evalInput: 'a+|'. Error signal: 'boom' ] ] on: Error do: [ :e | e return: nil ].
+
+	self assertEmpty: self installedCoverageLinks.
+	self deny: (RxMatcher package methods anySatisfy: [ :method | method isKindOf: ReflectiveMethod ])
+]
+
+{ #category : 'tests' }
+ShinCoverageOracleTest >> testInterruptedSessionLeavesNoMetalinkInstalled [
+
+	| gate process |
+	gate := Semaphore new.
+	process := [ oracle during: [ oracle evalInput: 'a+|'. gate wait ] ] forkAt: Processor userBackgroundPriority.
+	[ self installedCoverageLinks isEmpty ] whileTrue: [ (Delay forMilliseconds: 1) wait ].
+
+	process terminate.
+	(Delay forMilliseconds: 100) wait.
+
+	self assertEmpty: self installedCoverageLinks.
+	self deny: (RxMatcher package methods anySatisfy: [ :method | method isKindOf: ReflectiveMethod ])
+]
+
+{ #category : 'tests' }
+ShinCoverageOracleTest >> testShrinkingUsesOneSessionPerReduction [
+
+	| collectors shrinker result |
+	collectors := IdentitySet new.
+	oracle evalBlock: [ :regex |
+		collectors add: (oracle instVarNamed: #collector).
+		regex asRegex matches: regex minimalStringMatching ].
+	shrinker := ShinDDminFuzzingBookShrinker new oracle: oracle; yourself.
+
+	result := shrinker profiledShrink: 'b+bc||'.
+
+	self assert: collectors size equals: 1.
+	self assert: (result at: 'neededReductions') > 0.
+	self assert: (result at: 'minimizedBound') equals: (result at: 'originalBound').
+	self assertEmpty: self installedCoverageLinks
+]
+
+{ #category : 'tests' }
 ShinCoverageOracleTest >> testEvaluationLeavesNoMetalinkInstalled [
 
 	oracle evalInput: 'a+|'.

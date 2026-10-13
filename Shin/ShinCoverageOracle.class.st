@@ -3,7 +3,8 @@ Class {
 	#superclass : 'ShinThresholdOracle',
 	#instVars : [
 		'evalBlock',
-		'methodsToInstrument'
+		'methodsToInstrument',
+		'collector'
 	],
 	#category : 'Shin-Oracles',
 	#package : 'Shin',
@@ -45,24 +46,40 @@ ShinCoverageOracle >> evalBlock: aBlock [
 ]
 
 { #category : 'as yet unclassified' }
+ShinCoverageOracle >> during: aBlock [
+
+	"Install the coverage instrumentation once for the whole session, so each evaluation
+	only resets and collects the annotations. Installing and removing metalinks is by far
+	the most expensive part of an evaluation.
+	While the metalinks are installed their ASTs are held by the reflective methods, so a
+	flush of the AST cache cannot make the collected nodes stale. The installation happens
+	inside the protected block so that an interrupted session never leaves metalinks behind."
+
+	collector ifNotNil: [ ^ aBlock value ].
+
+	collector := CoverageCollector new methods: self currentMethods.
+	^ [
+	  collector install.
+	  aBlock value ] ensure: [
+		  collector uninstall.
+		  collector := nil ]
+]
+
+{ #category : 'as yet unclassified' }
 ShinCoverageOracle >> evalInput: input [
 
-	"A fresh collector is built for every evaluation. A CoverageCollector computes its
-	sequence nodes once from `CompiledMethod>>ast`, and the AST cache only holds ASTs weakly
-	and is flushed on image save or `ASTCache reset`: a reused collector then links nodes
-	that are no longer the compiled AST and reports an empty coverage forever.
-	The installation happens inside the protected block so that a run interrupted while
-	installing does not leave metalinks behind."
+	"Outside a session, the evaluation is its own session. A fresh collector is built for
+	every session: a CoverageCollector computes its sequence nodes once from
+	`CompiledMethod>>ast`, and the AST cache only holds ASTs weakly and is flushed on image
+	save or `ASTCache reset`, so a collector reused across sessions would link nodes that are
+	no longer the compiled AST and report an empty coverage."
 
-	| collector |
-	
-	collector := CoverageCollector new methods: self currentMethods.
-	[
-		collector install.
-		collector reset.
-		evalBlock value: input ] ensure: [ collector uninstall ].
+	collector ifNil: [ ^ self during: [ self evalInput: input ] ].
 
-	^ collector collectResult nodes collect: #asString as: Set
+	collector reset.
+	evalBlock value: input.
+
+	^ collector basicCollectResult nodes collect: #asString as: Set
 ]
 
 { #category : 'initialization' }
