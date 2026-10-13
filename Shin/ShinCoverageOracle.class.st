@@ -33,18 +33,6 @@ ShinCoverageOracle >> currentMethods [
 		  yourself
 ]
 
-{ #category : 'accessing' }
-ShinCoverageOracle >> evalBlock [
-
-	^ evalBlock 
-]
-
-{ #category : 'accessing' }
-ShinCoverageOracle >> evalBlock: aBlock [
-
-	evalBlock := aBlock 
-]
-
 { #category : 'as yet unclassified' }
 ShinCoverageOracle >> during: aBlock [
 
@@ -63,6 +51,18 @@ ShinCoverageOracle >> during: aBlock [
 	  aBlock value ] ensure: [
 		  collector uninstall.
 		  collector := nil ]
+]
+
+{ #category : 'accessing' }
+ShinCoverageOracle >> evalBlock [
+
+	^ evalBlock 
+]
+
+{ #category : 'accessing' }
+ShinCoverageOracle >> evalBlock: aBlock [
+
+	evalBlock := aBlock 
 ]
 
 { #category : 'as yet unclassified' }
