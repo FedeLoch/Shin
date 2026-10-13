@@ -204,7 +204,7 @@ ShinShrinker >> profiledShrink: input [
 	| tree minimizedTree upperBound initialTime totalTime minimizedInput minimizedBound |
 	
 	initialTime := Time microsecondClockValue.
-	(self tree: input) ifNil: [ self emptyProfiledResult: input ].
+	(self tree: input) ifNil: [ ^ self emptyProfiledResult: input ].
 
 	"One oracle session for the whole reduction (e.g. coverage instrumentation is installed once)"
 	oracle during: [
