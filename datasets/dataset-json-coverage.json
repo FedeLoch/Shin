@@ -4,9 +4,6 @@
         "percetange": 4.133858267716535,
         "#nodes": 21,
         "#methods": 14,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(readStream peek isSeparator)",
             "OCSequenceNode(^ mapClass ifNil: [ Dictionary ])",
@@ -36,9 +33,6 @@
         "percetange": 12.204724409448819,
         "#nodes": 62,
         "#methods": 26,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(readStream := aReadStream)",
             "OCSequenceNode(^ self\r\t  consumeWhitespace;\r\t  parseValue)",
@@ -111,9 +105,6 @@
         "percetange": 12.598425196850394,
         "#nodes": 64,
         "#methods": 26,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(readStream := aReadStream)",
             "OCSequenceNode(^ self\r\t  consumeWhitespace;\r\t  parseValue)",
@@ -189,9 +180,6 @@
         "percetange": 12.992125984251969,
         "#nodes": 66,
         "#methods": 26,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(readStream := aReadStream)",
             "OCSequenceNode(^ self\r\t  consumeWhitespace;\r\t  parseValue)",
@@ -269,9 +257,6 @@
         "percetange": 13.385826771653543,
         "#nodes": 68,
         "#methods": 26,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(block value: false)",
             "OCSequenceNode(readStream peek isSeparator)",
@@ -351,9 +336,6 @@
         "percetange": 14.37007874015748,
         "#nodes": 73,
         "#methods": 27,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(block value: false)",
             "OCSequenceNode(readStream peek isSeparator)",
@@ -433,9 +415,6 @@
         "percetange": 14.566929133858268,
         "#nodes": 74,
         "#methods": 27,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(block value: false)",
             "OCSequenceNode(readStream peek isSeparator)",

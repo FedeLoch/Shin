@@ -4,9 +4,6 @@
         "percetange": 15.384615384615385,
         "#nodes": 338,
         "#methods": 251,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
             "OCSequenceNode(^ width / 2)",
@@ -350,9 +347,6 @@
         "percetange": 16.385980883022302,
         "#nodes": 360,
         "#methods": 266,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
             "OCSequenceNode(^ width / 2)",
@@ -721,9 +715,6 @@
         "percetange": 18.024578971324534,
         "#nodes": 396,
         "#methods": 273,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
             "OCSequenceNode(^ width / 2)",
@@ -1128,9 +1119,6 @@
         "percetange": 18.29767865270824,
         "#nodes": 402,
         "#methods": 267,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(cachedParents ifNil: [ cachedParents := IdentityDictionary new: 1000 ].\r^ cachedParents)",
             "OCSequenceNode(| allPoints |\rcp size = 1 ifTrue: [ ^ cp ].\rallPoints := OrderedCollection new.\r2 to: cp size do: [ :i |\r\t\t| p1 p2 |\r\t\tp1 := cp at: i - 1.\r\t\tp2 := cp at: i.\r\t\tself hasBorder ifTrue: [\r\t\t\t\tp1 := border expandPoint: p1 to: p2.\r\t\t\t\tp2 := border expandPoint: p2 to: p1 ].\r\t\tself addTwoPointsBasedInWidthFrom: p1 to: p2 in: allPoints.\r\t\tself addTwoPointsBasedInWidthFrom: p2 to: p1 in: allPoints ].\r\r^ allPoints)",
@@ -1541,9 +1529,6 @@
         "percetange": 17.88802913063268,
         "#nodes": 393,
         "#methods": 278,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
             "OCSequenceNode(^ width / 2)",
@@ -1945,9 +1930,6 @@
         "percetange": 18.070095584888485,
         "#nodes": 397,
         "#methods": 279,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
             "OCSequenceNode(^ width / 2)",
@@ -2353,9 +2335,6 @@
         "percetange": 18.161128812016386,
         "#nodes": 399,
         "#methods": 280,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(| eachRect diff |\reachRect := each encompassingRectangle.\r\r\"horizontal\"\r(diff := eachRect left - enclosingRectangle left) < enclosingThreshold ifTrue: [\r\teach translateTo: each position + (k * (enclosingThreshold - diff) @ 0) ].\r\r(diff := enclosingRectangle right - eachRect right) < enclosingThreshold ifTrue: [\r\teach translateTo: each position - (k * (enclosingThreshold - diff) @ 0) ].\r\r\"vertical\"\r(diff := eachRect top - enclosingRectangle top) < enclosingThreshold ifTrue: [\r\teach translateTo: each position + (0 @ (k * (enclosingThreshold - diff))) ].\r\r(diff := enclosingRectangle bottom - eachRect bottom) < enclosingThreshold ifTrue: [\r\teach translateTo: each position - (0 @ (k * (enclosingThreshold - diff))) ])",
             "OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
@@ -2763,9 +2742,6 @@
         "percetange": 18.252162039144288,
         "#nodes": 401,
         "#methods": 282,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(| eachRect diff |\reachRect := each encompassingRectangle.\r\r\"horizontal\"\r(diff := eachRect left - enclosingRectangle left) < enclosingThreshold ifTrue: [\r\teach translateTo: each position + (k * (enclosingThreshold - diff) @ 0) ].\r\r(diff := enclosingRectangle right - eachRect right) < enclosingThreshold ifTrue: [\r\teach translateTo: each position - (k * (enclosingThreshold - diff) @ 0) ].\r\r\"vertical\"\r(diff := eachRect top - enclosingRectangle top) < enclosingThreshold ifTrue: [\r\teach translateTo: each position + (0 @ (k * (enclosingThreshold - diff))) ].\r\r(diff := enclosingRectangle bottom - eachRect bottom) < enclosingThreshold ifTrue: [\r\teach translateTo: each position - (0 @ (k * (enclosingThreshold - diff))) ])",
             "OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
@@ -3175,9 +3151,6 @@
         "percetange": 18.34319526627219,
         "#nodes": 403,
         "#methods": 267,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(cachedParents ifNil: [ cachedParents := IdentityDictionary new: 1000 ].\r^ cachedParents)",
             "OCSequenceNode(| allPoints |\rcp size = 1 ifTrue: [ ^ cp ].\rallPoints := OrderedCollection new.\r2 to: cp size do: [ :i |\r\t\t| p1 p2 |\r\t\tp1 := cp at: i - 1.\r\t\tp2 := cp at: i.\r\t\tself hasBorder ifTrue: [\r\t\t\t\tp1 := border expandPoint: p1 to: p2.\r\t\t\t\tp2 := border expandPoint: p2 to: p1 ].\r\t\tself addTwoPointsBasedInWidthFrom: p1 to: p2 in: allPoints.\r\t\tself addTwoPointsBasedInWidthFrom: p2 to: p1 in: allPoints ].\r\r^ allPoints)",
@@ -3589,9 +3562,6 @@
         "percetange": 18.38871187983614,
         "#nodes": 404,
         "#methods": 267,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(cachedParents ifNil: [ cachedParents := IdentityDictionary new: 1000 ].\r^ cachedParents)",
             "OCSequenceNode(| allPoints |\rcp size = 1 ifTrue: [ ^ cp ].\rallPoints := OrderedCollection new.\r2 to: cp size do: [ :i |\r\t\t| p1 p2 |\r\t\tp1 := cp at: i - 1.\r\t\tp2 := cp at: i.\r\t\tself hasBorder ifTrue: [\r\t\t\t\tp1 := border expandPoint: p1 to: p2.\r\t\t\t\tp2 := border expandPoint: p2 to: p1 ].\r\t\tself addTwoPointsBasedInWidthFrom: p1 to: p2 in: allPoints.\r\t\tself addTwoPointsBasedInWidthFrom: p2 to: p1 in: allPoints ].\r\r^ allPoints)",
@@ -4004,9 +3974,6 @@
         "percetange": 18.43422849340009,
         "#nodes": 405,
         "#methods": 267,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(cachedParents ifNil: [ cachedParents := IdentityDictionary new: 1000 ].\r^ cachedParents)",
             "OCSequenceNode(| allPoints |\rcp size = 1 ifTrue: [ ^ cp ].\rallPoints := OrderedCollection new.\r2 to: cp size do: [ :i |\r\t\t| p1 p2 |\r\t\tp1 := cp at: i - 1.\r\t\tp2 := cp at: i.\r\t\tself hasBorder ifTrue: [\r\t\t\t\tp1 := border expandPoint: p1 to: p2.\r\t\t\t\tp2 := border expandPoint: p2 to: p1 ].\r\t\tself addTwoPointsBasedInWidthFrom: p1 to: p2 in: allPoints.\r\t\tself addTwoPointsBasedInWidthFrom: p2 to: p1 in: allPoints ].\r\r^ allPoints)",
@@ -4420,9 +4387,6 @@
         "percetange": 18.479745106964042,
         "#nodes": 406,
         "#methods": 267,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(cachedParents ifNil: [ cachedParents := IdentityDictionary new: 1000 ].\r^ cachedParents)",
             "OCSequenceNode(| allPoints |\rcp size = 1 ifTrue: [ ^ cp ].\rallPoints := OrderedCollection new.\r2 to: cp size do: [ :i |\r\t\t| p1 p2 |\r\t\tp1 := cp at: i - 1.\r\t\tp2 := cp at: i.\r\t\tself hasBorder ifTrue: [\r\t\t\t\tp1 := border expandPoint: p1 to: p2.\r\t\t\t\tp2 := border expandPoint: p2 to: p1 ].\r\t\tself addTwoPointsBasedInWidthFrom: p1 to: p2 in: allPoints.\r\t\tself addTwoPointsBasedInWidthFrom: p2 to: p1 in: allPoints ].\r\r^ allPoints)",
@@ -4837,9 +4801,6 @@
         "percetange": 18.29767865270824,
         "#nodes": 402,
         "#methods": 285,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
             "OCSequenceNode(^ width / 2)",

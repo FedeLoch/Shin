@@ -4,9 +4,6 @@
         "percetange": 7.086614173228346,
         "#nodes": 90,
         "#methods": 59,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(super closeMe.\rself children: (self inlineParse: text))",
             "OCSequenceNode(^ MicInlineParser)",
@@ -99,9 +96,6 @@
         "percetange": 13.228346456692913,
         "#nodes": 168,
         "#methods": 103,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ parent)",
             "OCSequenceNode((current canConsumeLine: (current massageLine: line))\r\tifTrue: [\r\t\t\tcurrent := current addLineAndReturnNextNode: line.\r\t\t\t^ current ]\r\tifFalse: [ current closeMe ].\rcurrent := current parent.\rself handleLine: line)",
@@ -260,9 +254,6 @@
         "percetange": 13.543307086614174,
         "#nodes": 172,
         "#methods": 103,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -438,9 +429,6 @@
         "percetange": 13.779527559055119,
         "#nodes": 175,
         "#methods": 105,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ parent)",
             "OCSequenceNode((current canConsumeLine: (current massageLine: line))\r\tifTrue: [\r\t\t\tcurrent := current addLineAndReturnNextNode: line.\r\t\t\t^ current ]\r\tifFalse: [ current closeMe ].\rcurrent := current parent.\rself handleLine: line)",
@@ -606,9 +594,6 @@
         "percetange": 13.858267716535433,
         "#nodes": 176,
         "#methods": 105,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ parent)",
             "OCSequenceNode((current canConsumeLine: (current massageLine: line))\r\tifTrue: [\r\t\t\tcurrent := current addLineAndReturnNextNode: line.\r\t\t\t^ current ]\r\tifFalse: [ current closeMe ].\rcurrent := current parent.\rself handleLine: line)",
@@ -774,9 +759,6 @@
         "percetange": 14.960629921259843,
         "#nodes": 190,
         "#methods": 114,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ parent)",
             "OCSequenceNode((current canConsumeLine: (current massageLine: line))\r\tifTrue: [\r\t\t\tcurrent := current addLineAndReturnNextNode: line.\r\t\t\t^ current ]\r\tifFalse: [ current closeMe ].\rcurrent := current parent.\rself handleLine: line)",
@@ -942,9 +924,6 @@
         "percetange": 15.118110236220472,
         "#nodes": 192,
         "#methods": 115,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ parent)",
             "OCSequenceNode((current canConsumeLine: (current massageLine: line))\r\tifTrue: [\r\t\t\tcurrent := current addLineAndReturnNextNode: line.\r\t\t\t^ current ]\r\tifFalse: [ current closeMe ].\rcurrent := current parent.\rself handleLine: line)",
@@ -1111,9 +1090,6 @@
         "percetange": 15.275590551181102,
         "#nodes": 194,
         "#methods": 116,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ parent)",
             "OCSequenceNode((current canConsumeLine: (current massageLine: line))\r\tifTrue: [\r\t\t\tcurrent := current addLineAndReturnNextNode: line.\r\t\t\t^ current ]\r\tifFalse: [ current closeMe ].\rcurrent := current parent.\rself handleLine: line)",
@@ -1280,9 +1256,6 @@
         "percetange": 16.53543307086614,
         "#nodes": 210,
         "#methods": 129,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(startIndex ifNotNil: [ ^ self ].\r\"an ordered list line starts with the index and after a dot '.' \"\rstartIndex := line microdownExtractPartOfInteger)",
             "OCSequenceNode(| line |\rinLine withoutPreTabs ifEmpty: [ ^ self ].\r\"A list accept an empty - like that it avoids to close the block (the list) and we can have space between list item.\r\tNow we do nothing with empty so just do not create new item or whatever.\"\rline := inLine trim.\rself indentFromLine: line.\r^ self listItemBlockClass new\r\t  setParser: parser;\r\t  parent: self;\r\t  addLineAndReturnNextNode: (line copyFrom: indent - parent indent to: line size))",
@@ -1415,9 +1388,6 @@
         "percetange": 16.771653543307085,
         "#nodes": 213,
         "#methods": 131,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(outStream nextPut: bufferText)",
             "OCSequenceNode(bufferText ifNil: [ outStream nextPut: child ] ifNotNil: [\r\t\tbufferText bodyString ifNotEmpty: [ outStream nextPut: bufferText ].\r\t\toutStream nextPut: child.\r\t\tbufferText := nil ])",
@@ -1560,9 +1530,6 @@
         "percetange": 16.929133858267715,
         "#nodes": 215,
         "#methods": 131,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(outStream nextPut: bufferText)",
             "OCSequenceNode(bufferText ifNil: [ outStream nextPut: child ] ifNotNil: [\r\t\tbufferText bodyString ifNotEmpty: [ outStream nextPut: bufferText ].\r\t\toutStream nextPut: child.\r\t\tbufferText := nil ])",
@@ -1705,9 +1672,6 @@
         "percetange": 17.165354330708663,
         "#nodes": 218,
         "#methods": 138,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(outStream nextPut: bufferText)",
             "OCSequenceNode(bufferText ifNil: [ outStream nextPut: child ] ifNotNil: [\r\t\tbufferText bodyString ifNotEmpty: [ outStream nextPut: bufferText ].\r\t\toutStream nextPut: child.\r\t\tbufferText := nil ])",
@@ -1857,9 +1821,6 @@
         "percetange": 17.244094488188978,
         "#nodes": 219,
         "#methods": 138,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(outStream nextPut: bufferText)",
             "OCSequenceNode(bufferText ifNil: [ outStream nextPut: child ] ifNotNil: [\r\t\tbufferText bodyString ifNotEmpty: [ outStream nextPut: bufferText ].\r\t\toutStream nextPut: child.\r\t\tbufferText := nil ])",
@@ -2009,9 +1970,6 @@
         "percetange": 17.559055118110237,
         "#nodes": 223,
         "#methods": 140,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -2185,9 +2143,6 @@
         "percetange": 17.637795275590552,
         "#nodes": 224,
         "#methods": 140,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -2361,9 +2316,6 @@
         "percetange": 17.874015748031496,
         "#nodes": 227,
         "#methods": 140,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -2538,9 +2490,6 @@
         "percetange": 18.11023622047244,
         "#nodes": 230,
         "#methods": 143,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ parent)",
             "OCSequenceNode((current canConsumeLine: (current massageLine: line))\r\tifTrue: [\r\t\t\tcurrent := current addLineAndReturnNextNode: line.\r\t\t\t^ current ]\r\tifFalse: [ current closeMe ].\rcurrent := current parent.\rself handleLine: line)",
@@ -2706,9 +2655,6 @@
         "percetange": 18.4251968503937,
         "#nodes": 234,
         "#methods": 146,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ parent)",
             "OCSequenceNode((current canConsumeLine: (current massageLine: line))\r\tifTrue: [\r\t\t\tcurrent := current addLineAndReturnNextNode: line.\r\t\t\t^ current ]\r\tifFalse: [ current closeMe ].\rcurrent := current parent.\rself handleLine: line)",
@@ -2878,9 +2824,6 @@
         "percetange": 18.503937007874015,
         "#nodes": 235,
         "#methods": 146,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ parent)",
             "OCSequenceNode((current canConsumeLine: (current massageLine: line))\r\tifTrue: [\r\t\t\tcurrent := current addLineAndReturnNextNode: line.\r\t\t\t^ current ]\r\tifFalse: [ current closeMe ].\rcurrent := current parent.\rself handleLine: line)",
@@ -3051,9 +2994,6 @@
         "percetange": 18.58267716535433,
         "#nodes": 236,
         "#methods": 146,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ parent)",
             "OCSequenceNode((current canConsumeLine: (current massageLine: line))\r\tifTrue: [\r\t\t\tcurrent := current addLineAndReturnNextNode: line.\r\t\t\t^ current ]\r\tifFalse: [ current closeMe ].\rcurrent := current parent.\rself handleLine: line)",
@@ -3224,9 +3164,6 @@
         "percetange": 18.58267716535433,
         "#nodes": 236,
         "#methods": 147,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -3397,9 +3334,6 @@
         "percetange": 18.661417322834644,
         "#nodes": 237,
         "#methods": 146,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -3570,9 +3504,6 @@
         "percetange": 19.055118110236222,
         "#nodes": 242,
         "#methods": 148,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -3743,9 +3674,6 @@
         "percetange": 19.291338582677167,
         "#nodes": 245,
         "#methods": 149,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -3916,9 +3844,6 @@
         "percetange": 19.37007874015748,
         "#nodes": 246,
         "#methods": 149,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -4089,9 +4014,6 @@
         "percetange": 19.448818897637796,
         "#nodes": 247,
         "#methods": 149,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -4270,9 +4192,6 @@
         "percetange": 19.606299212598426,
         "#nodes": 249,
         "#methods": 149,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -4451,9 +4370,6 @@
         "percetange": 19.68503937007874,
         "#nodes": 250,
         "#methods": 151,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -4631,9 +4547,6 @@
         "percetange": 19.763779527559056,
         "#nodes": 251,
         "#methods": 152,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -4811,9 +4724,6 @@
         "percetange": 19.921259842519685,
         "#nodes": 253,
         "#methods": 152,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -4991,9 +4901,6 @@
         "percetange": 19.84251968503937,
         "#nodes": 252,
         "#methods": 153,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -5170,9 +5077,6 @@
         "percetange": 20.0,
         "#nodes": 254,
         "#methods": 152,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -5351,9 +5255,6 @@
         "percetange": 20.078740157480315,
         "#nodes": 255,
         "#methods": 152,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -5532,9 +5433,6 @@
         "percetange": 20.0,
         "#nodes": 254,
         "#methods": 155,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -5711,9 +5609,6 @@
         "percetange": 20.31496062992126,
         "#nodes": 258,
         "#methods": 155,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -5893,9 +5788,6 @@
         "percetange": 20.47244094488189,
         "#nodes": 260,
         "#methods": 155,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -6074,9 +5966,6 @@
         "percetange": 21.25984251968504,
         "#nodes": 270,
         "#methods": 169,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -6248,9 +6137,6 @@
         "percetange": 21.496062992125985,
         "#nodes": 273,
         "#methods": 168,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -6429,9 +6315,6 @@
         "percetange": 21.496062992125985,
         "#nodes": 273,
         "#methods": 170,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -6610,9 +6493,6 @@
         "percetange": 21.653543307086615,
         "#nodes": 275,
         "#methods": 170,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -6791,9 +6671,6 @@
         "percetange": 21.181102362204726,
         "#nodes": 269,
         "#methods": 171,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -6965,9 +6842,6 @@
         "percetange": 21.41732283464567,
         "#nodes": 272,
         "#methods": 172,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -7139,9 +7013,6 @@
         "percetange": 21.88976377952756,
         "#nodes": 278,
         "#methods": 173,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -7320,9 +7191,6 @@
         "percetange": 21.968503937007874,
         "#nodes": 279,
         "#methods": 173,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -7502,9 +7370,6 @@
         "percetange": 22.04724409448819,
         "#nodes": 280,
         "#methods": 173,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -7685,9 +7550,6 @@
         "percetange": 22.125984251968504,
         "#nodes": 281,
         "#methods": 174,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -7868,9 +7730,6 @@
         "percetange": 22.20472440944882,
         "#nodes": 282,
         "#methods": 174,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -8051,9 +7910,6 @@
         "percetange": 22.283464566929133,
         "#nodes": 283,
         "#methods": 175,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -8237,9 +8093,6 @@
         "percetange": 22.519685039370078,
         "#nodes": 286,
         "#methods": 175,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -8423,9 +8276,6 @@
         "percetange": 22.677165354330707,
         "#nodes": 288,
         "#methods": 176,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -8609,9 +8459,6 @@
         "percetange": 22.834645669291337,
         "#nodes": 290,
         "#methods": 176,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -8799,9 +8646,6 @@
         "percetange": 22.913385826771652,
         "#nodes": 291,
         "#methods": 177,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -8989,9 +8833,6 @@
         "percetange": 22.992125984251967,
         "#nodes": 292,
         "#methods": 177,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -9178,9 +9019,6 @@
         "percetange": 23.070866141732285,
         "#nodes": 293,
         "#methods": 177,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -9367,9 +9205,6 @@
         "percetange": 23.1496062992126,
         "#nodes": 294,
         "#methods": 177,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -9556,9 +9391,6 @@
         "percetange": 23.1496062992126,
         "#nodes": 294,
         "#methods": 178,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -9745,9 +9577,6 @@
         "percetange": 23.228346456692915,
         "#nodes": 295,
         "#methods": 178,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -9934,9 +9763,6 @@
         "percetange": 23.30708661417323,
         "#nodes": 296,
         "#methods": 179,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -10123,9 +9949,6 @@
         "percetange": 22.834645669291337,
         "#nodes": 290,
         "#methods": 180,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -10301,9 +10124,6 @@
         "percetange": 23.228346456692915,
         "#nodes": 295,
         "#methods": 181,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -10484,9 +10304,6 @@
         "percetange": 23.30708661417323,
         "#nodes": 296,
         "#methods": 182,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -10667,9 +10484,6 @@
         "percetange": 23.543307086614174,
         "#nodes": 299,
         "#methods": 183,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -10850,9 +10664,6 @@
         "percetange": 23.62204724409449,
         "#nodes": 300,
         "#methods": 183,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -11037,9 +10848,6 @@
         "percetange": 23.700787401574804,
         "#nodes": 301,
         "#methods": 184,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -11224,9 +11032,6 @@
         "percetange": 23.77952755905512,
         "#nodes": 302,
         "#methods": 184,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -11411,9 +11216,6 @@
         "percetange": 23.77952755905512,
         "#nodes": 302,
         "#methods": 185,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
@@ -11598,9 +11400,6 @@
         "percetange": 23.858267716535433,
         "#nodes": 303,
         "#methods": 186,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))",
             "OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",

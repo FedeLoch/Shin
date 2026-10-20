@@ -4,9 +4,6 @@
         "percetange": 23.529411764705884,
         "#nodes": 160,
         "#methods": 90,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(next matchAgainst: aMatcher)",
             "OCSequenceNode(^ branch isNullable or: [ regex isNotNil and: [ regex isNullable ] ])",
@@ -178,9 +175,6 @@
         "percetange": 23.676470588235293,
         "#nodes": 161,
         "#methods": 94,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(next matchAgainst: aMatcher)",
             "OCSequenceNode([ :char :matcher | p includes: char ])",
@@ -727,9 +721,6 @@
         "percetange": 26.176470588235293,
         "#nodes": 178,
         "#methods": 97,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ aMatcher syntaxRegex: self)",
             "OCSequenceNode(| atom |\ratom := self atom.\r\rlookahead = $* ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ self signalNullableClosureParserError ].\r\t\t^ RxsPiece new initializeStarAtom: atom ].\r\rlookahead = $+ ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ self signalNullableClosureParserError ].\r\t\t^ RxsPiece new initializePlusAtom: atom ].\r\rlookahead = $? ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ ^ self lookAround ].\r\t\t^ RxsPiece new initializeOptionalAtom: atom ].\r\rlookahead = ${ ifTrue: [ ^ self quantifiedAtom: atom ].\r\r^ RxsPiece new initializeAtom: atom)",
@@ -2360,9 +2351,6 @@
         "percetange": 29.11764705882353,
         "#nodes": 198,
         "#methods": 103,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(^ aMatcher syntaxRegex: self)",
             "OCSequenceNode(| atom |\ratom := self atom.\r\rlookahead = $* ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ self signalNullableClosureParserError ].\r\t\t^ RxsPiece new initializeStarAtom: atom ].\r\rlookahead = $+ ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ self signalNullableClosureParserError ].\r\t\t^ RxsPiece new initializePlusAtom: atom ].\r\rlookahead = $? ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ ^ self lookAround ].\r\t\t^ RxsPiece new initializeOptionalAtom: atom ].\r\rlookahead = ${ ifTrue: [ ^ self quantifiedAtom: atom ].\r\r^ RxsPiece new initializeAtom: atom)",

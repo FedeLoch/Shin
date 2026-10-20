@@ -4,9 +4,6 @@
         "#methods": 25,
         "#nodes": 7,
         "percentage": 13.44,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(| subPath absolute position point |\rpolygons := OrderedCollection new.\rsubPath := OrderedCollection new.\rabsolute := true.\rposition := 0 @ 0.\rpoint := [ :da |\r\t         position := absolute\r\t\t                     ifTrue: [ da ]\r\t\t                     ifFalse: [ position + da ].\r\t         subPath add: position ].\rsegments do: [ :segment |\r\t\t| key args |\r\t\tkey := segment first.\r\t\targs := segment second.\r\t\tkey = #absolute ifTrue: [ absolute := true ].\r\t\tkey = #relative ifTrue: [ absolute := false ].\r\t\tkey = #moveTo: ifTrue: [\r\t\t\t\tsubPath ifNotEmpty: [ polygons add: subPath ].\r\t\t\t\tsubPath := OrderedCollection new.\r\t\t\t\tpoint value: args first ].\r\t\tkey = #close ifTrue: [ position := subPath first ].\r\t\tkey = #curveVia:and:to: ifTrue: [ point value: args third ].\r\t\tkey = #curveVia:to: ifTrue: [ point value: args second ].\r\t\tkey = #lineTo: ifTrue: [ point value: args first ].\r\t\tkey = #reflectedCurveVia:to: ifTrue: [ point value: args second ].\r\t\tkey = #ellipticalArc:xrot:large:sweep:to:relative: ifTrue: [ point value: args fifth ].\r\t\tkey = #hLineTo: ifTrue: [\r\t\t\t\tposition := absolute\r\t\t\t\t\t            ifTrue: [ args first @ position y ]\r\t\t\t\t\t            ifFalse: [ position + (args first @ 0) ].\r\t\t\t\tsubPath add: position ].\r\t\tkey = #vLineTo: ifTrue: [\r\t\t\t\tposition := absolute\r\t\t\t\t\t            ifTrue: [ position x @ args first ]\r\t\t\t\t\t            ifFalse: [ position + (0 @ args first) ].\r\t\t\t\tsubPath add: position ] ].\rpolygons add: subPath)",
             "OCSequenceNode(poly)",
@@ -40,9 +37,6 @@
         "#methods": 28,
         "#nodes": 7,
         "percentage": 15.05,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(| subPath absolute position point |\rpolygons := OrderedCollection new.\rsubPath := OrderedCollection new.\rabsolute := true.\rposition := 0 @ 0.\rpoint := [ :da |\r\t         position := absolute\r\t\t                     ifTrue: [ da ]\r\t\t                     ifFalse: [ position + da ].\r\t         subPath add: position ].\rsegments do: [ :segment |\r\t\t| key args |\r\t\tkey := segment first.\r\t\targs := segment second.\r\t\tkey = #absolute ifTrue: [ absolute := true ].\r\t\tkey = #relative ifTrue: [ absolute := false ].\r\t\tkey = #moveTo: ifTrue: [\r\t\t\t\tsubPath ifNotEmpty: [ polygons add: subPath ].\r\t\t\t\tsubPath := OrderedCollection new.\r\t\t\t\tpoint value: args first ].\r\t\tkey = #close ifTrue: [ position := subPath first ].\r\t\tkey = #curveVia:and:to: ifTrue: [ point value: args third ].\r\t\tkey = #curveVia:to: ifTrue: [ point value: args second ].\r\t\tkey = #lineTo: ifTrue: [ point value: args first ].\r\t\tkey = #reflectedCurveVia:to: ifTrue: [ point value: args second ].\r\t\tkey = #ellipticalArc:xrot:large:sweep:to:relative: ifTrue: [ point value: args fifth ].\r\t\tkey = #hLineTo: ifTrue: [\r\t\t\t\tposition := absolute\r\t\t\t\t\t            ifTrue: [ args first @ position y ]\r\t\t\t\t\t            ifFalse: [ position + (args first @ 0) ].\r\t\t\t\tsubPath add: position ].\r\t\tkey = #vLineTo: ifTrue: [\r\t\t\t\tposition := absolute\r\t\t\t\t\t            ifTrue: [ position x @ args first ]\r\t\t\t\t\t            ifFalse: [ position + (0 @ args first) ].\r\t\t\t\tsubPath add: position ] ].\rpolygons add: subPath)",
             "OCSequenceNode(poly)",
@@ -79,9 +73,6 @@
         "#methods": 7,
         "#nodes": 32,
         "percentage": 17.2,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(position := absolute\r\t            ifTrue: [ da ]\r\t            ifFalse: [ position + da ].\rsubPath add: position)",
             "OCSequenceNode(absolute := true)",
@@ -122,9 +113,6 @@
         "#methods": 7,
         "#nodes": 35,
         "percentage": 18.81,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(absolute ifTrue: [\r\t\targs at: 5 put: args fifth - position.\r\t\targs at: 6 put: false ].\r^ absolute)",
             "OCSequenceNode(point value: args second)",
@@ -168,9 +156,6 @@
         "#methods": 7,
         "#nodes": 36,
         "percentage": 19.35,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(polygon at: index put: point - position)",
             "OCSequenceNode(position := absolute\r\t            ifTrue: [ args first @ position y ]\r\t            ifFalse: [ position + (args first @ 0) ].\rsubPath add: position)",
@@ -215,9 +200,6 @@
         "#methods": 7,
         "#nodes": 37,
         "percentage": 19.89,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(polygon at: index put: point - position)",
             "OCSequenceNode(position := absolute\r\t            ifTrue: [ args first @ position y ]\r\t            ifFalse: [ position + (args first @ 0) ].\rsubPath add: position)",
@@ -263,9 +245,6 @@
         "#methods": 7,
         "#nodes": 38,
         "percentage": 20.43,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": [
             "OCSequenceNode(polygon at: index put: point - position)",
             "OCSequenceNode(position := absolute\r\t            ifTrue: [ args first @ position y ]\r\t            ifFalse: [ position + (args first @ 0) ].\rsubPath add: position)",
@@ -312,9 +291,6 @@
         "#methods": 7,
         "#nodes": 39,
         "percentage": 20.96,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": null
     },
     {
@@ -322,9 +298,6 @@
         "#methods": 7,
         "#nodes": 40,
         "percentage": 21.5,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": null
     },
     {
@@ -332,9 +305,6 @@
         "#methods": 7,
         "#nodes": 41,
         "percentage": 22.04,
-        "reducedInput": "",
-        "reduceMethods": "",
-        "%inputReduction": 0,
         "originalBounds": null
     }
 ]
