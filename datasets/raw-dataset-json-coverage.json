@@ -27,7 +27,7 @@
             "OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
             "OCSequenceNode((self matchChar: character) ifFalse: [ self error: character asString , ' expected' ])"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 4
     },
     {
         "input": "{\"n\":true,\"n\":[],\"x\":6}",
@@ -100,7 +100,7 @@
             "OCSequenceNode(char isDigit)",
             "OCSequenceNode(readStream peekFor: each)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 9
     },
     {
         "input": "{\"s\":true,\"n\":[\"v\"],\"x\":6}",
@@ -176,7 +176,7 @@
             "OCSequenceNode(readStream peekFor: each)",
             "OCSequenceNode(block value: self parseValue)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 9
     },
     {
         "input": "{\"s\":true,\"n\":[[false]],\"x\":6}",
@@ -254,7 +254,7 @@
             "OCSequenceNode(readStream peekFor: each)",
             "OCSequenceNode(block value: self parseValue)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 7
     },
     {
         "input": "{\"s\":true,\"n\":[[false]],\"y\":[{\"t\":null},5]}",
@@ -334,7 +334,7 @@
             "OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
             "OCSequenceNode(^ (self on: string readStream) next)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 8
     },
     {
         "input": "{\"s\":true,\"n\":[[false]],\"y\":[{\"th\":null},8e5]}",
@@ -414,7 +414,7 @@
             "OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
             "OCSequenceNode(^ (self on: string readStream) next)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 7
     },
     {
         "input": "{\"s\":true,\"n\":[[false],5],\"}y\":[{\"th\":null},8e5]}",
@@ -494,6 +494,6 @@
             "OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
             "OCSequenceNode(^ (self on: string readStream) next)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 8
     }
 ]
