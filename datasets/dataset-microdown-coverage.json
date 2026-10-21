@@ -89,7 +89,8 @@
             "OCSequenceNode(children first isMetaData)",
             "OCSequenceNode(| tokenStream |\rtokenStream := MicInlineTokenStream on: aString.\r^ (self parseChildrenIn: tokenStream) asArray)",
             "OCSequenceNode(self createTextBlock: token string)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo is cool](http://pharo.org)\r\t\r   \t- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`, `Point class`, `Point>>#setX:setY:`, `#\u2019Microdown-Tests\u2019`\r\r  \tReferences: @ref@",
@@ -247,7 +248,8 @@
             "OCSequenceNode(aStreamOrString asString readStream)",
             "OCSequenceNode(| inStream line |\rcurrent := root := self newRootBlock\r\t                   setParser: self;\r\t                   yourself.\rinStream := aStreamOrString isStream\r\t            ifTrue: [ aStreamOrString readStream ]\r\t            ifFalse: [ aStreamOrString asString readStream ].\r[\r\tline := inStream nextLine.\r\tline isNil ] whileFalse: [ self handleLine: line ].\r[ current = root ] whileFalse: [\r\t\tcurrent closeMe.\r\t\tcurrent := current parent ].\rroot hasMetaDataElement ifTrue: [ root properties: root metaDataElement body ].\r\r\r^ root)",
             "OCSequenceNode(line ifEmpty: [ ^ nil ].\r(self matchOrdered: line)\r\tifTrue: [ ^ self orderedListBlockClass ]\r\tifFalse: [ \"right now this is super ugly and slow \r\t\t\tbut this is to try. Once we understand and probably change the environment syntax for now it is <!\r\t\t\tand this conflict with <!-- obviously. Too bad!\r\t\t\twe will be able to make this huge hack goes away.\"\r\t\t\t(line first = $< and: [ \" pay attention the micsharedpool includes p and p>, i and i> \r\t\t\t\t\tThis is working p src=800 \r\t\t\t\t\t\"\r\t\t\t\t\t (line includes: Character space)\r\t\t\t\t\t\t ifTrue: [ HTMLTags includes: (line allButFirst splitOnFirst: Character space) first ]\r\t\t\t\t\t\t ifFalse: [ HTMLTags includes: (line allButFirst splitOnFirst: $>) first ] ])\r\t\t\t\tifTrue: [ \"we have a rawparagraph block\" ^ MicRawParagraphBlock ]\r\t\t\t\tifFalse: [ \"the max significant length of a markup is 3\"\r\t\t\t\t\t\t(3 to: 1 by: -1) do: [ :i |\r\t\t\t\t\t\t\t\t| prefix |\r\t\t\t\t\t\t\t\tprefix := line truncateTo: i.\r\t\t\t\t\t\t\t\t\"If we have a inline starter, it takes precedence\"\r\t\t\t\t\t\t\t\t(Delimiters includes: prefix) ifTrue: [ ^ self delimiterBlockClassFor: prefix ].\r\t\t\t\t\t\t\t\tdispatchTable at: prefix ifPresent: [ :blockClass | ^ blockClass ] ] ] ].\r\r^ self nonMatchedBlockClassFor: line)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo 0[^ cool](http://pharo.org)\r\t\r   \t- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and package: \r  \t`Point`& `Point class`, `Point>>#setX:setY:`, `#\u2019Microdown-Tests\u2019`\r\r  \tReferences: @ref@",
@@ -422,7 +424,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(^ aString ifNil: [ line trim ] ifNotNil: [ aString , String cr , line trim ])"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo 0[^ cool](nttp://pharo.org)\r\t\r   \t- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to class, method and pac&age: \r  \t`Point`\r `Point class`, `Point>>#setX:setY:`, `#\u2019Microdown-Tests\u2019`\r\r  \tReferences: @ref@",
@@ -587,7 +590,8 @@
             "OCSequenceNode(aStreamOrString asString readStream)",
             "OCSequenceNode(| inStream line |\rcurrent := root := self newRootBlock\r\t                   setParser: self;\r\t                   yourself.\rinStream := aStreamOrString isStream\r\t            ifTrue: [ aStreamOrString readStream ]\r\t            ifFalse: [ aStreamOrString asString readStream ].\r[\r\tline := inStream nextLine.\r\tline isNil ] whileFalse: [ self handleLine: line ].\r[ current = root ] whileFalse: [\r\t\tcurrent closeMe.\r\t\tcurrent := current parent ].\rroot hasMetaDataElement ifTrue: [ root properties: root metaDataElement body ].\r\r\r^ root)",
             "OCSequenceNode(line ifEmpty: [ ^ nil ].\r(self matchOrdered: line)\r\tifTrue: [ ^ self orderedListBlockClass ]\r\tifFalse: [ \"right now this is super ugly and slow \r\t\t\tbut this is to try. Once we understand and probably change the environment syntax for now it is <!\r\t\t\tand this conflict with <!-- obviously. Too bad!\r\t\t\twe will be able to make this huge hack goes away.\"\r\t\t\t(line first = $< and: [ \" pay attention the micsharedpool includes p and p>, i and i> \r\t\t\t\t\tThis is working p src=800 \r\t\t\t\t\t\"\r\t\t\t\t\t (line includes: Character space)\r\t\t\t\t\t\t ifTrue: [ HTMLTags includes: (line allButFirst splitOnFirst: Character space) first ]\r\t\t\t\t\t\t ifFalse: [ HTMLTags includes: (line allButFirst splitOnFirst: $>) first ] ])\r\t\t\t\tifTrue: [ \"we have a rawparagraph block\" ^ MicRawParagraphBlock ]\r\t\t\t\tifFalse: [ \"the max significant length of a markup is 3\"\r\t\t\t\t\t\t(3 to: 1 by: -1) do: [ :i |\r\t\t\t\t\t\t\t\t| prefix |\r\t\t\t\t\t\t\t\tprefix := line truncateTo: i.\r\t\t\t\t\t\t\t\t\"If we have a inline starter, it takes precedence\"\r\t\t\t\t\t\t\t\t(Delimiters includes: prefix) ifTrue: [ ^ self delimiterBlockClassFor: prefix ].\r\t\t\t\t\t\t\t\tdispatchTable at: prefix ifPresent: [ :blockClass | ^ blockClass ] ] ] ].\r\r^ self nonMatchedBlockClassFor: line)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "# Header\r\t** This is a line comment **\r\t\r\t```\r\tcode\r\t```\r   \r   \t![Pharo 0[^ cool](nttp://pharo.org)\r\t\r   \t- list\r   \t1. ordered list \r\r  \t`in text` and for Pharo hyperlinks to cyass, method and pac&age: \r  \t`Point`\r `Point class`, `PoinT>>#setX:setY:`, `#\u2019Microdown-Tests\u2019`\r\r( \tReferences: @ref@",
@@ -752,7 +756,8 @@
             "OCSequenceNode(aStreamOrString asString readStream)",
             "OCSequenceNode(| inStream line |\rcurrent := root := self newRootBlock\r\t                   setParser: self;\r\t                   yourself.\rinStream := aStreamOrString isStream\r\t            ifTrue: [ aStreamOrString readStream ]\r\t            ifFalse: [ aStreamOrString asString readStream ].\r[\r\tline := inStream nextLine.\r\tline isNil ] whileFalse: [ self handleLine: line ].\r[ current = root ] whileFalse: [\r\t\tcurrent closeMe.\r\t\tcurrent := current parent ].\rroot hasMetaDataElement ifTrue: [ root properties: root metaDataElement body ].\r\r\r^ root)",
             "OCSequenceNode(line ifEmpty: [ ^ nil ].\r(self matchOrdered: line)\r\tifTrue: [ ^ self orderedListBlockClass ]\r\tifFalse: [ \"right now this is super ugly and slow \r\t\t\tbut this is to try. Once we understand and probably change the environment syntax for now it is <!\r\t\t\tand this conflict with <!-- obviously. Too bad!\r\t\t\twe will be able to make this huge hack goes away.\"\r\t\t\t(line first = $< and: [ \" pay attention the micsharedpool includes p and p>, i and i> \r\t\t\t\t\tThis is working p src=800 \r\t\t\t\t\t\"\r\t\t\t\t\t (line includes: Character space)\r\t\t\t\t\t\t ifTrue: [ HTMLTags includes: (line allButFirst splitOnFirst: Character space) first ]\r\t\t\t\t\t\t ifFalse: [ HTMLTags includes: (line allButFirst splitOnFirst: $>) first ] ])\r\t\t\t\tifTrue: [ \"we have a rawparagraph block\" ^ MicRawParagraphBlock ]\r\t\t\t\tifFalse: [ \"the max significant length of a markup is 3\"\r\t\t\t\t\t\t(3 to: 1 by: -1) do: [ :i |\r\t\t\t\t\t\t\t\t| prefix |\r\t\t\t\t\t\t\t\tprefix := line truncateTo: i.\r\t\t\t\t\t\t\t\t\"If we have a inline starter, it takes precedence\"\r\t\t\t\t\t\t\t\t(Delimiters includes: prefix) ifTrue: [ ^ self delimiterBlockClassFor: prefix ].\r\t\t\t\t\t\t\t\tdispatchTable at: prefix ifPresent: [ :blockClass | ^ blockClass ] ] ] ].\r\r^ self nonMatchedBlockClassFor: line)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "4.\raj:#w m:.\r\r\r   \repvRd\r~zj\\n~ \r\r\r\t\r [:wq/a  #cdrk ](Ucd/eC- c)>\r![ja>:R/](eb)\t> gdb\\cgrhfh#jhnueN/Lwlyn\u2019eg\r  \r - qewqyqReFicw\r  \t\t\t###\rxib-\r  4. -kMz/y   rz>ox:baxm",
@@ -917,7 +922,8 @@
             "OCSequenceNode(| inStream line |\rcurrent := root := self newRootBlock\r\t                   setParser: self;\r\t                   yourself.\rinStream := aStreamOrString isStream\r\t            ifTrue: [ aStreamOrString readStream ]\r\t            ifFalse: [ aStreamOrString asString readStream ].\r[\r\tline := inStream nextLine.\r\tline isNil ] whileFalse: [ self handleLine: line ].\r[ current = root ] whileFalse: [\r\t\tcurrent closeMe.\r\t\tcurrent := current parent ].\rroot hasMetaDataElement ifTrue: [ root properties: root metaDataElement body ].\r\r\r^ root)",
             "OCSequenceNode(line ifEmpty: [ ^ nil ].\r(self matchOrdered: line)\r\tifTrue: [ ^ self orderedListBlockClass ]\r\tifFalse: [ \"right now this is super ugly and slow \r\t\t\tbut this is to try. Once we understand and probably change the environment syntax for now it is <!\r\t\t\tand this conflict with <!-- obviously. Too bad!\r\t\t\twe will be able to make this huge hack goes away.\"\r\t\t\t(line first = $< and: [ \" pay attention the micsharedpool includes p and p>, i and i> \r\t\t\t\t\tThis is working p src=800 \r\t\t\t\t\t\"\r\t\t\t\t\t (line includes: Character space)\r\t\t\t\t\t\t ifTrue: [ HTMLTags includes: (line allButFirst splitOnFirst: Character space) first ]\r\t\t\t\t\t\t ifFalse: [ HTMLTags includes: (line allButFirst splitOnFirst: $>) first ] ])\r\t\t\t\tifTrue: [ \"we have a rawparagraph block\" ^ MicRawParagraphBlock ]\r\t\t\t\tifFalse: [ \"the max significant length of a markup is 3\"\r\t\t\t\t\t\t(3 to: 1 by: -1) do: [ :i |\r\t\t\t\t\t\t\t\t| prefix |\r\t\t\t\t\t\t\t\tprefix := line truncateTo: i.\r\t\t\t\t\t\t\t\t\"If we have a inline starter, it takes precedence\"\r\t\t\t\t\t\t\t\t(Delimiters includes: prefix) ifTrue: [ ^ self delimiterBlockClassFor: prefix ].\r\t\t\t\t\t\t\t\tdispatchTable at: prefix ifPresent: [ :blockClass | ^ blockClass ] ] ] ].\r\r^ self nonMatchedBlockClassFor: line)",
             "OCSequenceNode(super closeMe.\rself inlineParse: text)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "4.\raj:#w *m:.\r##\r\r   \repvRd\r~zj\\n~ \r\r\r\t\r [:wq/a  #cdrk ](Ucd/eC- c)>\r![ja>:R/]#(eb)\t> gdb\\cgrhfh#jhnueN/Lwlyn\u2019eg\r  \r - qewqyqReFicw\r  \t\t\t###\rxib-\r  4. -kMz/y   rz>ox:baxm",
@@ -1083,7 +1089,8 @@
             "OCSequenceNode(| inStream line |\rcurrent := root := self newRootBlock\r\t                   setParser: self;\r\t                   yourself.\rinStream := aStreamOrString isStream\r\t            ifTrue: [ aStreamOrString readStream ]\r\t            ifFalse: [ aStreamOrString asString readStream ].\r[\r\tline := inStream nextLine.\r\tline isNil ] whileFalse: [ self handleLine: line ].\r[ current = root ] whileFalse: [\r\t\tcurrent closeMe.\r\t\tcurrent := current parent ].\rroot hasMetaDataElement ifTrue: [ root properties: root metaDataElement body ].\r\r\r^ root)",
             "OCSequenceNode(line ifEmpty: [ ^ nil ].\r(self matchOrdered: line)\r\tifTrue: [ ^ self orderedListBlockClass ]\r\tifFalse: [ \"right now this is super ugly and slow \r\t\t\tbut this is to try. Once we understand and probably change the environment syntax for now it is <!\r\t\t\tand this conflict with <!-- obviously. Too bad!\r\t\t\twe will be able to make this huge hack goes away.\"\r\t\t\t(line first = $< and: [ \" pay attention the micsharedpool includes p and p>, i and i> \r\t\t\t\t\tThis is working p src=800 \r\t\t\t\t\t\"\r\t\t\t\t\t (line includes: Character space)\r\t\t\t\t\t\t ifTrue: [ HTMLTags includes: (line allButFirst splitOnFirst: Character space) first ]\r\t\t\t\t\t\t ifFalse: [ HTMLTags includes: (line allButFirst splitOnFirst: $>) first ] ])\r\t\t\t\tifTrue: [ \"we have a rawparagraph block\" ^ MicRawParagraphBlock ]\r\t\t\t\tifFalse: [ \"the max significant length of a markup is 3\"\r\t\t\t\t\t\t(3 to: 1 by: -1) do: [ :i |\r\t\t\t\t\t\t\t\t| prefix |\r\t\t\t\t\t\t\t\tprefix := line truncateTo: i.\r\t\t\t\t\t\t\t\t\"If we have a inline starter, it takes precedence\"\r\t\t\t\t\t\t\t\t(Delimiters includes: prefix) ifTrue: [ ^ self delimiterBlockClassFor: prefix ].\r\t\t\t\t\t\t\t\tdispatchTable at: prefix ifPresent: [ :blockClass | ^ blockClass ] ] ] ].\r\r^ self nonMatchedBlockClassFor: line)",
             "OCSequenceNode(super closeMe.\rself inlineParse: text)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "4.\raj:#w *m:.\r##\r\r+   \repvRd\r~zj\\n~ \r\r\r-\t\r [:wq/a  #cdrk ](Ucd/eC- c)>\r![ja>:R/]#(eb)\t> gdb\\cgrhfh#jyhnueN/Lwlyn\u2019eg\r  \r - qewqyqReFicw\r  \t\t\t###\rxib-\r  4. -kMz/y   rz>ox:baxm",
@@ -1249,7 +1256,8 @@
             "OCSequenceNode(| inStream line |\rcurrent := root := self newRootBlock\r\t                   setParser: self;\r\t                   yourself.\rinStream := aStreamOrString isStream\r\t            ifTrue: [ aStreamOrString readStream ]\r\t            ifFalse: [ aStreamOrString asString readStream ].\r[\r\tline := inStream nextLine.\r\tline isNil ] whileFalse: [ self handleLine: line ].\r[ current = root ] whileFalse: [\r\t\tcurrent closeMe.\r\t\tcurrent := current parent ].\rroot hasMetaDataElement ifTrue: [ root properties: root metaDataElement body ].\r\r\r^ root)",
             "OCSequenceNode(line ifEmpty: [ ^ nil ].\r(self matchOrdered: line)\r\tifTrue: [ ^ self orderedListBlockClass ]\r\tifFalse: [ \"right now this is super ugly and slow \r\t\t\tbut this is to try. Once we understand and probably change the environment syntax for now it is <!\r\t\t\tand this conflict with <!-- obviously. Too bad!\r\t\t\twe will be able to make this huge hack goes away.\"\r\t\t\t(line first = $< and: [ \" pay attention the micsharedpool includes p and p>, i and i> \r\t\t\t\t\tThis is working p src=800 \r\t\t\t\t\t\"\r\t\t\t\t\t (line includes: Character space)\r\t\t\t\t\t\t ifTrue: [ HTMLTags includes: (line allButFirst splitOnFirst: Character space) first ]\r\t\t\t\t\t\t ifFalse: [ HTMLTags includes: (line allButFirst splitOnFirst: $>) first ] ])\r\t\t\t\tifTrue: [ \"we have a rawparagraph block\" ^ MicRawParagraphBlock ]\r\t\t\t\tifFalse: [ \"the max significant length of a markup is 3\"\r\t\t\t\t\t\t(3 to: 1 by: -1) do: [ :i |\r\t\t\t\t\t\t\t\t| prefix |\r\t\t\t\t\t\t\t\tprefix := line truncateTo: i.\r\t\t\t\t\t\t\t\t\"If we have a inline starter, it takes precedence\"\r\t\t\t\t\t\t\t\t(Delimiters includes: prefix) ifTrue: [ ^ self delimiterBlockClassFor: prefix ].\r\t\t\t\t\t\t\t\tdispatchTable at: prefix ifPresent: [ :blockClass | ^ blockClass ] ] ] ].\r\r^ self nonMatchedBlockClassFor: line)",
             "OCSequenceNode(super closeMe.\rself inlineParse: text)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "1.\rupbf\\\r\t\r**:#\\ksbmlMb**[i>O](y.Z,pw)\r~~\\fpr~~ \r@UaKkap/\u2019@@l:p@\r\r   \r `z`\t---\r|bxs|\r| ----------- |\r|chl./qk lg|\r\r\r\r>  >\\s Jzx.-bn txyqrvifn{#/>-vnK #od\\>gvw}:./ p/ww  ",
@@ -1381,7 +1389,8 @@
             "OCSequenceNode(| inStream outStream char |\raString ifEmpty: [ ^ aString ].\rinStream := ReadStream on: aString.\routStream := WriteStream on: String new.\r[ inStream atEnd ] whileFalse: [\r\t\tchar := inStream next.\r\t\t(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\t\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\r\t\toutStream nextPut: char ].\r^ outStream contents)",
             "OCSequenceNode(aStreamOrString asString readStream)",
             "OCSequenceNode(self blockClass isEvaluated not)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "1.\rupbf\\\r\t\r**:#\\ksbmlMb**[lb.c](ampld x)\r~~\\fpr~~ \r@UaKkap/\u2019@@l:p@\r\r   \r `z`\t---\r|bxs|\r| ----------- |\r|chl./qk lg|\r\r\r\r>  >\\s Jzx.-bn txyqrvifn{#/>-vnK #od\\>gvw}:./ p/ww  ",
@@ -1523,7 +1532,8 @@
             "OCSequenceNode(DelimiterDictionary ifNil: [ self initializeDelimiters ].\r^ DelimiterDictionary values)",
             "OCSequenceNode(| newBlockClass |\rnewBlockClass := self blockStarterClassFrom: line.\rnewBlockClass ifNil: [ ^ parentBlock ].\r^ newBlockClass new\r\t  setParser: parser;\r\t  parent: parentBlock;\r\t  addLineAndReturnNextNode: line)",
             "OCSequenceNode(tokenStream atEnd)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "1.\rupbf\\\r\t\r**:#\\ksbmlMb*2#*[lb.c](ampld x)\r~~\\fpr~~ \r@UaKkap/\u2019@@l:p@\r\r   \r `z`\t---\r|bxs|\r| ----------- |\r|chl./qk lg|\r\r\r\r>  >\\s Jzx.-bn txyqrvifn{#/>-vnK #od\\>gvw-}:./ p/ww  ",
@@ -1665,7 +1675,8 @@
             "OCSequenceNode(DelimiterDictionary ifNil: [ self initializeDelimiters ].\r^ DelimiterDictionary values)",
             "OCSequenceNode(| newBlockClass |\rnewBlockClass := self blockStarterClassFrom: line.\rnewBlockClass ifNil: [ ^ parentBlock ].\r^ newBlockClass new\r\t  setParser: parser;\r\t  parent: parentBlock;\r\t  addLineAndReturnNextNode: line)",
             "OCSequenceNode(tokenStream atEnd)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\rxor.rG\r**\\nhIezsbp**[G-zf ](xj> yl:/o )\r```\t\r \r\rb#u  \r\r\t```[^54]: s\\aw\r- k\\c/-d xy w,# jhot\t\r\r  >\r\\>>gogwmzciyiW\t\r\r~.kx/~\r--- \r > >d",
@@ -1814,7 +1825,8 @@
             "OCSequenceNode(DelimiterDictionary ifNil: [ self initializeDelimiters ].\r^ DelimiterDictionary values)",
             "OCSequenceNode(| newBlockClass |\rnewBlockClass := self blockStarterClassFrom: line.\rnewBlockClass ifNil: [ ^ parentBlock ].\r^ newBlockClass new\r\t  setParser: parser;\r\t  parent: parentBlock;\r\t  addLineAndReturnNextNode: line)",
             "OCSequenceNode(tokenStream atEnd)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\rxor.rG\r**\\XnhIezsbp**[G-zf ](xj>) yl:/o )\r```\t\r \r2\rb#u  \r\r\t```[^54]: s\\aw\r- k\\c/-d xy w,# jhot\t\r\r  >\r\\>>gogwmzciyiW\t\r\r~.kx/~\r--- \r > >d",
@@ -1963,7 +1975,8 @@
             "OCSequenceNode(DelimiterDictionary ifNil: [ self initializeDelimiters ].\r^ DelimiterDictionary values)",
             "OCSequenceNode(| newBlockClass |\rnewBlockClass := self blockStarterClassFrom: line.\rnewBlockClass ifNil: [ ^ parentBlock ].\r^ newBlockClass new\r\t  setParser: parser;\r\t  parent: parentBlock;\r\t  addLineAndReturnNextNode: line)",
             "OCSequenceNode(tokenStream atEnd)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\rqdx\\.\\\\\r**v.#\\> **[ \\/>/,-y](o>> --\u2019y/: )```\t\t\r\t\r\r```- [ ]\r\\\\\\:\t- \\>\rB,>>-/ \t\r~~L.G/>t~~1.\r/ --h\t[^77]: :  l",
@@ -2136,7 +2149,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\rqdx\\.\\\\\r**v.#\\> **[ \\/)>/,-y](o>> --\u2019y/: )```\t\t\r\t\r\r```- [ ]\r\\\\\\:\t- \\>\rB,>>j-/ \t\r~~DL.G/>t~~1.\r/ --h\t[^77]: :  l",
@@ -2309,7 +2323,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\rqdx\\.\\\\\r**v.#\\> [ ]**[^[ \\/)>/,-y](o>> --\u2019y/: )```\t\t\r\t\r\r```- [ ]\r\\\\\\:\t- \\>\rB,>>#j-/ \t\r~~DL.G/>t~~1.\r/ --h\t[^77]: :  l",
@@ -2483,7 +2498,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\roy#t\\\\\r@:.i\\:u@[iojTp - w/trml>-cv](#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jrOZ)--- | xl\u2019\\pmlp.d:lt b|h:ctlkhya.yg| k> |\r| ----------- |\r|b/ c\u2019|\r[^07]: >>6. fura",
@@ -2648,7 +2664,8 @@
             "OCSequenceNode(| inStream line |\rcurrent := root := self newRootBlock\r\t                   setParser: self;\r\t                   yourself.\rinStream := aStreamOrString isStream\r\t            ifTrue: [ aStreamOrString readStream ]\r\t            ifFalse: [ aStreamOrString asString readStream ].\r[\r\tline := inStream nextLine.\r\tline isNil ] whileFalse: [ self handleLine: line ].\r[ current = root ] whileFalse: [\r\t\tcurrent closeMe.\r\t\tcurrent := current parent ].\rroot hasMetaDataElement ifTrue: [ root properties: root metaDataElement body ].\r\r\r^ root)",
             "OCSequenceNode(line ifEmpty: [ ^ nil ].\r(self matchOrdered: line)\r\tifTrue: [ ^ self orderedListBlockClass ]\r\tifFalse: [ \"right now this is super ugly and slow \r\t\t\tbut this is to try. Once we understand and probably change the environment syntax for now it is <!\r\t\t\tand this conflict with <!-- obviously. Too bad!\r\t\t\twe will be able to make this huge hack goes away.\"\r\t\t\t(line first = $< and: [ \" pay attention the micsharedpool includes p and p>, i and i> \r\t\t\t\t\tThis is working p src=800 \r\t\t\t\t\t\"\r\t\t\t\t\t (line includes: Character space)\r\t\t\t\t\t\t ifTrue: [ HTMLTags includes: (line allButFirst splitOnFirst: Character space) first ]\r\t\t\t\t\t\t ifFalse: [ HTMLTags includes: (line allButFirst splitOnFirst: $>) first ] ])\r\t\t\t\tifTrue: [ \"we have a rawparagraph block\" ^ MicRawParagraphBlock ]\r\t\t\t\tifFalse: [ \"the max significant length of a markup is 3\"\r\t\t\t\t\t\t(3 to: 1 by: -1) do: [ :i |\r\t\t\t\t\t\t\t\t| prefix |\r\t\t\t\t\t\t\t\tprefix := line truncateTo: i.\r\t\t\t\t\t\t\t\t\"If we have a inline starter, it takes precedence\"\r\t\t\t\t\t\t\t\t(Delimiters includes: prefix) ifTrue: [ ^ self delimiterBlockClassFor: prefix ].\r\t\t\t\t\t\t\t\tdispatchTable at: prefix ifPresent: [ :blockClass | ^ blockClass ] ] ] ].\r\r^ self nonMatchedBlockClassFor: line)",
             "OCSequenceNode(super closeMe.\rself inlineParse: text)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\roy#t\\\\\r@:.i\\:u@[iojTp - w/t/rml>-cv](#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)--- | xl\u2019\\pmlp.d:lt b|h:ctlkhya~.yg| k> |\r| ----------- |\r|b/ c\u2019|\r[^07]: >>6. fura",
@@ -2817,7 +2834,8 @@
             "OCSequenceNode(| inStream line |\rcurrent := root := self newRootBlock\r\t                   setParser: self;\r\t                   yourself.\rinStream := aStreamOrString isStream\r\t            ifTrue: [ aStreamOrString readStream ]\r\t            ifFalse: [ aStreamOrString asString readStream ].\r[\r\tline := inStream nextLine.\r\tline isNil ] whileFalse: [ self handleLine: line ].\r[ current = root ] whileFalse: [\r\t\tcurrent closeMe.\r\t\tcurrent := current parent ].\rroot hasMetaDataElement ifTrue: [ root properties: root metaDataElement body ].\r\r\r^ root)",
             "OCSequenceNode(line ifEmpty: [ ^ nil ].\r(self matchOrdered: line)\r\tifTrue: [ ^ self orderedListBlockClass ]\r\tifFalse: [ \"right now this is super ugly and slow \r\t\t\tbut this is to try. Once we understand and probably change the environment syntax for now it is <!\r\t\t\tand this conflict with <!-- obviously. Too bad!\r\t\t\twe will be able to make this huge hack goes away.\"\r\t\t\t(line first = $< and: [ \" pay attention the micsharedpool includes p and p>, i and i> \r\t\t\t\t\tThis is working p src=800 \r\t\t\t\t\t\"\r\t\t\t\t\t (line includes: Character space)\r\t\t\t\t\t\t ifTrue: [ HTMLTags includes: (line allButFirst splitOnFirst: Character space) first ]\r\t\t\t\t\t\t ifFalse: [ HTMLTags includes: (line allButFirst splitOnFirst: $>) first ] ])\r\t\t\t\tifTrue: [ \"we have a rawparagraph block\" ^ MicRawParagraphBlock ]\r\t\t\t\tifFalse: [ \"the max significant length of a markup is 3\"\r\t\t\t\t\t\t(3 to: 1 by: -1) do: [ :i |\r\t\t\t\t\t\t\t\t| prefix |\r\t\t\t\t\t\t\t\tprefix := line truncateTo: i.\r\t\t\t\t\t\t\t\t\"If we have a inline starter, it takes precedence\"\r\t\t\t\t\t\t\t\t(Delimiters includes: prefix) ifTrue: [ ^ self delimiterBlockClassFor: prefix ].\r\t\t\t\t\t\t\t\tdispatchTable at: prefix ifPresent: [ :blockClass | ^ blockClass ] ] ] ].\r\r^ self nonMatchedBlockClassFor: line)",
             "OCSequenceNode(super closeMe.\rself inlineParse: text)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\roy#t\\\\\r@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)--- | xl\u2019\\pmlp.d:lt b|h:ctlkhya~.yg| k> |\r| ----------- |\r|b/ c\u2019|\r[^0[^7]: >>6z. fura",
@@ -2987,7 +3005,8 @@
             "OCSequenceNode(| inStream line |\rcurrent := root := self newRootBlock\r\t                   setParser: self;\r\t                   yourself.\rinStream := aStreamOrString isStream\r\t            ifTrue: [ aStreamOrString readStream ]\r\t            ifFalse: [ aStreamOrString asString readStream ].\r[\r\tline := inStream nextLine.\r\tline isNil ] whileFalse: [ self handleLine: line ].\r[ current = root ] whileFalse: [\r\t\tcurrent closeMe.\r\t\tcurrent := current parent ].\rroot hasMetaDataElement ifTrue: [ root properties: root metaDataElement body ].\r\r\r^ root)",
             "OCSequenceNode(line ifEmpty: [ ^ nil ].\r(self matchOrdered: line)\r\tifTrue: [ ^ self orderedListBlockClass ]\r\tifFalse: [ \"right now this is super ugly and slow \r\t\t\tbut this is to try. Once we understand and probably change the environment syntax for now it is <!\r\t\t\tand this conflict with <!-- obviously. Too bad!\r\t\t\twe will be able to make this huge hack goes away.\"\r\t\t\t(line first = $< and: [ \" pay attention the micsharedpool includes p and p>, i and i> \r\t\t\t\t\tThis is working p src=800 \r\t\t\t\t\t\"\r\t\t\t\t\t (line includes: Character space)\r\t\t\t\t\t\t ifTrue: [ HTMLTags includes: (line allButFirst splitOnFirst: Character space) first ]\r\t\t\t\t\t\t ifFalse: [ HTMLTags includes: (line allButFirst splitOnFirst: $>) first ] ])\r\t\t\t\tifTrue: [ \"we have a rawparagraph block\" ^ MicRawParagraphBlock ]\r\t\t\t\tifFalse: [ \"the max significant length of a markup is 3\"\r\t\t\t\t\t\t(3 to: 1 by: -1) do: [ :i |\r\t\t\t\t\t\t\t\t| prefix |\r\t\t\t\t\t\t\t\tprefix := line truncateTo: i.\r\t\t\t\t\t\t\t\t\"If we have a inline starter, it takes precedence\"\r\t\t\t\t\t\t\t\t(Delimiters includes: prefix) ifTrue: [ ^ self delimiterBlockClassFor: prefix ].\r\t\t\t\t\t\t\t\tdispatchTable at: prefix ifPresent: [ :blockClass | ^ blockClass ] ] ] ].\r\r^ self nonMatchedBlockClassFor: line)",
             "OCSequenceNode(super closeMe.\rself inlineParse: text)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\roy#t\\\\\r@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)-\t-- | xl\u2019\\pmlp.d:lt\r b|h:ctlkhya~.yg| k> |\r| ----------- |\r|b/ c\u2019|\r[^0[^v7]: >>6z. fura",
@@ -3157,7 +3176,8 @@
             "OCSequenceNode(| inStream line |\rcurrent := root := self newRootBlock\r\t                   setParser: self;\r\t                   yourself.\rinStream := aStreamOrString isStream\r\t            ifTrue: [ aStreamOrString readStream ]\r\t            ifFalse: [ aStreamOrString asString readStream ].\r[\r\tline := inStream nextLine.\r\tline isNil ] whileFalse: [ self handleLine: line ].\r[ current = root ] whileFalse: [\r\t\tcurrent closeMe.\r\t\tcurrent := current parent ].\rroot hasMetaDataElement ifTrue: [ root properties: root metaDataElement body ].\r\r\r^ root)",
             "OCSequenceNode(line ifEmpty: [ ^ nil ].\r(self matchOrdered: line)\r\tifTrue: [ ^ self orderedListBlockClass ]\r\tifFalse: [ \"right now this is super ugly and slow \r\t\t\tbut this is to try. Once we understand and probably change the environment syntax for now it is <!\r\t\t\tand this conflict with <!-- obviously. Too bad!\r\t\t\twe will be able to make this huge hack goes away.\"\r\t\t\t(line first = $< and: [ \" pay attention the micsharedpool includes p and p>, i and i> \r\t\t\t\t\tThis is working p src=800 \r\t\t\t\t\t\"\r\t\t\t\t\t (line includes: Character space)\r\t\t\t\t\t\t ifTrue: [ HTMLTags includes: (line allButFirst splitOnFirst: Character space) first ]\r\t\t\t\t\t\t ifFalse: [ HTMLTags includes: (line allButFirst splitOnFirst: $>) first ] ])\r\t\t\t\tifTrue: [ \"we have a rawparagraph block\" ^ MicRawParagraphBlock ]\r\t\t\t\tifFalse: [ \"the max significant length of a markup is 3\"\r\t\t\t\t\t\t(3 to: 1 by: -1) do: [ :i |\r\t\t\t\t\t\t\t\t| prefix |\r\t\t\t\t\t\t\t\tprefix := line truncateTo: i.\r\t\t\t\t\t\t\t\t\"If we have a inline starter, it takes precedence\"\r\t\t\t\t\t\t\t\t(Delimiters includes: prefix) ifTrue: [ ^ self delimiterBlockClassFor: prefix ].\r\t\t\t\t\t\t\t\tdispatchTable at: prefix ifPresent: [ :blockClass | ^ blockClass ] ] ] ].\r\r^ self nonMatchedBlockClassFor: line)",
             "OCSequenceNode(super closeMe.\rself inlineParse: text)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\roy#t\\\\\r@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)-\t-- | xl\u2019\\pmlp.d:)lt\r b|h:ctlkhya~.yg| k> |\r| -------~~---- |\r|b/ c\u2019|\r[^0[^v7]: >>6z. fur7a",
@@ -3327,7 +3347,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\roy#t\\U\\\rt@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ezgx.wl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)-\t-- | xl\u2019\\pmlp.d:)lt\r b|h:ctlkh7ya~.yg| k> |\r| -------~~---- |\r|b/ c\u2019|\r[^0[^v7]: >>6z. fur7a",
@@ -3497,7 +3518,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\roy#t\\U\\\r=@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)-\t-- | xl\u2019\\pmlp.d:)lt\r b|h:ctlkh7ya~.yg| k> |\r| -------~~---- |\r|b/ c\u2019|\r[^0[^v7]: >>6z. fur7a",
@@ -3667,7 +3689,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.jr<OZ)-\t-- | xl\u2019\\pmlp.d:)lt\r b|h:ctlkh7y-~.yg| v> |\r| -------~~---- |\r|b/ c\u2019|\r[^0[^v7]: >>6z. fur7a",
@@ -3837,7 +3860,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/t/rml>-cv](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.j\r<OZ)-\t-- | xl\u2019\\pmlp.d:)lt\r b|h:ctlkh7y-~.yg| v> |\r| -------~~---- |\r|b/ c\u2019|\r[^0[^v7]: >>6zS fur7a",
@@ -4007,7 +4031,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/t/rml>-[^v](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.j\r<OZ)-\t-- | xl\u2019\\pmlp.d:)lt\r b|h:ctlkh7y-~.yg| v> |\r| --\u2019----~~---- |\r|b/ c\u2019|\r[^0[^v7]: >>6zS fur7a",
@@ -4185,7 +4210,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/t/**ml>-[^v](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.j\r<OZ)-\t-- | xl\u2019\\pmlp.d:)lt\r b|h**ctlkh7y-~.yg| v> |\r| --\u2019----~~---- |\r\rb/ c\u2019|\r[^0[^v7]: >>6zS fur7a",
@@ -4363,7 +4389,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t!,g](.j\r<OZ)0\t-- | xl\u2019\\pmlp.d:)lt\r b|h**ctlkh7y-~.yg| v> |\r| --\u2019----~~---- |\r\rb/ c\u2019|\r[^0[^v7]: >>6zS fur7a",
@@ -4540,7 +4567,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /->nfq . t.ez| -----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t!,g](.j\r<OZ)0\t-- |```xl\u2019\\pmlp.d:)lt\r b|h**ctlkh7y-~.yg| v> |\r| --\u2019----~~---- |\r\rb/ c\u2019|\r[^0[^v7]: >>6z4 fur7a",
@@ -4717,7 +4745,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /->nfq . t.ez| \r----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t!,g](.j\r<OZ)0\t-- |```xl\u2019\\pmlp.d:)lt\r b`h**ctlkh7y-~.yg| v# |\r| --\u2019----~~---- |\r\rb/ c\u2019|\r[^0[^v7]: >>6z4 fur7a",
@@ -4894,7 +4923,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /->nfq . t.ez| \r----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t!,g](.j\r&OZ)0\t-- |```xl\u2019\\pmlp.d:)lt\r b`h**ctlkh7y-~.yg| v# |\r| --\u2019----~~-f-- |\r\rb/ c\u2019|\r@^0[^v7]: >>6z4 fur7a",
@@ -5070,7 +5100,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /->nfq . twez| \r----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ)0\t-- |```xl\u2019\\pmlp.1:)lt\r b`h**ctlkh7y-~.yg| v# |\r| --\u2019----~~---- |\r\rb/ c\u2019|\r[^0[^v7]: >>6z4 fur7a",
@@ -5248,7 +5279,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\p\\\r=@:.i\\:u@[iojmp - w/tv**ml>-[^v](t#, /->nfq . twez| \r----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ)0\t-- |```xl\u2019\\pmlp.1:)lt\r b`h**ctlkh7y-~.yg| v#\r|\r| --\u2019----~~---- |\r\rb/ c\u2019|\r[^0[^v7]: >>6z4 fur7a",
@@ -5426,7 +5458,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/tv**ml>-[^v](t#, /2>nfq . t.ez| \r----------gxf(l)\r```\t\t\t\r \r```@\\V@f\r###!,g](.j\r&OZ)0\t-- |```xl\u2019\\pmlp.d:)lt\r b`h**ctlkh7y-~.yg| v# |\r| --\u2019----~~-f-- |\r\rb/ c\u2019|\r@^0[^v7]: >>6z4 fuQ7a",
@@ -5602,7 +5635,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\p\\\r=@:.i\\:u4[iojmp - w/tv**ml>-[^v](t#, /->nfq . twez| \r-----%----gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ)0\t-- |```xl\u2019\\pmlp.1:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --\u2019----~~---- |\r\rb/ c\u2019|\r[^0[^v7]: >>6z4 fur7a",
@@ -5781,7 +5815,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<y#t\\p\\\r=@:.i\\:u4[iojmp - w/tv**ml>-[^v](t#, /->nfq . tw\rz| \r-----%----gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ)0\t-- |```xl\u2019\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --\u2019----~~---- |\r\rb/ c\u2019|\r)^0[^v7]: >>6z4 fur7a",
@@ -5959,7 +5994,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm! - w/tv**ml>-[^vY(t#, /->nfq . tw\rz| \r-----%----gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ)0\t-- |```xl\u2019\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --\u2019----~~---- |\r\rb/ c\u2019|\r)^0[^v7]: >>6z4 fur7a",
@@ -6130,7 +6166,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm! - w/tv**mK>-[^vY(t#, /->nfq . tw\rz| \r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ#0\t-- |```xl\u2019\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --\u2019----~~---- |\r\rb/ c\u2019|\r)^0[^v7]: >>6z4 fur7a",
@@ -6308,7 +6345,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm! - w/tv**mK>-[^vY(t#, /->nfq . tw\rz| \r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ#0\t-- |```xl(\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --\u2019----~~---- |\r#b/ c\u2019|\r)^0[^v7]: >>6z4 fu<7a",
@@ -6486,7 +6524,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/tv**mK>-[^vY(t#, /->nfq . tw\rz|\r\r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j\r<OZ#0\t-- |```xl(\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --\u2019----~~---- |\r#b/ c\u2019|\r)^0[^v7]: >>6z- fu<7a",
@@ -6664,7 +6703,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/tv**mK>-[^vY(t#, /->nfq . tw\rz|\r\r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@f\r\t![^g](.j)<OZ#0\t-- |```xl(\u2019pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --\u2019----~~---- |\r#b/ c\u2019|\r)^0[^v7]: >>6z- fu**7a",
@@ -6835,7 +6875,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/tv**mK>-[^vY(t#, /->nfq . tw\rz|\r\r-----%--m-gxf(l)\r```\t&\t\r \r```@\\V@f\r\t![^g](.j)<xZ#0\t-- |```xl(\u2019pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --\u2019----~~---- |\r#b/ c\u2019|\r)!0[^v7]: >>6z- fu**7a",
@@ -7006,7 +7047,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/tv**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@>\r\t![^g](.j\r<OZ#0\t-- |```xl(\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v#\r|\r| --\u2019----~~---- |\r#b/ c\u2019|\r)^```[^v7]: >>6z- fu<7a",
@@ -7184,7 +7226,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/,v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gxf(l)\r```\t\t\t\r \r```@\\V@>\r\t![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.```:)lt\r%b`h**ctlkh7y-~.yg| v%\r|\r| --\u2019----~~---- |\r#b/ c\u2019|\r)^```[^v7]: >>6z- fu<7a",
@@ -7363,7 +7406,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\p\\\r=@:.i\\:u4[iojm!a- w/,v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gx[ ](l)\r```\t\t\t\r \r```@\\V@>\r\t![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%\r|\r| --\u2019----q~---- |\r#b/ c\u2019|\r)^```[^v7]: >>6z- fu<7a",
@@ -7543,7 +7587,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\)\\\r=@:.i\\:u4[iojm!a- w/,v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gx[ ](l)\r```\t\t\t\r \r```@\\V@>\r\t![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%\r- \r| --\u2019----q~---- |\r#b/ c\u2019|\r)^```]^v7]: >>6z- fu<7a",
@@ -7723,7 +7768,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\)\\\r=@:VZ\\:u4[iojm!a- w/,v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gx[ ](l)\r```\t\t\t\r \r```@\\V@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%\r- \r| --\u2019----q~---- |\r#b/ c\u2019|\r)^```]^v7]: >>6z- fu<7a",
@@ -7903,7 +7949,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\)\\\r=@:VZ\\:u4[iojm!a- w/,v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gx[ ](/)\r```\t\t\t\r \r```@\\V@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%**- \r| --\u2019----q~---- |\r#b/ c\u2019|\ra^```]^v7]: >>6z- fu<7a",
@@ -8086,7 +8133,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\)\\\r=@:VZ\\:u4[iojm!a- w/1v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-----%--m-gx[ ](/)\r```\t\r\t\r \r```@\\V@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%**- \r| --\u2019----qj---- |\r#b/ c\u2019|\ra^```]^v7]: >>6z- fu<7a",
@@ -8269,7 +8317,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\)\\\r=@:VZ\\:u4[iojm!aj w/1v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-[---%--m-gx[ ](/)\r```\t\r\t\r \r```@\\V@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%*\r- \r| --\u2019----qj---- |\r#b/ c\u2019|\ra^```]^v7]: >>6z- fu<7a",
@@ -8452,7 +8501,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\)\\\r=@:VZ\\(u4[iojm!aj w/1v**mK>-[^vY(t#, /->nfq . dw\rz|\r\r-[---%--m-gx, ](/)\r```\t\r\t\r \r```@\\V@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp.``?:)lt\r%b`h**ctlkh7y-~.yg| v%*\r- \r| --\u2019----q9---- |\r#b/ c\u2019|\ra^```]^v7]: >>6z- fu<7a",
@@ -8639,7 +8689,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\)\\\r=@:VZ\\(u4[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[---%--m-gx, ](/)\r```\t\r\t\r \r```@\\\r@>\r[^![^g](.j\r<OZ#0\t-- |```xl%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.yg| v%*\r- \r| --\u2019----q9---- |\r#b/ c\u2019|\ra^```]^v7]: >>6z- fu<7a",
@@ -8826,7 +8877,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\)\\\r=@:VZ\\(u4[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[-}-%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[^![^g](.j\r<OZ#0\t-- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.yg| v%*\r- \r| --\u2019----q9---- |\r#b/ c\u2019|\ra^```]^v7]: >>6z- fu<7a",
@@ -9012,7 +9064,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!#t\\)\\\r=@:VZ\\(u4[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[-}-%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\t-- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --\u2019----q9----\r|\r#b/ c\u2019|\ra^```]^v7]: >>6z- fu<7a",
@@ -9198,7 +9251,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%t\\)\\\r=@:VZ\\(u4[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[2}-%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --\u2019----q9----\r|\r#b/ c\u2019|\ra^```]^v7]: >>6z- fu<7a",
@@ -9384,7 +9438,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%t\\)\\\r=@:VZ\\(uL[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --\u2019---&q9----\r|\r#b/ c\u2019|\ra^```]^v7]: >>6z- fu<7a",
@@ -9570,7 +9625,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%t\\)\\\r=@:VZ\\(uL[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . dw\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --\u2019---&q9-%--\r{#\r#b/ c\u2019|\ra^```]^v7]: >>68- fu<7a",
@@ -9756,7 +9812,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%t\\)\\\r=&:VZ\\(uL[iojm!aj w/1v**mK>-h^vY(t#, /->nfq . **k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --\u2019---&q9-%--\r{#\r#b/ c\u2019|\ra^```]^v7]: >>68- fu<7a",
@@ -9942,7 +9999,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%O\\)\\\r=&:VZ\\(uL[iojm!aj w/1v**mK>-h^!Y(t#, /->nfq . **k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<OZ#0\tU- |```xE%\\pmlp..`?:mlt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --\u2019---&q9-%--\r{#\r#b/ c\u2019|\ra^```]^v7]: >>68- fu<7a",
@@ -10117,7 +10175,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%t\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#, /->nfq . **k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r@>\r[}![^g](.j\r<)Z#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --\u2019---&q9-%-t\r{#\r#b/ c\u2019|\ra^```]^v7]: >>68- fu<7a",
@@ -10297,7 +10356,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%t\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](.j\r<)Z#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --\u2019---&q9-%-t\r{#\r#b/ c\u2019|\ra^```]^v7]: >>68- fu<7a",
@@ -10477,7 +10537,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%|\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](.j\r<)Z#0\tU- |```xE%\\pmlp..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --\u2019---&q9-%-t\r{#\r#b/ c\u2019|\ra^```]^ve]: >>68- .u<7a",
@@ -10657,7 +10718,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%|\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\rz|\r\r-[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](]: j\r<)Z#0\tU- |```xE%\\pml&..`?:)lt\r%b`h**ctlkh7y-~.y0| v%*\r- \r| --\u2019---&q9-%-t\r{#\r#b/ c\u2019|\ra^```]^ve]: >>68K .u<7a",
@@ -10841,7 +10903,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%|\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\r@|\r\rV[2}[%--m-=x, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](]: j\r<)Z#0\tU- |```xE%\\pml&..`?:)lt\r%b`S**ctlkh7y-~.y0| v%*\r- \r| --\u2019---&q9-%-t\r{#\r#b/ c\u2019|\ra^```]^ve]: >>68K .u<7a",
@@ -11025,7 +11088,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%|\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\r@|\r\rV[2}[%--m-=v, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](]: j\r<)Z#0\tU- |```xE%\\pml&..`?])lt\r%b`S**ctlkh7y-~.y0| \r%*\r- \r| --\u2019---&q9-%-t\r{#\r#b/ c\u2019|\ra^```]^ve]: >>68K .u<7a",
@@ -11209,7 +11273,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%|\\)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^vY(t#,!/->nfq . *:k\r@|\r\rV[2}[%--m-=v, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](]: j\r<)Z#0\tU- |```xE%\\pml&..`?])lt\r%b`S**ctlkh7yO~.y0| \r%*\r> \r| --\u2019---&q9-%-t\r{#\r#b/ c\u2019|\ra^```m^ve]: >>68K .u<7a",
@@ -11393,7 +11458,8 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "9.\r<!%|0)\\\r=&:VZ\\(uL[io#m!aj w/1v**mK>-h^| -----------Y(t#,!/->nfq . *:k\r@|\r\rV[2}[%--m-=v, ](/)\r```\t\r\t\r \r```@\\\r###>\r[}![^g](]: j\r<)Z#0\tU- |```xE%\\pml&..`?])lt\r%b`S**ctlkh7yO~.y0| \r- *\r> \r| --\u2019---&q9-%-t\r{#\r#b/ c\u2019|\ra^```m^ve]: >>68K .u<7a",
@@ -11577,6 +11643,7 @@
             "OCSequenceNode(^ children)",
             "OCSequenceNode(char := inStream next.\r(char asInteger between: self magicCharacter and: self magicCharacter + 65536) ifTrue: [\r\t\tchar := (char asInteger - self magicCharacter) asCharacter.\r\t\t(keep includes: char) ifFalse: [ outStream nextPut: $\\ ] ].\routStream nextPut: char)",
             "OCSequenceNode(outStream nextPut: $\\)"
-        ]
+        ],
+        "oracleTime": null
     }
 ]

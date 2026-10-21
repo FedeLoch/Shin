@@ -19,7 +19,8 @@
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 295142
+        "executionsPerSecond": 295142,
+        "oracleTime": null
     },
     {
         "input": "b+||",
@@ -41,7 +42,8 @@
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 225796
+        "executionsPerSecond": 225796,
+        "oracleTime": null
     },
     {
         "input": "c?|b+c+|",
@@ -63,7 +65,8 @@
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 249841
+        "executionsPerSecond": 249841,
+        "oracleTime": null
     },
     {
         "input": "a+c?c",
@@ -84,7 +87,8 @@
         "RxMatcher>>#currentState": 2,
         "RxMatcher>>#atEnd": 2,
         "threshold": 0.9,
-        "executionsPerSecond": 266969
+        "executionsPerSecond": 266969,
+        "oracleTime": null
     },
     {
         "input": "|((a*a.+))b*c*||",
@@ -106,7 +110,8 @@
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 80879
+        "executionsPerSecond": 80879,
+        "oracleTime": null
     },
     {
         "input": "(|)c*.?||",
@@ -128,7 +133,8 @@
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 82885
+        "executionsPerSecond": 82885,
+        "oracleTime": null
     },
     {
         "input": "b+bc+",
@@ -148,7 +154,8 @@
         "RxMatcher>>#currentState": 2,
         "RxMatcher>>#atEnd": 2,
         "threshold": 0.9,
-        "executionsPerSecond": 218243
+        "executionsPerSecond": 218243,
+        "oracleTime": null
     },
     {
         "input": "().+a?b|.*a+b*|b|",
@@ -171,7 +178,8 @@
         "RxMatcher>>#atEnd": 3,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 49094
+        "executionsPerSecond": 49094,
+        "oracleTime": null
     },
     {
         "input": "|||c*||b+.a?|c*",
@@ -193,7 +201,8 @@
         "RxMatcher>>#atEnd": 1,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 113467
+        "executionsPerSecond": 113467,
+        "oracleTime": null
     },
     {
         "input": "||||",
@@ -212,7 +221,8 @@
         "RxmMarker>>#matchAgainst:": 2,
         "RxmBranch>>#matchAgainst:": 2,
         "threshold": 0.9,
-        "executionsPerSecond": 168910
+        "executionsPerSecond": 168910,
+        "oracleTime": null
     },
     {
         "input": "bb+b+bc+",
@@ -232,7 +242,8 @@
         "RxMatcher>>#currentState": 3,
         "RxMatcher>>#atEnd": 3,
         "threshold": 0.9,
-        "executionsPerSecond": 115114
+        "executionsPerSecond": 115114,
+        "oracleTime": null
     },
     {
         "input": "().+a.+a?b|.*a+b*|b|",
@@ -255,7 +266,8 @@
         "RxMatcher>>#atEnd": 4,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 21794
+        "executionsPerSecond": 21794,
+        "oracleTime": null
     },
     {
         "input": "().b+a...+a?b|.*a+b*|b|",
@@ -278,7 +290,8 @@
         "RxMatcher>>#atEnd": 4,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 16799
+        "executionsPerSecond": 16799,
+        "oracleTime": null
     },
     {
         "input": "ba.+a?.*.*c.+a",
@@ -301,7 +314,8 @@
         "RxMatcher>>#atEnd": 4,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 28054
+        "executionsPerSecond": 28054,
+        "oracleTime": null
     },
     {
         "input": "().b+a...+a?b|.*.+b*|b|",
@@ -324,7 +338,8 @@
         "RxMatcher>>#atEnd": 5,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 10017
+        "executionsPerSecond": 10017,
+        "oracleTime": null
     },
     {
         "input": "(.).b+a...+a.?b|.*.+b*|bb|",
@@ -347,7 +362,8 @@
         "RxMatcher>>#atEnd": 5,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 6905
+        "executionsPerSecond": 6905,
+        "oracleTime": null
     },
     {
         "input": "a*(..+b+.?b)..+b|(.(.+)+a+.?b?)|b.?b|b*b|",
@@ -370,7 +386,8 @@
         "RxMatcher>>#atEnd": 6,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 1760
+        "executionsPerSecond": 1760,
+        "oracleTime": null
     },
     {
         "input": "a*(c..+b+.?b)..+b|(.(.+)+a+.?b?c)|b.?b|.b*b|",
@@ -393,7 +410,8 @@
         "RxMatcher>>#atEnd": 6,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 1015
+        "executionsPerSecond": 1015,
+        "oracleTime": null
     },
     {
         "input": "().b+a...+a?b|.*.+b*|(.+)+.+.?.?|",
@@ -416,7 +434,8 @@
         "RxMatcher>>#atEnd": 7,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 748
+        "executionsPerSecond": 748,
+        "oracleTime": null
     },
     {
         "input": "(c).b+a...+a?b|.*.+b*c|(.+)+.+.?.?.|",
@@ -439,7 +458,8 @@
         "RxMatcher>>#atEnd": 8,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 364
+        "executionsPerSecond": 364,
+        "oracleTime": null
     },
     {
         "input": "().b+a...+a?b|.*.+c*|(.+a?)+.+.?.?|",
@@ -462,7 +482,8 @@
         "RxMatcher>>#atEnd": 8,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 348
+        "executionsPerSecond": 348,
+        "oracleTime": null
     },
     {
         "input": "(.c).b+a....+a?b|.a*.+b*c|(.+)+.+.?.?.|",
@@ -485,7 +506,8 @@
         "RxMatcher>>#atEnd": 9,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 93
+        "executionsPerSecond": 93,
+        "oracleTime": null
     },
     {
         "input": "(c).b+(c+(.+)?b?.?)+bcb*.|.*.+b*c|(.+)+.+.?.?.|",
@@ -508,7 +530,8 @@
         "RxMatcher>>#atEnd": 7,
         "RxmSubstring>>#matchAgainst:": 3,
         "threshold": 0.9,
-        "executionsPerSecond": 414
+        "executionsPerSecond": 414,
+        "oracleTime": null
     },
     {
         "input": "()c.b+a..a.+a?b|.*.+c*|(.+a?)+.+.?c.?|",
@@ -531,7 +554,8 @@
         "RxMatcher>>#atEnd": 9,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 74
+        "executionsPerSecond": 74,
+        "oracleTime": null
     },
     {
         "input": "()c.b+(a..a.+a?b|.*.).+c*|(.+a?)+.+.?c.?|",
@@ -554,7 +578,8 @@
         "RxMatcher>>#atEnd": 10,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 25
+        "executionsPerSecond": 25,
+        "oracleTime": null
     },
     {
         "input": "(.+a?a+|a?b)c.b+(a..a.+a?b|.*.).+c*|(.+a?)+.+.?c.?|",
@@ -577,7 +602,8 @@
         "RxMatcher>>#atEnd": 12,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 5
+        "executionsPerSecond": 5,
+        "oracleTime": null
     },
     {
         "input": "(.c).b+a....+a?b||b?(aa*.*|.*.)(.*..?a+a?b|.*..+a+a?)+a?a||(.*.)+a*a?|a?c*|a?",
@@ -600,7 +626,8 @@
         "RxMatcher>>#atEnd": 10,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 22
+        "executionsPerSecond": 22,
+        "oracleTime": null
     },
     {
         "input": "()c.b+(a..a.+a?b|.*.).+cc*|(.+a?)+.+.?cc.?|",
@@ -623,7 +650,8 @@
         "RxMatcher>>#atEnd": 11,
         "RxmSubstring>>#matchAgainst:": 9,
         "threshold": 0.9,
-        "executionsPerSecond": 11
+        "executionsPerSecond": 11,
+        "oracleTime": null
     },
     {
         "input": "(.?b)c.b+(a..a.+a?b|.*.).+cc*|(.+a?)+.+.?cc.?|a*",
@@ -646,7 +674,8 @@
         "RxMatcher>>#atEnd": 12,
         "RxmSubstring>>#matchAgainst:": 10,
         "threshold": 0.9,
-        "executionsPerSecond": 6
+        "executionsPerSecond": 6,
+        "oracleTime": null
     },
     {
         "input": "(.+a?a+|a?b)c.b+(a...a.+a?b|..*.).+c*|(.+a?)+.+.?.c.?|",
@@ -669,7 +698,8 @@
         "RxMatcher>>#atEnd": 13,
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
-        "executionsPerSecond": 2
+        "executionsPerSecond": 2,
+        "oracleTime": null
     },
     {
         "input": "(.?b)c.b+(a?a...a+a?a+c+|a|aa*.).+cc*|(.+a?)+.+.?cc.?|a*",
@@ -692,7 +722,8 @@
         "RxMatcher>>#atEnd": 13,
         "RxmSubstring>>#matchAgainst:": 11,
         "threshold": 0.9,
-        "executionsPerSecond": 2
+        "executionsPerSecond": 2,
+        "oracleTime": null
     },
     {
         "input": "(.?b)c.b+(ab..a.+a?b|.*.)..+cc*|(.+a?)+.+.a?cc.?|a*",
@@ -715,7 +746,8 @@
         "RxMatcher>>#atEnd": 13,
         "RxmSubstring>>#matchAgainst:": 10,
         "threshold": 0.9,
-        "executionsPerSecond": 1
+        "executionsPerSecond": 1,
+        "oracleTime": null
     },
     {
         "input": "()c.b+(a..a.+a?b|.*.).+cc*c|(.+a?)+.+.?cc.?|",
@@ -738,7 +770,8 @@
         "RxMatcher>>#atEnd": 12,
         "RxmSubstring>>#matchAgainst:": 10,
         "threshold": 0.9,
-        "executionsPerSecond": 5
+        "executionsPerSecond": 5,
+        "oracleTime": null
     },
     {
         "input": "(b+)c.b+(a..a.+a?b|.*.).+cc*c|(.+a?)+.+.?cc.?|",
@@ -761,7 +794,8 @@
         "RxMatcher>>#atEnd": 12,
         "RxmSubstring>>#matchAgainst:": 11,
         "threshold": 0.9,
-        "executionsPerSecond": 2
+        "executionsPerSecond": 2,
+        "oracleTime": null
     },
     {
         "input": "(.?b.)c.b+c(ab..+a.+a?b|.*.)..+cc*|(.+a?)+.+.a?cc.?|a*",
@@ -784,7 +818,8 @@
         "RxMatcher>>#atEnd": 15,
         "RxmSubstring>>#matchAgainst:": 12,
         "threshold": 0.9,
-        "executionsPerSecond": 0.25
+        "executionsPerSecond": 0.25,
+        "oracleTime": null
     },
     {
         "input": "(.?b)c.b+(a..a.+aa?b|.*.).+cc.*|(.+a?)+.+.?cc.?|ba*",
@@ -807,7 +842,8 @@
         "RxMatcher>>#atEnd": 13,
         "RxmSubstring>>#matchAgainst:": 12,
         "threshold": 0.9,
-        "executionsPerSecond": 1
+        "executionsPerSecond": 1,
+        "oracleTime": null
     },
     {
         "input": "(.?b)c.b+(a..a.+aa?b|.*.).+cc..*|(.+a?)+.+.?c*cc.?|ba*",
@@ -830,7 +866,8 @@
         "RxMatcher>>#atEnd": 14,
         "RxmSubstring>>#matchAgainst:": 13,
         "threshold": 0.9,
-        "executionsPerSecond": 0.4
+        "executionsPerSecond": 0.4,
+        "oracleTime": null
     },
     {
         "input": "(.?b)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?)+.+.?c*c?c..?|ba*",
@@ -853,7 +890,8 @@
         "RxMatcher>>#atEnd": 15,
         "RxmSubstring>>#matchAgainst:": 4,
         "threshold": 0.9,
-        "executionsPerSecond": 0.14
+        "executionsPerSecond": 0.14,
+        "oracleTime": null
     },
     {
         "input": "(b+a+)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?)+.+.?c*c?c..?|ba*",
@@ -876,7 +914,8 @@
         "RxMatcher>>#atEnd": 16,
         "RxmSubstring>>#matchAgainst:": 4,
         "threshold": 0.9,
-        "executionsPerSecond": 0.06
+        "executionsPerSecond": 0.06,
+        "oracleTime": null
     },
     {
         "input": "(b+a+)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?a?)+.+.?c*c?c..?|ba*",
@@ -899,6 +938,7 @@
         "RxMatcher>>#atEnd": 18,
         "RxmSubstring>>#matchAgainst:": 4,
         "threshold": 0.9,
-        "executionsPerSecond": 0.01
+        "executionsPerSecond": 0.01,
+        "oracleTime": null
     }
 ]

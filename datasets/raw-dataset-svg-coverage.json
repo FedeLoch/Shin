@@ -30,7 +30,8 @@
             "OCSequenceNode(| key args |\rkey := segment first.\rargs := segment second.\rkey = #absolute ifTrue: [ ^ true ].\rkey = #relative ifTrue: [ ^ false ].\rkey = #ellipticalArc:xrot:large:sweep:to:relative: ifTrue: [\r\t\tabsolute ifTrue: [\r\t\t\t\targs at: 5 put: args fifth - position.\r\t\t\t\targs at: 6 put: false ].\r\t\t^ absolute ].\rkey = #vLineTo: ifTrue: [\r\t\tabsolute ifTrue: [ args at: 1 put: args first - position y ].\r\t\t^ absolute ].\rkey = #hLineTo: ifTrue: [\r\t\tabsolute ifTrue: [ args at: 1 put: args first - position x ].\r\t\t^ absolute ].\rabsolute ifTrue: [ args doWithIndex: [ :point :index | args at: index put: point - position ] ].\r^ absolute)",
             "OCSequenceNode(svgPath := aString.\rself computeSegments.\rself computePolygons.\rself centerSegments.\rself resetPath)",
             "OCSequenceNode(^ self)"
-        ]
+        ],
+        "oracleTimeInMicroseconds": 1570
     },
     {
         "input": "m-94-.11-.26723 -.07-.26-7 H -9",
@@ -66,7 +67,8 @@
             "OCSequenceNode(| key args |\rkey := segment first.\rargs := segment second.\rkey = #absolute ifTrue: [ ^ true ].\rkey = #relative ifTrue: [ ^ false ].\rkey = #ellipticalArc:xrot:large:sweep:to:relative: ifTrue: [\r\t\tabsolute ifTrue: [\r\t\t\t\targs at: 5 put: args fifth - position.\r\t\t\t\targs at: 6 put: false ].\r\t\t^ absolute ].\rkey = #vLineTo: ifTrue: [\r\t\tabsolute ifTrue: [ args at: 1 put: args first - position y ].\r\t\t^ absolute ].\rkey = #hLineTo: ifTrue: [\r\t\tabsolute ifTrue: [ args at: 1 put: args first - position x ].\r\t\t^ absolute ].\rabsolute ifTrue: [ args doWithIndex: [ :point :index | args at: index put: point - position ] ].\r^ absolute)",
             "OCSequenceNode(svgPath := aString.\rself computeSegments.\rself computePolygons.\rself centerSegments.\rself resetPath)",
             "OCSequenceNode(^ self)"
-        ]
+        ],
+        "oracleTimeInMicroseconds": 1235
     },
     {
         "input": "m.3-57-.3 -264-5.-744-.03242,-79 -.307 2-30-.466,9 137,-.0621-.2S .3 -1.783-1-05 -45,-.8-1,653. A-1,10.,-.251934,0,1,65154,-6.6  H3.9",
@@ -106,7 +108,8 @@
             "OCSequenceNode(point value: args second)",
             "OCSequenceNode(| rect absolute position |\rrect := self segmentsRectangle.\rposition := rect floatCenter.\rabsolute := true.\rsegments do: [ :segment | absolute := self centerSegment: segment absolute: absolute position: position ].\r\rpolygons do: [ :polygon | polygon doWithIndex: [ :point :index | polygon at: index put: point - position ] ].\rrect := self segmentsRectangle.\rself position: position.\rbaseRectangle := Rectangle floatCenter: 0 @ 0 extent: rect extent)",
             "OCSequenceNode(absolute ifTrue: [\r\t\targs at: 5 put: args fifth - position.\r\t\targs at: 6 put: false ].\r^ absolute)"
-        ]
+        ],
+        "oracleTimeInMicroseconds": 1125
     },
     {
         "input": "m.3-57-.3 -264-5.-744-7.03242,-79 -.307 2-30-.466,9 137,-.0621-.2 S .3 -1.783-1-05 -45,-.8-1,6v53. A-1,10.,-.251934,0,1,65154,-6.6  H3.9",
@@ -149,7 +152,8 @@
             "OCSequenceNode(absolute ifTrue: [ args at: 1 put: args first - position x ].\r^ absolute)",
             "OCSequenceNode(| rect absolute position |\rrect := self segmentsRectangle.\rposition := rect floatCenter.\rabsolute := true.\rsegments do: [ :segment | absolute := self centerSegment: segment absolute: absolute position: position ].\r\rpolygons do: [ :polygon | polygon doWithIndex: [ :point :index | polygon at: index put: point - position ] ].\rrect := self segmentsRectangle.\rself position: position.\rbaseRectangle := Rectangle floatCenter: 0 @ 0 extent: rect extent)",
             "OCSequenceNode(absolute ifTrue: [ args at: 1 put: args first - position y ].\r^ absolute)"
-        ]
+        ],
+        "oracleTimeInMicroseconds": 1108
     },
     {
         "input": "m.3-57-.3 -264-5.-744-7.03242,-79 -.307 2-30-.466,9 137,-.0621-.2 S-.4883-.6,-.6-.5652,-.660 -3 .982-3,-13.17,996 -02.-380V-0 A-1,10.,-.251934,0,1,65154,-6.6  H3.9",
@@ -193,7 +197,8 @@
             "OCSequenceNode(subPath ifNotEmpty: [ polygons add: subPath ].\rsubPath := OrderedCollection new.\rpoint value: args first)",
             "OCSequenceNode(args doWithIndex: [ :point :index | args at: index put: point - position ])",
             "OCSequenceNode(| subPath absolute position point |\rpolygons := OrderedCollection new.\rsubPath := OrderedCollection new.\rabsolute := true.\rposition := 0 @ 0.\rpoint := [ :da |\r\t         position := absolute\r\t\t                     ifTrue: [ da ]\r\t\t                     ifFalse: [ position + da ].\r\t         subPath add: position ].\rsegments do: [ :segment |\r\t\t| key args |\r\t\tkey := segment first.\r\t\targs := segment second.\r\t\tkey = #absolute ifTrue: [ absolute := true ].\r\t\tkey = #relative ifTrue: [ absolute := false ].\r\t\tkey = #moveTo: ifTrue: [\r\t\t\t\tsubPath ifNotEmpty: [ polygons add: subPath ].\r\t\t\t\tsubPath := OrderedCollection new.\r\t\t\t\tpoint value: args first ].\r\t\tkey = #close ifTrue: [ position := subPath first ].\r\t\tkey = #curveVia:and:to: ifTrue: [ point value: args third ].\r\t\tkey = #curveVia:to: ifTrue: [ point value: args second ].\r\t\tkey = #lineTo: ifTrue: [ point value: args first ].\r\t\tkey = #reflectedCurveVia:to: ifTrue: [ point value: args second ].\r\t\tkey = #ellipticalArc:xrot:large:sweep:to:relative: ifTrue: [ point value: args fifth ].\r\t\tkey = #hLineTo: ifTrue: [\r\t\t\t\tposition := absolute\r\t\t\t\t\t            ifTrue: [ args first @ position y ]\r\t\t\t\t\t            ifFalse: [ position + (args first @ 0) ].\r\t\t\t\tsubPath add: position ].\r\t\tkey = #vLineTo: ifTrue: [\r\t\t\t\tposition := absolute\r\t\t\t\t\t            ifTrue: [ position x @ args first ]\r\t\t\t\t\t            ifFalse: [ position + (0 @ args first) ].\r\t\t\t\tsubPath add: position ] ].\rpolygons add: subPath)"
-        ]
+        ],
+        "oracleTimeInMicroseconds": 1182
     },
     {
         "input": "m.3-57-.3 -264-5.-744-7.03242,-79 -.307 2-30-.466,9 137,-.0621-.2Z S-.4883-.6,-.6-.5652,-.3660 -3 .982-33,-13.17,996 -02.-380V-0 A-1,10.,-.251934,0,1,65154,-6.6  H3.9",
@@ -238,7 +243,8 @@
             "OCSequenceNode(subPath ifNotEmpty: [ polygons add: subPath ].\rsubPath := OrderedCollection new.\rpoint value: args first)",
             "OCSequenceNode(args doWithIndex: [ :point :index | args at: index put: point - position ])",
             "OCSequenceNode(| subPath absolute position point |\rpolygons := OrderedCollection new.\rsubPath := OrderedCollection new.\rabsolute := true.\rposition := 0 @ 0.\rpoint := [ :da |\r\t         position := absolute\r\t\t                     ifTrue: [ da ]\r\t\t                     ifFalse: [ position + da ].\r\t         subPath add: position ].\rsegments do: [ :segment |\r\t\t| key args |\r\t\tkey := segment first.\r\t\targs := segment second.\r\t\tkey = #absolute ifTrue: [ absolute := true ].\r\t\tkey = #relative ifTrue: [ absolute := false ].\r\t\tkey = #moveTo: ifTrue: [\r\t\t\t\tsubPath ifNotEmpty: [ polygons add: subPath ].\r\t\t\t\tsubPath := OrderedCollection new.\r\t\t\t\tpoint value: args first ].\r\t\tkey = #close ifTrue: [ position := subPath first ].\r\t\tkey = #curveVia:and:to: ifTrue: [ point value: args third ].\r\t\tkey = #curveVia:to: ifTrue: [ point value: args second ].\r\t\tkey = #lineTo: ifTrue: [ point value: args first ].\r\t\tkey = #reflectedCurveVia:to: ifTrue: [ point value: args second ].\r\t\tkey = #ellipticalArc:xrot:large:sweep:to:relative: ifTrue: [ point value: args fifth ].\r\t\tkey = #hLineTo: ifTrue: [\r\t\t\t\tposition := absolute\r\t\t\t\t\t            ifTrue: [ args first @ position y ]\r\t\t\t\t\t            ifFalse: [ position + (args first @ 0) ].\r\t\t\t\tsubPath add: position ].\r\t\tkey = #vLineTo: ifTrue: [\r\t\t\t\tposition := absolute\r\t\t\t\t\t            ifTrue: [ position x @ args first ]\r\t\t\t\t\t            ifFalse: [ position + (0 @ args first) ].\r\t\t\t\tsubPath add: position ] ].\rpolygons add: subPath)"
-        ]
+        ],
+        "oracleTimeInMicroseconds": 1153
     },
     {
         "input": "m.3-57-.3 -264-5.-744-7.032742,-79 -.307 2-30-.466,9 137,-.0621-.2Z S-.4883-1.6,-.6-.5652,-.3660 -3 .982-33m,-13.17,996 -02.-380V-0 A-1,10.,-.251934,0,1,65154,-6.6  H3.9",
@@ -284,27 +290,31 @@
             "OCSequenceNode(subPath ifNotEmpty: [ polygons add: subPath ].\rsubPath := OrderedCollection new.\rpoint value: args first)",
             "OCSequenceNode(args doWithIndex: [ :point :index | args at: index put: point - position ])",
             "OCSequenceNode(| subPath absolute position point |\rpolygons := OrderedCollection new.\rsubPath := OrderedCollection new.\rabsolute := true.\rposition := 0 @ 0.\rpoint := [ :da |\r\t         position := absolute\r\t\t                     ifTrue: [ da ]\r\t\t                     ifFalse: [ position + da ].\r\t         subPath add: position ].\rsegments do: [ :segment |\r\t\t| key args |\r\t\tkey := segment first.\r\t\targs := segment second.\r\t\tkey = #absolute ifTrue: [ absolute := true ].\r\t\tkey = #relative ifTrue: [ absolute := false ].\r\t\tkey = #moveTo: ifTrue: [\r\t\t\t\tsubPath ifNotEmpty: [ polygons add: subPath ].\r\t\t\t\tsubPath := OrderedCollection new.\r\t\t\t\tpoint value: args first ].\r\t\tkey = #close ifTrue: [ position := subPath first ].\r\t\tkey = #curveVia:and:to: ifTrue: [ point value: args third ].\r\t\tkey = #curveVia:to: ifTrue: [ point value: args second ].\r\t\tkey = #lineTo: ifTrue: [ point value: args first ].\r\t\tkey = #reflectedCurveVia:to: ifTrue: [ point value: args second ].\r\t\tkey = #ellipticalArc:xrot:large:sweep:to:relative: ifTrue: [ point value: args fifth ].\r\t\tkey = #hLineTo: ifTrue: [\r\t\t\t\tposition := absolute\r\t\t\t\t\t            ifTrue: [ args first @ position y ]\r\t\t\t\t\t            ifFalse: [ position + (args first @ 0) ].\r\t\t\t\tsubPath add: position ].\r\t\tkey = #vLineTo: ifTrue: [\r\t\t\t\tposition := absolute\r\t\t\t\t\t            ifTrue: [ position x @ args first ]\r\t\t\t\t\t            ifFalse: [ position + (0 @ args first) ].\r\t\t\t\tsubPath add: position ] ].\rpolygons add: subPath)"
-        ]
+        ],
+        "oracleTimeInMicroseconds": 1123
     },
     {
         "input": "m.3-57-.3 -264-5.-744-7.032742,-79 -.307 2-30-.466,9 137,-.0621-.2Z S-.4883-1.6,-.46-.5l652,-.366v0 -3 .982-33m,-13.17,996 -02.-380V-0 A-1,10.,-.251934,0,1,65154,-6.6  H3.9",
         "#methods": 7,
         "#nodes": 39,
         "percentage": 20.96,
-        "originalBounds": null
+        "originalBounds": null,
+        "oracleTimeInMicroseconds": 1204
     },
     {
         "input": "m.3-57-.3 -264-5.-744-7.032742,-79 -.307 2-30-.466,9 137,-.0621-.2Z S-.4883-1.6,-.46-.5l652,-.366v0 -3 h.982-33m,-13.17,996 -02.-380V2-0z A-1,10.,-.251934,0,1,65154,-6.6  H3.9",
         "#methods": 7,
         "#nodes": 40,
         "percentage": 21.5,
-        "originalBounds": null
+        "originalBounds": null,
+        "oracleTimeInMicroseconds": 1138
     },
     {
         "input": "m.3-57-.3 -264C-5.-744-37.032742,-79 -.307 2-30-.466,9 137,-.0621-.2Z S-.4883-1.6,-.46-.5l652,-.366v0 -13 h.982-33m,-13.17,996 -02.-380V2-0z A-1,10.,-.251934,0,1,65154,-6.6  H3.9",
         "#methods": 7,
         "#nodes": 41,
         "percentage": 22.04,
-        "originalBounds": null
+        "originalBounds": null,
+        "oracleTimeInMicroseconds": 1133
     }
 ]

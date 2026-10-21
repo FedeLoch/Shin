@@ -26,7 +26,8 @@
             "OCSequenceNode(self expectChar: ${.\r(self matchChar: $}) ifTrue: [ ^ self ].\r[ readStream atEnd ] whileFalse: [\r\t\tblock value.\r\t\t(self matchChar: $}) ifTrue: [ ^ self ].\r\t\t(self matchChar: $,) ifFalse: [ self error: ', or } expected' ] ].\rself error: 'incomplete map')",
             "OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
             "OCSequenceNode((self matchChar: character) ifFalse: [ self error: character asString , ' expected' ])"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "{\"n\":true,\"n\":[],\"x\":6}",
@@ -98,7 +99,8 @@
             "OCSequenceNode(| result |\r(readStream peekFor: $\") ifFalse: [ self error: '\" expected' ].\rresult := self stringStreamContents: [ :stream |\r\t          [ readStream atEnd or: [ readStream peek = $\" ] ] whileFalse: [ stream nextPut: self parseCharacter ] ].\rself expectChar: $\".\r^ result)",
             "OCSequenceNode(char isDigit)",
             "OCSequenceNode(readStream peekFor: each)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "{\"s\":true,\"n\":[\"v\"],\"x\":6}",
@@ -173,7 +175,8 @@
             "OCSequenceNode(char isDigit)",
             "OCSequenceNode(readStream peekFor: each)",
             "OCSequenceNode(block value: self parseValue)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "{\"s\":true,\"n\":[[false]],\"x\":6}",
@@ -250,7 +253,8 @@
             "OCSequenceNode(char isDigit)",
             "OCSequenceNode(readStream peekFor: each)",
             "OCSequenceNode(block value: self parseValue)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "{\"s\":true,\"n\":[[false]],\"y\":[{\"t\":null},5]}",
@@ -329,7 +333,8 @@
             "OCSequenceNode(propertyNamesAsSymbols\r\tifTrue: [ name asSymbol ]\r\tifFalse: [ name ])",
             "OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
             "OCSequenceNode(^ (self on: string readStream) next)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "{\"s\":true,\"n\":[[false]],\"y\":[{\"th\":null},8e5]}",
@@ -408,7 +413,8 @@
             "OCSequenceNode(propertyNamesAsSymbols\r\tifTrue: [ name asSymbol ]\r\tifFalse: [ name ])",
             "OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
             "OCSequenceNode(^ (self on: string readStream) next)"
-        ]
+        ],
+        "oracleTime": null
     },
     {
         "input": "{\"s\":true,\"n\":[[false],5],\"}y\":[{\"th\":null},8e5]}",
@@ -487,6 +493,7 @@
             "OCSequenceNode(propertyNamesAsSymbols\r\tifTrue: [ name asSymbol ]\r\tifFalse: [ name ])",
             "OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
             "OCSequenceNode(^ (self on: string readStream) next)"
-        ]
+        ],
+        "oracleTime": null
     }
 ]

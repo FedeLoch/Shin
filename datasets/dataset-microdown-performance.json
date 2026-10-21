@@ -62,7 +62,8 @@
         "MicAbstractBlock>>#parser": 1,
         "MicInlineToken>>#delimiter:": 1,
         "MicParser>>#initialize": 1,
-        "MicRootBlock>>#hasMetaDataElement": 1
+        "MicRootBlock>>#hasMetaDataElement": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 1030,
@@ -184,7 +185,8 @@
         "MicInlineParser>>#parseNonEvaluatedBlock:token:stream:": 2,
         "MicInlineBlockWithUrl>>#reference:": 1,
         "MicSingleLineBlock>>#canConsumeLine:": 1,
-        "MicRootBlock>>#massageLine:": 3
+        "MicRootBlock>>#massageLine:": 3,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 961,
@@ -324,7 +326,8 @@
         "MicAbstractBlock>>#indent": 3,
         "MicInlineParser>>#joinTextNodesOf:": 2,
         "MicMonospaceFormatBlock>>#children": 2,
-        "MicUnEvaluatedBlock>>#bodyString:": 3
+        "MicUnEvaluatedBlock>>#bodyString:": 3,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 886,
@@ -449,7 +452,8 @@
         "MicInlineHttpDelimiter>>#blockClass": 2,
         "MicInlineElement>>#closeMe": 2,
         "MicElement>>#inlineParse:": 2,
-        "MicResourceReference class>>#fromUri:": 1
+        "MicResourceReference class>>#fromUri:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 150,
@@ -517,7 +521,8 @@
         "MicParser>>#initialize": 1,
         "MicAbstractBlock>>#parser": 1,
         "MicTableBlock>>#lineMarkup": 1,
-        "MicRootBlock>>#hasMetaDataElement": 1
+        "MicRootBlock>>#hasMetaDataElement": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 838,
@@ -654,7 +659,8 @@
         "MicInlineElement>>#closeMe": 2,
         "MicElement>>#inlineParse:": 2,
         "MicResourceReference class>>#fromUri:": 1,
-        "MicInlineBlockWithUrl>>#arguments": 1
+        "MicInlineBlockWithUrl>>#arguments": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 19783,
@@ -727,7 +733,8 @@
         "MicParser>>#initialize": 1,
         "MicRootBlock>>#indent": 1,
         "MicRootBlock>>#hasMetaDataElement": 1,
-        "MicListBlock>>#closeMe": 1
+        "MicListBlock>>#closeMe": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 747,
@@ -864,7 +871,8 @@
         "MicInlineElement>>#closeMe": 2,
         "MicElement>>#inlineParse:": 2,
         "MicResourceReference class>>#fromUri:": 1,
-        "MicInlineBlockWithUrl>>#arguments": 1
+        "MicInlineBlockWithUrl>>#arguments": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 665,
@@ -1001,7 +1009,8 @@
         "MicInlineElement>>#closeMe": 2,
         "MicElement>>#inlineParse:": 2,
         "MicResourceReference class>>#fromUri:": 1,
-        "MicInlineBlockWithUrl>>#arguments": 1
+        "MicInlineBlockWithUrl>>#arguments": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 99,
@@ -1085,7 +1094,8 @@
         "MicParser class>>#parse:": 1,
         "MicInlineTokenStream class>>#on:": 6,
         "MicTableBlock>>#isHeader:": 1,
-        "MicParser>>#nonMatchedBlockClassFor:": 1
+        "MicParser>>#nonMatchedBlockClassFor:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 364,
@@ -1195,7 +1205,8 @@
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicRootBlock>>#indent": 2,
         "MicRootBlock>>#massageLine:": 4,
-        "MicCodeBlock>>#extractFirstLineFrom:": 1
+        "MicCodeBlock>>#extractFirstLineFrom:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 81,
@@ -1324,7 +1335,8 @@
         "MicAbstractBlock>>#blockStarterClassFrom:": 5,
         "MicInlineBlockWithUrl>>#arguments": 1,
         "MicElement>>#inlineParse:": 5,
-        "MicResourceReference class>>#fromUri:": 1
+        "MicResourceReference class>>#fromUri:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 82,
@@ -1450,7 +1462,8 @@
         "MicAbstractBlock>>#blockStarterClassFrom:": 5,
         "MicInlineBlockWithUrl>>#arguments": 1,
         "MicElement>>#inlineParse:": 5,
-        "MicResourceReference class>>#fromUri:": 1
+        "MicResourceReference class>>#fromUri:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 619,
@@ -1584,7 +1597,8 @@
         "MicInlineElement>>#closeMe": 2,
         "MicElement>>#inlineParse:": 2,
         "MicResourceReference class>>#fromUri:": 1,
-        "MicInlineBlockWithUrl>>#arguments": 1
+        "MicInlineBlockWithUrl>>#arguments": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 2793,
@@ -1681,7 +1695,8 @@
         "MicParser class>>#parse:": 1,
         "MicInlineTokenStream class>>#on:": 2,
         "MicListItemBlock>>#addLineAndReturnNextNode:": 1,
-        "MicParser>>#nonMatchedBlockClassFor:": 2
+        "MicParser>>#nonMatchedBlockClassFor:": 2,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 2455,
@@ -1769,7 +1784,8 @@
         "MicEvaluatedBlock>>#children": 1,
         "MicInlineTokenStream class>>#on:": 1,
         "MicInlineElement class>>#isEvaluated": 1,
-        "MicParser>>#nonMatchedBlockClassFor:": 1
+        "MicParser>>#nonMatchedBlockClassFor:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 26283,
@@ -1832,7 +1848,8 @@
         "MicParser>>#initialize": 1,
         "MicPharoEvaluatorBlock class>>#tag": 1,
         "MicStartStopMarkupBlock>>#body": 1,
-        "MicRootBlock>>#hasMetaDataElement": 1
+        "MicRootBlock>>#hasMetaDataElement": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 77,
@@ -1962,7 +1979,8 @@
         "MicAbstractBlock>>#blockStarterClassFrom:": 5,
         "MicInlineBlockWithUrl>>#arguments": 1,
         "MicElement>>#inlineParse:": 5,
-        "MicResourceReference class>>#fromUri:": 1
+        "MicResourceReference class>>#fromUri:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 531,
@@ -2098,7 +2116,8 @@
         "MicInlineBlockWithUrl>>#arguments": 1,
         "MicElement>>#inlineParse:": 4,
         "MicResourceReference class>>#fromUri:": 1,
-        "MicTableBlock>>#extractLine:": 1
+        "MicTableBlock>>#extractLine:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 26279,
@@ -2161,7 +2180,8 @@
         "MicParser>>#initialize": 1,
         "MicPharoEvaluatorBlock class>>#tag": 1,
         "MicStartStopMarkupBlock>>#body": 1,
-        "MicRootBlock>>#hasMetaDataElement": 1
+        "MicRootBlock>>#hasMetaDataElement": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 370,
@@ -2296,7 +2316,8 @@
         "MicInlineElement>>#closeMe": 2,
         "MicElement>>#inlineParse:": 3,
         "MicResourceReference class>>#fromUri:": 1,
-        "MicInlineBlockWithUrl>>#arguments": 1
+        "MicInlineBlockWithUrl>>#arguments": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 752,
@@ -2441,7 +2462,8 @@
         "MicAbstractBlock>>#indent": 3,
         "MicInlineParser>>#joinTextNodesOf:": 2,
         "MicMonospaceFormatBlock>>#children": 1,
-        "MicUnEvaluatedBlock>>#bodyString:": 3
+        "MicUnEvaluatedBlock>>#bodyString:": 3,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 79,
@@ -2572,7 +2594,8 @@
         "MicAbstractBlock>>#blockStarterClassFrom:": 5,
         "MicInlineBlockWithUrl>>#arguments": 1,
         "MicElement>>#inlineParse:": 5,
-        "MicResourceReference class>>#fromUri:": 1
+        "MicResourceReference class>>#fromUri:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 2209,
@@ -2686,7 +2709,8 @@
         "MicArgumentList>>#setDefaultNoArguments:": 1,
         "MicRootBlock>>#indent": 1,
         "MicRootBlock>>#massageLine:": 4,
-        "MicCodeBlock>>#extractFirstLineFrom:": 1
+        "MicCodeBlock>>#extractFirstLineFrom:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 2923,
@@ -2824,7 +2848,8 @@
         "MicInlineBlockWithUrl>>#arguments": 1,
         "MicAbstractCodeBlock class>>#defaultLanguage": 1,
         "MicElement>>#inlineParse:": 1,
-        "MicResourceReference class>>#fromUri:": 1
+        "MicResourceReference class>>#fromUri:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 264,
@@ -2973,7 +2998,8 @@
         "MicRootBlock>>#initialize": 1,
         "MicAbstractBlock>>#indent": 3,
         "MicInlineParser>>#joinTextNodesOf:": 4,
-        "MicUnEvaluatedBlock>>#bodyString:": 5
+        "MicUnEvaluatedBlock>>#bodyString:": 5,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 613,
@@ -3118,7 +3144,8 @@
         "MicAbstractBlock>>#indent": 2,
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
-        "MicUnEvaluatedBlock>>#bodyString:": 4
+        "MicUnEvaluatedBlock>>#bodyString:": 4,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 271,
@@ -3281,7 +3308,8 @@
         "MicListItemBlock>>#closeMe": 3,
         "MicInlineBlockWithUrl>>#children:": 1,
         "threshold": 0.9,
-        "MicInlineStandardDelimiter>>#blockClass": 4
+        "MicInlineStandardDelimiter>>#blockClass": 4,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 550,
@@ -3426,7 +3454,8 @@
         "MicAbstractBlock>>#indent": 2,
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
-        "MicUnEvaluatedBlock>>#bodyString:": 4
+        "MicUnEvaluatedBlock>>#bodyString:": 4,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 537,
@@ -3571,7 +3600,8 @@
         "MicAbstractBlock>>#indent": 2,
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
-        "MicUnEvaluatedBlock>>#bodyString:": 4
+        "MicUnEvaluatedBlock>>#bodyString:": 4,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 81,
@@ -3733,7 +3763,8 @@
         "MicInlineBlockWithUrl>>#children:": 1,
         "MicListItemBlock>>#closeMe": 4,
         "threshold": 0.9,
-        "MicInlineStandardDelimiter>>#blockClass": 5
+        "MicInlineStandardDelimiter>>#blockClass": 5,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 492,
@@ -3878,7 +3909,8 @@
         "MicAbstractBlock>>#indent": 2,
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
-        "MicUnEvaluatedBlock>>#bodyString:": 4
+        "MicUnEvaluatedBlock>>#bodyString:": 4,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 488,
@@ -4023,7 +4055,8 @@
         "MicAbstractBlock>>#indent": 2,
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
-        "MicUnEvaluatedBlock>>#bodyString:": 4
+        "MicUnEvaluatedBlock>>#bodyString:": 4,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 567,
@@ -4155,7 +4188,8 @@
         "MicInlineElement>>#closeMe": 2,
         "MicElement>>#inlineParse:": 2,
         "MicResourceReference class>>#fromUri:": 2,
-        "MicInlineBlockWithUrl>>#arguments": 2
+        "MicInlineBlockWithUrl>>#arguments": 2,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 294,
@@ -4293,7 +4327,8 @@
         "MicInlineElement>>#closeMe": 2,
         "MicElement>>#inlineParse:": 3,
         "MicResourceReference class>>#fromUri:": 2,
-        "MicInlineBlockWithUrl>>#arguments": 2
+        "MicInlineBlockWithUrl>>#arguments": 2,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 163,
@@ -4463,7 +4498,8 @@
         "MicInlineBlockWithUrl>>#children:": 1,
         "MicListItemBlock>>#closeMe": 4,
         "threshold": 0.9,
-        "MicInlineStandardDelimiter>>#blockClass": 5
+        "MicInlineStandardDelimiter>>#blockClass": 5,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 291,
@@ -4601,7 +4637,8 @@
         "MicInlineElement>>#closeMe": 2,
         "MicElement>>#inlineParse:": 3,
         "MicResourceReference class>>#fromUri:": 2,
-        "MicInlineBlockWithUrl>>#arguments": 2
+        "MicInlineBlockWithUrl>>#arguments": 2,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 654,
@@ -4731,7 +4768,8 @@
         "MicInlineBlockWithUrl>>#arguments": 1,
         "MicElement>>#inlineParse:": 4,
         "MicResourceReference class>>#fromUri:": 1,
-        "MicTableBlock>>#extractLine:": 1
+        "MicTableBlock>>#extractLine:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 258,
@@ -4853,7 +4891,8 @@
         "MicInlineParser>>#parseNameUrlBlock:from:token:": 2,
         "MicInlineParser>>#parseNonEvaluatedBlock:token:stream:": 1,
         "MicRootBlock>>#massageLine:": 4,
-        "MicListBlock>>#closeMe": 1
+        "MicListBlock>>#closeMe": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 83,
@@ -5021,7 +5060,8 @@
         "MicInlineBlockWithUrl>>#children:": 1,
         "MicListItemBlock>>#closeMe": 4,
         "threshold": 0.9,
-        "MicInlineStandardDelimiter>>#blockClass": 5
+        "MicInlineStandardDelimiter>>#blockClass": 5,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 83,
@@ -5189,7 +5229,8 @@
         "MicInlineBlockWithUrl>>#children:": 1,
         "MicListItemBlock>>#closeMe": 4,
         "threshold": 0.9,
-        "MicInlineStandardDelimiter>>#blockClass": 5
+        "MicInlineStandardDelimiter>>#blockClass": 5,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 85,
@@ -5357,7 +5398,8 @@
         "MicInlineBlockWithUrl>>#children:": 1,
         "MicListItemBlock>>#closeMe": 4,
         "threshold": 0.9,
-        "MicInlineStandardDelimiter>>#blockClass": 5
+        "MicInlineStandardDelimiter>>#blockClass": 5,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 1382,
@@ -5441,7 +5483,8 @@
         "MicParser class>>#parse:": 1,
         "MicInlineTokenStream class>>#on:": 1,
         "MicTableBlock>>#isHeader:": 1,
-        "MicParser>>#nonMatchedBlockClassFor:": 1
+        "MicParser>>#nonMatchedBlockClassFor:": 1,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 613,
@@ -5587,7 +5630,8 @@
         "MicAbstractBlock>>#indent": 2,
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
-        "MicUnEvaluatedBlock>>#bodyString:": 4
+        "MicUnEvaluatedBlock>>#bodyString:": 4,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 220,
@@ -5730,7 +5774,8 @@
         "MicRootBlock>>#initialize": 1,
         "MicAbstractBlock>>#indent": 4,
         "MicInlineParser>>#joinTextNodesOf:": 4,
-        "MicUnEvaluatedBlock>>#bodyString:": 5
+        "MicUnEvaluatedBlock>>#bodyString:": 5,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 117,
@@ -5850,7 +5895,8 @@
         "MicSingleLineBlock>>#canConsumeLine:": 1,
         "MicRootBlock>>#massageLine:": 6,
         "MicParser>>#matchUnordered:": 2,
-        "MicListBlock>>#closeMe": 4
+        "MicListBlock>>#closeMe": 4,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 118,
@@ -5956,7 +6002,8 @@
         "MicSingleLineBlock>>#canConsumeLine:": 2,
         "MicRootBlock>>#massageLine:": 6,
         "MicParser>>#matchUnordered:": 2,
-        "MicListBlock>>#closeMe": 4
+        "MicListBlock>>#closeMe": 4,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 117,
@@ -6102,7 +6149,8 @@
         "MicAbstractBlock>>#indent": 4,
         "MicInlineParser>>#joinTextNodesOf:": 5,
         "MicMonospaceFormatBlock>>#children": 1,
-        "MicUnEvaluatedBlock>>#bodyString:": 6
+        "MicUnEvaluatedBlock>>#bodyString:": 6,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 711,
@@ -6249,7 +6297,8 @@
         "MicAbstractBlock>>#indent": 2,
         "MicInlineParser>>#joinTextNodesOf:": 2,
         "MicMonospaceFormatBlock>>#children": 1,
-        "MicUnEvaluatedBlock>>#bodyString:": 4
+        "MicUnEvaluatedBlock>>#bodyString:": 4,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 116,
@@ -6391,7 +6440,8 @@
         "MicRootBlock>>#initialize": 1,
         "MicAbstractBlock>>#indent": 4,
         "MicInlineParser>>#joinTextNodesOf:": 5,
-        "MicUnEvaluatedBlock>>#bodyString:": 6
+        "MicUnEvaluatedBlock>>#bodyString:": 6,
+        "oracleTime": null
     },
     {
         "executionsPerSecond": 368,
@@ -6519,6 +6569,7 @@
         "MicInlineElement>>#closeMe": 3,
         "MicElement>>#inlineParse:": 4,
         "MicResourceReference class>>#fromUri:": 1,
-        "MicTableBlock>>#extractLine:": 2
+        "MicTableBlock>>#extractLine:": 2,
+        "oracleTime": null
     }
 ]
