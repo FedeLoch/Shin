@@ -341,7 +341,7 @@
             "OCSequenceNode(min := min min: p.\rmax := max max: p)",
             "OCSequenceNode(self assert: [ (aPoint x isNaN | aPoint y isNaN) not ] description: 'you must provide a real point'.\rmatrix translation: aPoint.\rself resetBBox.\rself updateConnectedLines)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 3213
     },
     {
         "input": "RSTreeLayout\rRSLabel\r465->150 . 952->600",
@@ -710,7 +710,7 @@
             "OCSequenceNode(min := min min: p.\rmax := max max: p)",
             "OCSequenceNode(self assert: [ (aPoint x isNaN | aPoint y isNaN) not ] description: 'you must provide a real point'.\rmatrix translation: aPoint.\rself resetBBox.\rself updateConnectedLines)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 2427
     },
     {
         "input": "RSSugiyamaLayout\rRSPieSlice\r369->154",
@@ -1115,7 +1115,7 @@
             "OCSequenceNode(min := min min: p.\rmax := max max: p)",
             "OCSequenceNode(self assert: [ (aPoint x isNaN | aPoint y isNaN) not ] description: 'you must provide a real point'.\rmatrix translation: aPoint.\rself resetBBox.\rself updateConnectedLines)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 2276
     },
     {
         "input": "RSSugiyamaLayout\rRSBox\r679->886 . 333->677",
@@ -1526,7 +1526,7 @@
             "OCSequenceNode(fixedY := [ :r | r floatCenter y ].\rdirection := direction x @ 0)",
             "OCSequenceNode((layerNrs at: n) >= layerNr)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 2296
     },
     {
         "input": "RSForceBasedLayout\rRSEllipse\r976->801 . 770->260",
@@ -1928,7 +1928,7 @@
             "OCSequenceNode(min := min min: p.\rmax := max max: p)",
             "OCSequenceNode(self assert: [ (aPoint x isNaN | aPoint y isNaN) not ] description: 'you must provide a real point'.\rmatrix translation: aPoint.\rself resetBBox.\rself updateConnectedLines)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 30263
     },
     {
         "input": "RSForceBasedLayout\rRSCircle\r441->226 . 511->547 . 651->483 . 680->662 . 978->764",
@@ -2334,7 +2334,7 @@
             "OCSequenceNode(min := min min: p.\rmax := max max: p)",
             "OCSequenceNode(self assert: [ (aPoint x isNaN | aPoint y isNaN) not ] description: 'you must provide a real point'.\rmatrix translation: aPoint.\rself resetBBox.\rself updateConnectedLines)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 40954
     },
     {
         "input": "RSRectangleForceLayout\rRSPolygon\r003->652 . 920->524",
@@ -2742,7 +2742,7 @@
             "OCSequenceNode(min := min min: p.\rmax := max max: p)",
             "OCSequenceNode(self assert: [ (aPoint x isNaN | aPoint y isNaN) not ] description: 'you must provide a real point'.\rmatrix translation: aPoint.\rself resetBBox.\rself updateConnectedLines)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 26768
     },
     {
         "input": "RSRectangleForceLayout\rRSCircle\r721->152 . 184->235",
@@ -3152,7 +3152,7 @@
             "OCSequenceNode(min := min min: p.\rmax := max max: p)",
             "OCSequenceNode(self assert: [ (aPoint x isNaN | aPoint y isNaN) not ] description: 'you must provide a real point'.\rmatrix translation: aPoint.\rself resetBBox.\rself updateConnectedLines)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 30515
     },
     {
         "input": "RSSugiyamaLayout\rRSBox\r305->726 . 886->543 . 890->980 . 963->305 . 426->636",
@@ -3564,7 +3564,7 @@
             "OCSequenceNode(fixedY := [ :r | r floatCenter y ].\rdirection := direction x @ 0)",
             "OCSequenceNode((layerNrs at: n) >= layerNr)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 3756
     },
     {
         "input": "RSSugiyamaLayout\rRSBox\r686->688 . 674->467 . 129->045 . 045->179",
@@ -3977,7 +3977,7 @@
             "OCSequenceNode(fixedY := [ :r | r floatCenter y ].\rdirection := direction x @ 0)",
             "OCSequenceNode((layerNrs at: n) >= layerNr)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 3533
     },
     {
         "input": "RSSugiyamaLayout\rRSBox\r688->688 . 674->467 . 129->045 . 045->179",
@@ -4391,7 +4391,7 @@
             "OCSequenceNode(fixedY := [ :r | r floatCenter y ].\rdirection := direction x @ 0)",
             "OCSequenceNode((layerNrs at: n) >= layerNr)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 3106
     },
     {
         "input": "RSSugiyamaLayout\rRSBox\r688->688 . 674->467 . 129->045 . 674->756",
@@ -4806,7 +4806,7 @@
             "OCSequenceNode(fixedY := [ :r | r floatCenter y ].\rdirection := direction x @ 0)",
             "OCSequenceNode((layerNrs at: n) >= layerNr)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 2772
     },
     {
         "input": "RSForceBasedLayout\rRSPieSlice\r231->247 . 761->129 . 767->988",
@@ -5217,6 +5217,6 @@
             "OCSequenceNode(min := min min: p.\rmax := max max: p)",
             "OCSequenceNode(self assert: [ (aPoint x isNaN | aPoint y isNaN) not ] description: 'you must provide a real point'.\rmatrix translation: aPoint.\rself resetBBox.\rself updateConnectedLines)"
         ],
-        "oracleTimeInMicroseconds": null
+        "oracleTimeInMicroseconds": 50287
     }
 ]
