@@ -1,0 +1,7 @@
+# Python
+analysis/.venv/
+__pycache__/
+*.pyc
+
+# Salidas generadas por analysis/pca_analysis.py
+analysis/out/
