@@ -169,7 +169,7 @@
             "OCSequenceNode(lookahead := #epsilon)",
             "OCSequenceNode(max = 1)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 109
     },
     {
         "input": "c?|b+c+|",
@@ -341,7 +341,7 @@
             "OCSequenceNode(lookahead := #epsilon)",
             "OCSequenceNode(max = 1)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 17
     },
     {
         "input": "|((a*a.+))b*c*||",
@@ -529,7 +529,7 @@
             "OCSequenceNode(^ branchNode piece dispatchTo: self)",
             "OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 29
     },
     {
         "input": "b+bc||",
@@ -718,7 +718,7 @@
             "OCSequenceNode(^ self new parse: aString)",
             "OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 20
     },
     {
         "input": "b+b(b+c+a?)+|",
@@ -907,7 +907,7 @@
             "OCSequenceNode(^ self new parse: aString)",
             "OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 24
     },
     {
         "input": "b+bc||||a+a.+.?",
@@ -1108,7 +1108,7 @@
             "OCSequenceNode(^ branchNode piece dispatchTo: self)",
             "OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 23
     },
     {
         "input": "b+b(a*)||||a+a.+.?",
@@ -1310,7 +1310,7 @@
             "OCSequenceNode(^ branchNode piece dispatchTo: self)",
             "OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 25
     },
     {
         "input": "b+bc||a*||ac+a.+.?",
@@ -1517,7 +1517,7 @@
             "OCSequenceNode(^ branchNode piece dispatchTo: self)",
             "OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 25
     },
     {
         "input": "b+bc|||||c*a+a.?a?|a",
@@ -1725,7 +1725,7 @@
             "OCSequenceNode(^ branchNode piece dispatchTo: self)",
             "OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 27
     },
     {
         "input": "b*a+bc|b+b+c+||||||a?|ac?.?",
@@ -1934,7 +1934,7 @@
             "OCSequenceNode(^ branchNode piece dispatchTo: self)",
             "OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 30
     },
     {
         "input": "b*a+bc|b+b+bc+||||||a?|ac.?.?",
@@ -2144,7 +2144,7 @@
             "OCSequenceNode(^ branchNode piece dispatchTo: self)",
             "OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 28
     },
     {
         "input": "b*a+ac|b+b+b(a+a*(c*|)b*|.)+||||||a?|ac.?.?",
@@ -2356,7 +2356,7 @@
             "OCSequenceNode(^ branchNode piece dispatchTo: self)",
             "OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 38
     },
     {
         "input": "b*a+ac|b+b+.(a+a*(c*|)b*|.)+||||||a?|aa.?.?",
@@ -2566,6 +2566,6 @@
             "OCSequenceNode(^ branchNode piece dispatchTo: self)",
             "OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
         ],
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 43
     }
 ]

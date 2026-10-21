@@ -20,7 +20,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 295142,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "b+||",
@@ -43,7 +43,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 225796,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "c?|b+c+|",
@@ -66,7 +66,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 249841,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "a+c?c",
@@ -88,7 +88,7 @@
         "RxMatcher>>#atEnd": 2,
         "threshold": 0.9,
         "executionsPerSecond": 266969,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "|((a*a.+))b*c*||",
@@ -111,7 +111,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 80879,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(|)c*.?||",
@@ -134,7 +134,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 82885,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "b+bc+",
@@ -155,7 +155,7 @@
         "RxMatcher>>#atEnd": 2,
         "threshold": 0.9,
         "executionsPerSecond": 218243,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "().+a?b|.*a+b*|b|",
@@ -179,7 +179,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 49094,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "|||c*||b+.a?|c*",
@@ -202,7 +202,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 113467,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "||||",
@@ -222,7 +222,7 @@
         "RxmBranch>>#matchAgainst:": 2,
         "threshold": 0.9,
         "executionsPerSecond": 168910,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "bb+b+bc+",
@@ -243,7 +243,7 @@
         "RxMatcher>>#atEnd": 3,
         "threshold": 0.9,
         "executionsPerSecond": 115114,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "().+a.+a?b|.*a+b*|b|",
@@ -267,7 +267,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 21794,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "().b+a...+a?b|.*a+b*|b|",
@@ -291,7 +291,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 16799,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "ba.+a?.*.*c.+a",
@@ -315,7 +315,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 28054,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "().b+a...+a?b|.*.+b*|b|",
@@ -339,7 +339,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 10017,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.).b+a...+a.?b|.*.+b*|bb|",
@@ -363,7 +363,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 6905,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "a*(..+b+.?b)..+b|(.(.+)+a+.?b?)|b.?b|b*b|",
@@ -387,7 +387,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 1760,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "a*(c..+b+.?b)..+b|(.(.+)+a+.?b?c)|b.?b|.b*b|",
@@ -411,7 +411,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 1015,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "().b+a...+a?b|.*.+b*|(.+)+.+.?.?|",
@@ -435,7 +435,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 748,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(c).b+a...+a?b|.*.+b*c|(.+)+.+.?.?.|",
@@ -459,7 +459,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 364,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "().b+a...+a?b|.*.+c*|(.+a?)+.+.?.?|",
@@ -483,7 +483,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 348,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.c).b+a....+a?b|.a*.+b*c|(.+)+.+.?.?.|",
@@ -507,7 +507,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 93,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(c).b+(c+(.+)?b?.?)+bcb*.|.*.+b*c|(.+)+.+.?.?.|",
@@ -531,7 +531,7 @@
         "RxmSubstring>>#matchAgainst:": 3,
         "threshold": 0.9,
         "executionsPerSecond": 414,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "()c.b+a..a.+a?b|.*.+c*|(.+a?)+.+.?c.?|",
@@ -555,7 +555,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 74,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "()c.b+(a..a.+a?b|.*.).+c*|(.+a?)+.+.?c.?|",
@@ -579,7 +579,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 25,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.+a?a+|a?b)c.b+(a..a.+a?b|.*.).+c*|(.+a?)+.+.?c.?|",
@@ -603,7 +603,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.c).b+a....+a?b||b?(aa*.*|.*.)(.*..?a+a?b|.*..+a+a?)+a?a||(.*.)+a*a?|a?c*|a?",
@@ -627,7 +627,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 22,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "()c.b+(a..a.+a?b|.*.).+cc*|(.+a?)+.+.?cc.?|",
@@ -651,7 +651,7 @@
         "RxmSubstring>>#matchAgainst:": 9,
         "threshold": 0.9,
         "executionsPerSecond": 11,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.?b)c.b+(a..a.+a?b|.*.).+cc*|(.+a?)+.+.?cc.?|a*",
@@ -675,7 +675,7 @@
         "RxmSubstring>>#matchAgainst:": 10,
         "threshold": 0.9,
         "executionsPerSecond": 6,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.+a?a+|a?b)c.b+(a...a.+a?b|..*.).+c*|(.+a?)+.+.?.c.?|",
@@ -699,7 +699,7 @@
         "RxmSubstring>>#matchAgainst:": 1,
         "threshold": 0.9,
         "executionsPerSecond": 2,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.?b)c.b+(a?a...a+a?a+c+|a|aa*.).+cc*|(.+a?)+.+.?cc.?|a*",
@@ -723,7 +723,7 @@
         "RxmSubstring>>#matchAgainst:": 11,
         "threshold": 0.9,
         "executionsPerSecond": 2,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.?b)c.b+(ab..a.+a?b|.*.)..+cc*|(.+a?)+.+.a?cc.?|a*",
@@ -747,7 +747,7 @@
         "RxmSubstring>>#matchAgainst:": 10,
         "threshold": 0.9,
         "executionsPerSecond": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "()c.b+(a..a.+a?b|.*.).+cc*c|(.+a?)+.+.?cc.?|",
@@ -771,7 +771,7 @@
         "RxmSubstring>>#matchAgainst:": 10,
         "threshold": 0.9,
         "executionsPerSecond": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(b+)c.b+(a..a.+a?b|.*.).+cc*c|(.+a?)+.+.?cc.?|",
@@ -795,7 +795,7 @@
         "RxmSubstring>>#matchAgainst:": 11,
         "threshold": 0.9,
         "executionsPerSecond": 2,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.?b.)c.b+c(ab..+a.+a?b|.*.)..+cc*|(.+a?)+.+.a?cc.?|a*",
@@ -819,7 +819,7 @@
         "RxmSubstring>>#matchAgainst:": 12,
         "threshold": 0.9,
         "executionsPerSecond": 0.25,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.?b)c.b+(a..a.+aa?b|.*.).+cc.*|(.+a?)+.+.?cc.?|ba*",
@@ -843,7 +843,7 @@
         "RxmSubstring>>#matchAgainst:": 12,
         "threshold": 0.9,
         "executionsPerSecond": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.?b)c.b+(a..a.+aa?b|.*.).+cc..*|(.+a?)+.+.?c*cc.?|ba*",
@@ -867,7 +867,7 @@
         "RxmSubstring>>#matchAgainst:": 13,
         "threshold": 0.9,
         "executionsPerSecond": 0.4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(.?b)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?)+.+.?c*c?c..?|ba*",
@@ -891,7 +891,7 @@
         "RxmSubstring>>#matchAgainst:": 4,
         "threshold": 0.9,
         "executionsPerSecond": 0.14,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(b+a+)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?)+.+.?c*c?c..?|ba*",
@@ -915,7 +915,7 @@
         "RxmSubstring>>#matchAgainst:": 4,
         "threshold": 0.9,
         "executionsPerSecond": 0.06,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "input": "(b+a+)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?a?)+.+.?c*c?c..?|ba*",
@@ -939,6 +939,6 @@
         "RxmSubstring>>#matchAgainst:": 4,
         "threshold": 0.9,
         "executionsPerSecond": 0.01,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     }
 ]

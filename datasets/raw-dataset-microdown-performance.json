@@ -63,7 +63,7 @@
         "MicInlineToken>>#delimiter:": 1,
         "MicParser>>#initialize": 1,
         "MicRootBlock>>#hasMetaDataElement": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 110
     },
     {
         "executionsPerSecond": 1030,
@@ -186,7 +186,7 @@
         "MicInlineBlockWithUrl>>#reference:": 1,
         "MicSingleLineBlock>>#canConsumeLine:": 1,
         "MicRootBlock>>#massageLine:": 3,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1001
     },
     {
         "executionsPerSecond": 961,
@@ -327,7 +327,7 @@
         "MicInlineParser>>#joinTextNodesOf:": 2,
         "MicMonospaceFormatBlock>>#children": 2,
         "MicUnEvaluatedBlock>>#bodyString:": 3,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1070
     },
     {
         "executionsPerSecond": 886,
@@ -453,7 +453,7 @@
         "MicInlineElement>>#closeMe": 2,
         "MicElement>>#inlineParse:": 2,
         "MicResourceReference class>>#fromUri:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1021
     },
     {
         "executionsPerSecond": 150,
@@ -522,7 +522,7 @@
         "MicAbstractBlock>>#parser": 1,
         "MicTableBlock>>#lineMarkup": 1,
         "MicRootBlock>>#hasMetaDataElement": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 6118
     },
     {
         "executionsPerSecond": 838,
@@ -660,7 +660,7 @@
         "MicElement>>#inlineParse:": 2,
         "MicResourceReference class>>#fromUri:": 1,
         "MicInlineBlockWithUrl>>#arguments": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1049
     },
     {
         "executionsPerSecond": 19783,
@@ -734,7 +734,7 @@
         "MicRootBlock>>#indent": 1,
         "MicRootBlock>>#hasMetaDataElement": 1,
         "MicListBlock>>#closeMe": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 70
     },
     {
         "executionsPerSecond": 747,
@@ -872,7 +872,7 @@
         "MicElement>>#inlineParse:": 2,
         "MicResourceReference class>>#fromUri:": 1,
         "MicInlineBlockWithUrl>>#arguments": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1332
     },
     {
         "executionsPerSecond": 665,
@@ -1010,7 +1010,7 @@
         "MicElement>>#inlineParse:": 2,
         "MicResourceReference class>>#fromUri:": 1,
         "MicInlineBlockWithUrl>>#arguments": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1304
     },
     {
         "executionsPerSecond": 99,
@@ -1095,7 +1095,7 @@
         "MicInlineTokenStream class>>#on:": 6,
         "MicTableBlock>>#isHeader:": 1,
         "MicParser>>#nonMatchedBlockClassFor:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 8642
     },
     {
         "executionsPerSecond": 364,
@@ -1206,7 +1206,7 @@
         "MicRootBlock>>#indent": 2,
         "MicRootBlock>>#massageLine:": 4,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 2185
     },
     {
         "executionsPerSecond": 81,
@@ -1336,7 +1336,7 @@
         "MicInlineBlockWithUrl>>#arguments": 1,
         "MicElement>>#inlineParse:": 5,
         "MicResourceReference class>>#fromUri:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 9665
     },
     {
         "executionsPerSecond": 82,
@@ -1463,7 +1463,7 @@
         "MicInlineBlockWithUrl>>#arguments": 1,
         "MicElement>>#inlineParse:": 5,
         "MicResourceReference class>>#fromUri:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 9433
     },
     {
         "executionsPerSecond": 619,
@@ -1598,7 +1598,7 @@
         "MicElement>>#inlineParse:": 2,
         "MicResourceReference class>>#fromUri:": 1,
         "MicInlineBlockWithUrl>>#arguments": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1257
     },
     {
         "executionsPerSecond": 2793,
@@ -1696,7 +1696,7 @@
         "MicInlineTokenStream class>>#on:": 2,
         "MicListItemBlock>>#addLineAndReturnNextNode:": 1,
         "MicParser>>#nonMatchedBlockClassFor:": 2,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 273
     },
     {
         "executionsPerSecond": 2455,
@@ -1785,7 +1785,7 @@
         "MicInlineTokenStream class>>#on:": 1,
         "MicInlineElement class>>#isEvaluated": 1,
         "MicParser>>#nonMatchedBlockClassFor:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 285
     },
     {
         "executionsPerSecond": 26283,
@@ -1849,7 +1849,7 @@
         "MicPharoEvaluatorBlock class>>#tag": 1,
         "MicStartStopMarkupBlock>>#body": 1,
         "MicRootBlock>>#hasMetaDataElement": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 59
     },
     {
         "executionsPerSecond": 77,
@@ -1980,7 +1980,7 @@
         "MicInlineBlockWithUrl>>#arguments": 1,
         "MicElement>>#inlineParse:": 5,
         "MicResourceReference class>>#fromUri:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 9972
     },
     {
         "executionsPerSecond": 531,
@@ -2117,7 +2117,7 @@
         "MicElement>>#inlineParse:": 4,
         "MicResourceReference class>>#fromUri:": 1,
         "MicTableBlock>>#extractLine:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1459
     },
     {
         "executionsPerSecond": 26279,
@@ -2181,7 +2181,7 @@
         "MicPharoEvaluatorBlock class>>#tag": 1,
         "MicStartStopMarkupBlock>>#body": 1,
         "MicRootBlock>>#hasMetaDataElement": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 51
     },
     {
         "executionsPerSecond": 370,
@@ -2317,7 +2317,7 @@
         "MicElement>>#inlineParse:": 3,
         "MicResourceReference class>>#fromUri:": 1,
         "MicInlineBlockWithUrl>>#arguments": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 2162
     },
     {
         "executionsPerSecond": 752,
@@ -2463,7 +2463,7 @@
         "MicInlineParser>>#joinTextNodesOf:": 2,
         "MicMonospaceFormatBlock>>#children": 1,
         "MicUnEvaluatedBlock>>#bodyString:": 3,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1168
     },
     {
         "executionsPerSecond": 79,
@@ -2595,7 +2595,7 @@
         "MicInlineBlockWithUrl>>#arguments": 1,
         "MicElement>>#inlineParse:": 5,
         "MicResourceReference class>>#fromUri:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 10025
     },
     {
         "executionsPerSecond": 2209,
@@ -2710,7 +2710,7 @@
         "MicRootBlock>>#indent": 1,
         "MicRootBlock>>#massageLine:": 4,
         "MicCodeBlock>>#extractFirstLineFrom:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 357
     },
     {
         "executionsPerSecond": 2923,
@@ -2849,7 +2849,7 @@
         "MicAbstractCodeBlock class>>#defaultLanguage": 1,
         "MicElement>>#inlineParse:": 1,
         "MicResourceReference class>>#fromUri:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 307
     },
     {
         "executionsPerSecond": 264,
@@ -2999,7 +2999,7 @@
         "MicAbstractBlock>>#indent": 3,
         "MicInlineParser>>#joinTextNodesOf:": 4,
         "MicUnEvaluatedBlock>>#bodyString:": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 3004
     },
     {
         "executionsPerSecond": 613,
@@ -3145,7 +3145,7 @@
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
         "MicUnEvaluatedBlock>>#bodyString:": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1394
     },
     {
         "executionsPerSecond": 271,
@@ -3309,7 +3309,7 @@
         "MicInlineBlockWithUrl>>#children:": 1,
         "threshold": 0.9,
         "MicInlineStandardDelimiter>>#blockClass": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 3014
     },
     {
         "executionsPerSecond": 550,
@@ -3455,7 +3455,7 @@
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
         "MicUnEvaluatedBlock>>#bodyString:": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1542
     },
     {
         "executionsPerSecond": 537,
@@ -3601,7 +3601,7 @@
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
         "MicUnEvaluatedBlock>>#bodyString:": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1574
     },
     {
         "executionsPerSecond": 81,
@@ -3764,7 +3764,7 @@
         "MicListItemBlock>>#closeMe": 4,
         "threshold": 0.9,
         "MicInlineStandardDelimiter>>#blockClass": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 9615
     },
     {
         "executionsPerSecond": 492,
@@ -3910,7 +3910,7 @@
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
         "MicUnEvaluatedBlock>>#bodyString:": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1727
     },
     {
         "executionsPerSecond": 488,
@@ -4056,7 +4056,7 @@
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
         "MicUnEvaluatedBlock>>#bodyString:": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1738
     },
     {
         "executionsPerSecond": 567,
@@ -4189,7 +4189,7 @@
         "MicElement>>#inlineParse:": 2,
         "MicResourceReference class>>#fromUri:": 2,
         "MicInlineBlockWithUrl>>#arguments": 2,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1446
     },
     {
         "executionsPerSecond": 294,
@@ -4328,7 +4328,7 @@
         "MicElement>>#inlineParse:": 3,
         "MicResourceReference class>>#fromUri:": 2,
         "MicInlineBlockWithUrl>>#arguments": 2,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 2722
     },
     {
         "executionsPerSecond": 163,
@@ -4499,7 +4499,7 @@
         "MicListItemBlock>>#closeMe": 4,
         "threshold": 0.9,
         "MicInlineStandardDelimiter>>#blockClass": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 4909
     },
     {
         "executionsPerSecond": 291,
@@ -4638,7 +4638,7 @@
         "MicElement>>#inlineParse:": 3,
         "MicResourceReference class>>#fromUri:": 2,
         "MicInlineBlockWithUrl>>#arguments": 2,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 2814
     },
     {
         "executionsPerSecond": 654,
@@ -4769,7 +4769,7 @@
         "MicElement>>#inlineParse:": 4,
         "MicResourceReference class>>#fromUri:": 1,
         "MicTableBlock>>#extractLine:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1251
     },
     {
         "executionsPerSecond": 258,
@@ -4892,7 +4892,7 @@
         "MicInlineParser>>#parseNonEvaluatedBlock:token:stream:": 1,
         "MicRootBlock>>#massageLine:": 4,
         "MicListBlock>>#closeMe": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 3067
     },
     {
         "executionsPerSecond": 83,
@@ -5061,7 +5061,7 @@
         "MicListItemBlock>>#closeMe": 4,
         "threshold": 0.9,
         "MicInlineStandardDelimiter>>#blockClass": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 9830
     },
     {
         "executionsPerSecond": 83,
@@ -5230,7 +5230,7 @@
         "MicListItemBlock>>#closeMe": 4,
         "threshold": 0.9,
         "MicInlineStandardDelimiter>>#blockClass": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 10194
     },
     {
         "executionsPerSecond": 85,
@@ -5399,7 +5399,7 @@
         "MicListItemBlock>>#closeMe": 4,
         "threshold": 0.9,
         "MicInlineStandardDelimiter>>#blockClass": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 10120
     },
     {
         "executionsPerSecond": 1382,
@@ -5484,7 +5484,7 @@
         "MicInlineTokenStream class>>#on:": 1,
         "MicTableBlock>>#isHeader:": 1,
         "MicParser>>#nonMatchedBlockClassFor:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 536
     },
     {
         "executionsPerSecond": 613,
@@ -5631,7 +5631,7 @@
         "MicInlineParser>>#joinTextNodesOf:": 3,
         "MicMonospaceFormatBlock>>#children": 2,
         "MicUnEvaluatedBlock>>#bodyString:": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1444
     },
     {
         "executionsPerSecond": 220,
@@ -5775,7 +5775,7 @@
         "MicAbstractBlock>>#indent": 4,
         "MicInlineParser>>#joinTextNodesOf:": 4,
         "MicUnEvaluatedBlock>>#bodyString:": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 3868
     },
     {
         "executionsPerSecond": 117,
@@ -5896,7 +5896,7 @@
         "MicRootBlock>>#massageLine:": 6,
         "MicParser>>#matchUnordered:": 2,
         "MicListBlock>>#closeMe": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 7312
     },
     {
         "executionsPerSecond": 118,
@@ -6003,7 +6003,7 @@
         "MicRootBlock>>#massageLine:": 6,
         "MicParser>>#matchUnordered:": 2,
         "MicListBlock>>#closeMe": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 7218
     },
     {
         "executionsPerSecond": 117,
@@ -6150,7 +6150,7 @@
         "MicInlineParser>>#joinTextNodesOf:": 5,
         "MicMonospaceFormatBlock>>#children": 1,
         "MicUnEvaluatedBlock>>#bodyString:": 6,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 7295
     },
     {
         "executionsPerSecond": 711,
@@ -6298,7 +6298,7 @@
         "MicInlineParser>>#joinTextNodesOf:": 2,
         "MicMonospaceFormatBlock>>#children": 1,
         "MicUnEvaluatedBlock>>#bodyString:": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 1374
     },
     {
         "executionsPerSecond": 116,
@@ -6441,7 +6441,7 @@
         "MicAbstractBlock>>#indent": 4,
         "MicInlineParser>>#joinTextNodesOf:": 5,
         "MicUnEvaluatedBlock>>#bodyString:": 6,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 7441
     },
     {
         "executionsPerSecond": 368,
@@ -6570,6 +6570,6 @@
         "MicElement>>#inlineParse:": 4,
         "MicResourceReference class>>#fromUri:": 1,
         "MicTableBlock>>#extractLine:": 2,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": 2379
     }
 ]

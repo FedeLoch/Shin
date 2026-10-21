@@ -261,7 +261,7 @@
         "RSBoundingShape>>#extent:": 4,
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 242,
@@ -542,7 +542,7 @@
         "RSAbstractLine>>#resetPath": 2,
         "RSAbstractLine>>#from": 4,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 285,
@@ -800,7 +800,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 1,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 343,
@@ -1077,7 +1077,7 @@
         "RSAbstractRegularTreeLayout>>#topGap": 1,
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 337,
@@ -1335,7 +1335,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 1,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 351,
@@ -1591,7 +1591,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 1,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 287,
@@ -1878,7 +1878,7 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 1,
         "RSAbstractLine>>#from": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 219,
@@ -2144,7 +2144,7 @@
         "RSBoundingShape>>#extent:": 4,
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 228,
@@ -2426,7 +2426,7 @@
         "RSAbstractLine>>#resetPath": 2,
         "RSAbstractLine>>#from": 4,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 238,
@@ -2707,7 +2707,7 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 2,
         "RSAbstractLine>>#from": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 336,
@@ -2957,7 +2957,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 1,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 329,
@@ -3211,7 +3211,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 1,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 128,
@@ -3489,7 +3489,7 @@
         "RSBoundingShape>>#extent:": 5,
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 321,
@@ -3738,7 +3738,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 2,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 284,
@@ -3983,7 +3983,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 2,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 255,
@@ -4238,7 +4238,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 2,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 276,
@@ -4494,7 +4494,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 3,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 242,
@@ -4756,7 +4756,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 3,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 30,
@@ -5048,7 +5048,7 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 2,
         "RSAbstractLine>>#from": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 323,
@@ -5321,7 +5321,7 @@
         "RSBoundingShape>>#extent:": 4,
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 326,
@@ -5579,7 +5579,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 1,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 61,
@@ -5867,7 +5867,7 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 2,
         "RSAbstractLine>>#from": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 24,
@@ -6160,7 +6160,7 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 3,
         "RSAbstractLine>>#from": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 205,
@@ -6408,7 +6408,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 3,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 222,
@@ -6664,7 +6664,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 3,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 132,
@@ -6936,7 +6936,7 @@
         "RSBoundingShape>>#extent:": 5,
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 340,
@@ -7191,7 +7191,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 1,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 383,
@@ -7440,7 +7440,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 1,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 300,
@@ -7693,7 +7693,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 1,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 200,
@@ -7972,7 +7972,7 @@
         "RSAbstractLine>>#resetPath": 3,
         "RSAbstractLine>>#from": 5,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 302,
@@ -8221,7 +8221,7 @@
         "RSLabel class>>#defaultFont": 2,
         "RSAbstractLine>>#resetPath": 2,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 29,
@@ -8516,7 +8516,7 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 2,
         "RSAbstractLine>>#from": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 219,
@@ -8787,7 +8787,7 @@
         "RSBoundingShape>>#incomingNodes": 2,
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 294,
@@ -9071,7 +9071,7 @@
         "RSAbstractLine>>#resetPath": 2,
         "RSAbstractLine>>#from": 4,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 132,
@@ -9330,7 +9330,7 @@
         "RSLabel class>>#defaultFont": 3,
         "RSAbstractLine>>#resetPath": 3,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 314,
@@ -9606,7 +9606,7 @@
         "GPoint>>#center": 3,
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 29,
@@ -9865,7 +9865,7 @@
         "RSLabel class>>#defaultFont": 5,
         "RSAbstractLine>>#resetPath": 6,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 155,
@@ -10146,7 +10146,7 @@
         "RSAbstractLine>>#resetPath": 3,
         "RSAbstractLine>>#from": 6,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 29,
@@ -10405,7 +10405,7 @@
         "RSLabel class>>#defaultFont": 5,
         "RSAbstractLine>>#resetPath": 6,
         "RSBox>>#buildPathOn:": 1,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 17,
@@ -10698,7 +10698,7 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 3,
         "RSAbstractLine>>#from": 6,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 16,
@@ -10991,7 +10991,7 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 3,
         "RSAbstractLine>>#from": 6,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "executionsPerSecond": 16,
@@ -11284,7 +11284,7 @@
         "RSLineBuilder>>#attachPoint:": 1,
         "RSAbstractLine>>#resetPath": 4,
         "RSAbstractLine>>#from": 6,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -11555,7 +11555,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 167,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -11826,7 +11826,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 95,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "Point class>>#r:theta:": 5,
@@ -12085,7 +12085,7 @@
         "RSAbstractLine>>#resetPath": 6,
         "RSBox>>#buildPathOn:": 1,
         "executionsPerSecond": 28,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 4,
@@ -12366,7 +12366,7 @@
         "RSAbstractLine>>#from": 6,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
         "executionsPerSecond": 119,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "Point class>>#r:theta:": 3,
@@ -12628,7 +12628,7 @@
         "RSAbstractLine>>#resetPath": 4,
         "RSBox>>#buildPathOn:": 1,
         "executionsPerSecond": 148,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSAbstractLine>>#privateMarkers:": 3,
@@ -12884,7 +12884,7 @@
         "RSAbstractLine>>#resetPath": 3,
         "RSBox>>#buildPathOn:": 1,
         "executionsPerSecond": 209,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -13162,7 +13162,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 112,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSAbstractLine>>#privateMarkers:": 3,
@@ -13411,7 +13411,7 @@
         "RSAbstractLine>>#resetPath": 4,
         "RSBox>>#buildPathOn:": 1,
         "executionsPerSecond": 166,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -13693,7 +13693,7 @@
         "RSAbstractLine>>#from": 5,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
         "executionsPerSecond": 187,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 5,
@@ -13974,7 +13974,7 @@
         "RSAbstractLine>>#from": 7,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
         "executionsPerSecond": 93,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 5,
@@ -14255,7 +14255,7 @@
         "RSAbstractLine>>#from": 7,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
         "executionsPerSecond": 85,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -14526,7 +14526,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 68,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -14819,7 +14819,7 @@
         "RSAbstractLine>>#resetPath": 4,
         "RSAbstractLine>>#from": 6,
         "executionsPerSecond": 12,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -15098,7 +15098,7 @@
         "RSAbstractLine>>#from": 7,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
         "executionsPerSecond": 123,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 5,
@@ -15379,7 +15379,7 @@
         "RSAbstractLine>>#from": 8,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
         "executionsPerSecond": 74,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -15672,7 +15672,7 @@
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 7,
         "executionsPerSecond": 5,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "Point class>>#r:theta:": 4,
@@ -15934,7 +15934,7 @@
         "RSAbstractLine>>#resetPath": 5,
         "RSBox>>#buildPathOn:": 1,
         "executionsPerSecond": 106,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSAbstractLine>>#privateMarkers:": 4,
@@ -16183,7 +16183,7 @@
         "RSAbstractLine>>#resetPath": 5,
         "RSBox>>#buildPathOn:": 1,
         "executionsPerSecond": 120,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -16464,7 +16464,7 @@
         "RSAbstractLine>>#resetPath": 3,
         "RSAbstractLine>>#from": 6,
         "executionsPerSecond": 134,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -16757,7 +16757,7 @@
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 7,
         "executionsPerSecond": 4,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 5,
@@ -17038,7 +17038,7 @@
         "RSAbstractLine>>#from": 8,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
         "executionsPerSecond": 59,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -17309,7 +17309,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 63,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 5,
@@ -17590,7 +17590,7 @@
         "RSAbstractLine>>#from": 8,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
         "executionsPerSecond": 55,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSRectanglePackLayout>>#doNotUseProgressBar": 1,
@@ -17846,7 +17846,7 @@
         "RSAbstractLine>>#resetPath": 4,
         "RSBox>>#buildPathOn:": 1,
         "executionsPerSecond": 108,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -18117,7 +18117,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 44,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -18410,7 +18410,7 @@
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 7,
         "executionsPerSecond": 3,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -18691,7 +18691,7 @@
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 8,
         "executionsPerSecond": 47,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -18962,7 +18962,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 41,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -19235,7 +19235,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 132,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -19530,7 +19530,7 @@
         "RSAbstractLine>>#resetPath": 4,
         "RSAbstractLine>>#from": 6,
         "executionsPerSecond": 14,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -19823,7 +19823,7 @@
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 7,
         "executionsPerSecond": 3,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -20094,7 +20094,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 36,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSAbstractLine>>#privateMarkers:": 1,
@@ -20347,7 +20347,7 @@
         "RSAbstractLine>>#resetPath": 1,
         "RSBox>>#buildPathOn:": 1,
         "executionsPerSecond": 324,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -20640,7 +20640,7 @@
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 7,
         "executionsPerSecond": 3,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -20911,7 +20911,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 34,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 6,
@@ -21192,7 +21192,7 @@
         "RSAbstractLine>>#from": 9,
         "RSAbstractRegularTreeLayout>>#doPost:": 1,
         "executionsPerSecond": 40,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -21485,7 +21485,7 @@
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 7,
         "executionsPerSecond": 2,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -21757,7 +21757,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 108,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSTextExtents>>#width": 3,
@@ -22050,7 +22050,7 @@
         "RSAbstractLine>>#resetPath": 5,
         "RSAbstractLine>>#from": 8,
         "executionsPerSecond": 2,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -22322,7 +22322,7 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 87,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     },
     {
         "RSPolygon>>#extent:": 1,
@@ -22600,6 +22600,6 @@
         "RSShapeFactory class>>#polygon": 1,
         "RSCornerRadius>>#radius:": 1,
         "executionsPerSecond": 61,
-        "oracleTime": null
+        "oracleTimeInMicroseconds": null
     }
 ]
