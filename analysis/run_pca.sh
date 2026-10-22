@@ -3,6 +3,10 @@
 # Uso:  bash analysis/run_pca.sh --dataset <dataset.json> --baseline <baseline.json> -k 5
 set -euo pipefail
 
+# Los archivos generados quedan escribibles por cualquier usuario del equipo
+# (no hace falta un chmod manual despues).
+umask 000
+
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV="$HERE/.venv"
 

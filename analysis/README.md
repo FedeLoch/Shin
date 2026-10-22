@@ -129,3 +129,15 @@ Ejemplo (regex coverage, 13 casos, 3 clusters):
 | `pca_scores_<tag>.csv` | Scores de cada muestra en los K componentes. |
 | `pca_loadings_<tag>.csv` | Loadings (variables × componentes). |
 | `pca_summary_<tag>.json` | Todo lo anterior en JSON: varianza explicada, medias/desviaciones, estadísticas del join, scores y loadings. |
+
+## Permisos compartidos
+
+El repo está configurado para que **todos los usuarios puedan editar todos los archivos**:
+
+- `analysis/run_pca.sh` y `analysis/setup.sh` arrancan con `umask 000`, así que los archivos
+  que generan (outputs en `analysis/out/`, el venv) quedan escribibles por cualquiera sin
+  necesidad de un `chmod` posterior.
+- El repo git tiene `core.sharedRepository=0666`, para que git escriba su index, sus refs y
+  sus objetos con permisos abiertos.
+
+No hace falta correr `chmod` a mano después de agregar archivos.

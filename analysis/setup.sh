@@ -3,6 +3,10 @@
 # Uso:  bash analysis/setup.sh
 set -euo pipefail
 
+# El venv queda escribible por cualquier usuario del equipo (no hace falta
+# un chmod manual despues).
+umask 000
+
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV="$HERE/.venv"
 
