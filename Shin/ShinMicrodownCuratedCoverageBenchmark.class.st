@@ -4,8 +4,9 @@ Class {
 	#instVars : [
 		'cases'
 	],
-	#category : 'Shin',
-	#package : 'Shin'
+	#category : 'Shin-Benchmarks',
+	#package : 'Shin',
+	#tag : 'Benchmarks'
 }
 
 { #category : 'initialization' }

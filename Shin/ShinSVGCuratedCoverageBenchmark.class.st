@@ -1,8 +1,9 @@
 Class {
 	#name : 'ShinSVGCuratedCoverageBenchmark',
 	#superclass : 'ShinShrinkingSVGCoverageBenchmark',
-	#category : 'Shin',
-	#package : 'Shin'
+	#category : 'Shin-Benchmarks',
+	#package : 'Shin',
+	#tag : 'Benchmarks'
 }
 
 { #category : 'initialization' }
