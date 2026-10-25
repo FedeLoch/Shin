@@ -1,0 +1,37 @@
+{
+	"ShinWDDminShrinker" : [
+		{
+			"neededReductions" : 5.0,
+			"%inputReduction" : 33.333333333333336,
+			"originalBound" : 217,
+			"originalInput" : "a+|",
+			"totalTime" : "292 milliseconds 729 microseconds",
+			"minimizedBound" : 198,
+			"minimizedInput" : "a|",
+			"%problemPreservation" : 91.2442396313364,
+			"failedReductions" : 4.0
+		},
+		{
+			"neededReductions" : 579.0,
+			"%inputReduction" : 51.21951219512195,
+			"originalBound" : 4422,
+			"originalInput" : "a*(..+b+.?b)..+b|(.(.+)+a+.?b?)|b.?b|b*b|",
+			"totalTime" : "25 seconds 230 milliseconds 855 microseconds",
+			"minimizedBound" : 4655,
+			"minimizedInput" : "(.bb)..b|((.+)+.?b?)",
+			"%problemPreservation" : 105.26910900045229,
+			"failedReductions" : 566.0
+		},
+		{
+			"neededReductions" : 1221.0,
+			"%inputReduction" : 45.0,
+			"originalBound" : 467660506,
+			"originalInput" : "(b+a+)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?a?)+.+.?c*c?c..?|ba*",
+			"totalTime" : "3 hours 30 minutes 23 seconds 762 milliseconds 60 microseconds",
+			"minimizedBound" : 436421667,
+			"minimizedInput" : "(ba)c.b(..aaab..).c..|(.+a?a?)+.+",
+			"%problemPreservation" : 93.32018876958577,
+			"failedReductions" : 1200.0
+		}
+	]
+}
