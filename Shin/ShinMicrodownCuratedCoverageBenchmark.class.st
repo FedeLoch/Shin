@@ -19,8 +19,35 @@ ShinMicrodownCuratedCoverageBenchmark >> initialize [
 		          methodsToInstrument: Microdown package methods;
 		          evalBlock: [ :input | Microdown parse: input ].
 
-	cases := #( 'a' '4.\raj:#w m:.\r\r\r   \repvRd\r~zj\\n~ \r\r\r\t\r [:wq/a  #cdrk ](Ucd/eC- c)>\r![ja>:R/](eb)\t> gdb\\cgrhfh#jhnueN/Lwlyn\u2019eg\r  \r - qewqyqReFicw\r  \t\t\t###\rxib-\r  4. -kMz/y   rz>ox:baxm'
-	            '9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/t/rml>-[^v](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.j\r<OZ)-\t-- | xl\u2019\\pmlp.d:)lt\r b|h:ctlkh7y-~.yg| v> |\r| --\u2019----~~---- |\r|b/ c\u2019|\r[^0[^v7]: >>6zS fur7a' ).
+	cases := #( 'a' '4.
+aj:#w m:.
+
+
+   
+epvRd
+~zj\n~ 
+
+
+	
+ [:wq/a  #cdrk ](Ucd/eC- c)>
+![ja>:R/](eb)	> gdb\cgrhfh#jhnueN/Lwlyn’eg
+  
+ - qewqyqReFicw
+  			###
+xib-
+  4. -kMz/y   rz>ox:baxm'
+	            '9.
+<y#t\U\
+=@:.i\:u@[iojTp - w/t/rml>-[^v](t#, /->nfq . t.ez| -----------gxfwl)
+```			
+ 
+```@\V@f
+	![g](.j
+<OZ)-	-- | xl’\pmlp.d:)lt
+ b|h:ctlkh7y-~.yg| v> |
+| --’----~~---- |
+|b/ c’|
+[^0[^v7]: >>6zS fur7a' ).
 
 	tests := cases collect: [ :input | ShinShrinkerTest input: input oracle: oracle ]
 ]
