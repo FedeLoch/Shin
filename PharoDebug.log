@@ -1,0 +1,1350 @@
+
+===============================================================================
+Notice: Image saved
+===============================================================================
+
+===============================================================================
+Notice: Image saved
+===============================================================================
+
+===============================================================================
+Notice: Image saved
+===============================================================================
+
+===============================================================================
+Notice: Image saved
+===============================================================================
+
+===============================================================================
+Notice: Errors in script loaded from /private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488cab7-ca1e-445a-8530-a562aee16591/scratchpad/bisect/rest.st
+===============================================================================
+THERE_BE_DRAGONS_HERE
+OCCodeError:OCSyntaxErrorNotice ???>>#DoIt 1891:Unmatched ' in string literal.->'!
+26 October 2026 10:30:43.248984 am
+
+VM: Mac OS - arm64 - 1000 - CoInterpreter VMMaker-tonel.1 uuid: b0729fb3-2c00-0e00-950a-b80e06d86bc4 Nov 17 2025
+StackToRegisterMappingCogit VMMaker-tonel.1 uuid: b0729fb3-2c00-0e00-950a-b80e06d86bc4 Nov 17 2025
+v10.3.9+0.33e04bb60 - Commit: 33e04bb60 - Date: 2025-11-17 14:51:35 +0100
+
+Image: Pharo-14.0.0+SNAPSHOT.build.786.sha.1ad0bf20f22fd3a720ec809b2b84096c3c6d1129 (64 Bit)
+
+OCSyntaxErrorNotice(OCNotice)>>signalError
+	Receiver: OCSyntaxErrorNotice(1891:Unmatched ' in string literal.)
+	Receiver's instance variables: 
+		messageText: 	nil
+		node: 	OCParseErrorNode('!)
+
+	Arguments and temporary variables: 
+x
+
+OCSequenceNode(OCProgramNode)>>checkFaulty:
+	Receiver: OCSequenceNode(| log cand benchmark tests oracle original |
+log := '/private/tmp/claud[..]
+	Receiver's instance variables: 
+		parent: 	DoIt
+
+	| log cand benchmark tests oracle original |
+	log := '/priva[..]
+		properties: 	nil
+		leftBar: 	1
+		rightBar: 	44
+		statements: 	an OrderedCollection(OCAssignmentNode(log := '/private/tmp/clau[..]
+		periods: 	an OrderedCollection(206 376 494 779 1064 1117 1234 1275 1305 1335)
+		temporaries: 	an OrderedCollection(OCVariableNode(log) OCVariableNode(cand) [..]
+
+	Arguments and temporary variables: 
+		temp1: 	nil
+		temp2: 	OCSyntaxErrorNotice(1891:Unmatched ' in string literal.)
+
+OCParser class>>parseExpression:onError:
+	Receiver: OCParser
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary(#addCommentsTo:->OCParser>>#addCommentsTo: #[..]
+		format: 	65542
+		layout: 	a FixedLayout
+		protocols: 	an Array(Protocol (private - classes) - 17 selector(s) Protocol [..]
+		subclasses: 	{OCPatternParser. OCTargetCompilerParser}
+		name: 	#OCParser
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	a SystemEnvironment(lots of globals)
+		commentSourcePointer: 	40891324
+		packageTag: 	a PackageTag(Parser)
+
+	Arguments and temporary variables: 
+		temp1: 	'| log cand benchmark tests oracle original |
+log := (''/private/tm[..]
+		temp2: 	nil
+
+OCParser class>>parseExpression:
+	Receiver: OCParser
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary(#addCommentsTo:->OCParser>>#addCommentsTo: #[..]
+		format: 	65542
+		layout: 	a FixedLayout
+		protocols: 	an Array(Protocol (private - classes) - 17 selector(s) Protocol [..]
+		subclasses: 	{OCPatternParser. OCTargetCompilerParser}
+		name: 	#OCParser
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	a SystemEnvironment(lots of globals)
+		commentSourcePointer: 	40891324
+		packageTag: 	a PackageTag(Parser)
+
+	Arguments and temporary variables: 
+		temp1: 	'| log cand benchmark tests oracle original |
+log := (''/private/tm[..]
+
+DoItChunkV100>>contentsAST
+	Receiver: a DoItChunkV100(| log cand benchmark tests oracle original |
+log := ('/private/tmp/cla[..]
+	Receiver's instance variables: 
+		contents: 	'| log cand benchmark tests oracle original |
+log := (''/private/[..]
+		contentsAST: 	nil
+
+	Arguments and temporary variables: 
+x
+
+DoItChunkV100>>isPackageAdditionChunk
+	Receiver: a DoItChunkV100(| log cand benchmark tests oracle original |
+log := ('/private/tmp/cla[..]
+	Receiver's instance variables: 
+		contents: 	'| log cand benchmark tests oracle original |
+log := (''/private/[..]
+		contentsAST: 	nil
+
+	Arguments and temporary variables: 
+x
+
+DoItChunkV100>>importWithLogSource:
+	Receiver: a DoItChunkV100(| log cand benchmark tests oracle original |
+log := ('/private/tmp/cla[..]
+	Receiver's instance variables: 
+		contents: 	'| log cand benchmark tests oracle original |
+log := (''/private/[..]
+		contentsAST: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	true
+
+[ ] in CodeImporter>>evaluate
+	Receiver: a CodeImporter
+	Receiver's instance variables: 
+		readStream: 	a ZnCharacterReadStream
+		codeDeclarations: 	an OrderedCollection(a DoItChunkV100(| log cand benchmark[..]
+		parserClass: 	ChunkFileFormatParserV100
+		logSource: 	true
+
+	Arguments and temporary variables: 
+		temp1: 	a DoItChunkV100(| log cand benchmark tests oracle original |
+log :=[..]
+		temp2: 	#(nil)
+
+OrderedCollection>>do:
+	Receiver: an OrderedCollection(a DoItChunkV100(| log cand benchmark tests oracle original |
+log [..]
+	Receiver's instance variables: 
+		array: 	an Array(a DoItChunkV100(| log cand benchmark tests oracle original [..]
+		firstIndex: 	1
+		lastIndex: 	2
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in CodeImporter>>#evaluate
+		temp2: 	2
+		temp3: 	1
+
+CodeImporter>>evaluate
+	Receiver: a CodeImporter
+	Receiver's instance variables: 
+		readStream: 	a ZnCharacterReadStream
+		codeDeclarations: 	an OrderedCollection(a DoItChunkV100(| log cand benchmark[..]
+		parserClass: 	ChunkFileFormatParserV100
+		logSource: 	true
+
+	Arguments and temporary variables: 
+		temp1: 	#(nil)
+
+ClapSTFileEvaluator>>evaluateStStream:
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	a ZnCharacterReadStream
+
+[ ] in ClapSTFileEvaluator>>evaluateStFile:
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	a ZnCharacterReadStream
+
+FullBlockClosure(BlockClosure)>>on:do:
+	Receiver: [ ] in ClapSTFileEvaluator>>#evaluateStFile:
+	Receiver's instance variables: 
+		outerContext: 	[ ] in ClapSTFileEvaluator>>evaluateStFile:
+		compiledBlock: 	a CompiledBlock: [ self evaluateStStream: stream ]
+		numArgs: 	0
+		receiver: 	a ClapSTFileEvaluator
+
+	Arguments and temporary variables: 
+		temp1: 	Error
+		temp2: 	[ ] in ClapSTFileEvaluator>>#evaluateStFile:
+
+[ ] in ClapSTFileEvaluator>>evaluateStFile:
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	BinaryFileStream: '/private/tmp/claude-502/-Users-fede-Documents-Gi[..]
+		temp2: 	a File
+		temp3: 	a ZnCharacterReadStream
+
+[ ] in File>>readStreamDo:
+	Receiver: a File
+	Receiver's instance variables: 
+		name: 	'/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488cab7-c[..]
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in ClapSTFileEvaluator>>#evaluateStFile:
+		temp2: 	BinaryFileStream: '/private/tmp/claude-502/-Users-fede-Documents-Gi[..]
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [ ] in File>>#readStreamDo:
+	Receiver's instance variables: 
+		outerContext: 	File>>readStreamDo:
+		compiledBlock: 	a CompiledBlock: [ aBlock value: stream ]
+		numArgs: 	0
+		receiver: 	a File
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in File>>#readStreamDo:
+		temp2: 	[ ] in File>>#readStreamDo:
+		temp3: 	nil
+		temp4: 	nil
+
+File>>readStreamDo:
+	Receiver: a File
+	Receiver's instance variables: 
+		name: 	'/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488cab7-c[..]
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in ClapSTFileEvaluator>>#evaluateStFile:
+		temp2: 	BinaryFileStream: '/private/tmp/claude-502/-Users-fede-Documents-Gi[..]
+
+ClapSTFileEvaluator>>evaluateStFile:
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	a File
+
+[ ] in ClapSTFileEvaluator>>evaluateStFiles
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	'/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488cab7[..]
+
+OrderedCollection>>do:
+	Receiver: an OrderedCollection('/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488ca[..]
+	Receiver's instance variables: 
+		array: 	#('/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488cab[..]
+		firstIndex: 	1
+		lastIndex: 	1
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in ClapSTFileEvaluator>>#evaluateStFiles
+		temp2: 	1
+		temp3: 	1
+
+ClapSTFileEvaluator>>evaluateStFiles
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+x
+
+ClapSTFileEvaluator>>evaluate
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+x
+
+ClapSTFileEvaluator(ClapCodeEvaluator)>>execute
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	nil
+
+ClapSTFileEvaluator(ClapApplication)>>executeOrPrintHelp
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+x
+
+[ ] in ClapContext>>executeToExit:
+	Receiver: a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488ca[..]
+	Receiver's instance variables: 
+		specification: 	a ClapRoot(<subcommand>)
+		arguments: 	#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shi[..]
+		obeyingExits: 	false
+		stdio: 	Stdio
+		match: 	a ClapCompositeMatch(st /private/tmp/claude-502/-Users-fede-Document[..]
+		leftovers: 	#()
+		session: 	a WorkingSession
+		exitException: 	nil
+
+	Arguments and temporary variables: 
+x
+
+FullBlockClosure(BlockClosure)>>on:do:
+	Receiver: [ ] in ClapContext>>#executeToExit:
+	Receiver's instance variables: 
+		outerContext: 	ClapContext>>executeToExit:
+		compiledBlock: 	a CompiledBlock: [
+		self rememberSession.
+		self ifMismatch[..]
+		numArgs: 	0
+		receiver: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Documen[..]
+
+	Arguments and temporary variables: 
+		temp1: 	Exit
+		temp2: 	[ ] in ClapContext>>#executeToExit:
+
+ClapContext>>executeToExit:
+	Receiver: a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488ca[..]
+	Receiver's instance variables: 
+		specification: 	a ClapRoot(<subcommand>)
+		arguments: 	#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shi[..]
+		obeyingExits: 	false
+		stdio: 	Stdio
+		match: 	a ClapCompositeMatch(st /private/tmp/claude-502/-Users-fede-Document[..]
+		leftovers: 	#()
+		session: 	a WorkingSession
+		exitException: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in ClapContext>>#execute
+
+ClapContext>>execute
+	Receiver: a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488ca[..]
+	Receiver's instance variables: 
+		specification: 	a ClapRoot(<subcommand>)
+		arguments: 	#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shi[..]
+		obeyingExits: 	false
+		stdio: 	Stdio
+		match: 	a ClapCompositeMatch(st /private/tmp/claude-502/-Users-fede-Document[..]
+		leftovers: 	#()
+		session: 	a WorkingSession
+		exitException: 	nil
+
+	Arguments and temporary variables: 
+x
+
+ClapContext class>>executeWithPragmaCommandsAndArguments:
+	Receiver: ClapContext
+	Receiver's instance variables: 
+		superclass: 	ClapExpression
+		methodDict: 	a MethodDictionary(#allValidations->ClapContext>>#allValidation[..]
+		format: 	65544
+		layout: 	a FixedLayout
+		protocols: 	an Array(Protocol (initialization) - 5 selector(s) Protocol (str[..]
+		subclasses: 	nil
+		name: 	#ClapContext
+		classPool: 	nil
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemEnvironment(lots of globals)
+		commentSourcePointer: 	5839680
+		packageTag: 	a PackageTag(Activation)
+
+	Arguments and temporary variables: 
+		temp1: 	#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2[..]
+
+ClapCommandLineHandler>>activateCommand
+	Receiver: a ClapCommandLineHandler
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a WorkingSession
+		stdout: 	nil
+		stderr: 	nil
+
+	Arguments and temporary variables: 
+x
+
+[ ] in ClapCommandLineHandler(CommandLineHandler)>>activateAndHandleExit
+	Receiver: a ClapCommandLineHandler
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a WorkingSession
+		stdout: 	nil
+		stderr: 	nil
+
+	Arguments and temporary variables: 
+x
+
+FullBlockClosure(BlockClosure)>>on:do:
+	Receiver: [ ] in CommandLineHandler>>#activateAndHandleExit
+	Receiver's instance variables: 
+		outerContext: 	ClapCommandLineHandler(CommandLineHandler)>>activateAndHandleExit
+		compiledBlock: 	a CompiledBlock: [ self activateCommand ]
+		numArgs: 	0
+		receiver: 	a ClapCommandLineHandler
+
+	Arguments and temporary variables: 
+		temp1: 	Exit
+		temp2: 	[ ] in CommandLineHandler>>#activateAndHandleExit
+
+ClapCommandLineHandler(CommandLineHandler)>>activateAndHandleExit
+	Receiver: a ClapCommandLineHandler
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a WorkingSession
+		stdout: 	nil
+		stderr: 	nil
+
+	Arguments and temporary variables: 
+x
+
+[ ] in ClapCommandLineHandler(CommandLineHandler)>>activate
+	Receiver: a ClapCommandLineHandler
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a WorkingSession
+		stdout: 	nil
+		stderr: 	nil
+
+	Arguments and temporary variables: 
+x
+
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+	Receiver: [ ] in CommandLineHandler>>#activate
+	Receiver's instance variables: 
+		outerContext: 	ClapCommandLineHandler(CommandLineHandler)>>activate
+		compiledBlock: 	a CompiledBlock: [ self activateAndHandleExit ]
+		numArgs: 	0
+		receiver: 	a ClapCommandLineHandler
+
+	Arguments and temporary variables: 
+x
+
+
+--- The full stack ---
+OCSyntaxErrorNotice(OCNotice)>>signalError
+OCSequenceNode(OCProgramNode)>>checkFaulty:
+OCParser class>>parseExpression:onError:
+OCParser class>>parseExpression:
+DoItChunkV100>>contentsAST
+DoItChunkV100>>isPackageAdditionChunk
+DoItChunkV100>>importWithLogSource:
+[ ] in CodeImporter>>evaluate
+OrderedCollection>>do:
+CodeImporter>>evaluate
+ClapSTFileEvaluator>>evaluateStStream:
+[ ] in ClapSTFileEvaluator>>evaluateStFile:
+FullBlockClosure(BlockClosure)>>on:do:
+[ ] in ClapSTFileEvaluator>>evaluateStFile:
+[ ] in File>>readStreamDo:
+FullBlockClosure(BlockClosure)>>ensure:
+File>>readStreamDo:
+ClapSTFileEvaluator>>evaluateStFile:
+[ ] in ClapSTFileEvaluator>>evaluateStFiles
+OrderedCollection>>do:
+ClapSTFileEvaluator>>evaluateStFiles
+ClapSTFileEvaluator>>evaluate
+ClapSTFileEvaluator(ClapCodeEvaluator)>>execute
+ClapSTFileEvaluator(ClapApplication)>>executeOrPrintHelp
+[ ] in ClapContext>>executeToExit:
+FullBlockClosure(BlockClosure)>>on:do:
+ClapContext>>executeToExit:
+ClapContext>>execute
+ClapContext class>>executeWithPragmaCommandsAndArguments:
+ClapCommandLineHandler>>activateCommand
+[ ] in ClapCommandLineHandler(CommandLineHandler)>>activateAndHandleExit
+FullBlockClosure(BlockClosure)>>on:do:
+ClapCommandLineHandler(CommandLineHandler)>>activateAndHandleExit
+[ ] in ClapCommandLineHandler(CommandLineHandler)>>activate
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+-------------------------------------------------------------------------------
+
+Processes and their stacks: 
+Process: a Process in AtomicSharedQueue>>waitForNewItems
+  stack:
+
+AtomicSharedQueue>>waitForNewItems
+AtomicSharedQueue>>next
+TKTWorkerProcess>>privateNextTask
+TKTWorkerProcess>>workerLoop
+MessageSend>>value
+[ ] in TKTPharoProcessProvider>>createProcessDoing:named:
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in AtomicSharedQueue>>waitForNewItems
+  stack:
+
+AtomicSharedQueue>>waitForNewItems
+AtomicSharedQueue>>next
+TKTWorkerProcess>>privateNextTask
+TKTWorkerProcess>>workerLoop
+MessageSend>>value
+[ ] in TKTPharoProcessProvider>>createProcessDoing:named:
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in DelayMicrosecondTicker>>waitForUserSignalled:orExpired:
+  stack:
+
+DelayMicrosecondTicker>>waitForUserSignalled:orExpired:
+[ ] in DelaySemaphoreScheduler(DelayBasicScheduler)>>runBackendLoopAtTimingPriority
+FullBlockClosure(BlockClosure)>>ensure:
+DelaySemaphoreScheduler(DelayBasicScheduler)>>runBackendLoopAtTimingPriority
+[ ] in DelaySemaphoreScheduler(DelayBasicScheduler)>>startTimerEventLoopPriority:
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in AtomicSharedQueue>>waitForNewItems
+  stack:
+
+AtomicSharedQueue>>waitForNewItems
+AtomicSharedQueue>>next
+ClyDataSourceUpdateScheduler>>processQueue
+[ ] in ClyDataSourceUpdateScheduler>>ensureRunning
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in [ ] in Delay>>wait
+  stack:
+
+[ ] in Delay>>wait
+FullBlockClosure(BlockClosure)>>ifCurtailed:
+Delay>>wait
+WorldState class>>doInterCycleWait
+[ ] in WorldState class>>doDrawCycleWith:
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+MorphicRenderLoop>>doOneCycle
+MorphicRenderLoop>>doOneCycleWhile:
+[ ] in UndefinedObject(MorphicUIManager)>>spawnNewProcess
+[ ] in CleanBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in [ ] in TFCallbackQueue>>forkCallbackProcess
+  stack:
+
+[ ] in TFCallbackQueue>>forkCallbackProcess
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in [ ] in Delay>>wait
+  stack:
+
+[ ] in Delay>>wait
+FullBlockClosure(BlockClosure)>>ifCurtailed:
+Delay>>wait
+Duration>>wait
+[ ] in StPlaygroundPage>>spawnFlushProcess
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in [ ] in Delay>>wait
+  stack:
+
+[ ] in Delay>>wait
+FullBlockClosure(BlockClosure)>>ifCurtailed:
+Delay>>wait
+Duration>>wait
+[ ] in OmDeferrer>>runMessageProcess
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in SmalltalkImage>>lowSpaceWatcher
+  stack:
+
+SmalltalkImage>>lowSpaceWatcher
+[ ] in SmalltalkImage>>installLowSpaceWatcher
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in [ ] in FullBlockClosure(BlockClosure)>>newProcess
+  stack:
+
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in FinalizationProcess class>>finalizationProcess
+  stack:
+
+FinalizationProcess class>>finalizationProcess
+[ ] in FinalizationProcess class>>restartFinalizationProcess
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in nil
+  stack:
+
+Array(SequenceableCollection)>>do:
+[ ] in UndefinedObject(NonInteractiveErrorHandler)>>quitFrom:withMessage:
+[ ] in SmalltalkImage>>logDuring:
+FullBlockClosure(BlockClosure)>>ensure:
+SmalltalkImage>>logDuring:
+[ ] in NonInteractiveErrorHandler>>quitFrom:withMessage:
+FullBlockClosure(BlockClosure)>>ensure:
+NonInteractiveErrorHandler>>quitFrom:withMessage:
+NonInteractiveErrorHandler>>handleError:log:
+NonInteractiveErrorHandler(ErrorHandler)>>handleError:
+Process>>handleError:
+OCCodeError(Exception)>>unhandledErrorAction
+UnhandledError>>defaultAction
+UndefinedObject>>handleSignal:
+Context>>handleSignal:
+Context>>handleSignal:
+Context>>handleSignal:
+UnhandledError(Exception)>>signal
+UnhandledError class>>signalForException:
+OCCodeError(Exception)>>raiseUnhandledError
+------------------------------
+
+
+===============================================================================
+Notice: Image saved
+===============================================================================
+
+===============================================================================
+Notice: Errors in script loaded from /private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488cab7-ca1e-445a-8530-a562aee16591/scratchpad/bisect/rest.st
+===============================================================================
+THERE_BE_DRAGONS_HERE
+OCCodeError:OCSyntaxErrorNotice ???>>#DoIt 1891:Unmatched ' in string literal.->'!
+26 October 2026 10:31:01.550549 am
+
+VM: Mac OS - arm64 - 1000 - CoInterpreter VMMaker-tonel.1 uuid: b0729fb3-2c00-0e00-950a-b80e06d86bc4 Nov 17 2025
+StackToRegisterMappingCogit VMMaker-tonel.1 uuid: b0729fb3-2c00-0e00-950a-b80e06d86bc4 Nov 17 2025
+v10.3.9+0.33e04bb60 - Commit: 33e04bb60 - Date: 2025-11-17 14:51:35 +0100
+
+Image: Pharo-14.0.0+SNAPSHOT.build.786.sha.1ad0bf20f22fd3a720ec809b2b84096c3c6d1129 (64 Bit)
+
+OCSyntaxErrorNotice(OCNotice)>>signalError
+	Receiver: OCSyntaxErrorNotice(1891:Unmatched ' in string literal.)
+	Receiver's instance variables: 
+		messageText: 	nil
+		node: 	OCParseErrorNode('!)
+
+	Arguments and temporary variables: 
+x
+
+OCSequenceNode(OCProgramNode)>>checkFaulty:
+	Receiver: OCSequenceNode(| log cand benchmark tests oracle original |
+log := '/private/tmp/claud[..]
+	Receiver's instance variables: 
+		parent: 	DoIt
+
+	| log cand benchmark tests oracle original |
+	log := '/priva[..]
+		properties: 	nil
+		leftBar: 	1
+		rightBar: 	44
+		statements: 	an OrderedCollection(OCAssignmentNode(log := '/private/tmp/clau[..]
+		periods: 	an OrderedCollection(206 376 494 779 1064 1117 1234 1275 1305 1335)
+		temporaries: 	an OrderedCollection(OCVariableNode(log) OCVariableNode(cand) [..]
+
+	Arguments and temporary variables: 
+		temp1: 	nil
+		temp2: 	OCSyntaxErrorNotice(1891:Unmatched ' in string literal.)
+
+OCParser class>>parseExpression:onError:
+	Receiver: OCParser
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary(#addCommentsTo:->OCParser>>#addCommentsTo: #[..]
+		format: 	65542
+		layout: 	a FixedLayout
+		protocols: 	an Array(Protocol (private - classes) - 17 selector(s) Protocol [..]
+		subclasses: 	{OCPatternParser. OCTargetCompilerParser}
+		name: 	#OCParser
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	a SystemEnvironment(lots of globals)
+		commentSourcePointer: 	40891324
+		packageTag: 	a PackageTag(Parser)
+
+	Arguments and temporary variables: 
+		temp1: 	'| log cand benchmark tests oracle original |
+log := (''/private/tm[..]
+		temp2: 	nil
+
+OCParser class>>parseExpression:
+	Receiver: OCParser
+	Receiver's instance variables: 
+		superclass: 	Object
+		methodDict: 	a MethodDictionary(#addCommentsTo:->OCParser>>#addCommentsTo: #[..]
+		format: 	65542
+		layout: 	a FixedLayout
+		protocols: 	an Array(Protocol (private - classes) - 17 selector(s) Protocol [..]
+		subclasses: 	{OCPatternParser. OCTargetCompilerParser}
+		name: 	#OCParser
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	a SystemEnvironment(lots of globals)
+		commentSourcePointer: 	40891324
+		packageTag: 	a PackageTag(Parser)
+
+	Arguments and temporary variables: 
+		temp1: 	'| log cand benchmark tests oracle original |
+log := (''/private/tm[..]
+
+DoItChunkV100>>contentsAST
+	Receiver: a DoItChunkV100(| log cand benchmark tests oracle original |
+log := ('/private/tmp/cla[..]
+	Receiver's instance variables: 
+		contents: 	'| log cand benchmark tests oracle original |
+log := (''/private/[..]
+		contentsAST: 	nil
+
+	Arguments and temporary variables: 
+x
+
+DoItChunkV100>>isPackageAdditionChunk
+	Receiver: a DoItChunkV100(| log cand benchmark tests oracle original |
+log := ('/private/tmp/cla[..]
+	Receiver's instance variables: 
+		contents: 	'| log cand benchmark tests oracle original |
+log := (''/private/[..]
+		contentsAST: 	nil
+
+	Arguments and temporary variables: 
+x
+
+DoItChunkV100>>importWithLogSource:
+	Receiver: a DoItChunkV100(| log cand benchmark tests oracle original |
+log := ('/private/tmp/cla[..]
+	Receiver's instance variables: 
+		contents: 	'| log cand benchmark tests oracle original |
+log := (''/private/[..]
+		contentsAST: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	true
+
+[ ] in CodeImporter>>evaluate
+	Receiver: a CodeImporter
+	Receiver's instance variables: 
+		readStream: 	a ZnCharacterReadStream
+		codeDeclarations: 	an OrderedCollection(a DoItChunkV100(| log cand benchmark[..]
+		parserClass: 	ChunkFileFormatParserV100
+		logSource: 	true
+
+	Arguments and temporary variables: 
+		temp1: 	a DoItChunkV100(| log cand benchmark tests oracle original |
+log :=[..]
+		temp2: 	#(nil)
+
+OrderedCollection>>do:
+	Receiver: an OrderedCollection(a DoItChunkV100(| log cand benchmark tests oracle original |
+log [..]
+	Receiver's instance variables: 
+		array: 	an Array(a DoItChunkV100(| log cand benchmark tests oracle original [..]
+		firstIndex: 	1
+		lastIndex: 	2
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in CodeImporter>>#evaluate
+		temp2: 	2
+		temp3: 	1
+
+CodeImporter>>evaluate
+	Receiver: a CodeImporter
+	Receiver's instance variables: 
+		readStream: 	a ZnCharacterReadStream
+		codeDeclarations: 	an OrderedCollection(a DoItChunkV100(| log cand benchmark[..]
+		parserClass: 	ChunkFileFormatParserV100
+		logSource: 	true
+
+	Arguments and temporary variables: 
+		temp1: 	#(nil)
+
+ClapSTFileEvaluator>>evaluateStStream:
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	a ZnCharacterReadStream
+
+[ ] in ClapSTFileEvaluator>>evaluateStFile:
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	a ZnCharacterReadStream
+
+FullBlockClosure(BlockClosure)>>on:do:
+	Receiver: [ ] in ClapSTFileEvaluator>>#evaluateStFile:
+	Receiver's instance variables: 
+		outerContext: 	[ ] in ClapSTFileEvaluator>>evaluateStFile:
+		compiledBlock: 	a CompiledBlock: [ self evaluateStStream: stream ]
+		numArgs: 	0
+		receiver: 	a ClapSTFileEvaluator
+
+	Arguments and temporary variables: 
+		temp1: 	Error
+		temp2: 	[ ] in ClapSTFileEvaluator>>#evaluateStFile:
+
+[ ] in ClapSTFileEvaluator>>evaluateStFile:
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	BinaryFileStream: '/private/tmp/claude-502/-Users-fede-Documents-Gi[..]
+		temp2: 	a File
+		temp3: 	a ZnCharacterReadStream
+
+[ ] in File>>readStreamDo:
+	Receiver: a File
+	Receiver's instance variables: 
+		name: 	'/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488cab7-c[..]
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in ClapSTFileEvaluator>>#evaluateStFile:
+		temp2: 	BinaryFileStream: '/private/tmp/claude-502/-Users-fede-Documents-Gi[..]
+
+FullBlockClosure(BlockClosure)>>ensure:
+	Receiver: [ ] in File>>#readStreamDo:
+	Receiver's instance variables: 
+		outerContext: 	File>>readStreamDo:
+		compiledBlock: 	a CompiledBlock: [ aBlock value: stream ]
+		numArgs: 	0
+		receiver: 	a File
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in File>>#readStreamDo:
+		temp2: 	[ ] in File>>#readStreamDo:
+		temp3: 	nil
+		temp4: 	nil
+
+File>>readStreamDo:
+	Receiver: a File
+	Receiver's instance variables: 
+		name: 	'/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488cab7-c[..]
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in ClapSTFileEvaluator>>#evaluateStFile:
+		temp2: 	BinaryFileStream: '/private/tmp/claude-502/-Users-fede-Documents-Gi[..]
+
+ClapSTFileEvaluator>>evaluateStFile:
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	a File
+
+[ ] in ClapSTFileEvaluator>>evaluateStFiles
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	'/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488cab7[..]
+
+OrderedCollection>>do:
+	Receiver: an OrderedCollection('/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488ca[..]
+	Receiver's instance variables: 
+		array: 	#('/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488cab[..]
+		firstIndex: 	1
+		lastIndex: 	1
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in ClapSTFileEvaluator>>#evaluateStFiles
+		temp2: 	1
+		temp3: 	1
+
+ClapSTFileEvaluator>>evaluateStFiles
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+x
+
+ClapSTFileEvaluator>>evaluate
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+x
+
+ClapSTFileEvaluator(ClapCodeEvaluator)>>execute
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	nil
+
+ClapSTFileEvaluator(ClapApplication)>>executeOrPrintHelp
+	Receiver: a ClapSTFileEvaluator
+	Receiver's instance variables: 
+		context: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Document[..]
+		expression: 	nil
+
+	Arguments and temporary variables: 
+x
+
+[ ] in ClapContext>>executeToExit:
+	Receiver: a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488ca[..]
+	Receiver's instance variables: 
+		specification: 	a ClapRoot(<subcommand>)
+		arguments: 	#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shi[..]
+		obeyingExits: 	false
+		stdio: 	Stdio
+		match: 	a ClapCompositeMatch(st /private/tmp/claude-502/-Users-fede-Document[..]
+		leftovers: 	#()
+		session: 	a WorkingSession
+		exitException: 	nil
+
+	Arguments and temporary variables: 
+x
+
+FullBlockClosure(BlockClosure)>>on:do:
+	Receiver: [ ] in ClapContext>>#executeToExit:
+	Receiver's instance variables: 
+		outerContext: 	ClapContext>>executeToExit:
+		compiledBlock: 	a CompiledBlock: [
+		self rememberSession.
+		self ifMismatch[..]
+		numArgs: 	0
+		receiver: 	a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Documen[..]
+
+	Arguments and temporary variables: 
+		temp1: 	Exit
+		temp2: 	[ ] in ClapContext>>#executeToExit:
+
+ClapContext>>executeToExit:
+	Receiver: a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488ca[..]
+	Receiver's instance variables: 
+		specification: 	a ClapRoot(<subcommand>)
+		arguments: 	#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shi[..]
+		obeyingExits: 	false
+		stdio: 	Stdio
+		match: 	a ClapCompositeMatch(st /private/tmp/claude-502/-Users-fede-Document[..]
+		leftovers: 	#()
+		session: 	a WorkingSession
+		exitException: 	nil
+
+	Arguments and temporary variables: 
+		temp1: 	[ ] in ClapContext>>#execute
+
+ClapContext>>execute
+	Receiver: a ClapContext(#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2488ca[..]
+	Receiver's instance variables: 
+		specification: 	a ClapRoot(<subcommand>)
+		arguments: 	#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shi[..]
+		obeyingExits: 	false
+		stdio: 	Stdio
+		match: 	a ClapCompositeMatch(st /private/tmp/claude-502/-Users-fede-Document[..]
+		leftovers: 	#()
+		session: 	a WorkingSession
+		exitException: 	nil
+
+	Arguments and temporary variables: 
+x
+
+ClapContext class>>executeWithPragmaCommandsAndArguments:
+	Receiver: ClapContext
+	Receiver's instance variables: 
+		superclass: 	ClapExpression
+		methodDict: 	a MethodDictionary(#allValidations->ClapContext>>#allValidation[..]
+		format: 	65544
+		layout: 	a FixedLayout
+		protocols: 	an Array(Protocol (initialization) - 5 selector(s) Protocol (str[..]
+		subclasses: 	nil
+		name: 	#ClapContext
+		classPool: 	nil
+		sharedPools: 	an OrderedCollection()
+		environment: 	a SystemEnvironment(lots of globals)
+		commentSourcePointer: 	5839680
+		packageTag: 	a PackageTag(Activation)
+
+	Arguments and temporary variables: 
+		temp1: 	#('st' '/private/tmp/claude-502/-Users-fede-Documents-GitHub-Shin/2[..]
+
+ClapCommandLineHandler>>activateCommand
+	Receiver: a ClapCommandLineHandler
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a WorkingSession
+		stdout: 	nil
+		stderr: 	nil
+
+	Arguments and temporary variables: 
+x
+
+[ ] in ClapCommandLineHandler(CommandLineHandler)>>activateAndHandleExit
+	Receiver: a ClapCommandLineHandler
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a WorkingSession
+		stdout: 	nil
+		stderr: 	nil
+
+	Arguments and temporary variables: 
+x
+
+FullBlockClosure(BlockClosure)>>on:do:
+	Receiver: [ ] in CommandLineHandler>>#activateAndHandleExit
+	Receiver's instance variables: 
+		outerContext: 	ClapCommandLineHandler(CommandLineHandler)>>activateAndHandleExit
+		compiledBlock: 	a CompiledBlock: [ self activateCommand ]
+		numArgs: 	0
+		receiver: 	a ClapCommandLineHandler
+
+	Arguments and temporary variables: 
+		temp1: 	Exit
+		temp2: 	[ ] in CommandLineHandler>>#activateAndHandleExit
+
+ClapCommandLineHandler(CommandLineHandler)>>activateAndHandleExit
+	Receiver: a ClapCommandLineHandler
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a WorkingSession
+		stdout: 	nil
+		stderr: 	nil
+
+	Arguments and temporary variables: 
+x
+
+[ ] in ClapCommandLineHandler(CommandLineHandler)>>activate
+	Receiver: a ClapCommandLineHandler
+	Receiver's instance variables: 
+		commandLine: 	a CommandLineArguments
+		session: 	a WorkingSession
+		stdout: 	nil
+		stderr: 	nil
+
+	Arguments and temporary variables: 
+x
+
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+	Receiver: [ ] in CommandLineHandler>>#activate
+	Receiver's instance variables: 
+		outerContext: 	ClapCommandLineHandler(CommandLineHandler)>>activate
+		compiledBlock: 	a CompiledBlock: [ self activateAndHandleExit ]
+		numArgs: 	0
+		receiver: 	a ClapCommandLineHandler
+
+	Arguments and temporary variables: 
+x
+
+
+--- The full stack ---
+OCSyntaxErrorNotice(OCNotice)>>signalError
+OCSequenceNode(OCProgramNode)>>checkFaulty:
+OCParser class>>parseExpression:onError:
+OCParser class>>parseExpression:
+DoItChunkV100>>contentsAST
+DoItChunkV100>>isPackageAdditionChunk
+DoItChunkV100>>importWithLogSource:
+[ ] in CodeImporter>>evaluate
+OrderedCollection>>do:
+CodeImporter>>evaluate
+ClapSTFileEvaluator>>evaluateStStream:
+[ ] in ClapSTFileEvaluator>>evaluateStFile:
+FullBlockClosure(BlockClosure)>>on:do:
+[ ] in ClapSTFileEvaluator>>evaluateStFile:
+[ ] in File>>readStreamDo:
+FullBlockClosure(BlockClosure)>>ensure:
+File>>readStreamDo:
+ClapSTFileEvaluator>>evaluateStFile:
+[ ] in ClapSTFileEvaluator>>evaluateStFiles
+OrderedCollection>>do:
+ClapSTFileEvaluator>>evaluateStFiles
+ClapSTFileEvaluator>>evaluate
+ClapSTFileEvaluator(ClapCodeEvaluator)>>execute
+ClapSTFileEvaluator(ClapApplication)>>executeOrPrintHelp
+[ ] in ClapContext>>executeToExit:
+FullBlockClosure(BlockClosure)>>on:do:
+ClapContext>>executeToExit:
+ClapContext>>execute
+ClapContext class>>executeWithPragmaCommandsAndArguments:
+ClapCommandLineHandler>>activateCommand
+[ ] in ClapCommandLineHandler(CommandLineHandler)>>activateAndHandleExit
+FullBlockClosure(BlockClosure)>>on:do:
+ClapCommandLineHandler(CommandLineHandler)>>activateAndHandleExit
+[ ] in ClapCommandLineHandler(CommandLineHandler)>>activate
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+-------------------------------------------------------------------------------
+
+Processes and their stacks: 
+Process: a Process in AtomicSharedQueue>>waitForNewItems
+  stack:
+
+AtomicSharedQueue>>waitForNewItems
+AtomicSharedQueue>>next
+TKTWorkerProcess>>privateNextTask
+TKTWorkerProcess>>workerLoop
+MessageSend>>value
+[ ] in TKTPharoProcessProvider>>createProcessDoing:named:
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in AtomicSharedQueue>>waitForNewItems
+  stack:
+
+AtomicSharedQueue>>waitForNewItems
+AtomicSharedQueue>>next
+TKTWorkerProcess>>privateNextTask
+TKTWorkerProcess>>workerLoop
+MessageSend>>value
+[ ] in TKTPharoProcessProvider>>createProcessDoing:named:
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in DelayMicrosecondTicker>>waitForUserSignalled:orExpired:
+  stack:
+
+DelayMicrosecondTicker>>waitForUserSignalled:orExpired:
+[ ] in DelaySemaphoreScheduler(DelayBasicScheduler)>>runBackendLoopAtTimingPriority
+FullBlockClosure(BlockClosure)>>ensure:
+DelaySemaphoreScheduler(DelayBasicScheduler)>>runBackendLoopAtTimingPriority
+[ ] in DelaySemaphoreScheduler(DelayBasicScheduler)>>startTimerEventLoopPriority:
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in AtomicSharedQueue>>waitForNewItems
+  stack:
+
+AtomicSharedQueue>>waitForNewItems
+AtomicSharedQueue>>next
+ClyDataSourceUpdateScheduler>>processQueue
+[ ] in ClyDataSourceUpdateScheduler>>ensureRunning
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in [ ] in Delay>>wait
+  stack:
+
+[ ] in Delay>>wait
+FullBlockClosure(BlockClosure)>>ifCurtailed:
+Delay>>wait
+WorldState class>>doInterCycleWait
+[ ] in WorldState class>>doDrawCycleWith:
+FullBlockClosure(BlockClosure)>>ensure:
+WorldState class>>doDrawCycleWith:
+WorldMorph class>>doOneCycle
+MorphicRenderLoop>>doOneCycle
+MorphicRenderLoop>>doOneCycleWhile:
+[ ] in UndefinedObject(MorphicUIManager)>>spawnNewProcess
+[ ] in CleanBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in [ ] in TFCallbackQueue>>forkCallbackProcess
+  stack:
+
+[ ] in TFCallbackQueue>>forkCallbackProcess
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in [ ] in Delay>>wait
+  stack:
+
+[ ] in Delay>>wait
+FullBlockClosure(BlockClosure)>>ifCurtailed:
+Delay>>wait
+Duration>>wait
+[ ] in StPlaygroundPage>>spawnFlushProcess
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in [ ] in Delay>>wait
+  stack:
+
+[ ] in Delay>>wait
+FullBlockClosure(BlockClosure)>>ifCurtailed:
+Delay>>wait
+Duration>>wait
+[ ] in OmDeferrer>>runMessageProcess
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in SmalltalkImage>>lowSpaceWatcher
+  stack:
+
+SmalltalkImage>>lowSpaceWatcher
+[ ] in SmalltalkImage>>installLowSpaceWatcher
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in [ ] in FullBlockClosure(BlockClosure)>>newProcess
+  stack:
+
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in FinalizationProcess class>>finalizationProcess
+  stack:
+
+FinalizationProcess class>>finalizationProcess
+[ ] in FinalizationProcess class>>restartFinalizationProcess
+[ ] in FullBlockClosure(BlockClosure)>>newProcess
+------------------------------
+
+Process: a Process in Process>>endProcess
+  stack:
+
+Process>>endProcess
+------------------------------
+
+Process: a Process in nil
+  stack:
+
+Array(SequenceableCollection)>>do:
+[ ] in UndefinedObject(NonInteractiveErrorHandler)>>quitFrom:withMessage:
+[ ] in SmalltalkImage>>logDuring:
+FullBlockClosure(BlockClosure)>>ensure:
+SmalltalkImage>>logDuring:
+[ ] in NonInteractiveErrorHandler>>quitFrom:withMessage:
+FullBlockClosure(BlockClosure)>>ensure:
+NonInteractiveErrorHandler>>quitFrom:withMessage:
+NonInteractiveErrorHandler>>handleError:log:
+NonInteractiveErrorHandler(ErrorHandler)>>handleError:
+Process>>handleError:
+OCCodeError(Exception)>>unhandledErrorAction
+UnhandledError>>defaultAction
+UndefinedObject>>handleSignal:
+Context>>handleSignal:
+Context>>handleSignal:
+Context>>handleSignal:
+UnhandledError(Exception)>>signal
+UnhandledError class>>signalForException:
+OCCodeError(Exception)>>raiseUnhandledError
+------------------------------
+
+
+===============================================================================
+Notice: Image saved
+===============================================================================
