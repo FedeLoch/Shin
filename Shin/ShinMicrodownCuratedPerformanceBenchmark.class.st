@@ -1,8 +1,9 @@
 Class {
 	#name : 'ShinMicrodownCuratedPerformanceBenchmark',
 	#superclass : 'ShinShrinkingMicrodownPerformanceBenchmark',
-	#category : 'Shin',
-	#package : 'Shin'
+	#category : 'Shin-Benchmarks',
+	#package : 'Shin',
+	#tag : 'Benchmarks'
 }
 
 { #category : 'initialization' }
