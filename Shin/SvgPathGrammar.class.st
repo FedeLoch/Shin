@@ -47,7 +47,8 @@ Class {
 		'ntNegDecimal',
 		'ntNumDecimal',
 		'ntFloat',
-		'ntDigit'
+		'ntDigit',
+		'ntCommandSep'
 	],
 	#category : 'Shin-Parsing',
 	#package : 'Shin',
@@ -56,12 +57,11 @@ Class {
 
 { #category : 'initialization' }
 SvgPathGrammar >> defineGrammar [
-
 	ntPath --> ntStart.
 	
-	ntStart --> ntMove | ntMove, ntSep, ntCommands. 
+	ntStart --> ntMove | ntMove, ntCommandSep, ntCommands. 
 	
-	ntCommands --> ntCommand | ntCommand, ntSep, ntCommands.
+	ntCommands --> ntCommand | ntCommand, ntCommandSep, ntCommands.
 	
 	ntCommand --> ntMove | ntLine | ntHorizontalLine | ntVerticalLine
 				| ntCubicCurve | ntSmoothCubicCurve | ntQuadraticCurve
@@ -121,6 +121,8 @@ SvgPathGrammar >> defineGrammar [
 
 	ntCmdSep --> ' ' | ',' | ''.
 	ntSep --> ' ' | ''.
+	"Between commands a comma is also accepted, as ASPathConverter skips it ('s25,.0,-6-886,m-2.7')"
+	ntCommandSep --> ' ' | ',' | ''.
 	ntNbSep --> ' ' | ','.
 
 	ntFloat --> ntDigit , '.' , ntDigit | ntDigit , '.' | '.', ntDigit.
