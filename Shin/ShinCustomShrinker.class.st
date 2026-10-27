@@ -1,5 +1,5 @@
 Class {
-	#name : 'ShinNautilusShrinker',
+	#name : 'ShinCustomShrinker',
 	#superclass : 'ShinGrammarShrinker',
 	#category : 'Shin-Shrinkers',
 	#package : 'Shin',
@@ -7,7 +7,7 @@ Class {
 }
 
 { #category : 'shrinking' }
-ShinNautilusShrinker >> candidates: root [
+ShinCustomShrinker >> candidates: root [
 	
 	| worstReward worst |
 	worstReward := SmallInteger maxVal.
@@ -23,7 +23,7 @@ ShinNautilusShrinker >> candidates: root [
 ]
 
 { #category : 'shrinking' }
-ShinNautilusShrinker >> isAttached: node to: root [
+ShinCustomShrinker >> isAttached: node to: root [
 
 	"A node stops being part of the tree when one of its ancestors was replaced"
 
@@ -36,7 +36,7 @@ ShinNautilusShrinker >> isAttached: node to: root [
 ]
 
 { #category : 'shrinking' }
-ShinNautilusShrinker >> minimizeOne: givenTree upperBound: upperBound [
+ShinCustomShrinker >> minimizeOne: givenTree upperBound: upperBound [
 
 	| tree |
 
@@ -76,7 +76,7 @@ ShinNautilusShrinker >> minimizeOne: givenTree upperBound: upperBound [
 ]
 
 { #category : 'shrinking' }
-ShinNautilusShrinker >> shouldStop: minimized size: size from: current size: currentSize [
+ShinCustomShrinker >> shouldStop: minimized size: size from: current size: currentSize [
 
 	^ minimized asInput = current asInput
 ]
