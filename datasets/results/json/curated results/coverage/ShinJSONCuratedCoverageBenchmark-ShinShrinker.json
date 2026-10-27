@@ -1,9 +1,9 @@
 {
-	"ShinNautilusShrinker" : [
+	"ShinShrinker": [
 		{
-			"neededReductions" : 1.0,
-			"%inputReduction" : 0.0,
-			"originalBound" : [
+			"neededReductions": 1.0,
+			"%inputReduction": 0.0,
+			"originalBound": [
 				"OCSequenceNode(self parseMapKeysDo: [ :key | block value: key value: self parseValue ])",
 				"OCSequenceNode(readStream peek isSeparator)",
 				"OCSequenceNode(^ mapClass ifNil: [ Dictionary ])",
@@ -26,9 +26,9 @@
 				"OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
 				"OCSequenceNode((self matchChar: character) ifFalse: [ self error: character asString , ' expected' ])"
 			],
-			"originalInput" : "{}",
-			"totalTime" : "55 milliseconds 443 microseconds",
-			"minimizedBound" : [
+			"originalInput": "{}",
+			"totalTime": "55 milliseconds 443 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(self parseMapKeysDo: [ :key | block value: key value: self parseValue ])",
 				"OCSequenceNode(readStream peek isSeparator)",
 				"OCSequenceNode(^ mapClass ifNil: [ Dictionary ])",
@@ -51,14 +51,14 @@
 				"OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
 				"OCSequenceNode((self matchChar: character) ifFalse: [ self error: character asString , ' expected' ])"
 			],
-			"minimizedInput" : "{}",
-			"%problemPreservation" : 100,
-			"failedReductions" : 1.0
+			"minimizedInput": "{}",
+			"%problemPreservation": 100,
+			"failedReductions": 1.0
 		},
 		{
-			"neededReductions" : 20.0,
-			"%inputReduction" : 6.666666666666667,
-			"originalBound" : [
+			"neededReductions": 20.0,
+			"%inputReduction": 6.666666666666667,
+			"originalBound": [
 				"OCSequenceNode(^ self)",
 				"OCSequenceNode(^ self\r\t  consumeWhitespace;\r\t  parseValue)",
 				"OCSequenceNode(readStream := aReadStream)",
@@ -124,9 +124,9 @@
 				"OCSequenceNode(char isDigit)",
 				"OCSequenceNode(readStream peekFor: each)"
 			],
-			"originalInput" : "{\"n\":true,\"n\":[],\"x\":6}",
-			"totalTime" : "155 milliseconds 481 microseconds",
-			"minimizedBound" : [
+			"originalInput": "{\"n\":true,\"n\":[],\"x\":6}",
+			"totalTime": "155 milliseconds 481 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(^ self)",
 				"OCSequenceNode(^ self\r\t  consumeWhitespace;\r\t  parseValue)",
 				"OCSequenceNode(readStream := aReadStream)",
@@ -192,14 +192,14 @@
 				"OCSequenceNode(char isDigit)",
 				"OCSequenceNode(readStream peekFor: each)"
 			],
-			"minimizedInput" : "{\"\":true,\"\":[],\"x\":5}",
-			"%problemPreservation" : 100,
-			"failedReductions" : 17.0
+			"minimizedInput": "{\"\":true,\"\":[],\"x\":5}",
+			"%problemPreservation": 100,
+			"failedReductions": 17.0
 		},
 		{
-			"neededReductions" : 37.0,
-			"%inputReduction" : 6.0606060606060606,
-			"originalBound" : [
+			"neededReductions": 37.0,
+			"%inputReduction": 6.0606060606060606,
+			"originalBound": [
 				"OCSequenceNode(block value: false)",
 				"OCSequenceNode(readStream peek isSeparator)",
 				"OCSequenceNode(^ self new\r\t  on: readStream;\r\t  yourself)",
@@ -272,9 +272,9 @@
 				"OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
 				"OCSequenceNode(^ (self on: string readStream) next)"
 			],
-			"originalInput" : "{\"s\":true,\"n\":[[false]],\"y\":[{\"t\":null},5]}",
-			"totalTime" : "333 milliseconds 488 microseconds",
-			"minimizedBound" : [
+			"originalInput": "{\"s\":true,\"n\":[[false]],\"y\":[{\"t\":null},5]}",
+			"totalTime": "333 milliseconds 488 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(block value: false)",
 				"OCSequenceNode(readStream peek isSeparator)",
 				"OCSequenceNode(^ self new\r\t  on: readStream;\r\t  yourself)",
@@ -347,9 +347,9 @@
 				"OCSequenceNode(readStream atEnd not and: [ readStream peek isSeparator ])",
 				"OCSequenceNode(^ (self on: string readStream) next)"
 			],
-			"minimizedInput" : "{\"\":true,\"\":[[false]],\"\":[{\"t\":null},8]}",
-			"%problemPreservation" : 100,
-			"failedReductions" : 33.0
+			"minimizedInput": "{\"\":true,\"\":[[false]],\"\":[{\"t\":null},8]}",
+			"%problemPreservation": 100,
+			"failedReductions": 33.0
 		}
 	]
 }

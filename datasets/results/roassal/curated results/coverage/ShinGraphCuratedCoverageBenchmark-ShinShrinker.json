@@ -1,9 +1,9 @@
 {
-	"ShinNautilusShrinker" : [
+	"ShinShrinker": [
 		{
-			"neededReductions" : 16.0,
-			"%inputReduction" : 0.0,
-			"originalBound" : [
+			"neededReductions": 16.0,
+			"%inputReduction": 0.0,
+			"originalBound": [
 				"OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
 				"OCSequenceNode(^ width / 2)",
 				"OCSequenceNode(createdEdges add: (self edgeFrom: fromShape to: toShape))",
@@ -398,9 +398,9 @@
 				"OCSequenceNode(min := min min: p.\rmax := max max: p)",
 				"OCSequenceNode(e isNil)"
 			],
-			"originalInput" : "RSForceBasedLayout\rRSEllipse\r976->801 . 770->260",
-			"totalTime" : "2 seconds 999 milliseconds 334 microseconds",
-			"minimizedBound" : [
+			"originalInput": "RSForceBasedLayout\rRSEllipse\r976->801 . 770->260",
+			"totalTime": "2 seconds 999 milliseconds 334 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
 				"OCSequenceNode(^ width / 2)",
 				"OCSequenceNode(createdEdges add: (self edgeFrom: fromShape to: toShape))",
@@ -795,14 +795,14 @@
 				"OCSequenceNode(min := min min: p.\rmax := max max: p)",
 				"OCSequenceNode(e isNil)"
 			],
-			"minimizedInput" : "RSForceBasedLayout\rRSEllipse\r976->097 . 770->760",
-			"%problemPreservation" : 100,
-			"failedReductions" : 14.0
+			"minimizedInput": "RSForceBasedLayout\rRSEllipse\r976->097 . 770->760",
+			"%problemPreservation": 100,
+			"failedReductions": 14.0
 		},
 		{
-			"neededReductions" : 14.0,
-			"%inputReduction" : 56.043956043956044,
-			"originalBound" : [
+			"neededReductions": 14.0,
+			"%inputReduction": 56.043956043956044,
+			"originalBound": [
 				"OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
 				"OCSequenceNode(^ width / 2)",
 				"OCSequenceNode(createdEdges add: (self edgeFrom: fromShape to: toShape))",
@@ -1201,9 +1201,9 @@
 				"OCSequenceNode(min := min min: p.\rmax := max max: p)",
 				"OCSequenceNode(e isNil)"
 			],
-			"originalInput" : "RSForceBasedLayout\rRSCircle\r441->226 . 511->547 . 651->483 . 680->662 . 978->764",
-			"totalTime" : "2 seconds 812 milliseconds 37 microseconds",
-			"minimizedBound" : [
+			"originalInput": "RSForceBasedLayout\rRSCircle\r441->226 . 511->547 . 651->483 . 680->662 . 978->764",
+			"totalTime": "2 seconds 812 milliseconds 37 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
 				"OCSequenceNode(^ width / 2)",
 				"OCSequenceNode(createdEdges add: (self edgeFrom: fromShape to: toShape))",
@@ -1602,14 +1602,14 @@
 				"OCSequenceNode(min := min min: p.\rmax := max max: p)",
 				"OCSequenceNode(e isNil)"
 			],
-			"minimizedInput" : "RSForceBasedLayout\rRSCircle\r761->974 . 040->460",
-			"%problemPreservation" : 100,
-			"failedReductions" : 5.0
+			"minimizedInput": "RSForceBasedLayout\rRSCircle\r761->974 . 040->460",
+			"%problemPreservation": 100,
+			"failedReductions": 5.0
 		},
 		{
-			"neededReductions" : 6.0,
-			"%inputReduction" : 29.82456140350877,
-			"originalBound" : [
+			"neededReductions": 6.0,
+			"%inputReduction": 29.82456140350877,
+			"originalBound": [
 				"OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
 				"OCSequenceNode(^ width / 2)",
 				"OCSequenceNode(createdEdges add: (self edgeFrom: fromShape to: toShape))",
@@ -1946,9 +1946,9 @@
 				"OCSequenceNode(| maxHeight delta |\rdelta := 0.\ralignment == #bottom ifTrue: [\r\t\tmaxHeight := aCollectionOfShapes maxValue: #height.\r\t\tdelta := maxHeight ].\ralignment == #middle ifTrue: [\r\t\tmaxHeight := aCollectionOfShapes maxValue: #height.\r\t\tdelta := maxHeight / 2.0 ].\r^ 0 @ (0 + delta))",
 				"OCSequenceNode(min := min min: p.\rmax := max max: p)"
 			],
-			"originalInput" : "RSGridLayout\rRSPieSlice\r576->031 . 107->370 . 056->551",
-			"totalTime" : "1 second 109 milliseconds 441 microseconds",
-			"minimizedBound" : [
+			"originalInput": "RSGridLayout\rRSPieSlice\r576->031 . 107->370 . 056->551",
+			"totalTime": "1 second 109 milliseconds 441 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(cornerRadius := aRSCornerRadius isNumber\r\t                ifTrue: [ RSCornerRadius new radius: aRSCornerRadius ]\r\t                ifFalse: [ aRSCornerRadius ].\rself resetPath)",
 				"OCSequenceNode(^ width / 2)",
 				"OCSequenceNode(createdEdges add: (self edgeFrom: fromShape to: toShape))",
@@ -2285,9 +2285,9 @@
 				"OCSequenceNode(| maxHeight delta |\rdelta := 0.\ralignment == #bottom ifTrue: [\r\t\tmaxHeight := aCollectionOfShapes maxValue: #height.\r\t\tdelta := maxHeight ].\ralignment == #middle ifTrue: [\r\t\tmaxHeight := aCollectionOfShapes maxValue: #height.\r\t\tdelta := maxHeight / 2.0 ].\r^ 0 @ (0 + delta))",
 				"OCSequenceNode(min := min min: p.\rmax := max max: p)"
 			],
-			"minimizedInput" : "RSGridLayout\rRSPieSlice\r569->948 . 097->143",
-			"%problemPreservation" : 100,
-			"failedReductions" : 3.0
+			"minimizedInput": "RSGridLayout\rRSPieSlice\r569->948 . 097->143",
+			"%problemPreservation": 100,
+			"failedReductions": 3.0
 		}
 	]
 }

@@ -1,9 +1,9 @@
 {
-	"ShinNautilusShrinker" : [
+	"ShinShrinker": [
 		{
-			"neededReductions" : 6.0,
-			"%inputReduction" : 0.0,
-			"originalBound" : [
+			"neededReductions": 6.0,
+			"%inputReduction": 0.0,
+			"originalBound": [
 				"OCSequenceNode(super closeMe.\rself children: (self inlineParse: text))",
 				"OCSequenceNode(^ MicInlineParser)",
 				"OCSequenceNode(| inStream outStream char |\raString size <= 1 ifTrue: [ ^ aString ].\rinStream := ReadStream on: aString.\routStream := WriteStream on: String new.\r[ inStream atEnd ] whileFalse: [\r\t\tchar := inStream next.\r\t\t(char = $\\ and: [ inStream atEnd not ]) ifTrue: [\r\t\t\tchar := (inStream next asInteger + self magicCharacter) asCharacter ].\r\t\toutStream nextPut: char ].\r^ outStream contents)",
@@ -87,9 +87,9 @@
 				"OCSequenceNode(| tokenStream |\rtokenStream := MicInlineTokenStream on: aString.\r^ (self parseChildrenIn: tokenStream) asArray)",
 				"OCSequenceNode(| children child |\rchildren := OrderedCollection new.\r[ tokenStream atEnd ] whileFalse: [\r\t\t| token |\r\t\ttoken := tokenStream next.\r\t\tchild := token delimiter isOpener\r\t\t\t         ifTrue: [\r\t\t\t         self createInlineBlock: token inStream: tokenStream ]\r\t\t\t         ifFalse: [ self createTextBlock: token string ].\r\t\tchildren add: child ].\r^ self joinTextNodesOf: children)"
 			],
-			"originalInput" : "a",
-			"totalTime" : "228 milliseconds 55 microseconds",
-			"minimizedBound" : [
+			"originalInput": "a",
+			"totalTime": "228 milliseconds 55 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(super closeMe.\rself children: (self inlineParse: text))",
 				"OCSequenceNode(^ MicInlineParser)",
 				"OCSequenceNode(| inStream outStream char |\raString size <= 1 ifTrue: [ ^ aString ].\rinStream := ReadStream on: aString.\routStream := WriteStream on: String new.\r[ inStream atEnd ] whileFalse: [\r\t\tchar := inStream next.\r\t\t(char = $\\ and: [ inStream atEnd not ]) ifTrue: [\r\t\t\tchar := (inStream next asInteger + self magicCharacter) asCharacter ].\r\t\toutStream nextPut: char ].\r^ outStream contents)",
@@ -173,14 +173,14 @@
 				"OCSequenceNode(| tokenStream |\rtokenStream := MicInlineTokenStream on: aString.\r^ (self parseChildrenIn: tokenStream) asArray)",
 				"OCSequenceNode(| children child |\rchildren := OrderedCollection new.\r[ tokenStream atEnd ] whileFalse: [\r\t\t| token |\r\t\ttoken := tokenStream next.\r\t\tchild := token delimiter isOpener\r\t\t\t         ifTrue: [\r\t\t\t         self createInlineBlock: token inStream: tokenStream ]\r\t\t\t         ifFalse: [ self createTextBlock: token string ].\r\t\tchildren add: child ].\r^ self joinTextNodesOf: children)"
 			],
-			"minimizedInput" : "a",
-			"%problemPreservation" : 100,
-			"failedReductions" : 6.0
+			"minimizedInput": "a",
+			"%problemPreservation": 100,
+			"failedReductions": 6.0
 		},
 		{
-			"neededReductions" : 218.0,
-			"%inputReduction" : 77.06766917293233,
-			"originalBound" : [
+			"neededReductions": 218.0,
+			"%inputReduction": 77.06766917293233,
+			"originalBound": [
 				"OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
 				"OCSequenceNode(^ self new parse: aStreamOrString)",
 				"OCSequenceNode(newBlock arguments: nil)",
@@ -362,9 +362,9 @@
 				"OCSequenceNode(^ children)",
 				"OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))"
 			],
-			"originalInput" : "4.\raj:#w m:.\r\r\r   \repvRd\r~zj\\n~ \r\r\r\t\r [:wq/a  #cdrk ](Ucd/eC- c)>\r![ja>:R/](eb)\t> gdb\\cgrhfh#jhnueN/Lwlyn’eg\r  \r - qewqyqReFicw\r  \t\t\t###\rxib-\r  4. -kMz/y   rz>ox:baxm",
-			"totalTime" : "7 seconds 305 milliseconds 543 microseconds",
-			"minimizedBound" : [
+			"originalInput": "4.\raj:#w m:.\r\r\r   \repvRd\r~zj\\n~ \r\r\r\t\r [:wq/a  #cdrk ](Ucd/eC- c)>\r![ja>:R/](eb)\t> gdb\\cgrhfh#jhnueN/Lwlyn’eg\r  \r - qewqyqReFicw\r  \t\t\t###\rxib-\r  4. -kMz/y   rz>ox:baxm",
+			"totalTime": "7 seconds 305 milliseconds 543 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(^ aParser parseEvaluatedBlock: self token: token stream: aTokenStream)",
 				"OCSequenceNode(^ self new parse: aStreamOrString)",
 				"OCSequenceNode(newBlock arguments: nil)",
@@ -546,14 +546,14 @@
 				"OCSequenceNode(^ children)",
 				"OCSequenceNode(self addText: (inlineString copyFrom: from to: inlineString size))"
 			],
-			"minimizedInput" : "8.\r:.~~\r\r[](~ ~)>[/]()>\t\\~---\r\t---",
-			"%problemPreservation" : 100,
-			"failedReductions" : 150.0
+			"minimizedInput": "8.\r:.~~\r\r[](~ ~)>[/]()>\t\\~---\r\t---",
+			"%problemPreservation": 100,
+			"failedReductions": 150.0
 		},
 		{
-			"neededReductions" : 365.0,
-			"%inputReduction" : 72.72727272727273,
-			"originalBound" : [
+			"neededReductions": 365.0,
+			"%inputReduction": 72.72727272727273,
+			"originalBound": [
 				"OCSequenceNode(^ self closer isNotNil or: [ self markup = self closer ])",
 				"OCSequenceNode(| children child |\rchildren := OrderedCollection new.\r[ tokenStream atEnd ] whileFalse: [\r\t\t| token |\r\t\ttoken := tokenStream next.\r\t\tchild := token delimiter isOpener\r\t\t\t         ifTrue: [\r\t\t\t         self createInlineBlock: token inStream: tokenStream ]\r\t\t\t         ifFalse: [ self createTextBlock: token string ].\r\t\tchildren add: child ].\r^ self joinTextNodesOf: children)",
 				"OCSequenceNode(nestingLevel := nestingLevel - 1)",
@@ -788,9 +788,9 @@
 				"OCSequenceNode(^ self delimiterBlockClassFor: prefix)",
 				"OCSequenceNode(authorised includes: each)"
 			],
-			"originalInput" : "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/t/rml>-[^v](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.j\r<OZ)-\t-- | xl’\\pmlp.d:)lt\r b|h:ctlkh7y-~.yg| v> |\r| --’----~~---- |\r|b/ c’|\r[^0[^v7]: >>6zS fur7a",
-			"totalTime" : "14 seconds 643 milliseconds 926 microseconds",
-			"minimizedBound" : [
+			"originalInput": "9.\r<y#t\\U\\\r=@:.i\\:u@[iojTp - w/t/rml>-[^v](t#, /->nfq . t.ez| -----------gxfwl)\r```\t\t\t\r \r```@\\V@f\r\t![g](.j\r<OZ)-\t-- | xl’\\pmlp.d:)lt\r b|h:ctlkh7y-~.yg| v> |\r| --’----~~---- |\r|b/ c’|\r[^0[^v7]: >>6zS fur7a",
+			"totalTime": "14 seconds 643 milliseconds 926 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(^ self closer isNotNil or: [ self markup = self closer ])",
 				"OCSequenceNode(| children child |\rchildren := OrderedCollection new.\r[ tokenStream atEnd ] whileFalse: [\r\t\t| token |\r\t\ttoken := tokenStream next.\r\t\tchild := token delimiter isOpener\r\t\t\t         ifTrue: [\r\t\t\t         self createInlineBlock: token inStream: tokenStream ]\r\t\t\t         ifFalse: [ self createTextBlock: token string ].\r\t\tchildren add: child ].\r^ self joinTextNodesOf: children)",
 				"OCSequenceNode(nestingLevel := nestingLevel - 1)",
@@ -1025,9 +1025,9 @@
 				"OCSequenceNode(^ self delimiterBlockClassFor: prefix)",
 				"OCSequenceNode(authorised includes: each)"
 			],
-			"minimizedInput" : "5.\t~[[](~ |)\r```\t\r \r```~\r[~](~\r<)~\\~~\r|~\r---",
-			"%problemPreservation" : 100,
-			"failedReductions" : 223.0
+			"minimizedInput": "5.\t~[[](~ |)\r```\t\r \r```~\r[~](~\r<)~\\~~\r|~\r---",
+			"%problemPreservation": 100,
+			"failedReductions": 223.0
 		}
 	]
 }

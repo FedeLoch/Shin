@@ -1,9 +1,9 @@
 {
-	"ShinNautilusShrinker" : [
+	"ShinShrinker": [
 		{
-			"neededReductions" : 5.0,
-			"%inputReduction" : 0.0,
-			"originalBound" : [
+			"neededReductions": 5.0,
+			"%inputReduction": 0.0,
+			"originalBound": [
 				"OCSequenceNode(next matchAgainst: aMatcher)",
 				"OCSequenceNode(^ branch isNullable or: [ regex isNotNil and: [ regex isNullable ] ])",
 				"OCSequenceNode(next == nil\r\tifTrue: [ next := anRxmLink ]\r\tifFalse: [ next pointTailTo: anRxmLink ])",
@@ -168,9 +168,9 @@
 				"OCSequenceNode(lookahead := #epsilon)",
 				"OCSequenceNode(max = 1)"
 			],
-			"originalInput" : "a+|",
-			"totalTime" : "220 milliseconds 547 microseconds",
-			"minimizedBound" : [
+			"originalInput": "a+|",
+			"totalTime": "220 milliseconds 547 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(next matchAgainst: aMatcher)",
 				"OCSequenceNode(^ branch isNullable or: [ regex isNotNil and: [ regex isNullable ] ])",
 				"OCSequenceNode(next == nil\r\tifTrue: [ next := anRxmLink ]\r\tifFalse: [ next pointTailTo: anRxmLink ])",
@@ -335,14 +335,14 @@
 				"OCSequenceNode(lookahead := #epsilon)",
 				"OCSequenceNode(max = 1)"
 			],
-			"minimizedInput" : "c+|",
-			"%problemPreservation" : 100,
-			"failedReductions" : 4.0
+			"minimizedInput": "c+|",
+			"%problemPreservation": 100,
+			"failedReductions": 4.0
 		},
 		{
-			"neededReductions" : 11.0,
-			"%inputReduction" : 4.166666666666667,
-			"originalBound" : [
+			"neededReductions": 11.0,
+			"%inputReduction": 4.166666666666667,
+			"originalBound": [
 				"OCSequenceNode(next matchAgainst: aMatcher)",
 				"OCSequenceNode([ :char :matcher | p includes: char ])",
 				"OCSequenceNode(next == nil\r\tifTrue: [ next := anRxmLink ]\r\tifFalse: [ next pointTailTo: anRxmLink ])",
@@ -507,9 +507,9 @@
 				"OCSequenceNode(lookahead := #epsilon)",
 				"OCSequenceNode(max = 1)"
 			],
-			"originalInput" : "c?|b+c+|",
-			"totalTime" : "331 milliseconds 215 microseconds",
-			"minimizedBound" : [
+			"originalInput": "c?|b+c+|",
+			"totalTime": "331 milliseconds 215 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(next matchAgainst: aMatcher)",
 				"OCSequenceNode([ :char :matcher | p includes: char ])",
 				"OCSequenceNode(next == nil\r\tifTrue: [ next := anRxmLink ]\r\tifFalse: [ next pointTailTo: anRxmLink ])",
@@ -674,14 +674,14 @@
 				"OCSequenceNode(lookahead := #epsilon)",
 				"OCSequenceNode(max = 1)"
 			],
-			"minimizedInput" : "c?|b+c|",
-			"%problemPreservation" : 100,
-			"failedReductions" : 10.0
+			"minimizedInput": "c?|b+c|",
+			"%problemPreservation": 100,
+			"failedReductions": 10.0
 		},
 		{
-			"neededReductions" : 68.0,
-			"%inputReduction" : 44.696969696969695,
-			"originalBound" : [
+			"neededReductions": 68.0,
+			"%inputReduction": 44.696969696969695,
+			"originalBound": [
 				"OCSequenceNode(^ aMatcher syntaxRegex: self)",
 				"OCSequenceNode(| atom |\ratom := self atom.\r\rlookahead = $* ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ self signalNullableClosureParserError ].\r\t\t^ RxsPiece new initializeStarAtom: atom ].\r\rlookahead = $+ ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ self signalNullableClosureParserError ].\r\t\t^ RxsPiece new initializePlusAtom: atom ].\r\rlookahead = $? ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ ^ self lookAround ].\r\t\t^ RxsPiece new initializeOptionalAtom: atom ].\r\rlookahead = ${ ifTrue: [ ^ self quantifiedAtom: atom ].\r\r^ RxsPiece new initializeAtom: atom)",
 				"OCSequenceNode(loopback\r\tifTrue: [\r\t\t\talternative == nil\r\t\t\t\tifTrue: [ alternative := aNode ]\r\t\t\t\tifFalse: [ alternative terminateWith: aNode ] ]\r\tifFalse: [ super terminateWith: aNode ])",
@@ -883,9 +883,9 @@
 				"OCSequenceNode(^ self new parse: aString)",
 				"OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
 			],
-			"originalInput" : "b*a+ac|b+b+b(a+a*(c*|)b*|.)+||||||a?|ac.?.?",
-			"totalTime" : "1 second 377 milliseconds 275 microseconds",
-			"minimizedBound" : [
+			"originalInput": "b*a+ac|b+b+b(a+a*(c*|)b*|.)+||||||a?|ac.?.?",
+			"totalTime": "1 second 377 milliseconds 275 microseconds",
+			"minimizedBound": [
 				"OCSequenceNode(^ aMatcher syntaxRegex: self)",
 				"OCSequenceNode(| atom |\ratom := self atom.\r\rlookahead = $* ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ self signalNullableClosureParserError ].\r\t\t^ RxsPiece new initializeStarAtom: atom ].\r\rlookahead = $+ ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ self signalNullableClosureParserError ].\r\t\t^ RxsPiece new initializePlusAtom: atom ].\r\rlookahead = $? ifTrue: [\r\t\tself next.\r\t\tatom isNullable ifTrue: [ ^ self lookAround ].\r\t\t^ RxsPiece new initializeOptionalAtom: atom ].\r\rlookahead = ${ ifTrue: [ ^ self quantifiedAtom: atom ].\r\r^ RxsPiece new initializeAtom: atom)",
 				"OCSequenceNode(loopback\r\tifTrue: [\r\t\t\talternative == nil\r\t\t\t\tifTrue: [ alternative := aNode ]\r\t\t\t\tifFalse: [ alternative terminateWith: aNode ] ]\r\tifFalse: [ super terminateWith: aNode ])",
@@ -1087,9 +1087,9 @@
 				"OCSequenceNode(^ self new parse: aString)",
 				"OCSequenceNode(| rest |\rrest := regexNode regex ifNotNil: [ self hookBranchOf: regexNode regex onto: endMarker ].\r^ RxmBranch new\r\t  next: ((regexNode branch dispatchTo: self)\r\t\t\t   pointTailTo: endMarker;\r\t\t\t   yourself);\r\t  alternative: rest;\r\t  yourself)"
 			],
-			"minimizedInput" : "c*cc|b(c()c|c)+||cc.?",
-			"%problemPreservation" : 100,
-			"failedReductions" : 46.0
+			"minimizedInput": "c*cc|b(c()c|c)+||cc.?",
+			"%problemPreservation": 100,
+			"failedReductions": 46.0
 		}
 	]
 }
