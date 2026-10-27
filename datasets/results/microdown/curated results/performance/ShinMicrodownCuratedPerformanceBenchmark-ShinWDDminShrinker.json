@@ -1,0 +1,37 @@
+{
+	"ShinWDDminShrinker" : [
+		{
+			"neededReductions" : 0.0,
+			"%inputReduction" : 0.0,
+			"originalBound" : 63,
+			"originalInput" : "a",
+			"totalTime" : "102 milliseconds 662 microseconds",
+			"minimizedBound" : 63,
+			"minimizedInput" : "a",
+			"%problemPreservation" : 100.0,
+			"failedReductions" : 0.0
+		},
+		{
+			"neededReductions" : 28151.0,
+			"%inputReduction" : 39.92837958818263,
+			"originalBound" : 5328,
+			"originalInput" : "|#|#|j|g.gdl./tqd | /\\\rv i fu# |m cs Tz h\\\\ :vJq|,n\\u2019ps/k|vy| t cm#q|d|q|-x--:U.:/#,\\\\|\r| -----------| -----------| ----------- |\r|w#/ > o f  Wx|\r\r\\t\r\\t|:.|-|#xaz|l:e|X|c|#qmw:| >|,tucV/ |\r| ----------- |\r|.crmflc#Mjwy/h|:grg|u|sVte|\\t ~  Wcgl       zcuyrzs~###\r//.#eCvcrq\r\r\\t\r@i-@\r `ee v``.X\\\\a/o ``w  p`-bs*\\\r\\u2019r>wh*`c`\\\\,i\r\\t`tk`` t /p,/\\u2019Wf,ondpn- `yw/>*,lr\\u2019hc.>c>-: qla>>l*`jwo  md\\u2019u` d`wJb d\\u2019   ler`[//buOk>g]( sr)@xx \\\\t@q icm`-.`qj xln >#`fhm/` \\t  |Mf -Uy ov|w\\\\oxg|u g\\\\\\\\#|-Qgxp#um,vea::: W|\r| ----------- |\r|p ui|   :>#v,mv\\u2019mm:\\u2019emz,v/|p|ne f :y|p.zh|,mzh|\r|wxypf ,ua|kn:u|whN>|uv:z\\\\\\\\\\\\|/ zb p:  \\\\zkqH s|> |\\\\J:|g>,,\\\\|s.f |\r| ----------- |\r|ap/ /lo\\\\ im|jpe, #i-yol.\\u2019>|,b\\u2019|a -b|gwj|q zhj|s>  WgF-|y,-|qQ a |f \\u2019\\u2019\\u2019.>>#\\\\>\\u2019d- |\\\\.|# ,#H>\\u2019| /|>>-,y #|x:| i| #| t|y>n -|\\\\ph|:f/ |p|z- ,|cbi\\\\| \\u2019r|  ||,,|y#tw|sh|z:hs/>un| |b/s\\\\co|cv>\\\\>| w|jP|Pd->|.\\\\\\\\-/ |\\\\  i#p-|,#, | kq-- n,|b |,--lchb,|y :o| F  : >  p l |\r| ----------- |\r|\\\\Acz|q  |\\\\>k\\\\>u/|x|---```\\t ```|x.|./z| s\\u2019 SY-|xqv:o|lu#|K:-,a>t|pt|\r| ----------- |\r|z|- pu",
+			"totalTime" : "54 minutes 3 seconds 150 milliseconds 442 microseconds",
+			"minimizedBound" : 4797,
+			"minimizedInput" : "|#|g.dltqd|/v  fu|cs  \\ :Jq|nu19s/vy|t cq|q|x--U.:,\\\r|------ -------- -------|w# > f Wx|\\t\\t|.|#xal|X|#qw|,uc\r------- |\r.crlcMjw/hgrg|te|t ~ Wc    zcurzs##//eCvrq\rt\ri-@ ` v`Xa/o``w `s*\r\\019>whc`\\,i\\t`k`` /,/\\20Wf,d- `w/>,lr209h>c>: q>>*`o  d\\u19` dwJd\\u1  lr`[/u>g( )@x \\\\q cm`.`q xl>#fhm`   | y o|w\\oxg g\\\\|-Qxp#,va: W|| ------- |p | :>v,m\\29m:\\019mz,|pne  :yp.z,mh|\rwxf ,|:u|hN>uv:\\\\\\\\ zbp: \\zqH|> \\\\Jg>,\\\\s.|\r|------|/ lo imjpe#iyol\\u219>b\\201|ab|g|zhjs> WgFy,|qa|\\u19u29\\u019>#\\>\\20d- \\# ,H>\\21 />>y #x:| |ty>n-|\\h|f/ p|,|i|\\201r| |,|yw|s|z:/>n|b/s\\cov>\\>|w|Pd|\\\\\\/|\\ p-,#|k--|b|,-lch,|yo|F   >p l\r---------\r|\\A|q|\\\\\\\\u/|--``` ``|x|.|s29 S-|xvou#K:a>tpt|--------|z|pu",
+			"%problemPreservation" : 90.03378378378379,
+			"failedReductions" : 28120.0
+		},
+		{
+			"neededReductions" : 50125.0,
+			"%inputReduction" : 23.570595099183198,
+			"originalBound" : 11873,
+			"originalInput" : "Sm\\\\:#, jiG\r\r`.duyk`\r\\t\\t\r\\t- [x] /E #\r- [x]\\t .ts ,f\r- [ ] fpt\r- [x] G\r- [x] okPmp/aiv\r- [x] > \\\\,cG,k hm\r- [x]\\ta:f \r- [x]\\te \r- [x]\r/j l \r- [x] og\r- [x]\\tf \r- [x]\rvavyh/Bwl,wQc G ,oe.\\\\#\\\\\r- [x] :vb \r- [x] b \r- [ ]\rppgry\r- [x]\ryaC\r- [x]\r w-/o g \r- [x]\\t \r- [x]\rps b:xe#ykB \r- [x]\\t c,j:f\\u2019E\r- [x]\\tnsef\r- [x]\rR\r- [x]\rko\r- [ ]\r--D, \r- [x]\r:xiH:K>kh >##,\r- [x]\r>>:\r- [x]\rg\r- [x]\\tf\r- [x]\r -\r- [ ]\\t.d>\r- [x]\\t- \\\\n  >f-:\r- [ ]\\t, ,\r- [x]\r,-\\\\d\r- [x]\r/> wk/,\r- [x]\r##\r- [x]\r> - \r- [x]\r, \r- [x]\r>po \r- [x]\r--T/\r- [x]\r   -a\r- [x]\r-Oa\r- [x]\r  -\r- [x]\ru n \r- [ ]\rx-i- p\r- [x]\r #h,\r- [x]\r-\r- [x]\rlw \\\\\r- [x]\r  v> \r- [ ]\r\\\\-\r- [x]\rt y-t\r- [x]\r--l#x  g-\r- [x]\r   --r- -     >\r- [x]\r  \r- [x]\r m.\r- [x]\\t \r- [x]\\tjhv\r- [x]\r :-.\r- [x]\\t:> :\r- [x] v\r- [x] a\r- [x]\r-\r- [x]\\t/\r- [x]\r-\\\\\\u2019,\r- [x]\r,\r- [x]\r--->\r- [x]\\t \r- [x]\r#,,\r- [x]\rI>#\r- [x]\r#, \\\\\r- [x]\r>\\\\: ,",
+			"totalTime" : "2 hours 6 minutes 30 seconds 471 milliseconds 551 microseconds",
+			"minimizedBound" : 10687,
+			"minimizedInput" : "m\\\\:#, G\r\r`.dyk`\r\\\\\r\\t [x /E #\r-[x]\\t .s ,\r- ] fpt\r[x] G\r[x] okmp/i\r[x > \\,G,k m\r- [x]ta:f\r-[x]\\te\r- []\r/l\r- [] o\rx]\\f\r- [x]\rvayh/Bwl,Qc G ,o.\\\\#\\\\\r- [x :v\r-[x]b\r- \rppry\r- []\rya\r- [x]\rw-/o g - [x]\\t\r- [x]\rb:xe#kB\r-[]\\tc,jf\\u2019\r- [x\\nse\r- x]\rR\r- [x]\ro\r- \r--D\r- []:xi:K>h ##,\r[x]\r>>\r- [x]\r\r- [x]\\f\r-[x]-\r- [ \\t.>-[x]t- \\n  >f-\r[ ]\\, ,\r- []\r,-\\\\d\r- []\r/wk,\r-[x]\r#\r[x\r> -\r[x],\r- [x\r>p\r-[x]\r--T\r- [x]\r-a\r- [x]\rO\r[x\r \r- [x]\rn\r- []\rxi-\r- [x]\rh,\r- [\r-\r- []\rl \\- []\rv>\r- []\r\\\\-\r- [x]\rt yt\r- [x]\r--lx\r- [x]   ---    >\r- [x]\r \r- [x]\rm.\r- [x\\t\r- []\\thv\r[x\r:.\r- []t:>:\r- [x v\r-[x] a\r- [x]\r-\r-[x]\\t/\r- [x]\r-\\u2019,\r- [],- []\r-->\r- [x\\t\r-[]\r#,\r-[x]\rI>#\r- []\r\\\\\r- []\r>\\",
+			"%problemPreservation" : 90.01094921249894,
+			"failedReductions" : 50055.0
+		}
+	]
+}

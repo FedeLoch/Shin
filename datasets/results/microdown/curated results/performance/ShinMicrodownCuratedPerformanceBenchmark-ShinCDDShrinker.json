@@ -1,0 +1,37 @@
+{
+	"ShinCDDShrinker" : [
+		{
+			"neededReductions" : 0.0,
+			"%inputReduction" : 0.0,
+			"originalBound" : 63,
+			"originalInput" : "a",
+			"totalTime" : "127 milliseconds 420 microseconds",
+			"minimizedBound" : 63,
+			"minimizedInput" : "a",
+			"%problemPreservation" : 100.0,
+			"failedReductions" : 0.0
+		},
+		{
+			"neededReductions" : 1150.0,
+			"%inputReduction" : 54.162936436884515,
+			"originalBound" : 5328,
+			"originalInput" : "|#|#|j|g.gdl./tqd | /\\\rv i fu# |m cs Tz h\\\\ :vJq|,n\\u2019ps/k|vy| t cm#q|d|q|-x--:U.:/#,\\\\|\r| -----------| -----------| ----------- |\r|w#/ > o f  Wx|\r\r\\t\r\\t|:.|-|#xaz|l:e|X|c|#qmw:| >|,tucV/ |\r| ----------- |\r|.crmflc#Mjwy/h|:grg|u|sVte|\\t ~  Wcgl       zcuyrzs~###\r//.#eCvcrq\r\r\\t\r@i-@\r `ee v``.X\\\\a/o ``w  p`-bs*\\\r\\u2019r>wh*`c`\\\\,i\r\\t`tk`` t /p,/\\u2019Wf,ondpn- `yw/>*,lr\\u2019hc.>c>-: qla>>l*`jwo  md\\u2019u` d`wJb d\\u2019   ler`[//buOk>g]( sr)@xx \\\\t@q icm`-.`qj xln >#`fhm/` \\t  |Mf -Uy ov|w\\\\oxg|u g\\\\\\\\#|-Qgxp#um,vea::: W|\r| ----------- |\r|p ui|   :>#v,mv\\u2019mm:\\u2019emz,v/|p|ne f :y|p.zh|,mzh|\r|wxypf ,ua|kn:u|whN>|uv:z\\\\\\\\\\\\|/ zb p:  \\\\zkqH s|> |\\\\J:|g>,,\\\\|s.f |\r| ----------- |\r|ap/ /lo\\\\ im|jpe, #i-yol.\\u2019>|,b\\u2019|a -b|gwj|q zhj|s>  WgF-|y,-|qQ a |f \\u2019\\u2019\\u2019.>>#\\\\>\\u2019d- |\\\\.|# ,#H>\\u2019| /|>>-,y #|x:| i| #| t|y>n -|\\\\ph|:f/ |p|z- ,|cbi\\\\| \\u2019r|  ||,,|y#tw|sh|z:hs/>un| |b/s\\\\co|cv>\\\\>| w|jP|Pd->|.\\\\\\\\-/ |\\\\  i#p-|,#, | kq-- n,|b |,--lchb,|y :o| F  : >  p l |\r| ----------- |\r|\\\\Acz|q  |\\\\>k\\\\>u/|x|---```\\t ```|x.|./z| s\\u2019 SY-|xqv:o|lu#|K:-,a>t|pt|\r| ----------- |\r|z|- pu",
+			"totalTime" : "50 minutes 7 seconds 98 milliseconds 945 microseconds",
+			"minimizedBound" : 4797,
+			"minimizedInput" : "----------- |\r|.crmflc#Mjwy/h|:grg|u|sVte|\\t ~  Wcgl       zcuyrzs~###\r//.#eCvcrq\r\r\\t\r@\r`ee v``.X\\\\a/o ``w  p`-bs*\\\r\\u2019r>wh*`c`\\\\,i\r\\t`tk`` t /p,/\\u2019Wf,ondpn- `ywlr\\u2019hc.>c>-: qla>>l*`jwo  md\\u2019u` d`wJb d\\u2019   ler`[//buOk>g]( sr)@xx \\\\t@q icm`-.`qj xln >#`fhm/` \\t  |Mf -Uy ov|w\\\\oxg|u g\\\\\\\\#|-Qgxp#um,vea::: W|\r|-|,,|y#tw|sh|z:hs/>un| |b/s\\\\co|cv>\\\\>|w|jP|Pd->|.\\\\\\\\-|\\\\  i#p-|,#,|kq-- n,|b|,--lchb,|y :o|F  :------\r|\\\\Acz|q|\\\\>k\\\\>u/|x|---```\\t ```|x.|./z|s\\u2019 SY-|xqv:o|lu#|K:-,a>t|pt\r|z|- p",
+			"%problemPreservation" : 90.03378378378379,
+			"failedReductions" : 1127.0
+		},
+		{
+			"neededReductions" : 1612.0,
+			"%inputReduction" : 32.20536756126021,
+			"originalBound" : 11873,
+			"originalInput" : "Sm\\\\:#, jiG\r\r`.duyk`\r\\t\\t\r\\t- [x] /E #\r- [x]\\t .ts ,f\r- [ ] fpt\r- [x] G\r- [x] okPmp/aiv\r- [x] > \\\\,cG,k hm\r- [x]\\ta:f \r- [x]\\te \r- [x]\r/j l \r- [x] og\r- [x]\\tf \r- [x]\rvavyh/Bwl,wQc G ,oe.\\\\#\\\\\r- [x] :vb \r- [x] b \r- [ ]\rppgry\r- [x]\ryaC\r- [x]\r w-/o g \r- [x]\\t \r- [x]\rps b:xe#ykB \r- [x]\\t c,j:f\\u2019E\r- [x]\\tnsef\r- [x]\rR\r- [x]\rko\r- [ ]\r--D, \r- [x]\r:xiH:K>kh >##,\r- [x]\r>>:\r- [x]\rg\r- [x]\\tf\r- [x]\r -\r- [ ]\\t.d>\r- [x]\\t- \\\\n  >f-:\r- [ ]\\t, ,\r- [x]\r,-\\\\d\r- [x]\r/> wk/,\r- [x]\r##\r- [x]\r> - \r- [x]\r, \r- [x]\r>po \r- [x]\r--T/\r- [x]\r   -a\r- [x]\r-Oa\r- [x]\r  -\r- [x]\ru n \r- [ ]\rx-i- p\r- [x]\r #h,\r- [x]\r-\r- [x]\rlw \\\\\r- [x]\r  v> \r- [ ]\r\\\\-\r- [x]\rt y-t\r- [x]\r--l#x  g-\r- [x]\r   --r- -     >\r- [x]\r  \r- [x]\r m.\r- [x]\\t \r- [x]\\tjhv\r- [x]\r :-.\r- [x]\\t:> :\r- [x] v\r- [x] a\r- [x]\r-\r- [x]\\t/\r- [x]\r-\\\\\\u2019,\r- [x]\r,\r- [x]\r--->\r- [x]\\t \r- [x]\r#,,\r- [x]\rI>#\r- [x]\r#, \\\\\r- [x]\r>\\\\: ,",
+			"totalTime" : "1 hour 11 minutes 24 seconds 575 milliseconds 638 microseconds",
+			"minimizedBound" : 10686,
+			"minimizedInput" : "jiG\r\r`.duyk`\r\\t\\t\r- [x\r- [ts ,f\r[x]\\ta:\r- [x]\\te\r- [x]\r/j l\r- [x] og\r[x\r- [x]\r\\\\\r- [vb\r[x\r- [\rp\r- [x]\ry\r- [x]\rw-/o g\r- [x]\\\r- [x]\rps b:xe#ykB\r- [x]\\t c,j:f\\u2019E\r[f\r- []\rR\r- []\ro\r- []\r,\r- []\rxiH:K>kh >##,\r- [x]\r>>:\r- [x]\rg\r- [x]\\tf\r- [x]\r-\r- [ ]\\t.d>\r[x\r- [\\t, ,\r- [x]\r,-\\\\d\r- [x]\r/> wk/,\r- [x]\r#\r- [x]\r>\r- [x]\r,\r- [x]\r>po\r- [x]\r/\r- [x]\ra\r- [x]\r-- [  -\r- [x]\ru n\r- [ ]\rx-i- p\r- [x]\r #h,\r- [x]\r-\r- [x]\rlw \\\\\r- [x]\r \r- \r\\\\-\r- [x]\rt y-t\r- [x]\r--l#x  g-\r- [x]\r- -     >\r[x\r- [x]\rm.\r- [x]\r-\\tjhv\r- [x]\r-.\r- [x]:\r- [x] v\ra\r- [x]\r-\r- [x]\\t/\r- [x]\r-\\\\\\u2019,\r- [x]\r,\r- [x]\r--->\r- [x]\\t\r- ",
+			"%problemPreservation" : 90.00252674134592,
+			"failedReductions" : 1519.0
+		}
+	]
+}

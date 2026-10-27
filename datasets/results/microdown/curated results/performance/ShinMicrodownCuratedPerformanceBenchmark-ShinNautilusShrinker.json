@@ -1,0 +1,37 @@
+{
+	"ShinNautilusShrinker" : [
+		{
+			"neededReductions" : 1.0,
+			"%inputReduction" : 37.5,
+			"originalBound" : 63,
+			"originalInput" : "a",
+			"totalTime" : "191 milliseconds 237 microseconds",
+			"minimizedBound" : 67,
+			"minimizedInput" : "---",
+			"%problemPreservation" : 106.34920634920636,
+			"failedReductions" : 0.0
+		},
+		{
+			"neededReductions" : 1915.0,
+			"%inputReduction" : 78.09116809116809,
+			"originalBound" : 5328,
+			"originalInput" : "|#|#|j|g.gdl./tqd | /\\\rv i fu# |m cs Tz h\\\\ :vJq|,n\\u2019ps/k|vy| t cm#q|d|q|-x--:U.:/#,\\\\|\r| -----------| -----------| ----------- |\r|w#/ > o f  Wx|\r\r\\t\r\\t|:.|-|#xaz|l:e|X|c|#qmw:| >|,tucV/ |\r| ----------- |\r|.crmflc#Mjwy/h|:grg|u|sVte|\\t ~  Wcgl       zcuyrzs~###\r//.#eCvcrq\r\r\\t\r@i-@\r `ee v``.X\\\\a/o ``w  p`-bs*\\\r\\u2019r>wh*`c`\\\\,i\r\\t`tk`` t /p,/\\u2019Wf,ondpn- `yw/>*,lr\\u2019hc.>c>-: qla>>l*`jwo  md\\u2019u` d`wJb d\\u2019   ler`[//buOk>g]( sr)@xx \\\\t@q icm`-.`qj xln >#`fhm/` \\t  |Mf -Uy ov|w\\\\oxg|u g\\\\\\\\#|-Qgxp#um,vea::: W|\r| ----------- |\r|p ui|   :>#v,mv\\u2019mm:\\u2019emz,v/|p|ne f :y|p.zh|,mzh|\r|wxypf ,ua|kn:u|whN>|uv:z\\\\\\\\\\\\|/ zb p:  \\\\zkqH s|> |\\\\J:|g>,,\\\\|s.f |\r| ----------- |\r|ap/ /lo\\\\ im|jpe, #i-yol.\\u2019>|,b\\u2019|a -b|gwj|q zhj|s>  WgF-|y,-|qQ a |f \\u2019\\u2019\\u2019.>>#\\\\>\\u2019d- |\\\\.|# ,#H>\\u2019| /|>>-,y #|x:| i| #| t|y>n -|\\\\ph|:f/ |p|z- ,|cbi\\\\| \\u2019r|  ||,,|y#tw|sh|z:hs/>un| |b/s\\\\co|cv>\\\\>| w|jP|Pd->|.\\\\\\\\-/ |\\\\  i#p-|,#, | kq-- n,|b |,--lchb,|y :o| F  : >  p l |\r| ----------- |\r|\\\\Acz|q  |\\\\>k\\\\>u/|x|---```\\t ```|x.|./z| s\\u2019 SY-|xqv:o|lu#|K:-,a>t|pt|\r| ----------- |\r|z|- pu",
+			"totalTime" : "1 hour 16 minutes 31 seconds 472 milliseconds 123 microseconds",
+			"minimizedBound" : 4823,
+			"minimizedInput" : "~~~---\r|~~~~~~~~\r---\r\r---\r~``````~\r~``\\~\rt`~~``~~~~~~~~~~~~~~~~~~~~~~~`yw/>lr\\~2019hc.>c>-: qla>>l*`~~~~~~~~~~~~~~` d`~~~~~~~~~~~~~~~~~`[//buOk>g]( ~~)@xx \\~t@q icm`~~`qj xln >#`~~~~` ~~~~---\r~~~~~~~~~~~~~~~~~---\r|~~~```~~~```~~~~~~~~~~~",
+			"%problemPreservation" : 90.52177177177177,
+			"failedReductions" : 986.0
+		},
+		{
+			"neededReductions" : 442.0,
+			"%inputReduction" : 58.780127889818004,
+			"originalBound" : 11873,
+			"originalInput" : "Sm\\\\:#, jiG\r\r`.duyk`\r\\t\\t\r\\t- [x] /E #\r- [x]\\t .ts ,f\r- [ ] fpt\r- [x] G\r- [x] okPmp/aiv\r- [x] > \\\\,cG,k hm\r- [x]\\ta:f \r- [x]\\te \r- [x]\r/j l \r- [x] og\r- [x]\\tf \r- [x]\rvavyh/Bwl,wQc G ,oe.\\\\#\\\\\r- [x] :vb \r- [x] b \r- [ ]\rppgry\r- [x]\ryaC\r- [x]\r w-/o g \r- [x]\\t \r- [x]\rps b:xe#ykB \r- [x]\\t c,j:f\\u2019E\r- [x]\\tnsef\r- [x]\rR\r- [x]\rko\r- [ ]\r--D, \r- [x]\r:xiH:K>kh >##,\r- [x]\r>>:\r- [x]\rg\r- [x]\\tf\r- [x]\r -\r- [ ]\\t.d>\r- [x]\\t- \\\\n  >f-:\r- [ ]\\t, ,\r- [x]\r,-\\\\d\r- [x]\r/> wk/,\r- [x]\r##\r- [x]\r> - \r- [x]\r, \r- [x]\r>po \r- [x]\r--T/\r- [x]\r   -a\r- [x]\r-Oa\r- [x]\r  -\r- [x]\ru n \r- [ ]\rx-i- p\r- [x]\r #h,\r- [x]\r-\r- [x]\rlw \\\\\r- [x]\r  v> \r- [ ]\r\\\\-\r- [x]\rt y-t\r- [x]\r--l#x  g-\r- [x]\r   --r- -     >\r- [x]\r  \r- [x]\r m.\r- [x]\\t \r- [x]\\tjhv\r- [x]\r :-.\r- [x]\\t:> :\r- [x] v\r- [x] a\r- [x]\r-\r- [x]\\t/\r- [x]\r-\\\\\\u2019,\r- [x]\r,\r- [x]\r--->\r- [x]\\t \r- [x]\r#,,\r- [x]\rI>#\r- [x]\r#, \\\\\r- [x]\r>\\\\: ,",
+			"totalTime" : "17 minutes 49 seconds 430 milliseconds 434 microseconds",
+			"minimizedBound" : 10730,
+			"minimizedInput" : "-\t~\r- [x]\r~\r- [x]\t~-\t~~- [x]\r~\r- [x]\t~\r- [x]\t~\r- [x]\r~\r- [x]\t~\r- [x]\r~-\t[~\r- [x]\r~\r-\t[~~\r-\t[~\r- [x]\r~\r- [x]\r~\r- [x]\r~\r- [x]\r~\r- [x]\t~\r- [x]\r~-\t[~\r- [x]\r~\t-\t[~~-\t[~~-\t[~\r- [x]\r~\r- [x]\r~\r- [x]\t~\r- [x]\r~\r- [x]\r~\r- [x]\t~\r- [x]\r~\r- [x]\t~\r- [x]\r~\r- [x]\t~\r- [x]\t~\r- [x]\r~\r- [x]\r~\r- [x]\r~\r- [x]\r~\r- [x]\t~\r- [x]\t~\r- [x]\r~\r- [x]\r~\r- [x]\t~\r- [x]\t~\r- [x]\t~\r-\t~\r-\t[~\r- [x]\r~\r-\t[~\r- [x]\t~\r- [x]\t~\r- [x]\t~\t-\t[~\r- [x]\r~\r- [x]\r~\r- [x]\r~-\t~~\r- [x]\r~\r- [x]\r~\r- [x]\t~\r- [x]\r~",
+			"%problemPreservation" : 90.3731154720795,
+			"failedReductions" : 329.0
+		}
+	]
+}
