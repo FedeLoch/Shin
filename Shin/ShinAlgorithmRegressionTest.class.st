@@ -81,22 +81,12 @@ ShinAlgorithmRegressionTest >> testLazyPerfReducesBelowARejectedNode [
 ShinAlgorithmRegressionTest >> testMinimizedNodeIsTheSmallestDerivationOfItsSymbol [
 
 	| shrinker |
-	shrinker := ShinNautilusShrinker new grammar: grammar; yourself.
+	shrinker := ShinCustomShrinker new grammar: grammar; yourself.
 
 	((self parse: '12+(3*45)') allNodes reject: #isLeaf) do: [ :node | | minimal |
 		minimal := shrinker minimized: node.
 		self assert: minimal tag equals: node tag.
 		self assert: minimal treeSize equals: (shrinker nonTerminalNamed: node tag) minSize ]
-]
-
-{ #category : 'tests' }
-ShinAlgorithmRegressionTest >> testNautilusMinimizesIdenticalSubtreesAtDifferentPositions [
-
-	| result |
-	result := (ShinNautilusShrinker new grammar: grammar; oracle: (self oracleByBlock: [ :input | input includes: $3 ]); yourself)
-		          shrink: '11+11+3'.
-
-	self deny: (result includesSubstring: '11')
 ]
 
 { #category : 'tests' }
@@ -106,6 +96,16 @@ ShinAlgorithmRegressionTest >> testProbDDDoesNotLoopWhenAnElementBecomesCertain 
 	shrinker := ShinProbDDShrinker new oracle: (self oracleByBlock: [ :input | input includes: $b ]); yourself.
 
 	self assert: (shrinker shrink: 'abcd') equals: 'b'
+]
+
+{ #category : 'tests' }
+ShinAlgorithmRegressionTest >> testShinMinimizesIdenticalSubtreesAtDifferentPositions [
+
+	| result |
+	result := (ShinCustomShrinker new grammar: grammar; oracle: (self oracleByBlock: [ :input | input includes: $3 ]); yourself)
+		          shrink: '11+11+3'.
+
+	self deny: (result includesSubstring: '11')
 ]
 
 { #category : 'tests' }

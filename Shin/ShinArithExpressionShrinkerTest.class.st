@@ -14,7 +14,7 @@ ShinArithExpressionShrinkerTest >> setUp [
 	
 	super setUp.
 	self timeLimit: 5 hours.
-	shrinker := ShinNautilusShrinker new.
+	shrinker := ShinCustomShrinker new.
 	shrinker grammar: AritExpressionGrammar new.
 ]
 
