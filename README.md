@@ -59,6 +59,7 @@ Shin provides the following shrinkers. Tree-based ones are grammar-aware.
 | `ShinHDDShrinker` | Grammar tree | Hierarchical Delta Debugging, applies `ddmin` level by level over the parse tree. |
 | `ShinGRABRShrinker` | Grammar tree | Grammar-based reduction that replaces subtrees with grammar-derived smaller candidates. |
 | `ShinNautilusShrinker` | Grammar tree | Reward-based reduction inspired by Nautilus, repeatedly minimizing the "worst" node. |
+| `ShinNautilusPaperShrinker` | Grammar tree | Nautilus' minimization as in the paper: a subtree minimization pass (each subtree replaced by the smallest derivation of its symbol) followed by a recursive minimization pass (each node replaces its nearest ancestor of the same symbol). |
 | `ShinVulcanShrinker` | Grammar tree | Combines a main reducer (HDD) with auxiliary reducers: identifier replacement, subtree reduction, and tree-based Linear Example-based Edition (LEE). |
 | `ShinProbDDShrinker` | Array/string | Probabilistic delta debugging, models the probability of each element being kept in the result and selects subsets that maximize expected reduction gain, learning from test history instead of following ddmin's fixed removal order. |
 | `ShinCDDShrinker` | Array/string | Counter-based delta debugging, a simplified version of ProbDD that replaces probability computations with counters, skipping inefficient complement/repeated deletion attempts. |

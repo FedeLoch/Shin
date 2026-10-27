@@ -25,6 +25,7 @@ ShinGrammarReducerPropertyTest class >> testParameters [
 				  ShinHDDPaperShrinker.
 				  ShinGRABRShrinker.
 				  ShinNautilusShrinker.
+				  ShinNautilusPaperShrinker.
 				  ShinVulcanShrinker.
 				  ShinSADDminShrinker.
 				  ShinSAProbDDShrinker.
