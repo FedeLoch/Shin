@@ -1,0 +1,37 @@
+{
+	"ShinLazyPerfShrinker" : [
+		{
+			"neededReductions" : 1.0,
+			"%inputReduction" : 37.5,
+			"originalBound" : 65,
+			"originalInput" : "a",
+			"totalTime" : "175 milliseconds 291 microseconds",
+			"minimizedBound" : 69,
+			"minimizedInput" : "---",
+			"%problemPreservation" : 106.15384615384616,
+			"failedReductions" : 0.0
+		},
+		{
+			"neededReductions" : 546.0,
+			"%inputReduction" : 59.23076923076923,
+			"originalBound" : 5330,
+			"originalInput" : "|#|#|j|g.gdl./tqd | /\\\rv i fu# |m cs Tz h\\\\ :vJq|,n\\u2019ps/k|vy| t cm#q|d|q|-x--:U.:/#,\\\\|\r| -----------| -----------| ----------- |\r|w#/ > o f  Wx|\r\r\\t\r\\t|:.|-|#xaz|l:e|X|c|#qmw:| >|,tucV/ |\r| ----------- |\r|.crmflc#Mjwy/h|:grg|u|sVte|\\t ~  Wcgl       zcuyrzs~###\r//.#eCvcrq\r\r\\t\r@i-@\r `ee v``.X\\\\a/o ``w  p`-bs*\\\r\\u2019r>wh*`c`\\\\,i\r\\t`tk`` t /p,/\\u2019Wf,ondpn- `yw/>*,lr\\u2019hc.>c>-: qla>>l*`jwo  md\\u2019u` d`wJb d\\u2019   ler`[//buOk>g]( sr)@xx \\\\t@q icm`-.`qj xln >#`fhm/` \\t  |Mf -Uy ov|w\\\\oxg|u g\\\\\\\\#|-Qgxp#um,vea::: W|\r| ----------- |\r|p ui|   :>#v,mv\\u2019mm:\\u2019emz,v/|p|ne f :y|p.zh|,mzh|\r|wxypf ,ua|kn:u|whN>|uv:z\\\\\\\\\\\\|/ zb p:  \\\\zkqH s|> |\\\\J:|g>,,\\\\|s.f |\r| ----------- |\r|ap/ /lo\\\\ im|jpe, #i-yol.\\u2019>|,b\\u2019|a -b|gwj|q zhj|s>  WgF-|y,-|qQ a |f \\u2019\\u2019\\u2019.>>#\\\\>\\u2019d- |\\\\.|# ,#H>\\u2019| /|>>-,y #|x:| i| #| t|y>n -|\\\\ph|:f/ |p|z- ,|cbi\\\\| \\u2019r|  ||,,|y#tw|sh|z:hs/>un| |b/s\\\\co|cv>\\\\>| w|jP|Pd->|.\\\\\\\\-/ |\\\\  i#p-|,#, | kq-- n,|b |,--lchb,|y :o| F  : >  p l |\r| ----------- |\r|\\\\Acz|q  |\\\\>k\\\\>u/|x|---```\\t ```|x.|./z| s\\u2019 SY-|xqv:o|lu#|K:-,a>t|pt|\r| ----------- |\r|z|- pu",
+			"totalTime" : "1 minute 14 seconds 788 milliseconds 440 microseconds",
+			"minimizedBound" : 4809,
+			"minimizedInput" : "---------------~---\r|.crmflc#Mjwy/h|:grg|u|sVte|\\t ~  Wcgl  ~\r~\r\r---\r~`ee v``.X\\\\a/o ``w  p`~\r\\u2019r>wh*`c`~\r\\t`tk`` t /p,/\\u2019Wf,ondpn- `yw/>*,lr\\u2019hc.>c>-: qla>>l*`jwo  md\\u2019u` d`wJb d\\u2019   ler`[//buOk>g]( sr)@xx \\\\t@q icm`-.`qj xln >#`fhm/` \\t  |Mf -Uy ~\r---\r|p ui|   :>#v,mv\\u2019mm:\\u2019emz,v/|p|ne f :y|p.zh|~|wxypf ,ua|kn:u|whN>|uv:z\\\\\\\\\\\\|/ zb p:  \\\\zkqH s|> |~\r---------\r|\\\\Acz|q  |\\\\>k\\\\>u/|x|---```\\t ```|x.|./z| s\\u2019 SY-|xqv:o~---|~",
+			"%problemPreservation" : 90.22514071294559,
+			"failedReductions" : 521.0
+		},
+		{
+			"neededReductions" : 295.0,
+			"%inputReduction" : 57.452041318248895,
+			"originalBound" : 11875,
+			"originalInput" : "Sm\\\\:#, jiG\r\r`.duyk`\r\\t\\t\r\\t- [x] /E #\r- [x]\\t .ts ,f\r- [ ] fpt\r- [x] G\r- [x] okPmp/aiv\r- [x] > \\\\,cG,k hm\r- [x]\\ta:f \r- [x]\\te \r- [x]\r/j l \r- [x] og\r- [x]\\tf \r- [x]\rvavyh/Bwl,wQc G ,oe.\\\\#\\\\\r- [x] :vb \r- [x] b \r- [ ]\rppgry\r- [x]\ryaC\r- [x]\r w-/o g \r- [x]\\t \r- [x]\rps b:xe#ykB \r- [x]\\t c,j:f\\u2019E\r- [x]\\tnsef\r- [x]\rR\r- [x]\rko\r- [ ]\r--D, \r- [x]\r:xiH:K>kh >##,\r- [x]\r>>:\r- [x]\rg\r- [x]\\tf\r- [x]\r -\r- [ ]\\t.d>\r- [x]\\t- \\\\n  >f-:\r- [ ]\\t, ,\r- [x]\r,-\\\\d\r- [x]\r/> wk/,\r- [x]\r##\r- [x]\r> - \r- [x]\r, \r- [x]\r>po \r- [x]\r--T/\r- [x]\r   -a\r- [x]\r-Oa\r- [x]\r  -\r- [x]\ru n \r- [ ]\rx-i- p\r- [x]\r #h,\r- [x]\r-\r- [x]\rlw \\\\\r- [x]\r  v> \r- [ ]\r\\\\-\r- [x]\rt y-t\r- [x]\r--l#x  g-\r- [x]\r   --r- -     >\r- [x]\r  \r- [x]\r m.\r- [x]\\t \r- [x]\\tjhv\r- [x]\r :-.\r- [x]\\t:> :\r- [x] v\r- [x] a\r- [x]\r-\r- [x]\\t/\r- [x]\r-\\\\\\u2019,\r- [x]\r,\r- [x]\r--->\r- [x]\\t \r- [x]\r#,,\r- [x]\rI>#\r- [x]\r#, \\\\\r- [x]\r>\\\\: ,",
+			"totalTime" : "42 seconds 406 milliseconds 746 microseconds",
+			"minimizedBound" : 10713,
+			"minimizedInput" : "------------------------\r- [x]\r~\r- [x]\t~\r---\r- [x]\rvavyh/~\r- [x]\t~\r- [x]\t~\r- [ ]\r~\r- [x]\t~\r- [x]\r~\r- [~\r~~~\r- [x]~\r---\r- [x]\rR\r- [x]\t~\r- [ ]\r~\r- [x]\r~\r- [x]\r~\r- [x]\rg\r- ~\r~~~\r- [~\r- [~\r-\t~\r- [x]\r~\r- [x]\r~\r- [x]\t~\r- [x]\r~\r- [x]\t~\r- [x]\r~\r- [x]\r~\r- [x]\t~\r- [x]\r~\r- [x]\t~\r- [x]\r~\r- [ ]\r~\r- [x]\r~\r- [x]\r-\r- [x]\t~\r- [x]\t~\r- [ ]\r~\r- [x]\r~\r- [x]\r~\r- [x]\r~\r- [x]\t~\r- [x]\t~\r- [~\r---\r- [x]\r~- [~- [x] v\r- [x] a\r- [x]\r-\r- [~- [x]\r~\r- [x]\r,\r- [x]\r~- ~- [x]\t~\r- [x]\r~\r- [x]\r~\r- [x]\r~",
+			"%problemPreservation" : 90.21473684210527,
+			"failedReductions" : 253.0
+		}
+	]
+}
