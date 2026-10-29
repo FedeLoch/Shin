@@ -1,0 +1,37 @@
+{
+	"ShinLazyPerfShrinker" : [
+		{
+			"neededReductions" : 2.0,
+			"%inputReduction" : 9.090909090909092,
+			"originalBound" : 217,
+			"originalInput" : "a+|",
+			"totalTime" : "152 milliseconds 769 microseconds",
+			"minimizedBound" : 198,
+			"minimizedInput" : "c|",
+			"%problemPreservation" : 91.2442396313364,
+			"failedReductions" : 1.0
+		},
+		{
+			"neededReductions" : 46.0,
+			"%inputReduction" : 38.70967741935484,
+			"originalBound" : 4422,
+			"originalInput" : "a*(..+b+.?b)..+b|(.(.+)+a+.?b?)|b.?b|b*b|",
+			"totalTime" : "2 seconds 566 milliseconds 804 microseconds",
+			"minimizedBound" : 4155,
+			"minimizedInput" : "c(.ccc).cb|(.(.+)+c)|",
+			"%problemPreservation" : 93.96200814111262,
+			"failedReductions" : 39.0
+		},
+		{
+			"neededReductions" : 68.0,
+			"%inputReduction" : 20.32967032967033,
+			"originalBound" : 467660506,
+			"originalInput" : "(b+a+)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?a?)+.+.?c*c?c..?|ba*",
+			"totalTime" : "50 minutes 44 seconds 233 milliseconds 693 microseconds",
+			"minimizedBound" : 451814076,
+			"minimizedInput" : "(ca+)c.c(a..a.+ac|).+cc.c|(.+a?a?)+.+.?c*c?c|",
+			"%problemPreservation" : 96.61155265482265,
+			"failedReductions" : 61.0
+		}
+	]
+}
