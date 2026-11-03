@@ -1,0 +1,37 @@
+{
+	"ShinVulcanShrinker" : [
+		{
+			"neededReductions" : 17.0,
+			"%inputReduction" : 36.36363636363637,
+			"originalBound" : 217,
+			"originalInput" : "a+|",
+			"totalTime" : "885 milliseconds 866 microseconds",
+			"minimizedBound" : 198,
+			"minimizedInput" : "a|",
+			"%problemPreservation" : 91.2442396313364,
+			"failedReductions" : 14.0
+		},
+		{
+			"neededReductions" : 743.0,
+			"%inputReduction" : 57.25806451612903,
+			"originalBound" : 4422,
+			"originalInput" : "a*(..+b+.?b)..+b|(.(.+)+a+.?b?)|b.?b|b*b|",
+			"totalTime" : "37 seconds 793 milliseconds 707 microseconds",
+			"minimizedBound" : 4223,
+			"minimizedInput" : "a(aaa)aaa|(a+)+",
+			"%problemPreservation" : 95.49977385798282,
+			"failedReductions" : 661.0
+		},
+		{
+			"neededReductions" : 2183.0,
+			"%inputReduction" : 45.604395604395606,
+			"originalBound" : 467660506,
+			"originalInput" : "(b+a+)c.b+(a..a.+aa?b|.*.).+cc...*|(.+a?a?)+.+.?c*c?c..?|ba*",
+			"totalTime" : "4 days 22 hours 25 minutes 57 seconds 250 milliseconds 260 microseconds",
+			"minimizedBound" : 446871943,
+			"minimizedInput" : "aaa(aaaaaaaa)aaaaa|(a+a?a?)+",
+			"%problemPreservation" : 95.55477472797328,
+			"failedReductions" : 1670.0
+		}
+	]
+}
